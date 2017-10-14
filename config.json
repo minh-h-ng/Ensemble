@@ -14,6 +14,6 @@
     "EDGAR_DIR": "Preprocessed/EDGAR"
   },
   "PROCESSED":{
-    "EDGAR_LOCATION": "Processed/EDGAR/access.log"
+    "EDGAR_LOCATION": "Processed/EDGAR/access.csv"
   }
 }
