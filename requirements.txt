@@ -13,4 +13,5 @@ pytz==2017.2
 requests==2.18.4
 six==1.11.0
 subprocess32==3.2.7
+tqdm==4.19.2
 urllib3==1.22
