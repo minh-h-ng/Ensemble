@@ -20,7 +20,7 @@ import concurrent.futures
 
 class DatasetDownloader(object):
     def __init__(self, **kwargs):
-        default_attr = dict(verbose=0)
+        default_attr = dict(verbose=0, destination=os.getcwd())
 
         allowed_attr = list(default_attr.keys())
         default_attr.update(kwargs)
@@ -56,33 +56,26 @@ class DatasetDownloader(object):
 
     def _download_file(self, url, dir_name):
         """
-        Downloads file located at url inside dir
+        Downloads file located at url inside dir.
+        Directory must exist before calling this function
         Ref: https://stackoverflow.com/a/16696317/353736
         """
         filename = self._url2filename(url) # filename
-        cwd = os.getcwd() # save current working directory
-
-        self._mkdir(dir_name)
-        os.chdir(dir_name) # change to new directory
 
         # download
-        r = requests.get(url, stream=True)
-        total_size = (int(r.headers.get('content-length', 0))/1024)
-        with open(filename, 'wb') as f:
-            for chunk in tqdm.tqdm(r.iter_content(chunk_size=1024), total=total_size, unit='B', unit_scale=True):
-                if chunk: # filter out keep-alive new chunks
-                    f.write(chunk)
-
-        # cleanup
-        r.close()
-        os.chdir(cwd)
+        with requests.get(url, stream=True) as r:
+            total_size = (int(r.headers.get('content-length', 0))/1024)
+            with open(os.path.join(dir_name, filename), 'wb') as f:
+                for chunk in tqdm.tqdm(r.iter_content(chunk_size=1024), total=total_size, unit='B', unit_scale=True):
+                    if chunk: # filter out keep-alive new chunks
+                        f.write(chunk)
         return filename
 
     def download_edgar(self):
         self.logger.critical('Downloading EDGAR')
 
         # Download dir, a subdir with year will be created
-        dir = os.path.join(os.getcwd(), 'edgar')
+        dir = os.path.join(self.destination, 'edgar')
         temp_dir = '/tmp/.edgar'
 
         # List of all log-files
@@ -96,6 +89,7 @@ class DatasetDownloader(object):
             # Make directory
             dir = os.path.join(dir, year)
             self._mkdir(dir)
+            self._mkdir(temp_dir)
 
             r = requests.get(list_url)
             soup = BeautifulSoup(r.text, 'html.parser')
@@ -131,11 +125,15 @@ class DatasetDownloader(object):
         self.logger.critical('Downloading SVDS')
 
         # Directory & URLs
-        dir = './svds'
+        dir = os.path.join(self.destination, 'svds')
         base_url = 'https://raw.githubusercontent.com/silicon-valley-data-science/datasets/master/'
         schema_url = base_url + 'access_log_schema'
         logs_url = base_url + 'access.log'
 
+        # Make directory
+        self._mkdir(dir)
+
+        # Download
         self._download_file(schema_url, dir)
         self._download_file(logs_url, dir)
 
@@ -143,13 +141,14 @@ class DatasetDownloader(object):
         self.logger.critical('Downloading SECREPO')
 
         # Directory & Log prefix
-        dir = './secrepo'
+        dir = os.path.join(self.destination, 'secrepo')
         temp_dir = '/tmp/.secrepo'
         base_url = 'http://www.secrepo.com/self.logs/2016/'
         log_file_prefix = 'access.log'
 
         # Make directory
         self._mkdir(dir)
+        self._mkdir(temp_dir)
 
         # Download in temp_dir & extract in dir
         r = requests.get(base_url)
@@ -169,9 +168,13 @@ class DatasetDownloader(object):
         self.logger.critical('Downloading Almhuette-Raith')
 
         # Directory & URLs
-        dir = './almhuette_raith'
+        dir = os.path.join(self.destination, 'almhuette_raith')
         logs_url = 'http://www.almhuette-raith.at/apache-log/access.log'
 
+        # Make directory
+        self._mkdir(dir)
+
+        # Download
         self._download_file(logs_url, dir)
 
     @staticmethod
@@ -199,6 +202,8 @@ def main():
                         choices=['all', 'edgar', 'svds', 'secrepo', 'almhuette_raith'])
     parser.add_argument('--verbose', '-v', help='Logging verbosity level',
                         type=int, default=0)
+    parser.add_argument('--destination', '-d', help='Download destination',
+                        type=str, default=os.getcwd())
     args = parser.parse_args()
 
     downloader = DatasetDownloader(**vars(args))
