@@ -116,6 +116,15 @@ class DatasetDownloader(object):
         shutil.rmtree(temp_dir)
         r.close()
 
+    def download_almhuette_raith(self):
+        self.logger.critical('Downloading Almhuette-Raith')
+
+        # Directory & URLs
+        dir = './almhuette_raith'
+        logs_url = 'http://www.almhuette-raith.at/apache-log/access.log'
+
+        self._download_file(logs_url, dir)
+
     @staticmethod
     def get_logger(level=logging.DEBUG, verbose=0):
         logger = logging.getLogger(__name__)
@@ -138,7 +147,7 @@ class DatasetDownloader(object):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('dataset', help='Dataset(s) to download',
-                        choices=['all', 'edgar', 'svds', 'secrepo'])
+                        choices=['all', 'edgar', 'svds', 'secrepo', 'almhuette_raith'])
     parser.add_argument('--verbose', '-v', help='Logging verbosity level',
                         type=int, default=0)
     args = parser.parse_args()
@@ -149,12 +158,15 @@ def main():
         downloader.download_edgar()
         downloader.download_svds()
         downloader.download_secrepo()
+        downloader.download_almhuette_raith()
     elif args.dataset == 'edgar':
         downloader.download_edgar()
     elif args.dataset == 'svds':
         downloader.download_svds()
     elif args.dataset == 'secrepo':
         downloader.download_secrepo()
+    elif args.dataset == 'almhuette_raith':
+        downloader.download_almhuette_raith()
     else:
         parser.print_help()
 
