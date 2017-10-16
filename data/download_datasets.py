@@ -94,7 +94,7 @@ class DatasetDownloader(object):
                 return None
 
     def download_edgar(self):
-        self.logger.critical('Downloading EDGAR')
+        self.logger.debug('Downloading EDGAR')
 
         # Download dir, a subdir with year will be created
         dir = os.path.join(self.destination, 'edgar')
@@ -136,7 +136,7 @@ class DatasetDownloader(object):
                             shutil.copyfileobj(f_in, f_out)
                     os.remove(zip_path)
                 except Exception as exc:
-                    self.logger.warning('Unable to download {0}: {1}'.format(url, exc))
+                    self.logger.critical('Unable to download {0}: {1}'.format(url, exc))
 
             # cleanup
             executor.shutdown(True)
@@ -144,7 +144,7 @@ class DatasetDownloader(object):
 
 
     def download_svds(self):
-        self.logger.critical('Downloading SVDS')
+        self.logger.debug('Downloading SVDS')
 
         # Directory & URLs
         dir = os.path.join(self.destination, 'svds')
@@ -162,11 +162,11 @@ class DatasetDownloader(object):
             if self._download_file_with_monitor(logs_url, dir) is None:
                 raise ValueError
         except Exception as exc:
-            self.logger.warning('Unable to download {0}: {1}'.format(logs_url, exc))
+            self.logger.critical('Unable to download {0}: {1}'.format(logs_url, exc))
 
 
     def download_secrepo(self):
-        self.logger.critical('Downloading SECREPO')
+        self.logger.debug('Downloading SECREPO')
 
         # Directory & Log prefix
         dir = os.path.join(self.destination, 'secrepo')
@@ -201,7 +201,7 @@ class DatasetDownloader(object):
                     shutil.copyfileobj(f_in, f_out)
                 os.remove(temp_path)
             except Exception as exc:
-                self.logger.warning('Unable to download {0}: {1}'.format(url, exc))
+                self.logger.critical('Unable to download {0}: {1}'.format(url, exc))
 
         # cleanup
         executor.shutdown(True)
@@ -209,7 +209,7 @@ class DatasetDownloader(object):
 
 
     def download_almhuette_raith(self):
-        self.logger.critical('Downloading Almhuette-Raith')
+        self.logger.debug('Downloading Almhuette-Raith')
 
         # Directory & URLs
         dir = os.path.join(self.destination, 'almhuette_raith')
@@ -223,7 +223,7 @@ class DatasetDownloader(object):
             if self._download_file_with_monitor(logs_url, dir) is None:
                 raise ValueError
         except Exception as exc:
-            self.logger.warning('Unable to download {0}: {1}'.format(logs_url, exc))
+            self.logger.critical('Unable to download {0}: {1}'.format(logs_url, exc))
 
     @staticmethod
     def get_logger(level=logging.DEBUG, verbose=0):
