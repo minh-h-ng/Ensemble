@@ -14,6 +14,9 @@ from bs4 import BeautifulSoup
 import re
 import gzip
 import shutil
+import zipfile
+import concurrent.futures
+
 
 class DatasetDownloader(object):
     def __init__(self, **kwargs):
@@ -77,6 +80,52 @@ class DatasetDownloader(object):
 
     def download_edgar(self):
         self.logger.critical('Downloading EDGAR')
+
+        # Download dir, a subdir with year will be created
+        dir = os.path.join(os.getcwd(), 'edgar')
+        temp_dir = '/tmp/.edgar'
+
+        # List of all log-files
+        list_url = 'https://www.sec.gov/files/EDGAR_LogFileData_thru_Dec2016.html'
+        # Base URL of actual dataset
+        base_url = 'www.sec.gov/dera/data/Public-EDGAR-log-file-data/'
+
+        year = raw_input('Enter the year [2003 ~ 2016]: ')
+        if int(year) in range(2003, 2017):
+
+            # Make directory
+            dir = os.path.join(dir, year)
+            self._mkdir(dir)
+
+            r = requests.get(list_url)
+            soup = BeautifulSoup(r.text, 'html.parser')
+            urls = [x for x in soup.body.string.split('\r\n') if x.startswith(year, len(base_url))]
+
+            # Schedule download
+            executor = concurrent.futures.ThreadPoolExecutor(max_workers=20)
+            future_to_filename = {executor.submit(self._download_file, 'http://' + url, temp_dir): url for url in urls}
+
+            # Download in temp_dir & extract in dir
+            for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_filename), total=len(future_to_filename)):
+                url = future_to_filename[future]
+                try:
+                    filename = future.result()
+                    csv_filename = os.path.splitext(filename)[0] + '.csv'
+                    zip_path = os.path.join(temp_dir, filename)
+
+                    with zipfile.ZipFile(zip_path) as logzip:
+                        with logzip.open(csv_filename, 'r') as f_in, \
+                                open(os.path.join(dir, csv_filename), 'w') as f_out:
+                            shutil.copyfileobj(f_in, f_out)
+                    os.remove(zip_path)
+                except Exception as exc:
+                    self.logger.warning('Unable to download {0}: {1}'.format(url, exc))
+
+            # cleanup
+            executor.shutdown(True)
+            shutil.rmtree(temp_dir)
+            r.close()
+
 
     def download_svds(self):
         self.logger.critical('Downloading SVDS')
