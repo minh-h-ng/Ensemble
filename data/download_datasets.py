@@ -85,7 +85,6 @@ class DatasetDownloader(object):
 
         year = raw_input('Enter the year [2003 ~ 2016]: ')
         if int(year) in range(2003, 2017):
-
             # Make directory
             dir = os.path.join(dir, year)
             self._mkdir(dir)
@@ -150,19 +149,31 @@ class DatasetDownloader(object):
         self._mkdir(dir)
         self._mkdir(temp_dir)
 
-        # Download in temp_dir & extract in dir
         r = requests.get(base_url)
         soup = BeautifulSoup(r.text, 'html.parser')
-        for url in tqdm.tqdm(soup.findAll('a', href=re.compile('^' + log_file_prefix))):
-            self.logger.warn(url['href'])
-            filename = self._download_file(base_url + url['href'], temp_dir)
-            temp_path = os.path.join(temp_dir, filename)
-            with gzip.open(temp_path, 'rb') as f_in,\
-                    open(os.path.join(dir, os.path.splitext(filename)[0]), 'wb') as f_out:
-                shutil.copyfileobj(f_in, f_out)
-            os.remove(temp_path)
+        urls = soup.findAll('a', href=re.compile('^' + log_file_prefix))
+        
+        # Schedule download
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=20)
+        future_to_filename = {executor.submit(self._download_file, base_url + url['href'],
+                                              temp_dir): base_url + url['href'] for url in urls}
+
+        # Download in temp_dir & extract in dir     
+        for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_filename), total=len(future_to_filename)):
+            url = future_to_filename[future]
+            try:
+                filename = future.result()
+                temp_path = os.path.join(temp_dir, filename)
+
+                with gzip.open(temp_path, 'rb') as f_in, \
+                        open(os.path.join(dir, os.path.splitext(filename)[0]), 'wb') as f_out:
+                    shutil.copyfileobj(f_in, f_out)
+                os.remove(temp_path)
+            except Exception as exc:
+                self.logger.warning('Unable to download {0}: {1}'.format(url, exc))
 
         # cleanup
+        executor.shutdown(True)
         shutil.rmtree(temp_dir)
         r.close()
 
