@@ -156,9 +156,11 @@ class DatasetDownloader(object):
         for url in tqdm.tqdm(soup.findAll('a', href=re.compile('^' + log_file_prefix))):
             self.logger.warn(url['href'])
             filename = self._download_file(base_url + url['href'], temp_dir)
-            with gzip.open(os.path.join(temp_dir, filename), 'rb') as f_in,\
+            temp_path = os.path.join(temp_dir, filename)
+            with gzip.open(temp_path, 'rb') as f_in,\
                     open(os.path.join(dir, os.path.splitext(filename)[0]), 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
+            os.remove(temp_path)
 
         # cleanup
         shutil.rmtree(temp_dir)
