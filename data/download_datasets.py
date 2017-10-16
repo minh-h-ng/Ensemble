@@ -90,8 +90,8 @@ class DatasetDownloader(object):
             self._mkdir(dir)
             self._mkdir(temp_dir)
 
-            r = requests.get(list_url)
-            soup = BeautifulSoup(r.text, 'html.parser')
+            with requests.get(list_url) as r:
+                soup = BeautifulSoup(r.text, 'html.parser')
             urls = [x for x in soup.body.string.split('\r\n') if x.startswith(year, len(base_url))]
 
             # Schedule download
@@ -117,7 +117,6 @@ class DatasetDownloader(object):
             # cleanup
             executor.shutdown(True)
             shutil.rmtree(temp_dir)
-            r.close()
 
 
     def download_svds(self):
@@ -136,6 +135,7 @@ class DatasetDownloader(object):
         self._download_file(schema_url, dir)
         self._download_file(logs_url, dir)
 
+
     def download_secrepo(self):
         self.logger.critical('Downloading SECREPO')
 
@@ -149,10 +149,10 @@ class DatasetDownloader(object):
         self._mkdir(dir)
         self._mkdir(temp_dir)
 
-        r = requests.get(base_url)
-        soup = BeautifulSoup(r.text, 'html.parser')
+        with requests.get(base_url) as r:
+            soup = BeautifulSoup(r.text, 'html.parser')
         urls = soup.findAll('a', href=re.compile('^' + log_file_prefix))
-        
+
         # Schedule download
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=20)
         future_to_filename = {executor.submit(self._download_file, base_url + url['href'],
@@ -175,7 +175,7 @@ class DatasetDownloader(object):
         # cleanup
         executor.shutdown(True)
         shutil.rmtree(temp_dir)
-        r.close()
+
 
     def download_almhuette_raith(self):
         self.logger.critical('Downloading Almhuette-Raith')
