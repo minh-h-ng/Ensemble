@@ -165,7 +165,7 @@ class DatasetDownloader(object):
             self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
 
-    def download_secrepo(self):
+    def download_secrepo2016(self):
         self.logger.debug('Downloading SECREPO')
 
         # Directory & Log prefix
@@ -225,6 +225,36 @@ class DatasetDownloader(object):
         except Exception as exc:
             self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
+
+    def download_maccdc2012(self):
+        self.logger.debug('Downloading MACCDC2012')
+
+        # Directory & URLs
+        dir = os.path.join(self.destination, 'maccdc2012')
+        temp_dir = '/tmp/.maccdc2012'
+        logs_url = 'http://www.secrepo.com/maccdc2012/http.log.gz'
+
+        # Make directory
+        self._mkdir(dir)
+        self._mkdir(temp_dir)
+
+        # Download
+        try:
+            filename = self._download_file_with_monitor(logs_url, temp_dir)
+            if  filename is None:
+                raise ValueError
+            temp_path = os.path.join(temp_dir, filename)
+
+            with gzip.open(temp_path, 'rb') as f_in, \
+                    open(os.path.join(dir, os.path.splitext(filename)[0]), 'wb') as f_out:
+                shutil.copyfileobj(f_in, f_out)
+            os.remove(temp_path)
+        except Exception as exc:
+            self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
+
+        # cleanup
+        shutil.rmtree(temp_dir)
+
     @staticmethod
     def get_logger(level=logging.DEBUG, verbose=0):
         logger = logging.getLogger(__name__)
@@ -258,7 +288,7 @@ def harvest_log(log_path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
-                        choices=['all', 'edgar', 'svds', 'secrepo', 'almhuette_raith'],
+                        choices=['all', 'edgar', 'svds', 'secrepo2016', 'almhuette_raith', 'maccdc2012'],
                         nargs=1)
     parser.add_argument('--harvest', help='Harvests failed URLs from logfile',
                         type=str, nargs=1)
@@ -272,19 +302,22 @@ def main():
         harvest_log(args.harvest[0])
     elif args.dataset:
         downloader = DatasetDownloader(**vars(args))
-        if args.dataset == 'all':
+        if args.dataset[0] == 'all':
             downloader.download_edgar()
             downloader.download_svds()
-            downloader.download_secrepo()
+            downloader.download_secrepo2016()
             downloader.download_almhuette_raith()
-        elif args.dataset == 'edgar':
+            downloader.download_maccdc2012()
+        elif args.dataset[0] == 'edgar':
             downloader.download_edgar()
-        elif args.dataset == 'svds':
+        elif args.dataset[0] == 'svds':
             downloader.download_svds()
-        elif args.dataset == 'secrepo':
-            downloader.download_secrepo()
-        elif args.dataset == 'almhuette_raith':
+        elif args.dataset[0] == 'secrepo2016':
+            downloader.download_secrepo2016()
+        elif args.dataset[0] == 'almhuette_raith':
             downloader.download_almhuette_raith()
+        elif args.dataset[0] == 'maccdc2012':
+            downloader.download_maccdc2012()
     else:
         parser.print_help()
 
