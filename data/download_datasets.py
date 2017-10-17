@@ -136,7 +136,7 @@ class DatasetDownloader(object):
                             shutil.copyfileobj(f_in, f_out)
                     os.remove(zip_path)
                 except Exception as exc:
-                    self.logger.critical('Unable to download {0}: {1}'.format(url, exc))
+                    self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(url, exc))
 
             # cleanup
             executor.shutdown(True)
@@ -162,7 +162,7 @@ class DatasetDownloader(object):
             if self._download_file_with_monitor(logs_url, dir) is None:
                 raise ValueError
         except Exception as exc:
-            self.logger.critical('Unable to download {0}: {1}'.format(logs_url, exc))
+            self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
 
     def download_secrepo(self):
@@ -201,7 +201,7 @@ class DatasetDownloader(object):
                     shutil.copyfileobj(f_in, f_out)
                 os.remove(temp_path)
             except Exception as exc:
-                self.logger.critical('Unable to download {0}: {1}'.format(url, exc))
+                self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(url, exc))
 
         # cleanup
         executor.shutdown(True)
@@ -223,7 +223,7 @@ class DatasetDownloader(object):
             if self._download_file_with_monitor(logs_url, dir) is None:
                 raise ValueError
         except Exception as exc:
-            self.logger.critical('Unable to download {0}: {1}'.format(logs_url, exc))
+            self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
     @staticmethod
     def get_logger(level=logging.DEBUG, verbose=0):
@@ -244,31 +244,47 @@ class DatasetDownloader(object):
 
         return logger
 
+def harvest_log(log_path):
+    with open(log_path, 'r') as f:
+        for line in f:
+            try:
+                line_parse = line.split()
+                url_index = line_parse.index('DOWNLOAD_FAILED')
+                print line_parse[url_index + 1][:-1]
+            except:
+                print "Unable to parse: {}".format(line)
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('dataset', help='Dataset(s) to download',
-                        choices=['all', 'edgar', 'svds', 'secrepo', 'almhuette_raith'])
+    parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
+                        choices=['all', 'edgar', 'svds', 'secrepo', 'almhuette_raith'],
+                        nargs=1)
+    parser.add_argument('--harvest', help='Harvests failed URLs from logfile',
+                        type=str, nargs=1)
     parser.add_argument('--verbose', '-v', help='Logging verbosity level',
                         type=int, default=0)
     parser.add_argument('--destination', '-d', help='Download destination',
                         type=str, default=os.getcwd())
     args = parser.parse_args()
 
-    downloader = DatasetDownloader(**vars(args))
-
-    if args.dataset == 'all':
-        downloader.download_edgar()
-        downloader.download_svds()
-        downloader.download_secrepo()
-        downloader.download_almhuette_raith()
-    elif args.dataset == 'edgar':
-        downloader.download_edgar()
-    elif args.dataset == 'svds':
-        downloader.download_svds()
-    elif args.dataset == 'secrepo':
-        downloader.download_secrepo()
-    elif args.dataset == 'almhuette_raith':
-        downloader.download_almhuette_raith()
+    if args.harvest:
+        harvest_log(args.harvest[0])
+    elif args.dataset:
+        downloader = DatasetDownloader(**vars(args))
+        if args.dataset == 'all':
+            downloader.download_edgar()
+            downloader.download_svds()
+            downloader.download_secrepo()
+            downloader.download_almhuette_raith()
+        elif args.dataset == 'edgar':
+            downloader.download_edgar()
+        elif args.dataset == 'svds':
+            downloader.download_svds()
+        elif args.dataset == 'secrepo':
+            downloader.download_secrepo()
+        elif args.dataset == 'almhuette_raith':
+            downloader.download_almhuette_raith()
     else:
         parser.print_help()
 
