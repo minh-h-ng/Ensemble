@@ -35,6 +35,7 @@ numpy==1.13.3
 pandas==0.20.3
 pandocfilters==1.4.2
 pathlib2==2.3.0
+patsy==0.4.1
 pexpect==4.2.1
 pickleshare==0.7.4
 prompt-toolkit==1.0.15
@@ -47,9 +48,11 @@ pyzmq==16.0.2
 qtconsole==4.3.1
 requests==2.18.4
 scandir==1.6
+scipy==0.19.1
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
 six==1.11.0
+statsmodels==0.8.0
 subprocess32==3.2.7
 terminado==0.6
 testpath==0.3.1
