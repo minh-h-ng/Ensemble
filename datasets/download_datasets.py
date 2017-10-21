@@ -6,8 +6,7 @@ import logging.config
 import requests
 import os
 import posixpath
-from urlparse import urlsplit
-from urllib import unquote
+from urllib.parse import urlsplit, unquote
 import errno
 import tqdm
 from bs4 import BeautifulSoup
@@ -105,7 +104,7 @@ class DatasetDownloader(object):
         # Base URL of actual dataset
         base_url = 'www.sec.gov/dera/data/Public-EDGAR-log-file-data/'
 
-        year = raw_input('Enter the year [2003 ~ 2016]: ')
+        year = input('Enter the year [2003 ~ 2016]: ')
         if int(year) in range(2003, 2017):
             # Make directory
             dir = os.path.join(dir, year)
@@ -280,9 +279,9 @@ def harvest_log(log_path):
             try:
                 line_parse = line.split()
                 url_index = line_parse.index('DOWNLOAD_FAILED')
-                print line_parse[url_index + 1][:-1]
+                print(line_parse[url_index + 1][:-1])
             except:
-                print "Unable to parse: {}".format(line)
+                print("Unable to parse: {}".format(line))
 
 
 def main():
