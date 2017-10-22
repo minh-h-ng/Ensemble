@@ -1,20 +1,21 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import sys
+import concurrent.futures
+import errno
+import gzip
 import logging.config
-import requests
 import os
 import posixpath
+import re
+import shutil
+import sys
+import zipfile
 from urllib.parse import urlsplit, unquote
-import errno
+
+import requests
 import tqdm
 from bs4 import BeautifulSoup
-import re
-import gzip
-import shutil
-import zipfile
-import concurrent.futures
 
 
 class DatasetDownloader(object):
@@ -63,10 +64,10 @@ class DatasetDownloader(object):
         # download
         with requests.get(url, stream=True) as r:
             if r.status_code == requests.codes.ok:
-                filename = self._url2filename(url) # filename
+                filename = self._url2filename(url)  # filename
                 with open(os.path.join(dir_name, filename), 'wb') as f:
                     for chunk in r.iter_content(chunk_size=1024):
-                        if chunk: # filter out keep-alive new chunks
+                        if chunk:  # filter out keep-alive new chunks
                             f.write(chunk)
                 return filename
             else:
@@ -82,11 +83,12 @@ class DatasetDownloader(object):
         # download
         with requests.get(url, stream=True) as r:
             if r.status_code == requests.codes.ok:
-                filename = self._url2filename(url) # filename
-                total_size = (int(r.headers.get('content-length', 0))/1024)
+                filename = self._url2filename(url)  # filename
+                total_size = (int(r.headers.get('content-length', 0)) / 1024)
                 with open(os.path.join(dir_name, filename), 'wb') as f:
-                    for chunk in tqdm.tqdm(r.iter_content(chunk_size=1024), total=total_size, unit='B', unit_scale=True):
-                        if chunk: # filter out keep-alive new chunks
+                    for chunk in tqdm.tqdm(r.iter_content(chunk_size=1024), total=total_size, unit='B',
+                                           unit_scale=True):
+                        if chunk:  # filter out keep-alive new chunks
                             f.write(chunk)
                 return filename
             else:
@@ -141,7 +143,6 @@ class DatasetDownloader(object):
             executor.shutdown(True)
             shutil.rmtree(temp_dir)
 
-
     def download_svds(self):
         self.logger.debug('Downloading SVDS')
 
@@ -162,7 +163,6 @@ class DatasetDownloader(object):
                 raise ValueError
         except Exception as exc:
             self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
-
 
     def download_secrepo2016(self):
         self.logger.debug('Downloading SECREPO')
@@ -206,7 +206,6 @@ class DatasetDownloader(object):
         executor.shutdown(True)
         shutil.rmtree(temp_dir)
 
-
     def download_almhuette_raith(self):
         self.logger.debug('Downloading Almhuette-Raith')
 
@@ -224,7 +223,6 @@ class DatasetDownloader(object):
         except Exception as exc:
             self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
-
     def download_maccdc2012(self):
         self.logger.debug('Downloading MACCDC2012')
 
@@ -240,7 +238,7 @@ class DatasetDownloader(object):
         # Download
         try:
             filename = self._download_file_with_monitor(logs_url, temp_dir)
-            if  filename is None:
+            if filename is None:
                 raise ValueError
             temp_path = os.path.join(temp_dir, filename)
 
@@ -272,6 +270,7 @@ class DatasetDownloader(object):
         logger.addHandler(sh)
 
         return logger
+
 
 def harvest_log(log_path):
     with open(log_path, 'r') as f:
@@ -319,6 +318,7 @@ def main():
             downloader.download_maccdc2012()
     else:
         parser.print_help()
+
 
 if __name__ == '__main__':
     main()
