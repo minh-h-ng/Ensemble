@@ -57,7 +57,7 @@ for DATANAME in ${DATANAMES[@]}; do
     DATAFILE=${DATAPREFIX}${DATANAME}
     CONFIGFILE=${CONFIGPREFIX}${CONFIGNAME}
     ESNCONFIG=$ESNCONFIGDIR/$FILENAME
-    RUNS=32
+    RUNS=1
 
     # Spawn process.
     # Note: unbuffer is in the 'expect' package and ensures that the output is flushed to stdout right away.

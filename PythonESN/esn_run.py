@@ -47,13 +47,10 @@ else:
     # Construct training/test sets
     Xtr, Ytr, _, _, Xte, Yte = esnet.generate_datasets(X, Y)
 
-def single_run(dummy):
-    """
-    This function will be run by the workers.
-    """
-    _,error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
-
-    return error
+#print('Xtr:',Xtr)
+#print('Ytr:',Ytr)
+#print('Xte:',Xte)
+#print('Yte:',Yte)
 
 def main():
     # Run in parallel and store result in a numpy array
