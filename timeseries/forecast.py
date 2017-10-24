@@ -70,7 +70,7 @@ class ForecastAlgorithms:
                 ar_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
                 ar_forecast = self.rforecast.forecast(ar_fit, h=1)
                 results = np.append(results, ar_forecast[3])
-        return results
+        return np.ceil(results)
 
     def arma_simulation(self):
         """
@@ -90,7 +90,7 @@ class ForecastAlgorithms:
                 arma_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
                 arma_forecast = self.rforecast.forecast(arma_fit, h=1)
                 results = np.append(results, arma_forecast[3])
-        return results
+        return np.ceil(results)
 
     def arima_simulation(self):
         """
@@ -111,7 +111,7 @@ class ForecastAlgorithms:
                 arima_fit = self.rforecast.auto_arima(rdata)
                 arima_forecast = self.rforecast.forecast(arima_fit, h=1)
                 results = np.append(results, arima_forecast[3])
-        return results
+        return np.ceil(results)
 
     def ets_simulation(self):
         """
@@ -131,4 +131,4 @@ class ForecastAlgorithms:
                 ets_fit = self.rforecast.ets(rdata)
                 ets_forecast = self.rforecast.forecast(ets_fit, h=1)
                 results = np.append(results, ets_forecast[1])
-        return results
+        return np.ceil(results)
