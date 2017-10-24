@@ -108,3 +108,7 @@ class ForecastAlgorithms:
         arima_fit = arima.fit(disp=0)
 
         return arima_fit.forecast(n)[0]
+
+forecast = ForecastAlgorithms('/home/minh/PycharmProjects/Ensemble/processed/edgar.csv')
+print('results:',forecast.naive())
+print('results:',forecast.naive())

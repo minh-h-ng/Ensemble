@@ -1,20 +1,20 @@
 {
     "n_dim": null, 
     "regression_method": "enet", 
-    "n_internal_units": 434, 
+    "n_internal_units": 299, 
     "n_drop": 100, 
-    "noise_level": 0.07995086797918455, 
+    "noise_level": 0.08528705714272387, 
     "teacher_shift": 0.0, 
-    "input_scaling": 0.21091714297222924, 
+    "input_scaling": 0.48959863514324, 
     "input_shift": 0.0, 
     "embedding": "identity", 
     "connectivity": 0.25, 
     "embedding_parameters": null, 
-    "teacher_scaling": 0.2035588004497466, 
+    "teacher_scaling": 0.2739084968557937, 
     "regression_parameters": [
-        0.5942440631745585, 
-        0.724825190015778
+        0.922323944143821, 
+        0.8342411624721272
     ], 
-    "spectral_radius": 1.2951833478667791, 
-    "feedback_scaling": 0.12303415120484304
+    "spectral_radius": 1.3907847777063913, 
+    "feedback_scaling": 0.23792415882300855
 }
