@@ -4,8 +4,10 @@ import warnings
 
 import numpy as np
 import pandas as pd
-from statsmodels.tsa.arima_model import ARMA, ARIMA
-from statsmodels.tsa.stattools import adfuller, arma_order_select_ic
+import rpy2.robjects as robjects
+import rpy2.robjects.packages as rpackages
+import tqdm
+from rpy2.robjects import pandas2ri
 
 
 class ForecastAlgorithms:
@@ -14,7 +16,21 @@ class ForecastAlgorithms:
         Initializes data required by forecasting algorithms
         :param file_path: path to processed dataset
         """
-        self.series = series = pd.read_csv(
+        # Try importing 'forecast' package
+        try:
+            self.rforecast = rpackages.importr('forecast')
+        except:
+            # Select mirror
+            utils = rpackages.importr('utils')
+            utils.chooseCRANmirror(ind=1)
+            # Install
+            with warnings.catch_warnings():
+                warnings.filterwarnings('ignore')
+                utils.install_packages('forecast')
+            self.rforecast = rpackages.importr('forecast')
+
+        # Read csv
+        self.series = pd.read_csv(
             file_path,
             header=None,  # contains no header
             index_col=0,  # set datetime column as index
@@ -25,90 +41,93 @@ class ForecastAlgorithms:
             dtype={'requests': np.float64}  # https://git.io/vdbyk
         )
 
-    def naive(self):
-        results = np.array([])
-        for i in range(self.series.size):
-            results = np.append(results,np.repeat(self.series[i],1))
-        return results
+        # R timeseries
+        self.rts = robjects.r('ts')
 
-    def ar(self):
-        results = np.array([])
-        for i in range(self.series.size):
-            sub_series = self.series[:(i+1)]
-            if i<2:
-                results = np.append(results,sub_series.mean())
-            else:
-                ar = ARMA(sub_series, order=(1,0))
-                ar_fit = ar.fit(disp=0)
-                results = np.append(results,ar_fit.forecast(1)[0])
-        return results
-
-    def arma(self):
-        results = np.array([])
-        for i in range(self.series.size):
-            sub_series = self.series[:(i+1)]
-            if i<2:
-                results = np.append(results,sub_series.mean())
-            else:
-                ar = ARMA(sub_series, order=(1,1))
-                ar_fit = ar.fit(disp=0)
-                results = np.append(results,ar_fit.forecast(1)[0])
-        return results
-
-    def naive_forecast(self, n=1):
+    def naive_simulation(self):
         """
         Forecasts number of requests using naive algorithm
-        :param n: number of out-of-sample hours for which forecast is requested
-        :return: forecasts for all n hours
+        :return: forecasts for all hours
         """
-        last_index = self.series.last_valid_index()
-        return np.repeat(self.series[last_index], n)
+        return np.append(np.nan, self.series.values[:-1])
 
-    def ar_forecast(self, n=1):
+    def ar_simulation(self):
         """
         Forecasts number of requests using AR(1) model
-        :param n: number of out-of-sample hours for which forecast is requested
         :return: forecasts for all n hours
         """
-        ar = ARMA(self.series, order=(1, 0))
-        ar_fit = ar.fit(disp=0)
-        return ar_fit.forecast(n)[0]
+        pandas2ri.activate()
+        results = np.array([np.nan])
 
-    def arma_forecast(self, n=1):
+        # TODO: parallelize
+        for i in tqdm.tqdm(range(self.series.size - 1)):
+            sub_series = self.series[:(i + 1)]
+            if i < 2:
+                results = np.append(results, sub_series.mean())
+            else:
+                rdata = self.rts(sub_series)
+                ar_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
+                ar_forecast = self.rforecast.forecast(ar_fit, h=1)
+                results = np.append(results, ar_forecast[3])
+        return results
+
+    def arma_simulation(self):
         """
         Forecasts number of requests using ARMA(1,1) model
-        :param n: number of out-of-sample hours for which forecast is requested
         :return: forecasts for all n hours
         """
-        arma = ARMA(self.series, order=(1, 1))
-        arma_fit = arma.fit(disp=0)
-        return arma_fit.forecast(n)[0]
+        pandas2ri.activate()
+        results = np.array([np.nan])
 
-    def arima_forecast(self, n=1):
+        # TODO: parallelize
+        for i in tqdm.tqdm(range(self.series.size - 1)):
+            sub_series = self.series[:(i + 1)]
+            if i < 2:
+                results = np.append(results, sub_series.mean())
+            else:
+                rdata = self.rts(sub_series)
+                arma_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
+                arma_forecast = self.rforecast.forecast(arma_fit, h=1)
+                results = np.append(results, arma_forecast[3])
+        return results
+
+    def arima_simulation(self):
         """
         Forecasts number of requests using ARIMA(p,d,q) model.
         The parameters (p,d,q) are auto-tuned.
-        :param n: number of out-of-sample hours for which forecast is requested
         :return: forecasts for all n hours
         """
-        # Test for stationarity
-        dftest = adfuller(self.series, autolag='AIC')
-        assert dftest[0] < dftest[4]['5%']  # Test Statistic < Critical Value (5%)
-        assert dftest[1] < 0.05  # p-value < 0.05
+        pandas2ri.activate()
+        results = np.array([np.nan])
 
-        # Select p and q
-        with warnings.catch_warnings():
-            warnings.filterwarnings("ignore")
-            arma_params = arma_order_select_ic(self.series, fit_kw=dict(method='css'))
+        # TODO: parallelize
+        for i in tqdm.tqdm(range(self.series.size - 1)):
+            sub_series = self.series[:(i + 1)]
+            if i < 2:
+                results = np.append(results, sub_series.mean())
+            else:
+                rdata = self.rts(sub_series)
+                arima_fit = self.rforecast.auto_arima(rdata)
+                arima_forecast = self.rforecast.forecast(arima_fit, h=1)
+                results = np.append(results, arima_forecast[3])
+        return results
 
-        p = arma_params.bic_min_order[0]
-        q = arma_params.bic_min_order[1]
+    def ets_simulation(self):
+        """
+        Forecasts number of requests using ETS model.
+        :return: forecasts for all n hours
+        """
+        pandas2ri.activate()
+        results = np.array([np.nan])
 
-        arima = ARIMA(self.series, order=(p, 0, q))
-        arima_fit = arima.fit(disp=0)
-
-        return arima_fit.forecast(n)[0]
-
-forecast = ForecastAlgorithms('/home/minh/PycharmProjects/Ensemble/processed/edgar.csv')
-print('results:',forecast.naive())
-print('results:',forecast.naive())
+        # TODO: parallelize
+        for i in tqdm.tqdm(range(self.series.size - 1)):
+            sub_series = self.series[:(i + 1)]
+            if i < 2:
+                results = np.append(results, sub_series.mean())
+            else:
+                rdata = self.rts(sub_series)
+                ets_fit = self.rforecast.ets(rdata)
+                ets_forecast = self.rforecast.forecast(ets_fit, h=1)
+                results = np.append(results, ets_forecast[1])
+        return results
