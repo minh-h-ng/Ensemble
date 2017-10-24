@@ -27,13 +27,13 @@ class ForecastAlgorithms:
 
     def naive(self):
         results = np.array([])
-        for i in range(self.series.size):
+        for i in range(self.series.size-1):
             results = np.append(results,np.repeat(self.series[i],1))
         return results
 
     def ar(self):
         results = np.array([])
-        for i in range(self.series.size):
+        for i in range(self.series.size-1):
             sub_series = self.series[:(i+1)]
             if i<2:
                 results = np.append(results,sub_series.mean())
@@ -45,7 +45,7 @@ class ForecastAlgorithms:
 
     def arma(self):
         results = np.array([])
-        for i in range(self.series.size):
+        for i in range(self.series.size-1):
             sub_series = self.series[:(i+1)]
             if i<2:
                 results = np.append(results,sub_series.mean())

@@ -51,29 +51,13 @@ done
 # Initialize the experiment
 idx_i=0
 idx_j=0
-
-#Lorenz MG MS MSO NARMA
-#echo ${DATANAMES[@]}
-
-#enet_identity enet_kpca enet_pca lasso_identity lasso_kpca lasso_pca nusvr_identity nusvr_kpca nusvr_pca ridge_identity ridge_kpca ridge_pca
-#echo ${CONFIGNAMES[@]}
-
-#./data/
-#echo ${DATAPREFIX}
-
-#./configs/user/
-#echo ${CONFIGPREFIX}
-
-#./configs/esn
-#echo $ESNCONFIGDIR
-
 for DATANAME in ${DATANAMES[@]}; do
   for CONFIGNAME in ${CONFIGNAMES[@]}; do
     FILENAME=${DATANAME}_${CONFIGNAME}
     DATAFILE=${DATAPREFIX}${DATANAME}
     CONFIGFILE=${CONFIGPREFIX}${CONFIGNAME}
     ESNCONFIG=$ESNCONFIGDIR/$FILENAME
-    RUNS=1
+    RUNS=32
 
     # Spawn process.
     # Note: unbuffer is in the 'expect' package and ensures that the output is flushed to stdout right away.

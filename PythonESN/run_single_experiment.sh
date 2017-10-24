@@ -13,8 +13,8 @@ RUNS=$4
 #RUNS=30
 
 # Tune parameters. Note: the config file for the best parameters are saved at the location in $ESNCONFIG
-#python -m scoop -n 4 ./genoptesn.py $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
+#python -m scoop -n 2 ./genoptesn.py $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
 
 # Run experiments with these parameters
-#python -m scoop -n 4 ./esn_experiment.py $DATAFILE $ESNCONFIG $RUNS
+#python -m scoop -n 2 ./esn_experiment.py $DATAFILE $ESNCONFIG $RUNS
 python ./esn_run.py $DATAFILE $ESNCONFIG $RUNS
