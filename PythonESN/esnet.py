@@ -350,9 +350,16 @@ def load_lorenz(path, shift):
     return X, Y
 
 def load_from_text(path):
-    data = np.loadtxt(path)
+    data = np.genfromtxt(path, dtype=None, delimiter=',')
+    #data = np.loadtxt(path)
 
-    return np.atleast_2d(data[:, 0]).T, np.atleast_2d(data[:, 1]).T
+    print('data:',data)
+
+    print('X:',data)
+
+    print('Y:',np.atleast_2d(data[:, 1]).T)
+
+    return data, np.atleast_2d(data[:, 1]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

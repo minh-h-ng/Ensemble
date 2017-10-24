@@ -51,7 +51,6 @@ optconfig = paramhelper._optimization
 # Load data
 ############################################################################
 logger.info("Loading data (%s)"%args.data)
-
 # If the data is stored in a directory, load the data from there. Otherwise,
 # load from the single file and split it.
 if os.path.isdir(args.data):
