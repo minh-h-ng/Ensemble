@@ -25,6 +25,36 @@ class ForecastAlgorithms:
             dtype={'requests': np.float64}  # https://git.io/vdbyk
         )
 
+    def naive(self):
+        results = np.array([])
+        for i in range(self.series.size):
+            results = np.append(results,np.repeat(self.series[i],1))
+        return results
+
+    def ar(self):
+        results = np.array([])
+        for i in range(self.series.size):
+            sub_series = self.series[:(i+1)]
+            if i<2:
+                results = np.append(results,sub_series.mean())
+            else:
+                ar = ARMA(sub_series, order=(1,0))
+                ar_fit = ar.fit(disp=0)
+                results = np.append(results,ar_fit.forecast(1)[0])
+        return results
+
+    def arma(self):
+        results = np.array([])
+        for i in range(self.series.size):
+            sub_series = self.series[:(i+1)]
+            if i<2:
+                results = np.append(results,sub_series.mean())
+            else:
+                ar = ARMA(sub_series, order=(1,1))
+                ar_fit = ar.fit(disp=0)
+                results = np.append(results,ar_fit.forecast(1)[0])
+        return results
+
     def naive_forecast(self, n=1):
         """
         Forecasts number of requests using naive algorithm
