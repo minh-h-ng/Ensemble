@@ -1,0 +1,47 @@
+[2017-10-24 15:47:12,957] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-10-24 15:47:12,957] launcher  INFO    Deploying 2 worker(s) over 1 host(s).
+[2017-10-24 15:47:12,957] launcher  INFO    Worker distribution: 
+[2017-10-24 15:47:12,957] launcher  INFO       127.0.0.1:	1 + origin
+2017-10-24 15:47:13,167 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-24 15:47:13,167 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-10-24 15:47:13,168 root            INFO     Loading data (./data/Lorenz)
+2017-10-24 15:47:13,178 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-24 15:47:13,179 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-10-24 15:47:13,179 root            INFO     Loading data (./data/Lorenz)
+2017-10-24 15:47:13,222 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-24 15:47:13,222 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-24 15:47:13,223 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-10-24 15:47:13,223 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-10-24 15:47:13,223 root            INFO     Loading data (./data/Lorenz)
+2017-10-24 15:47:13,223 root            INFO     Loading data (./data/Lorenz)
+2017-10-24 15:47:13,254 root            INFO     Initializing genetic algorithm
+2017-10-24 15:47:13,254 root            INFO     Initializing genetic algorithm
+2017-10-24 15:47:13,255 root            INFO     Running GA optimization
+2017-10-24 15:47:13,255 root            INFO     Running GA optimization
+gen	nevals	avg    	std       	min    	max    
+0  	2     	1.00884	0.00622541	1.00262	1.01507
+1  	1     	1.00262	0         	1.00262	1.00262
+2  	1     	1.00262	0         	1.00262	1.00262
+2017-10-24 15:47:26,111 root            INFO     Saving the best parameters
+2017-10-24 15:47:26,111 root            INFO     Saving the best parameters
+2017-10-24 15:47:26,112 root            INFO     Done
+2017-10-24 15:47:26,112 root            INFO     Done
+[2017-10-24 15:47:26,439] launcher  (127.0.0.1:58988) INFO    Root process is done.
+[2017-10-24 15:47:26,440] launcher  (127.0.0.1:58988) INFO    Finished cleaning spawned subprocesses.
+[2017-10-24 15:47:26,468] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-10-24 15:47:26,468] launcher  INFO    Deploying 2 worker(s) over 1 host(s).
+[2017-10-24 15:47:26,468] launcher  INFO    Worker distribution: 
+[2017-10-24 15:47:26,469] launcher  INFO       127.0.0.1:	1 + origin
+Errors:
+[ 1.04184279  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279
+  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279
+  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279
+  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279
+  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279  1.04184279
+  1.04184279  1.04184279]
+Mean:
+1.04184278887
+Std:
+0.0
+[2017-10-24 15:47:54,758] launcher  (127.0.0.1:53201) INFO    Root process is done.
+[2017-10-24 15:47:54,758] launcher  (127.0.0.1:53201) INFO    Finished cleaning spawned subprocesses.
