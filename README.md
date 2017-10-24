@@ -1,6 +1,11 @@
+## Configure repository
+Follow the instructions [here](https://cran.rstudio.com/bin/linux/ubuntu/#installation)
+and configure your apt repositories for R's installation.
+We have listed the packages to install below.
+
 ## Install system dependencies
 ```bash
-$ sudo apt-get install python3-dev
+$ sudo apt-get install python3-dev python-virtualenv r-base libcurl4-openssl-dev
 ```
 
 # Create virtual environment

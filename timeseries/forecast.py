@@ -7,6 +7,7 @@ import pandas as pd
 import rpy2.robjects as robjects
 import rpy2.robjects.packages as rpackages
 import tqdm
+from rpy2.rinterface import RRuntimeError
 from rpy2.robjects import pandas2ri
 
 
@@ -19,7 +20,7 @@ class ForecastAlgorithms:
         # Try importing 'forecast' package
         try:
             self.rforecast = rpackages.importr('forecast')
-        except:
+        except RRuntimeError:
             # Select mirror
             utils = rpackages.importr('utils')
             utils.chooseCRANmirror(ind=1)
