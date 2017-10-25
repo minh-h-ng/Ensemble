@@ -305,7 +305,44 @@ def format_config(n_internal_units, spectral_radius, connectivity, input_scaling
 
     return config
 
-def generate_datasets(X, Y, test_percent = 0.15, val_percent = 0.15, scaler = StandardScaler):
+def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
+    n_data,_ = X.shape
+
+    #n_te = np.ceil(test_percent*n_data).astype(int)
+    n_te=1
+    n_val = np.ceil(val_percent*n_data).astype(int)
+    n_tr = n_data - n_te - n_val
+
+    # Split dataset
+    Xtr = X[:n_tr, :]
+    Ytr = Y[:n_tr, :]
+
+    Xval = X[n_tr:-n_te, :]
+    Yval = Y[n_tr:-n_te, :]
+
+    Xte = X[-102:,:]
+    Yte = Y[-102:,:]
+    #Xte = X[-n_te:, :]
+    #Yte = Y[-n_te:, :]
+
+    # Scale
+    Xscaler = scaler()
+    Yscaler = scaler()
+
+    # Fit scaler on training set
+    Xtr = Xscaler.fit_transform(Xtr)
+    Ytr = Yscaler.fit_transform(Ytr)
+
+    # Transform the rest
+    Xval = Xscaler.transform(Xval)
+    Yval = Yscaler.transform(Yval)
+
+    Xte = Xscaler.transform(Xte)
+    Yte = Yscaler.transform(Yte)
+
+    return Xtr, Ytr, Xval, Yval, Xte, Yte, Yscaler
+
+"""def generate_datasets(X, Y, test_percent = 0.15, val_percent = 0.15, scaler = StandardScaler):
     n_data,_ = X.shape
 
     n_te = np.ceil(test_percent*n_data).astype(int)
@@ -337,7 +374,7 @@ def generate_datasets(X, Y, test_percent = 0.15, val_percent = 0.15, scaler = St
     Xte = Xscaler.transform(Xte)
     Yte = Yscaler.transform(Yte)
 
-    return Xtr, Ytr, Xval, Yval, Xte, Yte
+    return Xtr, Ytr, Xval, Yval, Xte, Yte"""
 
 def construct_output(X, shift):
     return X[:-shift,:], X[shift:, :]
@@ -353,13 +390,11 @@ def load_from_text(path):
     data = np.genfromtxt(path, dtype=None, delimiter=',')
     #data = np.loadtxt(path)
 
-    print('data:',data)
+    #print('data:',data)
+    #print('X:',np.atleast_2d(data[:,[0,1]]))
+    #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    print('X:',data)
-
-    print('Y:',np.atleast_2d(data[:, 1]).T)
-
-    return data, np.atleast_2d(data[:, 1]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4]]), np.atleast_2d(data[:, 5]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

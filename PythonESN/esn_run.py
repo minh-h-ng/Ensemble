@@ -38,25 +38,40 @@ config = json.load(open(args.esnconfig + '.json', 'r'))
 ############################################################################
 # If the data is stored in a directory, load the data from there. Otherwise,
 # load from the single file and split it.
-if os.path.isdir(args.data):
+"""if os.path.isdir(args.data):
     Xtr, Ytr, _, _, Xte, Yte = esnet.load_from_dir(args.data)
 
 else:
     X, Y = esnet.load_from_text(args.data)
 
     # Construct training/test sets
-    Xtr, Ytr, _, _, Xte, Yte = esnet.generate_datasets(X, Y)
-
-#print('Xtr:',Xtr)
-#print('Ytr:',Ytr)
-#print('Xte:',Xte)
-#print('Yte:',Yte)
+    Xtr, Ytr, _, _, Xte, Yte, Yscaler = esnet.generate_datasets(X, Y)"""
 
 def main():
     # Run in parallel and store result in a numpy array
-    Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
-    print('predictions:',Yhat)
-    print('error:',error)
+    X, Y = esnet.load_from_text(args.data)
+    predictions = []
+    count = 0
+    for i in range(150,len(X)):
+        Xtr, Ytr, _, _, Xte, Yte, Yscaler = esnet.generate_datasets(X[:i], Y[:i])
+        Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
+        Yhat = np.rint(Yscaler.inverse_transform(Yhat))
+        #print('predictions:',Yhat)
+        #print('error:',error)
+        predictions.append(Yhat[len(Yhat)-1][0])
+        count+=1
+        if count%100==0:
+            print('predictions made:',count)
+
+    curPath = os.getcwd().split('/')
+    writePath = ''
+    for i in range(len(curPath)):
+        writePath += curPath[i] + '/'
+    writePath += 'predictions/predictions'
+
+    with open(writePath,'w') as f:
+        for value in predictions:
+            f.write(str(value) + '\n')
 
 if __name__ == "__main__":
     main()
