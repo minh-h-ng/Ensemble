@@ -152,16 +152,12 @@ class ForecastAlgorithms:
 
 
 if __name__ == '__main__':
-    curPath = os.getcwd().split('/')
-    dataPath = ''
-    for i in range(len(curPath) - 1):
-        dataPath += curPath[i] + '/'
-    dataPath += 'processed/nasa.csv'
+    # script's directory
+    dir_path = os.path.dirname(os.path.realpath(__file__))
 
-    writePath = ''
-    for i in range(len(curPath) - 1):
-        writePath += curPath[i] + '/'
-    writePath += 'PythonESN/data/nasa'
+    # read, write files
+    dataPath = os.path.join(dir_path, '..', 'processed', 'nasa.csv')
+    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data', 'nasa')
 
     # forecast
     forecast = ForecastAlgorithms(dataPath)
