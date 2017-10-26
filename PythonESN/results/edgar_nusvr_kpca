@@ -1,0 +1,68 @@
+[2017-10-26 06:18:37,885] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-10-26 06:18:37,885] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-10-26 06:18:37,885] launcher  INFO    Worker distribution: 
+[2017-10-26 06:18:37,885] launcher  INFO       127.0.0.1:	3 + origin
+2017-10-26 06:18:38,100 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,100 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,101 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,101 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,101 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,101 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,112 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,112 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,113 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,132 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,132 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,133 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,133 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,133 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 06:18:38,133 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,133 parameterhelper INFO     Config: ./configs/user/nusvr_kpca (overload)
+2017-10-26 06:18:38,134 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,134 root            INFO     Loading data (./data/edgar)
+2017-10-26 06:18:38,146 root            INFO     Initializing genetic algorithm
+2017-10-26 06:18:38,146 root            INFO     Initializing genetic algorithm
+2017-10-26 06:18:38,149 root            INFO     Running GA optimization
+2017-10-26 06:18:38,149 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min       	max    
+0  	50    	1.16914	1.63412	0.00223214	9.62561
+1  	26    	0.626389	0.307802	0.00223214	1.16276
+2  	20    	0.648479	0.223458	0.002331  	0.887931
+3  	26    	0.670531	0.149322	0.230303  	0.857923
+4  	29    	0.66726 	0.142996	0.230303  	0.804791
+5  	24    	0.674422	0.119943	0.554217  	0.800837
+6  	25    	0.672892	0.118366	0.554217  	0.796691
+7  	25    	0.672068	0.117531	0.554545  	0.798914
+8  	26    	0.670268	0.119504	0.409091  	0.793446
+9  	25    	0.671605	0.11706 	0.554545  	0.788671
+10 	24    	0.671598	0.117053	0.554545  	0.788671
+11 	26    	0.671627	0.117082	0.554545  	0.79283 
+12 	25    	0.671508	0.116963	0.554545  	0.788671
+13 	24    	0.671397	0.116853	0.554545  	0.788671
+14 	26    	0.671198	0.116656	0.554545  	0.788671
+15 	25    	0.670758	0.116216	0.554545  	0.78853 
+16 	26    	0.670496	0.115958	0.554545  	0.79734 
+17 	21    	0.670194	0.115648	0.554545  	0.785842
+18 	23    	0.670194	0.115648	0.554545  	0.785842
+19 	23    	0.670194	0.115648	0.554545  	0.785842
+20 	27    	0.670208	0.115662	0.554545  	0.787236
+2017-10-26 07:28:55,449 root            INFO     Saving the best parameters
+2017-10-26 07:28:55,449 root            INFO     Saving the best parameters
+2017-10-26 07:28:55,450 root            INFO     Done
+2017-10-26 07:28:55,450 root            INFO     Done
+[2017-10-26 07:28:55,790] launcher  (127.0.0.1:60246) INFO    Root process is done.
+[2017-10-26 07:28:55,790] launcher  (127.0.0.1:60246) INFO    Finished cleaning spawned subprocesses.
+Traceback (most recent call last):
+  File "./esn_run.py", line 77, in <module>
+    main()
+  File "./esn_run.py", line 57, in main
+    Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 253, in run_from_config
+    Yhat,error = esn.predict(Xte, Yte)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 123, in predict
+    Yhat, error, _, _ = self._predict_transform(X = X, Y = Y, n_drop = n_drop, error_function = error_function)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 129, in _predict_transform
+    states,embedded_states,Yhat = self._compute_state_matrix(X = X, n_drop = n_drop)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 184, in _compute_state_matrix
+    embedded_states[i - n_drop, :] = current_embedding.flatten()
+ValueError: could not broadcast input array from shape (26) into shape (183)

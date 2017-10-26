@@ -154,12 +154,12 @@ curPath = os.getcwd().split('/')
 dataPath = ''
 for i in range(len(curPath)-1):
     dataPath += curPath[i]+'/'
-dataPath += 'processed/edgar.csv'
+dataPath += 'processed/nasa.csv'
 
 writePath = ''
 for i in range(len(curPath)-1):
     writePath += curPath[i]+'/'
-writePath += 'PythonESN/data/edgar'
+writePath += 'PythonESN/data/nasa'
 
 forecast = ForecastAlgorithms(dataPath)
 naive_results = forecast.naive_simulation()
@@ -168,10 +168,22 @@ arma_results = forecast.arma_simulation()
 arima_results = forecast.arma_simulation()
 ets_results = forecast.ets_simulation()
 
+for i in range(len(naive_results)):
+    if naive_results[i]<0:
+        naive_results[i]=0
+    if ar_results[i]<0:
+        ar_results[i]=0
+    if arma_results[i]<0:
+        arma_results[i]=0
+    if arima_results[i]<0:
+        arima_results[i]=0
+    if ets_results[i]<0:
+        ets_results[i]=0
+
 with open(writePath,'w') as f:
     for i in range(1,len(naive_results)):
         line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
                + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
-               + str(ets_results[i]) + ',' + str(forecast.series[i])
+               + str(ets_results[i]) + ',' + str(forecast.series[i-1]) + ',' + str(forecast.series[i])
         #line = str(naive_results[i])
         f.write(line+'\n')

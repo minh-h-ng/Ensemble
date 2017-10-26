@@ -1,0 +1,17 @@
+{
+    "n_dim": 1, 
+    "regression_method": "ridge", 
+    "n_internal_units": 120, 
+    "n_drop": 100, 
+    "noise_level": 0.035802849958470474, 
+    "teacher_shift": 0.0, 
+    "input_scaling": 0.12815986039358657, 
+    "input_shift": 0.0, 
+    "embedding": "pca", 
+    "connectivity": 0.25, 
+    "embedding_parameters": null, 
+    "teacher_scaling": 0.7372856633763835, 
+    "regression_parameters": 0.1536243619217745, 
+    "spectral_radius": 1.1587850489252784, 
+    "feedback_scaling": 0.5546915787713728
+}

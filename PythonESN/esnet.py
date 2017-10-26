@@ -320,8 +320,8 @@ def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
     Xval = X[n_tr:-n_te, :]
     Yval = Y[n_tr:-n_te, :]
 
-    Xte = X[-102:,:]
-    Yte = Y[-102:,:]
+    Xte = X
+    Yte = Y
     #Xte = X[-n_te:, :]
     #Yte = Y[-n_te:, :]
 
@@ -394,7 +394,7 @@ def load_from_text(path):
     #print('X:',np.atleast_2d(data[:,[0,1]]))
     #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    return np.atleast_2d(data[:, [0,1,2,3,4]]), np.atleast_2d(data[:, 5]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

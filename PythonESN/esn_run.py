@@ -67,7 +67,8 @@ def main():
     writePath = ''
     for i in range(len(curPath)):
         writePath += curPath[i] + '/'
-    writePath += 'predictions/predictions'
+    configs = args.esnconfig.split('/')
+    writePath += 'predictions/predictions_' + configs[-1]
 
     with open(writePath,'w') as f:
         for value in predictions:

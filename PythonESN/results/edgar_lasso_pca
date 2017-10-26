@@ -1,0 +1,68 @@
+[2017-10-26 05:23:46,753] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-10-26 05:23:46,753] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-10-26 05:23:46,753] launcher  INFO    Worker distribution: 
+[2017-10-26 05:23:46,753] launcher  INFO       127.0.0.1:	3 + origin
+2017-10-26 05:23:46,969 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:46,969 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:46,969 root            INFO     Loading data (./data/edgar)
+2017-10-26 05:23:46,973 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:46,973 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:46,974 root            INFO     Loading data (./data/edgar)
+2017-10-26 05:23:46,980 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:46,980 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:46,980 root            INFO     Loading data (./data/edgar)
+2017-10-26 05:23:46,994 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:46,994 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:46,994 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:46,994 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:46,994 root            INFO     Loading data (./data/edgar)
+2017-10-26 05:23:46,994 root            INFO     Loading data (./data/edgar)
+2017-10-26 05:23:47,007 root            INFO     Initializing genetic algorithm
+2017-10-26 05:23:47,007 root            INFO     Initializing genetic algorithm
+2017-10-26 05:23:47,009 root            INFO     Running GA optimization
+2017-10-26 05:23:47,009 root            INFO     Running GA optimization
+2017-10-26 05:23:47,045 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-10-26 05:23:47,045 parameterhelper INFO     Config: ./configs/user/lasso_pca (overload)
+2017-10-26 05:23:47,045 root            INFO     Loading data (./data/edgar)
+gen	nevals	avg     	std     	min       	max    
+0  	50    	0.913191	0.489399	0.00915332	2.14284
+1  	26    	0.814539	0.434846	0.00915332	1.4186 
+2  	26    	0.767926	0.406016	0.0557276 	1.23499
+3  	23    	0.819058	0.333484	0.0928571 	1.13264
+4  	26    	0.718097	0.369851	0.0928571 	1.07922
+5  	22    	0.735906	0.308119	0.0930851 	1.08361
+6  	26    	0.76819 	0.257867	0.313846  	1.00169
+7  	22    	0.820474	0.191827	0.313846  	0.969978
+8  	27    	0.818199	0.189396	0.313846  	1.01746 
+9  	22    	0.856768	0.0808292	0.313846  	0.935788
+10 	27    	0.8523  	0.0512604	0.801223  	0.935788
+11 	27    	0.845054	0.0448308	0.802508  	0.913526
+12 	21    	0.838242	0.0386052	0.802508  	0.904081
+13 	27    	0.827946	0.0281225	0.802508  	0.877911
+14 	28    	0.823429	0.0237837	0.802508  	0.926504
+15 	26    	0.820695	0.0181876	0.802508  	0.838883
+16 	20    	0.820695	0.0181876	0.802508  	0.838883
+17 	25    	0.820695	0.0181876	0.802508  	0.838883
+18 	21    	0.820695	0.0181876	0.802508  	0.838883
+19 	23    	0.820695	0.0181876	0.802508  	0.838883
+20 	22    	0.820695	0.0181876	0.802508  	0.838883
+2017-10-26 05:29:45,748 root            INFO     Saving the best parameters
+2017-10-26 05:29:45,748 root            INFO     Saving the best parameters
+2017-10-26 05:29:45,748 root            INFO     Done
+2017-10-26 05:29:45,748 root            INFO     Done
+[2017-10-26 05:29:46,087] launcher  (127.0.0.1:40209) INFO    Root process is done.
+[2017-10-26 05:29:46,087] launcher  (127.0.0.1:40209) INFO    Finished cleaning spawned subprocesses.
+Traceback (most recent call last):
+  File "./esn_run.py", line 77, in <module>
+    main()
+  File "./esn_run.py", line 57, in main
+    Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 253, in run_from_config
+    Yhat,error = esn.predict(Xte, Yte)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 123, in predict
+    Yhat, error, _, _ = self._predict_transform(X = X, Y = Y, n_drop = n_drop, error_function = error_function)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 129, in _predict_transform
+    states,embedded_states,Yhat = self._compute_state_matrix(X = X, n_drop = n_drop)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 184, in _compute_state_matrix
+    embedded_states[i - n_drop, :] = current_embedding.flatten()
+ValueError: could not broadcast input array from shape (26) into shape (256)

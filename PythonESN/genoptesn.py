@@ -54,13 +54,13 @@ logger.info("Loading data (%s)"%args.data)
 # If the data is stored in a directory, load the data from there. Otherwise,
 # load from the single file and split it.
 if os.path.isdir(args.data):
-    Xtr, Ytr, Xval, Yval, _, _ = esnet.load_from_dir(args.data)
+    Xtr, Ytr, Xval, Yval, _, _, Yscaler = esnet.load_from_dir(args.data)
 
 else:
     X, Y = esnet.load_from_text(args.data)
 
     # Construct training/test sets
-    Xtr, Ytr, Xval, Yval, _, _ = esnet.generate_datasets(X, Y)
+    Xtr, Ytr, Xval, Yval, _, _, Yscaler= esnet.generate_datasets(X, Y)
 
 ############################################################################
 # Initialization of the genetic algorithm
