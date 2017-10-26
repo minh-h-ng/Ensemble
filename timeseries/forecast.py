@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import warnings
 import os
+import warnings
 
 import numpy as np
 import pandas as pd
@@ -63,8 +63,8 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1)):
-            if i>=500:
-                sub_series = self.series[(i-499):(i+1)]
+            if i >= 500:
+                sub_series = self.series[(i - 499):(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -74,7 +74,7 @@ class ForecastAlgorithms:
                 ar_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
                 ar_forecast = self.rforecast.forecast(ar_fit, h=1)
                 results = np.append(results, ar_forecast[3])
-        #return np.ceil(results)
+        # return np.ceil(results)
         return np.rint(results)
 
     def arma_simulation(self):
@@ -87,8 +87,8 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1)):
-            if i>=500:
-                sub_series = self.series[(i-499):(i+1)]
+            if i >= 500:
+                sub_series = self.series[(i - 499):(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -98,7 +98,7 @@ class ForecastAlgorithms:
                 arma_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
                 arma_forecast = self.rforecast.forecast(arma_fit, h=1)
                 results = np.append(results, arma_forecast[3])
-        #return np.ceil(results)
+        # return np.ceil(results)
         return np.rint(results)
 
     def arima_simulation(self):
@@ -112,8 +112,8 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1)):
-            if i>=500:
-                sub_series = self.series[(i-499):(i+1)]
+            if i >= 500:
+                sub_series = self.series[(i - 499):(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -123,7 +123,7 @@ class ForecastAlgorithms:
                 arima_fit = self.rforecast.auto_arima(rdata)
                 arima_forecast = self.rforecast.forecast(arima_fit, h=1)
                 results = np.append(results, arima_forecast[3])
-        #return np.ceil(results)
+        # return np.ceil(results)
         return np.rint(results)
 
     def ets_simulation(self):
@@ -136,8 +136,8 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1)):
-            if i>=500:
-                sub_series = self.series[(i-499):(i+1)]
+            if i >= 500:
+                sub_series = self.series[(i - 499):(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 3:
@@ -147,43 +147,45 @@ class ForecastAlgorithms:
                 ets_fit = self.rforecast.ets(rdata)
                 ets_forecast = self.rforecast.forecast(ets_fit, h=1)
                 results = np.append(results, ets_forecast[1])
-        #return np.ceil(results)
+        # return np.ceil(results)
         return np.rint(results)
 
-curPath = os.getcwd().split('/')
-dataPath = ''
-for i in range(len(curPath)-1):
-    dataPath += curPath[i]+'/'
-dataPath += 'processed/nasa.csv'
 
-writePath = ''
-for i in range(len(curPath)-1):
-    writePath += curPath[i]+'/'
-writePath += 'PythonESN/data/nasa'
+if __name__ == '__main__':
+    curPath = os.getcwd().split('/')
+    dataPath = ''
+    for i in range(len(curPath) - 1):
+        dataPath += curPath[i] + '/'
+    dataPath += 'processed/nasa.csv'
 
-forecast = ForecastAlgorithms(dataPath)
-naive_results = forecast.naive_simulation()
-ar_results = forecast.ar_simulation()
-arma_results = forecast.arma_simulation()
-arima_results = forecast.arma_simulation()
-ets_results = forecast.ets_simulation()
+    writePath = ''
+    for i in range(len(curPath) - 1):
+        writePath += curPath[i] + '/'
+    writePath += 'PythonESN/data/nasa'
 
-for i in range(len(naive_results)):
-    if naive_results[i]<0:
-        naive_results[i]=0
-    if ar_results[i]<0:
-        ar_results[i]=0
-    if arma_results[i]<0:
-        arma_results[i]=0
-    if arima_results[i]<0:
-        arima_results[i]=0
-    if ets_results[i]<0:
-        ets_results[i]=0
+    forecast = ForecastAlgorithms(dataPath)
+    naive_results = forecast.naive_simulation()
+    ar_results = forecast.ar_simulation()
+    arma_results = forecast.arma_simulation()
+    arima_results = forecast.arma_simulation()
+    ets_results = forecast.ets_simulation()
 
-with open(writePath,'w') as f:
-    for i in range(1,len(naive_results)):
-        line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
-               + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
-               + str(ets_results[i]) + ',' + str(forecast.series[i-1]) + ',' + str(forecast.series[i])
-        #line = str(naive_results[i])
-        f.write(line+'\n')
+    for i in range(len(naive_results)):
+        if naive_results[i] < 0:
+            naive_results[i] = 0
+        if ar_results[i] < 0:
+            ar_results[i] = 0
+        if arma_results[i] < 0:
+            arma_results[i] = 0
+        if arima_results[i] < 0:
+            arima_results[i] = 0
+        if ets_results[i] < 0:
+            ets_results[i] = 0
+
+    with open(writePath, 'w') as f:
+        for i in range(1, len(naive_results)):
+            line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
+                   + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
+                   + str(ets_results[i]) + ',' + str(forecast.series[i - 1]) + ',' + str(forecast.series[i])
+            # line = str(naive_results[i])
+            f.write(line + '\n')

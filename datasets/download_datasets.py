@@ -17,6 +17,7 @@ import requests
 import tqdm
 from bs4 import BeautifulSoup
 
+
 class DatasetDownloader(object):
     def __init__(self, **kwargs):
         default_attr = dict(verbose=0, destination=os.getcwd())
