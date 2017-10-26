@@ -163,6 +163,7 @@ if __name__ == '__main__':
         writePath += curPath[i] + '/'
     writePath += 'PythonESN/data/nasa'
 
+    # forecast
     forecast = ForecastAlgorithms(dataPath)
     naive_results = forecast.naive_simulation()
     ar_results = forecast.ar_simulation()
@@ -170,17 +171,12 @@ if __name__ == '__main__':
     arima_results = forecast.arma_simulation()
     ets_results = forecast.ets_simulation()
 
-    for i in range(len(naive_results)):
-        if naive_results[i] < 0:
-            naive_results[i] = 0
-        if ar_results[i] < 0:
-            ar_results[i] = 0
-        if arma_results[i] < 0:
-            arma_results[i] = 0
-        if arima_results[i] < 0:
-            arima_results[i] = 0
-        if ets_results[i] < 0:
-            ets_results[i] = 0
+    # replace < 0 with 0
+    naive_results[naive_results < 0] = 0
+    ar_results[ar_results < 0] = 0
+    arma_results[arma_results < 0] = 0
+    arima_results[arima_results < 0] = 0
+    ets_results[ets_results < 0] = 0
 
     with open(writePath, 'w') as f:
         for i in range(1, len(naive_results)):
