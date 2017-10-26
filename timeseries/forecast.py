@@ -62,7 +62,7 @@ class ForecastAlgorithms:
         results = np.array([np.nan])
 
         # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1)):
+        for i in tqdm.tqdm(range(self.series.size - 1), desc="AR"):
             if i >= 500:
                 sub_series = self.series[(i - 499):(i + 1)]
             else:
@@ -86,7 +86,7 @@ class ForecastAlgorithms:
         results = np.array([np.nan])
 
         # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1)):
+        for i in tqdm.tqdm(range(self.series.size - 1), desc="ARMA"):
             if i >= 500:
                 sub_series = self.series[(i - 499):(i + 1)]
             else:
@@ -111,7 +111,7 @@ class ForecastAlgorithms:
         results = np.array([np.nan])
 
         # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1)):
+        for i in tqdm.tqdm(range(self.series.size - 1), desc="ARIMA"):
             if i >= 500:
                 sub_series = self.series[(i - 499):(i + 1)]
             else:
@@ -135,7 +135,7 @@ class ForecastAlgorithms:
         results = np.array([np.nan])
 
         # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1)):
+        for i in tqdm.tqdm(range(self.series.size - 1), desc="ETS"):
             if i >= 500:
                 sub_series = self.series[(i - 499):(i + 1)]
             else:
@@ -168,7 +168,7 @@ if __name__ == '__main__':
     naive_results = forecast.naive_simulation()
     ar_results = forecast.ar_simulation()
     arma_results = forecast.arma_simulation()
-    arima_results = forecast.arma_simulation()
+    arima_results = forecast.arima_simulation()
     ets_results = forecast.ets_simulation()
 
     # replace < 0 with 0
