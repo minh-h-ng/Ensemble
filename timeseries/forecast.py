@@ -13,10 +13,11 @@ from rpy2.robjects import pandas2ri
 
 
 class ForecastAlgorithms:
-    def __init__(self, file_path):
+    def __init__(self, file_path, samples=500):
         """
         Initializes data required by forecasting algorithms
         :param file_path: path to processed dataset
+        :param samples: clip algorithms to most recent 500 samples
         """
         # Try importing 'forecast' package
         try:
@@ -46,6 +47,12 @@ class ForecastAlgorithms:
         # R timeseries
         self.rts = robjects.r('ts')
 
+        # Clip
+        if samples <= 0:
+            raise ValueError
+        self.clip = samples
+
+
     def naive_simulation(self):
         """
         Forecasts number of requests using naive algorithm
@@ -63,8 +70,9 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1), desc="AR"):
-            if i >= 500:
-                sub_series = self.series[(i - 499):(i + 1)]
+            if i >= self.clip:
+                start_idx = i - (self.clip - 1)
+                sub_series = self.series[start_idx:(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -87,8 +95,9 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1), desc="ARMA"):
-            if i >= 500:
-                sub_series = self.series[(i - 499):(i + 1)]
+            if i >= self.clip:
+                start_idx = i - (self.clip - 1)
+                sub_series = self.series[start_idx:(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -112,8 +121,9 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1), desc="ARIMA"):
-            if i >= 500:
-                sub_series = self.series[(i - 499):(i + 1)]
+            if i >= self.clip:
+                start_idx = i - (self.clip - 1)
+                sub_series = self.series[start_idx:(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 2:
@@ -136,8 +146,9 @@ class ForecastAlgorithms:
 
         # TODO: parallelize
         for i in tqdm.tqdm(range(self.series.size - 1), desc="ETS"):
-            if i >= 500:
-                sub_series = self.series[(i - 499):(i + 1)]
+            if i >= self.clip:
+                start_idx = i - (self.clip - 1)
+                sub_series = self.series[start_idx:(i + 1)]
             else:
                 sub_series = self.series[:(i + 1)]
             if i < 3:
@@ -160,7 +171,7 @@ if __name__ == '__main__':
     writePath = os.path.join(dir_path, '..', 'PythonESN', 'data', 'nasa')
 
     # forecast
-    forecast = ForecastAlgorithms(dataPath)
+    forecast = ForecastAlgorithms(dataPath, samples=500)
     naive_results = forecast.naive_simulation()
     ar_results = forecast.ar_simulation()
     arma_results = forecast.arma_simulation()
