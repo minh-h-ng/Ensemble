@@ -167,8 +167,8 @@ if __name__ == '__main__':
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # read, write files
-    dataPath = os.path.join(dir_path, '..', 'processed', 'nasa.csv')
-    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data', 'nasa')
+    dataPath = os.path.join(dir_path, '..', 'processed', 'edgar.csv')
+    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data', 'edgar')
 
     # forecast
     forecast = ForecastAlgorithms(dataPath, samples=500)
@@ -179,11 +179,11 @@ if __name__ == '__main__':
     ets_results = forecast.ets_simulation()
 
     # replace < 0 with 0
-    naive_results[naive_results < 0] = 0
-    ar_results[ar_results < 0] = 0
-    arma_results[arma_results < 0] = 0
-    arima_results[arima_results < 0] = 0
-    ets_results[ets_results < 0] = 0
+    naive_results[1:][naive_results[1:] < 0] = 0
+    ar_results[1:][ar_results[1:] < 0] = 0
+    arma_results[1:][arma_results[1:] < 0] = 0
+    arima_results[1:][arima_results[1:] < 0] = 0
+    ets_results[1:][ets_results[1:] < 0] = 0
 
     with open(writePath, 'w') as f:
         for i in range(1, len(naive_results)):
