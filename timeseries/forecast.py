@@ -52,7 +52,6 @@ class ForecastAlgorithms:
             raise ValueError
         self.clip = samples
 
-
     def naive_simulation(self):
         """
         Forecasts number of requests using naive algorithm
@@ -186,9 +185,13 @@ if __name__ == '__main__':
     ets_results[1:][ets_results[1:] < 0] = 0
 
     with open(writePath, 'w') as f:
+        # Header
+        line = "Naive,AR,ARMA,ARIMA,ETS,PreviousObservation,CurrentObservation"
+        f.write(line + '\n')
+
+        # Contents
         for i in range(1, len(naive_results)):
             line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
                    + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
                    + str(ets_results[i]) + ',' + str(forecast.series[i - 1]) + ',' + str(forecast.series[i])
-            # line = str(naive_results[i])
             f.write(line + '\n')
