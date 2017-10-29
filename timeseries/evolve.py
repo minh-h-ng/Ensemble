@@ -3,9 +3,11 @@
 import json
 import logging
 import os
+import random
 import sys
 from functools import partial
 
+import numpy as np
 import pandas as pd
 from deap import base, creator, tools
 
@@ -52,19 +54,114 @@ def computeFitness(individual, hours_elapsed):
     return df.apply(computeElasticityIndex, axis=1).sum(),
 
 
+def cxArithmeticAverage(ind1, ind2):
+    _os = [sum(x) / 2 for x in zip(ind1, ind2)]
+    return creator.Individual(_os)
+
+
+def mutSwapGenes(individual):
+    size = len(individual)
+
+    rand = np.random.choice(range(size), 2, replace=False)
+    indx1 = rand[0]
+    indx2 = rand[1]
+
+    individual[indx1], individual[indx2] = \
+        individual[indx2], individual[indx1]
+
+    return individual,
+
+
 def init_toolbox():
     toolbox = base.Toolbox()
 
     # Population is a list of individuals seeded from json file
     toolbox.register("population", initPopulation, list, creator.Individual, "seed_population.json")
 
-    # fitness is computed using elasticity index
+    # Evaluation: elasticity index
     toolbox.register("evaluate", computeFitness)
 
-    # select best 50 individuals
+    # Selection: best 50 individuals
     toolbox.register("select", tools.selBest, k=50)
 
+    # Crossover: Arithmetic average
+    toolbox.register("mate", cxArithmeticAverage)
+
+    # Mutation: swap genes
+    toolbox.register("mutate", mutSwapGenes)
+
     return toolbox
+
+
+def varTwoByTwo(population, toolbox, cxpb, mutpb):
+    offspring = []
+
+    # "two-by-two" combinations
+    for ind1_idx in range(len(population)):
+        for ind2_idx in range(ind1_idx + 1, len(population)):
+            if random.random() < cxpb:
+                # clone
+                ind1 = toolbox.clone(population[ind1_idx])
+                ind2 = toolbox.clone(population[ind2_idx])
+
+                # mate
+                _os = toolbox.mate(ind1, ind2)
+                del _os.fitness.values
+                offspring.append(_os)
+
+    # mutation
+    for i in range(len(offspring)):
+        if random.random() < mutpb:
+            offspring[i], = toolbox.mutate(offspring[i])
+            del offspring[i].fitness.values
+
+    return offspring
+
+
+def eaValter(population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
+             stats=None, halloffame=None, verbose=__debug__):
+    logbook = tools.Logbook()
+    logbook.header = ['gen', 'nevals'] + (stats.fields if stats else [])
+
+    # Evaluate the individuals with an invalid fitness
+    invalid_ind = [ind for ind in population if not ind.fitness.valid]
+    fitnesses = toolbox.map(partial(toolbox.evaluate, hours_elapsed=hours_elapsed), invalid_ind)
+    for ind, fit in zip(invalid_ind, fitnesses):
+        ind.fitness.values = fit
+
+    if halloffame is not None:
+        halloffame.update(population)
+
+    record = stats.compile(population) if stats is not None else {}
+    logbook.record(gen=0, nevals=len(invalid_ind), **record)
+    if verbose:
+        print(logbook.stream)
+
+    # Begin the generational process
+    for gen in range(1, ngen + 1):
+        # Vary the population
+        offspring = varTwoByTwo(population, toolbox, cxpb, mutpb)
+
+        # Evaluate the individuals with an invalid fitness
+        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+        fitnesses = toolbox.map(partial(toolbox.evaluate, hours_elapsed=hours_elapsed), invalid_ind)
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitness.values = fit
+
+        # Update the hall of fame with the generated individuals
+        if halloffame is not None:
+            halloffame.update(offspring)
+
+        # Select the next generation population
+        population[:] = toolbox.select(population + offspring)
+
+        # Update the statistics with the new population
+        record = stats.compile(population) if stats is not None else {}
+        logbook.record(gen=gen, nevals=len(invalid_ind), **record)
+        if verbose:
+            print(logbook.stream)
+
+    return population, logbook
 
 
 def main():
@@ -72,13 +169,17 @@ def main():
 
     population = toolbox.population()
 
-    # Evaluate population
-    fitnesses = list(map(partial(toolbox.evaluate, hours_elapsed=1), population))
-    for ind, fit in zip(population, fitnesses):
-        ind.fitness.values = fit
+    # Parameters
+    cxpb = 0.90  # Probability of mating two individuals
+    mutpb = 0.10  # Probability of mutating an individual
+    ngen = 100  # Number of generations
 
-    fits = [ind.fitness.values[0] for ind in population]
-    print(fits)
+    # Best individual
+    halloffame = tools.HallOfFame(maxsize=1)
+
+    final_population, logbook = eaValter(population, toolbox, cxpb, mutpb, ngen,
+                                         hours_elapsed=1, halloffame=halloffame)
+    print(halloffame[-1])
 
 
 if __name__ == '__main__':
