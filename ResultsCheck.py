@@ -29,15 +29,18 @@ arimaResults = []
 etsResults = []
 realResults = []
 
+count = 0
 with open(dataPath,'r') as f:
     for line in f:
-        data = line.split(',')
-        naiveResults.append(data[0])
-        arResults.append(data[1])
-        armaResults.append(data[2])
-        arimaResults.append(data[3])
-        etsResults.append(data[4])
-        realResults.append(data[6][:-1])
+        count+=1
+        if count>1:
+            data = line.split(',')
+            naiveResults.append(data[0])
+            arResults.append(data[1])
+            armaResults.append(data[2])
+            arimaResults.append(data[3])
+            etsResults.append(data[4])
+            realResults.append(data[6][:-1])
 
 averageResults = []
 for i in range(len(naiveResults)):
