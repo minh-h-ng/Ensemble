@@ -42,27 +42,10 @@ with open(dataPath,'r') as f:
             etsResults.append(data[4])
             realResults.append(data[6][:-1])
 
-averageResults = []
-for i in range(len(naiveResults)):
-    averageResults.append((float(naiveResults[i])+float(arResults[i])+float(armaResults[i])
-                           +float(arimaResults[i])+float(etsResults[i]))/5)
-
-errorResults = []
-
+esnResults = []
 with open(predictionPath, 'r') as f:
     for line in f:
-        errorResults.append(line[:-1])
-
-naiveResults = naiveResults[(len(naiveResults)-len(errorResults)):]
-arResults = arResults[(len(arResults)-len(errorResults)):]
-armaResults = armaResults[(len(armaResults)-len(errorResults)):]
-arimaResults = arimaResults[(len(arimaResults)-len(errorResults)):]
-etsResults = etsResults[(len(etsResults)-len(errorResults)):]
-realResults = realResults[(len(realResults)-len(errorResults)):]
-
-esnResults = []
-for i in range(len(errorResults)):
-    esnResults.append(float(errorResults[i])+averageResults[len(averageResults)-len(errorResults)+i])
+        esnResults.append(float(line))
 
 print('naive:',RMSE(realResults,naiveResults))
 print('ar:',RMSE(realResults,arResults))

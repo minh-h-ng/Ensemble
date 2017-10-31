@@ -17,7 +17,8 @@ def NRMSE(y_true, y_pred):
     return np.sqrt(mean_squared_error(y_true, y_pred))/y_std
 
 class ESN(object):
-    def __init__(self, n_internal_units = 100, spectral_radius = 0.9, connectivity = 0.5, input_scaling = 0.5, input_shift = 0.0, teacher_scaling = 0.5, teacher_shift = 0.0, feedback_scaling = 0.01, noise_level = 0.01):
+    def __init__(self, n_internal_units = 100, spectral_radius = 0.9, connectivity = 0.5, input_scaling = 0.5,
+                 input_shift = 0.0, teacher_scaling = 0.5, teacher_shift = 0.0, feedback_scaling = 0.01, noise_level = 0.01):
         # Initialize attributes
         self._n_internal_units = n_internal_units
         self._spectral_radius = spectral_radius
@@ -250,7 +251,7 @@ def run_from_config(Xtr, Ytr, Xte, Yte, config):
     esn.fit(Xtr, Ytr, n_drop = n_drop, regression_method = regression_method, regression_parameters = regression_parameters,
             embedding = embedding, n_dim = n_dim, embedding_parameters = embedding_parameters)
 
-    Yhat,error = esn.predict(Xte, Yte)
+    Yhat,error = esn.predict(Xte, Yte, n_drop=n_drop)
 
     return Yhat, error
 
@@ -310,15 +311,16 @@ def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
 
     #n_te = np.ceil(test_percent*n_data).astype(int)
     n_te=1
-    n_val = np.ceil(val_percent*n_data).astype(int)
+    #n_val = np.ceil(val_percent*n_data).astype(int)
+    n_val = 0
     n_tr = n_data - n_te - n_val
 
     # Split dataset
     Xtr = X[:n_tr, :]
     Ytr = Y[:n_tr, :]
 
-    Xval = X[n_tr:-n_te, :]
-    Yval = Y[n_tr:-n_te, :]
+    #Xval = X[n_tr:-n_te, :]
+    #Yval = Y[n_tr:-n_te, :]
 
     Xte = X
     Yte = Y
@@ -334,8 +336,10 @@ def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
     Ytr = Yscaler.fit_transform(Ytr)
 
     # Transform the rest
-    Xval = Xscaler.transform(Xval)
-    Yval = Yscaler.transform(Yval)
+    #Xval = Xscaler.transform(Xval)
+    #Yval = Yscaler.transform(Yval)
+    Xval = None
+    Yval = None
 
     Xte = Xscaler.transform(Xte)
     Yte = Yscaler.transform(Yte)

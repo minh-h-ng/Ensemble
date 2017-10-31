@@ -9,15 +9,19 @@ realResults = []
 dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
 writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data/edgar_historical'
 
+lineCount = 0
 with open(dataPath,'r') as f:
     for line in f:
-        data = line.split(',')
-        naiveResults.append(data[0])
-        arResults.append(data[1])
-        armaResults.append(data[2])
-        arimaResults.append(data[3])
-        etsResults.append(data[4])
-        realResults.append(data[6][:-1])
+        # skip the title line
+        if lineCount>=1:
+            data = line.split(',')
+            naiveResults.append(data[0])
+            arResults.append(data[1])
+            armaResults.append(data[2])
+            arimaResults.append(data[3])
+            etsResults.append(data[4])
+            realResults.append(data[6][:-1])
+        lineCount += 1
 
 averageResults = []
 for i in range(len(naiveResults)):
