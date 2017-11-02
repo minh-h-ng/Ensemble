@@ -40,7 +40,7 @@ def computeElasticityIndex(row):
 def computeFitness(individual, hours_elapsed):
     # script's directory
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data', 'edgar')
+    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
 
     # WARN: the data must be sampled at every hour for nrows to work!
 
@@ -178,7 +178,7 @@ def main():
     halloffame = tools.HallOfFame(maxsize=1)
 
     final_population, logbook = eaValter(population, toolbox, cxpb, mutpb, ngen,
-                                         hours_elapsed=1, halloffame=halloffame)
+                                         hours_elapsed=2000, halloffame=halloffame)
     print(halloffame[-1])
 
 

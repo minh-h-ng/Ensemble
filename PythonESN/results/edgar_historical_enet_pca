@@ -1,0 +1,16 @@
+/usr/local/lib/python2.7/dist-packages/sklearn/decomposition/pca.py:277: RuntimeWarning: invalid value encountered in divide
+  explained_variance_.sum())
+Traceback (most recent call last):
+  File "./esn_run.py", line 125, in <module>
+    main()
+  File "./esn_run.py", line 92, in main
+    Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 259, in run_from_config
+    Yhat,error = esn.predict(Xte, Yte, n_drop=n_drop)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 129, in predict
+    Yhat, error, _, _ = self._predict_transform(X = X, Y = Y, n_drop = n_drop, error_function = error_function)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 135, in _predict_transform
+    states,embedded_states,Yhat = self._compute_state_matrix(X = X, n_drop = n_drop)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 190, in _compute_state_matrix
+    embedded_states[i - n_drop, :] = current_embedding.flatten()
+ValueError: could not broadcast input array from shape (2) into shape (39)

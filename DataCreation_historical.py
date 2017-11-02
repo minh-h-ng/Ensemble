@@ -45,10 +45,9 @@ for i in range(len(averageResults)):
     errorResults.append(float(realResults[i])-float(averageResults[i]))
 
 with open(writePath,'w') as f:
-    for i in range(2, len(averageResults)):
-        line = str(errorNaive[i-2]) + ',' + str(errorAR[i-2]) + ',' + str(errorARMA[i-2]) + ',' + str(errorARIMA[i-2]) \
-               + ',' + str(errorETS[i-2]) + ',' + str(errorNaive[i-1]) + ',' + str(errorAR[i-1]) + ',' + str(errorARMA[i-1]) \
-               + ',' + str(errorARIMA[i-1]) + ',' + str(errorETS[i-1]) + ',' + str(errorResults[i])
+    for i in range(1, len(averageResults)):
+        line = str(errorNaive[i-1]) + ',' + str(errorAR[i-1]) + ',' + str(errorARMA[i-1]) + ',' + str(errorARIMA[i-1]) + ',' + str(errorETS[i-1]) + ',' + \
+               str(errorResults[i])
         f.write(line+'\n')
 
 

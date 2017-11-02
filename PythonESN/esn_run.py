@@ -52,7 +52,7 @@ def main():
     predictions_error = []
     predictions = []
     reals = []
-    startPoint = 4
+    startPoint = 10
 
     #For the first few predictions, use the last error as prediction
     dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
@@ -87,10 +87,10 @@ def main():
     count = 0
     for i in range(startPoint,len(X)):
         Xtr, Ytr, _, _, Xte, Yte, Yscaler = esnet.generate_datasets(X[:i], Y[:i])
-        if (i-2)<100:
+        if (i-1)<100:
             config['n_drop'] = i-2
         Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config)
-        Yhat = np.rint(Yscaler.inverse_transform(Yhat))
+        Yhat = np.ceil(Yscaler.inverse_transform(Yhat))
         #print('predictions:',Yhat)
         #print('error:',error)
         predictions_error.append(Yhat[len(Yhat)-1][0])
@@ -105,21 +105,14 @@ def main():
     configs = args.esnconfig.split('/')
     writePath += 'predictions/predictions_' + configs[-1]
 
-    for i in range(startPoint+2):
+    for i in range(startPoint+1):
         predictions.append(averages[i])
 
     for i in range(len(predictions_error)):
-        predictions.append(predictions_error[i]+averages[len(averages)-len(predictions_error)+i])
-
-    for i in range(len(predictions)):
-        if predictions[i]<1:
-            predictions[i]=1
-        else:
-            predictions[i]=np.rint(predictions[i])
+        predictions.append(np.ceil((predictions_error[i]+averages[len(averages)-len(predictions_error)+i])))
 
     with open(writePath,'w') as f:
         for value in predictions:
             f.write(str(value) + '\n')
-
 if __name__ == "__main__":
     main()

@@ -18,3 +18,4 @@ RUNS=$4
 # Run experiments with these parameters
 #python -m scoop -n 2 ./esn_experiment.py $DATAFILE $ESNCONFIG $RUNS
 python ./esn_run.py $DATAFILE $ESNCONFIG $RUNS
+
