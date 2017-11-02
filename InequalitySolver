@@ -1,0 +1,9 @@
+#!/usr/bin/sage -python
+
+"""
+Requirements:
+    Start Pycharm from sage shell
+    Execute the script from command line
+"""
+import sage.all
+import numpy as np
