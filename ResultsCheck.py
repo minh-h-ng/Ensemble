@@ -12,12 +12,14 @@ def NRMSE(y_true, y_pred):
 
 def RMSE(y_true, y_pred):
     """ Root Mean Squared Error """
+    total = 0
     for i in range(len(y_true)):
         y_true[i] = float(y_true[i])
         y_pred[i] = float(y_pred[i])
-    y_std = np.std(y_true)
+        total+=abs(y_true[i]-y_pred[i])
 
     return np.sqrt(mean_squared_error(y_true, y_pred))
+    #return total
 
 dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
 predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
