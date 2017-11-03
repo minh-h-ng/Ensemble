@@ -49,7 +49,12 @@ def computeFitness(individual, hours_elapsed):
     df = pd.read_csv(file_path, nrows=hours_elapsed)
 
     # compute predicted value in hours_elapsed
-    df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].dot(individual).round()
+    if hours_elapsed >= 500:
+        start_idx = hours_elapsed - (500 - 1)
+        df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']][start_idx:(500 + 1)]\
+            .dot(individual).round()
+    else:
+        df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].dot(individual).round()
 
     # compute SEI for predictions in hours_elapsed
     return df.apply(computeElasticityIndex, axis=1).sum(),
