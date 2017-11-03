@@ -7,6 +7,7 @@ deap==1.0.2
 decorator==4.1.2
 entrypoints==0.2.3
 futures==3.1.1
+greenlet==0.4.12
 html5lib==1.0b10
 idna==2.6
 ipykernel==4.6.1
@@ -44,6 +45,7 @@ qtconsole==4.3.1
 requests==2.18.4
 rpy2==2.9.0
 scipy==0.19.1
+scoop==0.7.1.1
 simplegeneric==0.8.1
 six==1.11.0
 statsmodels==0.8.0

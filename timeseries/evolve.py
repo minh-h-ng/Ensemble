@@ -6,6 +6,7 @@ import os
 import random
 import sys
 from functools import partial
+from scoop import futures
 
 import numpy as np
 import pandas as pd
@@ -89,6 +90,9 @@ def init_toolbox():
 
     # Mutation: swap genes
     toolbox.register("mutate", mutSwapGenes)
+
+    # multiprocessing
+    toolbox.register("map", futures.map)
 
     return toolbox
 
