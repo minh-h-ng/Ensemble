@@ -136,6 +136,9 @@ def eaValter(population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
     if halloffame is not None:
         halloffame.update(population)
 
+    # save the current best individual
+    best_ind = toolbox.clone(halloffame[-1])
+
     record = stats.compile(population) if stats is not None else {}
     logbook.record(gen=0, nevals=len(invalid_ind), **record)
     if verbose:
@@ -155,6 +158,10 @@ def eaValter(population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
         # Update the hall of fame with the generated individuals
         if halloffame is not None:
             halloffame.update(offspring)
+
+        # break if best_ind is not changed
+        if best_ind == halloffame[-1]:
+            break
 
         # Select the next generation population
         population[:] = toolbox.select(population + offspring)
