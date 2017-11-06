@@ -21,7 +21,7 @@ class ResourceAllocation:
         for i in range(len(predictions)):
             usedResources = math.ceil((self.responseTime*predictions[i])/(self.responseTime*self.processingRate-1))
             necessaryResources = math.ceil((self.responseTime*reals[i])/(self.responseTime*self.processingRate-1))
-            print('necessaryResources:',necessaryResources)
+            #print('necessaryResources:',necessaryResources)
             if usedResources>necessaryResources:
                 overResources+=usedResources-necessaryResources
             else:

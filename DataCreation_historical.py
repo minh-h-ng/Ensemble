@@ -46,8 +46,22 @@ for i in range(len(averageResults)):
 
 with open(writePath,'w') as f:
     for i in range(1, len(averageResults)):
-        line = str(errorNaive[i-1]) + ',' + str(errorAR[i-1]) + ',' + str(errorARMA[i-1]) + ',' + str(errorARIMA[i-1]) + ',' + str(errorETS[i-1]) + ',' + \
-               str(errorResults[i])
+        line = str(naiveResults[i-2]) + ',' + str(arResults[i-2]) + ',' + str(armaResults[i-2]) + ',' + str(arimaResults[i-2]) + ',' + str(etsResults[i-2]) + ',' + \
+               str(realResults[i-2]) + ',' + \
+               str(naiveResults[i-1]) + ',' + str(arResults[i-1]) + ',' + str(armaResults[i-1]) + ',' + str(arimaResults[i-1]) + ',' + str(etsResults[i-1]) + ',' + \
+               str(realResults[i-1]) + ',' + \
+               str(naiveResults[i]) + ',' + str(arResults[i]) + ',' + str(armaResults[i]) + ',' + str(arimaResults[i]) + ',' + str(etsResults[i]) + ',' + \
+               str(realResults[i])
         f.write(line+'\n')
+    """for i in range(2, len(averageResults)):
+        line = str(naiveResults[i - 2]) + ',' + str(arResults[i - 2]) + ',' + str(armaResults[i - 2]) + ',' + \
+               str(arimaResults[i - 2]) + ',' + str(etsResults[i - 2]) + ',' + str(realResults[i - 2]) + ',' + \
+               str(naiveResults[i - 1]) + ',' + str(arResults[i - 1]) + ',' + str(armaResults[i - 1]) + ',' + \
+               str(arimaResults[i - 1]) + ',' + str(etsResults[i - 1]) + ',' + str(realResults[i - 1]) + ',' + \
+               str(realResults[i])
+        f.write(line+'\n')"""
+    """for i in range(5, len(averageResults)):
+        line = str(realResults[i-5]) + ',' + str(realResults[i-4]) + ',' + str(realResults[i-3]) + ',' + str(realResults[i-2]) + ',' + str(realResults[i-1]) + ',' + str(realResults[i])
+        f.write(line + '\n')"""
 
 

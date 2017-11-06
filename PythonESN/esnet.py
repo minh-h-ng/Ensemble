@@ -10,16 +10,27 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import NuSVR
 
-def NRMSE(y_true, y_pred):
+def NRMSE(y_true, y_pred, scaler):
     """ Normalized Root Mean Squared Error """
-    y_std = np.std(y_true)
+    """y_std = np.std(y_true)
 
-    return np.sqrt(mean_squared_error(y_true, y_pred))/y_std
+    return np.sqrt(mean_squared_error(y_true, y_pred))/y_std"""
 
     """totalDiff = 0
+    y_std = np.std(y_true)
     for i in range(len(y_true)):
-        totalDiff += abs(y_true[i]-y_pred[i])
+        totalDiff += abs(y_true[i]-y_pred[i])/y_std
     return totalDiff/len(y_true)"""
+
+    y_true = scaler.inverse_transform(y_true)
+    y_pred = scaler.inverse_transform(y_pred)
+    mu = 10
+    response = 0.4
+    total = 0
+    for i in range(len(y_true)):
+        total += abs(np.ceil(response * y_true[i] / (response * mu - 1)) -
+                     np.ceil(response * y_pred[i] / (response * mu - 1)))
+    return total
 
 class ESN(object):
     def __init__(self, n_internal_units = 100, spectral_radius = 0.9, connectivity = 0.5, input_scaling = 0.5,
@@ -125,12 +136,12 @@ class ESN(object):
 
         return states, embedded_states
 
-    def predict(self, X, Y = None, n_drop = 100, error_function = NRMSE):
-        Yhat, error, _, _ = self._predict_transform(X = X, Y = Y, n_drop = n_drop, error_function = error_function)
+    def predict(self, X, Y = None, n_drop = 100, error_function = NRMSE, scaler = None, averages = None):
+        Yhat, error, _, _ = self._predict_transform(X = X, Y = Y, n_drop = n_drop, error_function = error_function, scaler=scaler, averages=averages)
 
         return Yhat, error
 
-    def _predict_transform(self, X, Y = None, n_drop = 100, error_function = NRMSE):
+    def _predict_transform(self, X, Y = None, n_drop = 100, error_function = NRMSE, scaler = None, averages=None):
         # Predict outputs
         states,embedded_states,Yhat = self._compute_state_matrix(X = X, n_drop = n_drop)
 
@@ -139,7 +150,7 @@ class ESN(object):
 
         # Compute error if ground truth is provided
         if (Y is not None):
-            error = error_function(Y[n_drop:,:], Yhat)
+            error = error_function(Y[n_drop:,:], Yhat, scaler)
 
         return Yhat, error, states, embedded_states
 
@@ -232,7 +243,7 @@ class ESN(object):
 
         return internal_weights
 
-def run_from_config(Xtr, Ytr, Xte, Yte, config):
+def run_from_config(Xtr, Ytr, Xte, Yte, config, scaler):
     # Instantiate ESN object
     esn = ESN(n_internal_units = config['n_internal_units'],
               spectral_radius = config['spectral_radius'],
@@ -256,7 +267,7 @@ def run_from_config(Xtr, Ytr, Xte, Yte, config):
     esn.fit(Xtr, Ytr, n_drop = n_drop, regression_method = regression_method, regression_parameters = regression_parameters,
             embedding = embedding, n_dim = n_dim, embedding_parameters = embedding_parameters)
 
-    Yhat,error = esn.predict(Xte, Yte, n_drop=n_drop)
+    Yhat,error = esn.predict(Xte, Yte, n_drop=n_drop, scaler=scaler)
 
     return Yhat, error
 
@@ -311,26 +322,26 @@ def format_config(n_internal_units, spectral_radius, connectivity, input_scaling
 
     return config
 
-def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
+def generate_datasets(X, Y, test_percent=0.15,val_percent = 0.15, scaler = StandardScaler):
     n_data,_ = X.shape
 
-    #n_te = np.ceil(test_percent*n_data).astype(int)
-    n_te=1
-    #n_val = np.ceil(val_percent*n_data).astype(int)
-    n_val = 0
+    n_te = np.ceil(test_percent*n_data).astype(int)
+    #n_te=1
+    n_val = np.ceil(val_percent*n_data).astype(int)
+    #n_val = 0
     n_tr = n_data - n_te - n_val
 
     # Split dataset
     Xtr = X[:n_tr, :]
     Ytr = Y[:n_tr, :]
 
-    #Xval = X[n_tr:-n_te, :]
-    #Yval = Y[n_tr:-n_te, :]
+    Xval = X[n_tr:-n_te, :]
+    Yval = Y[n_tr:-n_te, :]
 
-    Xte = X
-    Yte = Y
-    #Xte = X[-n_te:, :]
-    #Yte = Y[-n_te:, :]
+    #Xte = X
+    #Yte = Y
+    Xte = X[-n_te:, :]
+    Yte = Y[-n_te:, :]
 
     # Scale
     Xscaler = scaler()
@@ -341,10 +352,8 @@ def generate_datasets(X, Y, val_percent = 0.15, scaler = StandardScaler):
     Ytr = Yscaler.fit_transform(Ytr)
 
     # Transform the rest
-    #Xval = Xscaler.transform(Xval)
-    #Yval = Yscaler.transform(Yval)
-    Xval = Xte
-    Yval = Yte
+    Xval = Xscaler.transform(Xval)
+    Yval = Yscaler.transform(Yval)
 
     Xte = Xscaler.transform(Xte)
     Yte = Yscaler.transform(Yte)
@@ -403,7 +412,7 @@ def load_from_text(path):
     #print('X:',np.atleast_2d(data[:,[0,1]]))
     #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    return np.atleast_2d(data[:, [0,1,2,3,4]]), np.atleast_2d(data[:, 5]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]]), np.atleast_2d(data[:, 17]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

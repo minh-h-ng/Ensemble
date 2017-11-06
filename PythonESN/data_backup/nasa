@@ -1,3 +1,4 @@
+Naive,AR,ARMA,ARIMA,ETS,PreviousObservation,CurrentObservation
 7.0,7.0,7.0,7.0,7.0,7.0,7.0
 7.0,7.0,7.0,7.0,7.0,7.0,8.0
 8.0,7.0,7.0,7.0,7.0,8.0,6.0

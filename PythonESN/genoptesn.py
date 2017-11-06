@@ -35,6 +35,7 @@ logger.setLevel(logging.INFO)
 # Parse input arguments
 ############################################################################
 parser = argparse.ArgumentParser()
+parser.add_argument("count",type=int)
 parser.add_argument("data", help="path to data file", type=str)
 parser.add_argument("optconfig", help="path to optimization config file", type=str)
 parser.add_argument("esnconfig", help="path to where the ESN config file should be saved", type=str)
@@ -57,10 +58,11 @@ if os.path.isdir(args.data):
     Xtr, Ytr, Xval, Yval, _, _, Yscaler = esnet.load_from_dir(args.data)
 
 else:
+    count = args.count
     X, Y = esnet.load_from_text(args.data)
 
     # Construct training/test sets
-    Xtr, Ytr, Xval, Yval, _, _, Yscaler= esnet.generate_datasets(X, Y)
+    Xtr, Ytr, Xval, Yval, _, _, Yscaler= esnet.generate_datasets(X[:count], Y[:count])
 
 ############################################################################
 # Initialization of the genetic algorithm
@@ -228,7 +230,7 @@ def evaluate_ind(individual):
     errors = np.empty((n_eval,), dtype=float)
 
     for i in range(n_eval):
-        _, errors[i] = esnet.run_from_config(Xtr, Ytr, Xval, Yval, parameters)
+        _, errors[i] = esnet.run_from_config(Xtr, Ytr, Xval, Yval, parameters,Yscaler)
 
     error = np.mean(errors)
 

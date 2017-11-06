@@ -1,8 +1,8 @@
 {
   "optimization": {
-    "population_size": 50,
-    "n_generations": 20,
-    "n_offsprings": 35,
+    "population_size": 20,
+    "n_generations": 10,
+    "n_offsprings": 15,
     "mutpb": 0.2,
     "cxpb": 0.5,
     "mu": 0.0,
