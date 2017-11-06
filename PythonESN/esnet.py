@@ -412,7 +412,7 @@ def load_from_text(path):
     #print('X:',np.atleast_2d(data[:,[0,1]]))
     #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]]), np.atleast_2d(data[:, 17]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9,10]]), np.atleast_2d(data[:, 11]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

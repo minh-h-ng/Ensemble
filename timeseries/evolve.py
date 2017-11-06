@@ -202,7 +202,7 @@ if __name__ == '__main__':
     dir_path = os.path.dirname(os.path.realpath(__file__))
     file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
 
-    for hours_elapsed in range(1, 2208):  # number of hours in edgar logs
+    for hours_elapsed in range(1, 10):  # number of hours in edgar logs
         # read genes
         df = pd.read_csv(file_path, nrows=1,
                          skiprows=hours_elapsed,
