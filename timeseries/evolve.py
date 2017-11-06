@@ -6,11 +6,11 @@ import os
 import random
 import sys
 from functools import partial
-from scoop import futures
 
 import numpy as np
 import pandas as pd
 from deap import base, creator, tools
+from scoop import futures
 
 # Initialize logger
 logger = logging.getLogger(__name__)
@@ -51,7 +51,7 @@ def computeFitness(individual, hours_elapsed):
     # compute predicted value in hours_elapsed
     if hours_elapsed >= 500:
         start_idx = hours_elapsed - (500 - 1)
-        df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']][start_idx:(500 + 1)]\
+        df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']][start_idx:(500 + 1)] \
             .dot(individual).round()
     else:
         df['GA'] = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].dot(individual).round()
@@ -147,7 +147,7 @@ def eaValter(population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
     record = stats.compile(population) if stats is not None else {}
     logbook.record(gen=0, nevals=len(invalid_ind), **record)
     if verbose:
-        print(logbook.stream)
+        logger.debug(logbook.stream)
 
     # Begin the generational process
     for gen in range(1, ngen + 1):
@@ -175,12 +175,12 @@ def eaValter(population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
         record = stats.compile(population) if stats is not None else {}
         logbook.record(gen=gen, nevals=len(invalid_ind), **record)
         if verbose:
-            print(logbook.stream)
+            logger.debug(logbook.stream)
 
     return population, logbook
 
 
-def main():
+def run_ga(hours_elapsed):
     toolbox = init_toolbox()
 
     population = toolbox.population()
@@ -192,11 +192,29 @@ def main():
 
     # Best individual
     halloffame = tools.HallOfFame(maxsize=1)
-
     final_population, logbook = eaValter(population, toolbox, cxpb, mutpb, ngen,
-                                         hours_elapsed=2000, halloffame=halloffame)
-    print(halloffame[-1])
+                                         hours_elapsed=hours_elapsed, halloffame=halloffame)
+    return halloffame[-1]
 
 
 if __name__ == '__main__':
-    main()
+    # script's directory
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
+
+    for hours_elapsed in range(1, 2208):  # number of hours in edgar logs
+        # read genes
+        df = pd.read_csv(file_path, nrows=1,
+                         skiprows=hours_elapsed,
+                         header=None,
+                         names=['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS'],  # name the columns
+                         usecols=[0, 1, 2, 3, 4]
+                         )
+
+        # evolve
+        halloffame = run_ga(hours_elapsed)
+
+        # print best
+        series = df[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].dot(halloffame).round()
+        assert series.size == 1
+        print(series[0])
