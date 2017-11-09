@@ -11,6 +11,7 @@ import re
 import shutil
 import sys
 import zipfile
+
 from urllib.parse import urlsplit, unquote
 
 import requests
@@ -98,8 +99,10 @@ class DatasetDownloader(object):
         self.logger.debug('Downloading EDGAR')
 
         # Download dir, a subdir with year will be created
-        dir = os.path.join(self.destination, 'edgar')
-        temp_dir = '/tmp/.edgar'
+        #dir = os.path.join(self.destination, 'edgar')
+        #temp_dir = '/tmp/.edgar'
+        temp_dir = '/home/minh/Desktop/edgar/'
+        dir = temp_dir
 
         # List of all log-files
         list_url = 'https://www.sec.gov/files/EDGAR_LogFileData_thru_Dec2016.html'
@@ -118,7 +121,7 @@ class DatasetDownloader(object):
             urls = [x for x in soup.body.string.split('\r\n') if x.startswith(year, len(base_url))]
 
             # Schedule download
-            executor = concurrent.futures.ThreadPoolExecutor(max_workers=20)
+            executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
             future_to_filename = {executor.submit(self._download_file, 'http://' + url, temp_dir): url for url in urls}
 
             # Download in temp_dir & extract in dir
@@ -131,17 +134,19 @@ class DatasetDownloader(object):
                     csv_filename = os.path.splitext(filename)[0] + '.csv'
                     zip_path = os.path.join(temp_dir, filename)
 
-                    with zipfile.ZipFile(zip_path) as logzip:
+                    """with zipfile.ZipFile(zip_path) as logzip:
                         with logzip.open(csv_filename, 'r') as f_in, \
-                                open(os.path.join(dir, csv_filename), 'w') as f_out:
+                                open(os.path.join(dir, csv_filename), 'wb') as f_out:
                             shutil.copyfileobj(f_in, f_out)
-                    os.remove(zip_path)
+                    os.remove(zip_path)"""
+
+                    os.rename(os.path.join(temp_dir,filename),os.path.join(dir,filename))
                 except Exception as exc:
                     self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(url, exc))
 
             # cleanup
             executor.shutdown(True)
-            shutil.rmtree(temp_dir)
+            #shutil.rmtree(temp_dir)
 
     def download_svds(self):
         self.logger.debug('Downloading SVDS')
@@ -284,7 +289,10 @@ def harvest_log(log_path):
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    downloader = DatasetDownloader()
+    downloader.download_edgar()
+
+    """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
                         choices=['all', 'edgar', 'svds', 'secrepo2016', 'almhuette_raith', 'maccdc2012'],
                         nargs=1)
@@ -317,7 +325,7 @@ def main():
         elif args.dataset[0] == 'maccdc2012':
             downloader.download_maccdc2012()
     else:
-        parser.print_help()
+        parser.print_help()"""
 
 
 if __name__ == '__main__':
