@@ -12,7 +12,7 @@ RUNS=$4
 #ESNCONFIG=esnconfig
 #RUNS=30
 
-for count in {2206..500}
+for count in {2106..500}
 do
     # Tune parameters. Note: the config file for the best parameters are saved at the location in $ESNCONFIG
     python -m scoop -n 4 ./genoptesn.py $count $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim

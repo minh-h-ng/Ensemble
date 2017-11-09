@@ -1,5 +1,8 @@
 import numpy as np
 from sklearn.metrics import mean_squared_error
+import matplotlib
+matplotlib.use('Gtk3Agg')
+import matplotlib.pyplot as plt
 
 def NRMSE(y_true, y_pred):
     """ Normalized Root Mean Squared Error """
@@ -61,6 +64,12 @@ esnResults_fixed = []
 for i in range(len(esnResults)):
     esnResults_fixed.append(esnResults[len(esnResults)-1-i])
 
+naiveResults = naiveResults[:-100]
+arResults = arResults[:-100]
+armaResults = arResults[:-100]
+arimaResults = arResults[:-100]
+etsResults = arResults[:-100]
+
 naiveResults = naiveResults[len(naiveResults)-len(esnResults):]
 arResults = arResults[len(arResults)-len(esnResults):]
 armaResults = armaResults[len(armaResults)-len(esnResults):]
@@ -76,6 +85,29 @@ print('arma:',RMSE(realResults,armaResults))
 print('arima:',RMSE(realResults,arimaResults))
 print('ets:',RMSE(realResults,etsResults))
 print('esn:',RMSE(realResults,esnResults_fixed))
+
+esn_resources = []
+arima_resources = []
+differences = []
+x_axis = []
+mu = 10
+response = 0.4
+for i in range(len(esnResults_fixed)):
+    esn_resources.append(abs(np.ceil((response * realResults[i]) / (response * mu - 1)) - np.ceil((response * esnResults_fixed[i]) / (response * mu - 1))))
+    arima_resources.append(abs(np.ceil((response * realResults[i]) / (response * mu - 1)) - np.ceil((response * arimaResults[i]) / (response * mu - 1))))
+    differences.append(esn_resources[i]-arima_resources[i])
+    x_axis.append(i)
+
+total_diff = []
+cur_sum = 0
+for i in range(len(differences)):
+    cur_sum+=differences[i]
+    total_diff.append(cur_sum)
+
+print('diff:',differences)
+print('cur_sum:',cur_sum)
+plt.plot(x_axis,total_diff)
+#plt.show()
 
 overload_naive = 0
 underload_naive = 0

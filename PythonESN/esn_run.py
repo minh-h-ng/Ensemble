@@ -85,7 +85,6 @@ def main():
 
     # Run in parallel and store result in a numpy array
     X, Y = esnet.load_from_text(args.data)
-    count = 0
     Xtr, Ytr, _, _, Xte, Yte, Yscaler = esnet.generate_datasets(X[:startPoint], Y[:startPoint])
     Yhat, error = esnet.run_from_config(Xtr, Ytr, Xte, Yte, config, Yscaler)
     Yhat = np.ceil(Yscaler.inverse_transform(Yhat))

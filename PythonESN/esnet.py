@@ -322,7 +322,7 @@ def format_config(n_internal_units, spectral_radius, connectivity, input_scaling
 
     return config
 
-def generate_datasets(X, Y, test_percent=0.15,val_percent = 0.15, scaler = StandardScaler):
+def generate_datasets(X, Y, test_percent = 0.15,val_percent = 0.15, scaler = StandardScaler):
     n_data,_ = X.shape
 
     n_te = np.ceil(test_percent*n_data).astype(int)
@@ -412,7 +412,7 @@ def load_from_text(path):
     #print('X:',np.atleast_2d(data[:,[0,1]]))
     #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9,10]]), np.atleast_2d(data[:, 11]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4]]), np.atleast_2d(data[:, 5]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

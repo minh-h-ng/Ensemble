@@ -7,7 +7,7 @@
     "cxpb": 0.5,
     "mu": 0.0,
     "sigma": null,
-    "n_eval": 5,
+    "n_eval": 3,
     "parallel": true
   },
 
