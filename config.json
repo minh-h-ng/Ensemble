@@ -11,9 +11,9 @@
     "SECREPO_DIR": "Sources/sec_repo"
   },
   "PREPROCESSED": {
-    "EDGAR_DIR": "Preprocessed/EDGAR"
+    "EDGAR_DIR": "preprocessed/EDGAR"
   },
   "PROCESSED":{
-    "EDGAR_LOCATION": "Processed/EDGAR/access.csv"
+    "EDGAR_LOCATION": "processed/EDGAR/access.csv"
   }
 }

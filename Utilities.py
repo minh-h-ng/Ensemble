@@ -11,11 +11,11 @@ with open('config.json','r') as f:
     config = json.load(f)
 
 def gotoTopDir():
-    topDir = config['PROJECT']['TOP_DIR'].encode('utf-8')
+    topDir = config['PROJECT']['TOP_DIR']
     curDirList = getcwd().split('/')
-    for i in xrange(len(curDirList)):
+    for i in range(len(curDirList)):
         if curDirList[i]==topDir:
-            for j in xrange(len(curDirList)-1-i):
+            for j in range(len(curDirList)-1-i):
                 chdir('..')
             return
     print('Cannot find top directory!')

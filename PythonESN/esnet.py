@@ -329,14 +329,17 @@ def generate_datasets(X, Y, test_percent = 0.15,val_percent = 0.15, scaler = Sta
     #n_te=1
     n_val = np.ceil(val_percent*n_data).astype(int)
     #n_val = 0
-    n_tr = n_data - n_te - n_val
+    n_tr = n_data - n_te
+    #n_tr = n_data - n_te - n_val
 
     # Split dataset
     Xtr = X[:n_tr, :]
     Ytr = Y[:n_tr, :]
 
-    Xval = X[n_tr:-n_te, :]
-    Yval = Y[n_tr:-n_te, :]
+    #Xval = X[n_tr:-n_te, :]
+    #Yval = Y[n_tr:-n_te, :]
+    Xval = X[-n_te:-1, :]
+    Yval = Y[-n_te:-1, :]
 
     #Xte = X
     #Yte = Y
@@ -412,7 +415,7 @@ def load_from_text(path):
     #print('X:',np.atleast_2d(data[:,[0,1]]))
     #print('Y:',np.atleast_2d(data[:, 2]).T)
 
-    return np.atleast_2d(data[:, [0,1,2,3,4]]), np.atleast_2d(data[:, 5]).T
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]]), np.atleast_2d(data[:, 23]).T
 
 def load_from_dir(path):
     Xtr_base = np.loadtxt(path + '/Xtr')

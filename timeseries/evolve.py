@@ -223,7 +223,7 @@ class GeneticAlgorithm:
 if __name__ == '__main__':
     # script's directory
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
+    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar_1_3')
 
     # initialize
     ga = GeneticAlgorithm(file_path)

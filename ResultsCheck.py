@@ -32,7 +32,7 @@ def RMSE(y_true, y_pred):
         total+=abs(np.ceil((response * y_true[i]) / (response * mu - 1)) - np.ceil((response * y_pred[i]) / (response * mu - 1)))
     return total
 
-dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
+dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_1_3'
 predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
 
 naiveResults = []
@@ -64,11 +64,11 @@ esnResults_fixed = []
 for i in range(len(esnResults)):
     esnResults_fixed.append(esnResults[len(esnResults)-1-i])
 
-naiveResults = naiveResults[:-100]
+"""naiveResults = naiveResults[:-100]
 arResults = arResults[:-100]
 armaResults = arResults[:-100]
 arimaResults = arResults[:-100]
-etsResults = arResults[:-100]
+etsResults = arResults[:-100]"""
 
 naiveResults = naiveResults[len(naiveResults)-len(esnResults):]
 arResults = arResults[len(arResults)-len(esnResults):]
@@ -87,15 +87,15 @@ print('ets:',RMSE(realResults,etsResults))
 print('esn:',RMSE(realResults,esnResults_fixed))
 
 esn_resources = []
-arima_resources = []
+ets_resources = []
 differences = []
 x_axis = []
 mu = 10
 response = 0.4
 for i in range(len(esnResults_fixed)):
     esn_resources.append(abs(np.ceil((response * realResults[i]) / (response * mu - 1)) - np.ceil((response * esnResults_fixed[i]) / (response * mu - 1))))
-    arima_resources.append(abs(np.ceil((response * realResults[i]) / (response * mu - 1)) - np.ceil((response * arimaResults[i]) / (response * mu - 1))))
-    differences.append(esn_resources[i]-arima_resources[i])
+    ets_resources.append(abs(np.ceil((response * realResults[i]) / (response * mu - 1)) - np.ceil((response * etsResults[i]) / (response * mu - 1))))
+    differences.append(esn_resources[i]-ets_resources[i])
     x_axis.append(i)
 
 total_diff = []

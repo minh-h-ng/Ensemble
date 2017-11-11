@@ -6,7 +6,7 @@ arimaResults = []
 etsResults = []
 realResults = []
 
-dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
+dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_1_3'
 writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data/edgar_historical'
 
 lineCount = 0
@@ -45,12 +45,8 @@ for i in range(len(averageResults)):
     errorResults.append(float(realResults[i])-float(averageResults[i]))
 
 with open(writePath,'w') as f:
-    for i in range(5, len(averageResults)):
-        """line = str(naiveResults[i-5]) + ',' + str(arResults[i-5]) + ',' + str(armaResults[i-5]) + ',' + str(arimaResults[i-5]) + ',' + str(etsResults[i-5]) + ',' + \
-               str(realResults[i-5]) + ',' + \
-               str(naiveResults[i-4]) + ',' + str(arResults[i-4]) + ',' + str(armaResults[i-4]) + ',' + str(arimaResults[i-4]) + ',' + str(etsResults[i-4]) + ',' + \
-               str(realResults[i-4]) + ',' + \
-               str(naiveResults[i-3]) + ',' + str(arResults[i-3]) + ',' + str(armaResults[i-3]) + ',' + str(arimaResults[i-3]) + ',' + str(etsResults[i-3]) + ',' + \
+    for i in range(3, len(averageResults)):
+        line = str(naiveResults[i-3]) + ',' + str(arResults[i-3]) + ',' + str(armaResults[i-3]) + ',' + str(arimaResults[i-3]) + ',' + str(etsResults[i-3]) + ',' + \
                str(realResults[i-3]) + ',' + \
                str(naiveResults[i-2]) + ',' + str(arResults[i-2]) + ',' + str(armaResults[i-2]) + ',' + str(arimaResults[i-2]) + ',' + str(etsResults[i-2]) + ',' + \
                str(realResults[i-2]) + ',' + \
@@ -58,7 +54,7 @@ with open(writePath,'w') as f:
                str(realResults[i-1]) + ',' + \
                str(naiveResults[i]) + ',' + str(arResults[i]) + ',' + str(armaResults[i]) + ',' + str(arimaResults[i]) + ',' + str(etsResults[i]) + ',' + \
                str(realResults[i])
-        f.write(line+'\n')"""
+        f.write(line+'\n')
     """for i in range(2, len(averageResults)):
         line = str(naiveResults[i - 2]) + ',' + str(arResults[i - 2]) + ',' + str(armaResults[i - 2]) + ',' + \
                str(arimaResults[i - 2]) + ',' + str(etsResults[i - 2]) + ',' + str(realResults[i - 2]) + ',' + \
@@ -66,8 +62,8 @@ with open(writePath,'w') as f:
                str(arimaResults[i - 1]) + ',' + str(etsResults[i - 1]) + ',' + str(realResults[i - 1]) + ',' + \
                str(realResults[i])
         f.write(line+'\n')"""
-    for i in range(5, len(averageResults)):
+    """for i in range(5, len(averageResults)):
         line = str(realResults[i-5]) + ',' + str(realResults[i-4]) + ',' + str(realResults[i-3]) + ',' + str(realResults[i-2]) + ',' + str(realResults[i-1]) + ',' + str(realResults[i])
-        f.write(line + '\n')
+        f.write(line + '\n')"""
 
 

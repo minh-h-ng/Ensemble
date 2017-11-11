@@ -166,8 +166,8 @@ if __name__ == '__main__':
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # read, write files
-    dataPath = os.path.join(dir_path, '..', 'processed', 'edgar.csv')
-    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
+    dataPath = os.path.join(dir_path, '..', 'processed', 'edgar_1_3.csv')
+    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar_1_3')
 
     # forecast
     forecast = ForecastAlgorithms(dataPath, samples=500)
