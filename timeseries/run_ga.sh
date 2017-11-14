@@ -2,7 +2,10 @@
 
 ########### Variables ###########
 DATAFILE="/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar"
-HOURS_ELAPSED=2207
+
+# Both hours_start and hours_end are inclusive
+HOURS_START=1
+HOURS_END=2207
 
 # Top most directory of project
 top_dir=$(git rev-parse --show-toplevel)
@@ -24,4 +27,4 @@ result_path=${dir_path}${results_file}
 
 # Execute script
 #unbuffer python3 -m scoop -n 4 evolve.py $DATAFILE $HOURS_ELAPSED 2>&1 | tee ${result_path}
-unbuffer python3 -m scoop -n 4 evolve.py $DATAFILE $HOURS_ELAPSED $result_path
+python3 -m scoop -n 4 evolve.py $DATAFILE $HOURS_START $HOURS_END $result_path

@@ -21,7 +21,8 @@ from scoop import futures
 ############################################################################
 parser = argparse.ArgumentParser()
 parser.add_argument('data',type=str)
-parser.add_argument('hours_elapsed',type=int)
+parser.add_argument('hours_start',type=int)
+parser.add_argument('hours_end',type=int)
 parser.add_argument('result_path',type=str)
 args = parser.parse_args()
 
@@ -246,7 +247,7 @@ def main():
     ga = GeneticAlgorithm(args.data)
 
     # run for every hour
-    for hr in range(1, args.hours_elapsed+1):
+    for hr in range(args.hours_start, args.hours_end + 1):
         result = ga.run(hr)
         with open(args.result_path,'a') as f:
             f.write(str(result)+'\n')
