@@ -1,3 +1,8 @@
 #!/bin/bash
 
-python -m scoop -n 4 ./evolve.py > "/home/minh/PycharmProjects/Ensemble/timeseries/GA_results"
+DATAFILE="/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar"
+
+for HOURS_ELAPSED in {1..1}
+do
+    python -m scoop -n 2 ./evolve.py $DATAFILE
+done

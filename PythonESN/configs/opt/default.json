@@ -1,13 +1,13 @@
 {
   "optimization": {
-    "population_size": 20,
-    "n_generations": 10,
-    "n_offsprings": 15,
+    "population_size": 100,
+    "n_generations": 50,
+    "n_offsprings": 75,
     "mutpb": 0.2,
     "cxpb": 0.5,
     "mu": 0.0,
     "sigma": null,
-    "n_eval": 3,
+    "n_eval": 5,
     "parallel": true
   },
 

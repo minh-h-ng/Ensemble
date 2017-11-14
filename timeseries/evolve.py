@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import argparse
 import json
 import logging
 import os
@@ -11,6 +12,20 @@ import numpy as np
 import pandas as pd
 from deap import base, creator, tools
 from scoop import futures
+
+###############################################################################################
+# The next part needs to be in the global scope, since all workers
+# need access to these variables (pickling problems).
+############################################################################
+# Parse input arguments
+############################################################################
+parser = argparse.ArgumentParser()
+parser.add_argument('data',type=str)
+args = parser.parse_args()
+
+############################################################################
+# Load data
+############################################################################
 
 # Initialize logger
 logger = logging.getLogger(__name__)
@@ -31,8 +46,8 @@ class GeneticAlgorithm:
     def __init__(self, file_path, samples=500,
                  cxpb=0.90, mutpb=0.10, ngen=100,
                  selbest=50):
-        """
-        Initializes data required by genetic algorithm
+
+        """Initializes data required by genetic algorithm
         :param file_path: path to output of forecast.py
         :param samples: clip algorithm to most recent 500 forecasts
         :param cxpb: probability of mating two individuals
@@ -219,16 +234,19 @@ class GeneticAlgorithm:
         ga_estimate = genes.dot(halloffame[-1]).round()
         return ga_estimate
 
-
-if __name__ == '__main__':
+def main():
     # script's directory
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar_1_3')
+    # dir_path = os.path.dirname(os.path.realpath(__file__))
+    # file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
 
     # initialize
-    ga = GeneticAlgorithm(file_path)
+    # ga = GeneticAlgorithm(file_path)
+    ga = GeneticAlgorithm(args.data)
 
     # run for every hour
     for hr in range(1, 10):
         result = ga.run(hr)
         print(result)
+
+if __name__ == '__main__':
+    main()

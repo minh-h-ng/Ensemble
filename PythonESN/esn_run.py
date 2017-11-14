@@ -23,6 +23,7 @@ logger.setLevel(logging.INFO)
 # Parse input arguments
 ############################################################################
 parser = argparse.ArgumentParser()
+parser.add_argument("times",type=int)
 parser.add_argument("count",type=int)
 parser.add_argument("data", help="path to data file", type=str)
 parser.add_argument("esnconfig", help="path to ESN config file", type=str)
@@ -110,21 +111,13 @@ def main():
     for i in range(len(curPath)):
         writePath += curPath[i] + '/'
     configs = args.esnconfig.split('/')
-    writePath += 'predictions/predictions_' + configs[-1]
+    writePath += 'predictions/predictions_' + configs[-1] + '_' + str(args.times)
 
-    """for i in range(startPoint+5):
-        predictions.append(averages[i])
-
-    for i in range(len(predictions_error)):
-        #predictions.append(np.ceil((predictions_error[i]+averages[len(averages)-len(predictions_error)+i])))
-        predictions.append(predictions_error[i])
-
-    with open(writePath,'a') as f:
-        for value in predictions:
-            f.write(str(value) + '\n')"""
-
-    with open(writePath, 'a') as f:
-        f.write(str(np.ceil(Yhat[len(Yhat) - 1][0]))+'\n')
+    """with open(writePath, 'a') as f:
+        f.write(str(np.ceil(Yhat[len(Yhat) - 1][0]))+'\n')"""
+    with open (writePath, 'w') as f:
+        for i in range(len(Yhat)):
+            f.writelines(str(np.ceil(Yhat[i][0])) + '\n')
 
 if __name__ == "__main__":
     main()
