@@ -4,7 +4,7 @@
 DATAFILE="/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar"
 
 # Both hours_start and hours_end are inclusive
-HOURS_START=1
+HOURS_START=1866
 HOURS_END=2207
 
 # Top most directory of project
