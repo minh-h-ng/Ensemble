@@ -152,7 +152,8 @@ class DatasetDownloader(object):
         self.logger.debug('Downloading SVDS')
 
         # Directory & URLs
-        dir = os.path.join(self.destination, 'svds')
+        #dir = os.path.join(self.destination, 'svds')
+        dir = '/home/minh/Desktop/svds'
         base_url = 'https://raw.githubusercontent.com/silicon-valley-data-science/datasets/master/'
         schema_url = base_url + 'access_log_schema'
         logs_url = base_url + 'access.log'
@@ -232,8 +233,10 @@ class DatasetDownloader(object):
         self.logger.debug('Downloading MACCDC2012')
 
         # Directory & URLs
-        dir = os.path.join(self.destination, 'maccdc2012')
-        temp_dir = '/tmp/.maccdc2012'
+        #dir = os.path.join(self.destination, 'maccdc2012')
+        #temp_dir = '/tmp/.maccdc2012'
+        temp_dir = 'home/minh/Desktop/maccdc2012'
+        dir = temp_dir
         logs_url = 'http://www.secrepo.com/maccdc2012/http.log.gz'
 
         # Make directory
@@ -255,7 +258,7 @@ class DatasetDownloader(object):
             self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(logs_url, exc))
 
         # cleanup
-        shutil.rmtree(temp_dir)
+        #shutil.rmtree(temp_dir)
 
     @staticmethod
     def get_logger(level=logging.DEBUG, verbose=0):
@@ -290,7 +293,7 @@ def harvest_log(log_path):
 
 def main():
     downloader = DatasetDownloader()
-    downloader.download_edgar()
+    downloader.download_svds()
 
     """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
