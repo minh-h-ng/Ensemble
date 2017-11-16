@@ -3,7 +3,6 @@
 import argparse
 import json
 import logging
-import os
 import random
 import sys
 from functools import partial
@@ -20,10 +19,10 @@ from scoop import futures
 # Parse input arguments
 ############################################################################
 parser = argparse.ArgumentParser()
-parser.add_argument('data',type=str)
-parser.add_argument('hours_start',type=int)
-parser.add_argument('hours_end',type=int)
-parser.add_argument('result_path',type=str)
+parser.add_argument('data', type=str)
+parser.add_argument('hours_start', type=int)
+parser.add_argument('hours_end', type=int)
+parser.add_argument('result_path', type=str)
 args = parser.parse_args()
 
 ############################################################################
@@ -88,12 +87,13 @@ class GeneticAlgorithm:
 
     def computeFitness(self, individual, hours_elapsed):
         # df subset
-        if hours_elapsed >= self.clip:
-            start_idx = hours_elapsed - (self.clip - 1)
-            end_idx = self.clip + 1
+        if hours_elapsed > self.clip:
+            start_idx = hours_elapsed - self.clip  # # (1, 2, 3, 4 ...)
+            end_idx = hours_elapsed  # # (501, 502, 503, 504 ...)
             dfs = self.df[start_idx:end_idx].copy()
         else:
-            dfs = self.df[:hours_elapsed].copy()
+            end_idx = hours_elapsed  # # (0:1, 0:2, 0:3, 0:4 ... 0:500)
+            dfs = self.df[:end_idx].copy()
 
         # compute predicted value in hours_elapsed
         dfs['GA'] = dfs[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].dot(individual).round()
@@ -237,20 +237,21 @@ class GeneticAlgorithm:
         ga_estimate = genes.dot(halloffame[-1]).round()
         return ga_estimate
 
+
 def main():
-    # script's directory
-    # dir_path = os.path.dirname(os.path.realpath(__file__))
-    # file_path = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'edgar')
+    # sanitize (elapsed hours should at-least be 1)
+    if args.hours_start <= 0:
+        return
 
     # initialize
-    # ga = GeneticAlgorithm(file_path)
     ga = GeneticAlgorithm(args.data)
 
     # run for every hour
     for hr in range(args.hours_start, args.hours_end + 1):
         result = ga.run(hr)
-        with open(args.result_path,'a') as f:
-            f.write(str(result)+'\n')
+        with open(args.result_path, 'a') as f:
+            f.write(str(result) + '\n')
+
 
 if __name__ == '__main__':
     main()

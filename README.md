@@ -5,7 +5,7 @@ We have listed the packages to install below.
 
 ## Install system dependencies
 ```bash
-$ sudo apt-get install python3-dev python-virtualenv r-base libcurl4-openssl-dev expect
+$ sudo apt-get install python3-dev python-virtualenv r-base libcurl4-openssl-dev
 ```
 
 # Create virtual environment
