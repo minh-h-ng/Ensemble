@@ -220,5 +220,4 @@ def preprocess(dataset):
         print('startTime:',startTime)
         print('curTime:',curTime)"""
 
-#preprocess('MACCDC2012')
-preprocess('EDGAR')
+#process('EDGAR')
