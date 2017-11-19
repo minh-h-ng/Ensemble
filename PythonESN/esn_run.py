@@ -57,9 +57,9 @@ def main():
     startPoint = args.count
 
     #For the first few predictions, use the last error as prediction
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data/edgar_historical'
     count = 0
-    with open(dataPath,'r') as f:
+    """with open(dataPath,'r') as f:
         for line in f:
             if count>0:
                 data = line.split(',')
@@ -68,7 +68,7 @@ def main():
                     total += float(data[i])
                 averages.append(total/5)
                 reals.append(float(data[6]))
-            count+=1
+            count+=1"""
     """count = 0
     with open(dataPath,'r') as f:
         for line in f:

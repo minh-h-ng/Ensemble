@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 import matplotlib
 matplotlib.use('Gtk3Agg')
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def NRMSE(y_true, y_pred):
     """ Normalized Root Mean Squared Error """
@@ -33,9 +33,11 @@ def RMSE(y_true, y_pred):
     return total
 
 def checkResult(times):
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
     predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity' + '_' + str(times)
-    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
+    #predictionPath = '/home
+
+    # /minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
 
     naiveResults = []
     arResults = []
@@ -109,7 +111,7 @@ def checkResult(times):
 
     print('diff:',differences)
     print('cur_sum:',cur_sum)
-    plt.plot(x_axis,total_diff)
+    #plt.plot(x_axis,total_diff)
     #plt.show()
 
     """overload_naive = 0
@@ -157,6 +159,6 @@ def checkResult(times):
     print('total over-under of naive,ar,arma,arima,ets,esn:',overload_naive+underload_naive,overload_ar+underload_ar,overload_arma+underload_arma,
           overload_arima+underload_arima,overload_ets+underload_ets,overload_esn+underload_esn)"""
 
-for i in range(1,11):
+for i in range(1,10):
     checkResult(i)
     print('')

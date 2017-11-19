@@ -6,7 +6,7 @@ arimaResults = []
 etsResults = []
 realResults = []
 
-dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar'
+dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data/edgar_historical'
 
 lineCount = 0

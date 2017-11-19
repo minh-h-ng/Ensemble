@@ -19,6 +19,7 @@ from scoop import futures
 # Parse input arguments
 ############################################################################
 parser = argparse.ArgumentParser()
+parser.add_argument('times', type=str)
 parser.add_argument('data', type=str)
 parser.add_argument('hours_start', type=int)
 parser.add_argument('hours_end', type=int)
@@ -249,7 +250,7 @@ def main():
     # run for every hour
     for hr in range(args.hours_start, args.hours_end + 1):
         result = ga.run(hr)
-        with open(args.result_path, 'a') as f:
+        with open(args.result_path + '_' + args.times, 'a') as f:
             f.write(str(result) + '\n')
 
 
