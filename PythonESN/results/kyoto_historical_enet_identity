@@ -1,0 +1,882 @@
+[2017-11-20 19:13:02,105] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 19:13:02,105] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 19:13:02,106] launcher  INFO    Worker distribution: 
+[2017-11-20 19:13:02,106] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 19:13:02,398 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,398 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,398 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,398 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,399 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,399 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,414 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,415 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,415 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,421 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,421 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,421 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,421 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,422 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,422 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,435 root            INFO     Initializing genetic algorithm
+2017-11-20 19:13:02,435 root            INFO     Initializing genetic algorithm
+2017-11-20 19:13:02,438 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:13:02,438 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:13:02,439 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:13:02,439 root            INFO     Running GA optimization
+2017-11-20 19:13:02,439 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min  	max    
+0  	100   	62416.3	2347.95	61183	69514.8
+1  	54    	61183  	0      	61183	61183  
+2  	60    	61183  	0      	61183	61183  
+3  	45    	61183  	0      	61183	61183  
+4  	49    	61182.9	0.656692	61176.4	61183  
+5  	51    	61182.9	0.855689	61174.4	61183  
+6  	51    	61182.9	0.881099	61174.4	61183  
+7  	47    	61182.7	1.32486 	61174.4	61183  
+8  	54    	61182.2	2.23806 	61174.4	61183  
+9  	52    	61180.7	3.33616 	61174.4	61183  
+10 	52    	61177.6	3.43561 	61171  	61183  
+11 	61    	61174.7	2.69808 	61162.6	61183  
+12 	54    	61173.3	3.38257 	61162.6	61178  
+13 	42    	61170.9	4.70848 	61162.6	61174.4
+14 	61    	61167.6	4.96232 	61162.6	61174.4
+15 	49    	61163.7	2.51429 	61162.6	61174.4
+16 	60    	61162.8	1.35451 	61161.6	61174  
+17 	53    	61162.6	0.0994987	61161.6	61162.6
+18 	51    	61162.7	1.17929  	61161.6	61174.4
+19 	52    	61162.5	0.246219 	61161.6	61162.6
+20 	54    	61162.6	2.20064  	61161.6	61184.2
+21 	45    	61162.3	2.12004  	61161.6	61183  
+22 	48    	61161.8	0.339994 	61161.6	61162.6
+23 	59    	61162.1	2.68125  	61161.6	61180.4
+24 	53    	61162  	2.70595  	61161.6	61183  
+25 	59    	61161.9	2.12875  	61161.6	61177.2
+26 	54    	61161.8	2.12927  	61161.6	61183  
+27 	54    	61162  	2.55442  	61161.6	61183  
+28 	51    	61161.7	1.49248  	61161.6	61176.6
+29 	57    	61162  	2.48634  	61161.6	61180.6
+30 	55    	61161.6	0.457694 	61161.6	61166.2
+31 	52    	61161.7	1.39298  	61161.6	61175.6
+32 	54    	61161.8	2.14108  	61160.2	61183  
+33 	48    	61161.6	0.139298 	61160.2	61161.6
+34 	56    	61161.6	0.139298 	61160.2	61161.6
+35 	50    	61161.5	0.332482 	61160.2	61161.6
+36 	56    	61161.5	1.99947  	61158.8	61177.8
+37 	57    	61160.9	2.17614  	61158.8	61175  
+38 	54    	61160  	0.929815 	61158.8	61161.6
+39 	55    	61159.8	3.16633  	61158.4	61183  
+40 	53    	61159.4	3.20383  	61158.4	61183  
+41 	48    	61159.2	2.88894  	61158.4	61183  
+42 	47    	61159  	2.42178  	61158.4	61183  
+43 	58    	61158.8	1.82275  	61158.4	61176.8
+44 	52    	61158.5	0.134521 	61158.4	61158.8
+45 	47    	61158.4	0.0397995	61158.4	61158.8
+46 	54    	61158.4	2.91038e-11	61158.4	61158.4
+47 	55    	61158.4	2.91038e-11	61158.4	61158.4
+48 	49    	61158.6	2.44767    	61158.4	61183  
+49 	55    	61158.4	2.91038e-11	61158.4	61158.4
+50 	56    	61158.6	1.63178    	61158.4	61174.8
+2017-11-20 19:24:26,729 root            INFO     Saving the best parameters
+2017-11-20 19:24:26,729 root            INFO     Saving the best parameters
+2017-11-20 19:24:26,730 root            INFO     Done
+2017-11-20 19:24:26,730 root            INFO     Done
+[2017-11-20 19:24:27,067] launcher  (127.0.0.1:33208) INFO    Root process is done.
+[2017-11-20 19:24:27,071] launcher  (127.0.0.1:33208) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 19:24:27,406] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 19:24:27,406] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 19:24:27,406] launcher  INFO    Worker distribution: 
+[2017-11-20 19:24:27,406] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 19:24:27,624 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,624 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,624 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,625 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,625 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,625 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,627 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,627 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,628 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,647 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,647 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,648 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,648 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,648 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 19:24:27,649 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,649 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 19:24:27,649 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,649 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 19:24:27,661 root            INFO     Initializing genetic algorithm
+2017-11-20 19:24:27,661 root            INFO     Initializing genetic algorithm
+2017-11-20 19:24:27,666 root            INFO     Running GA optimization
+2017-11-20 19:24:27,666 root            INFO     Running GA optimization
+gen	nevals	avg  	std    	min  	max    
+0  	100   	62482	2553.57	61183	71867.4
+1  	52    	61188.6	55.5999	61183	61741.8
+2  	48    	61181.9	4.83838	61160.8	61183  
+3  	46    	61179.4	8.13865	61160.8	61183  
+4  	49    	61175.7	10.4387	61160.8	61183  
+5  	49    	61166.7	9.79067	61160.8	61183  
+6  	49    	61161.2	3.108  	61160.8	61183  
+7  	46    	61160.8	0      	61160.8	61160.8
+8  	53    	61161  	1.65168	61160.8	61177.4
+9  	54    	61161.2	2.76853	61160.8	61183  
+10 	48    	61161  	2.20887	61160.8	61183  
+11 	53    	61160.8	0      	61160.8	61160.8
+12 	53    	61161  	1.93028	61160.8	61180.2
+13 	56    	61161.2	3.108  	61160.8	61183  
+14 	53    	61160.7	0.81589	61152.6	61160.8
+15 	49    	61160.6	1.148  	61152.6	61160.8
+16 	56    	61160.1	2.2246 	61152.6	61160.8
+17 	56    	61159.1	3.75643	61152.6	61175.2
+18 	55    	61157  	5.00302	61152.6	61179.6
+19 	53    	61153.4	2.49181	61152.6	61161.8
+20 	56    	61153  	2.87597	61152.6	61180.4
+21 	53    	61152.9	2.78596	61152.6	61180.6
+22 	50    	61152.6	2.91038e-11	61152.6	61152.6
+23 	50    	61152.8	2.20887    	61152.6	61174.8
+24 	47    	61152.6	2.91038e-11	61152.6	61152.6
+25 	53    	61153.1	3.76258    	61152.6	61183  
+26 	49    	61152.6	2.91038e-11	61152.6	61152.6
+27 	57    	61152.6	2.91038e-11	61152.6	61152.6
+28 	59    	61152.6	2.91038e-11	61152.6	61152.6
+29 	59    	61153.2	4.256      	61152.6	61183  
+30 	56    	61152.6	2.91038e-11	61152.6	61152.6
+31 	56    	61152.9	2.50737    	61152.6	61177.8
+32 	51    	61153.1	3.81046    	61152.6	61183  
+33 	51    	61152.6	2.91038e-11	61152.6	61152.6
+34 	48    	61152.8	2.44767    	61152.6	61177.2
+35 	54    	61152.6	2.91038e-11	61152.6	61152.6
+36 	55    	61153.3	4.00054    	61152.6	61181.8
+37 	49    	61152.8	2.18897    	61152.6	61174.6
+38 	56    	61153.2	4.13196    	61152.6	61183  
+39 	49    	61152.8	1.97008    	61152.6	61172.4
+40 	55    	61153.5	5.21976    	61152.6	61187.2
+41 	56    	61152.9	2.88546    	61152.6	61181.6
+42 	49    	61152.6	2.91038e-11	61152.6	61152.6
+43 	55    	61152.9	3.16406    	61152.6	61184.4
+44 	47    	61152.9	2.86556    	61152.6	61181.4
+45 	50    	61152.6	2.91038e-11	61152.6	61152.6
+46 	53    	61152.6	2.91038e-11	61152.6	61152.6
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+47 	51    	61153.2	4.30472    	61152.6	61185  
+48 	55    	61153.4	4.74525    	61152.6	61183  
+49 	57    	61153.5	4.45137    	61152.6	61176.2
+50 	52    	61152.6	2.91038e-11	61152.6	61152.6
+2017-11-20 20:03:43,740 root            INFO     Saving the best parameters
+2017-11-20 20:03:43,740 root            INFO     Saving the best parameters
+2017-11-20 20:03:43,740 root            INFO     Done
+2017-11-20 20:03:43,740 root            INFO     Done
+[2017-11-20 20:03:44,080] launcher  (127.0.0.1:35711) INFO    Root process is done.
+[2017-11-20 20:03:44,081] launcher  (127.0.0.1:35711) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 20:03:44,709] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 20:03:44,710] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 20:03:44,710] launcher  INFO    Worker distribution: 
+[2017-11-20 20:03:44,710] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 20:03:44,925 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,925 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,926 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,927 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,927 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,928 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,933 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,934 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,934 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,941 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,941 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,942 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,955 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,955 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:03:44,955 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,955 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:03:44,956 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,956 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:03:44,969 root            INFO     Initializing genetic algorithm
+2017-11-20 20:03:44,969 root            INFO     Initializing genetic algorithm
+2017-11-20 20:03:44,973 root            INFO     Running GA optimization
+2017-11-20 20:03:44,973 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg  	std    	min  	max  
+0  	100   	62321	2720.93	61183	73458
+1  	52    	61183	0      	61183	61183
+2  	57    	61183	0      	61183	61183
+3  	54    	61183	0      	61183	61183
+4  	50    	61183	0      	61183	61183
+5  	48    	61183	0.238822	61181.6	61183
+6  	52    	61182.9	0.332482	61181.6	61183
+7  	59    	61182.8	0.619626	61179.6	61183
+8  	54    	61182.4	0.93839 	61179.6	61183
+9  	60    	61181.8	1.01764 	61179.6	61183
+10 	51    	61181.3	0.904254	61179.6	61183
+11 	49    	61180.7	1.0221  	61179.6	61183
+12 	51    	61179.5	2.49731 	61162.8	61183
+13 	52    	61177.6	5.27007 	61162.8	61181.6
+14 	48    	61174.1	7.53344 	61162.8	61183  
+15 	57    	61168.9	7.6366  	61162.8	61183  
+16 	58    	61164.8	5.00687 	61162.8	61179.6
+17 	51    	61163.2	2.16083 	61162.8	61175.6
+18 	54    	61162.8	0       	61162.8	61162.8
+19 	48    	61163.3	2.76871 	61162.8	61180.8
+20 	53    	61163.3	3.24514 	61162.8	61187.8
+21 	45    	61162.8	0       	61162.8	61162.8
+22 	54    	61163  	2.00987 	61162.8	61183  
+23 	56    	61163.6	5.43931 	61159.4	61200.6
+24 	53    	61162.8	3.43598 	61159.4	61183  
+25 	55    	61161.7	1.59872 	61159.4	61162.8
+26 	53    	61160.5	1.59872 	61159.4	61162.8
+27 	53    	61159.7	0.973018	61159.4	61162.8
+28 	55    	61159.5	0.476   	61159.4	61162.8
+29 	45    	61159.4	2.91038e-11	61159.4	61159.4
+30 	49    	61159.4	2.91038e-11	61159.4	61159.4
+31 	60    	61159.4	2.91038e-11	61159.4	61159.4
+32 	52    	61159.4	2.91038e-11	61159.4	61159.4
+33 	50    	61159.6	2.06957    	61159.4	61180.2
+34 	57    	61159.6	2.14917    	61159.4	61181  
+35 	51    	61159.4	2.91038e-11	61159.4	61159.4
+36 	55    	61160.1	4.02586    	61159.4	61183  
+37 	53    	61159.4	2.91038e-11	61159.4	61159.4
+38 	51    	61159.4	2.91038e-11	61159.4	61159.4
+39 	53    	61159.4	2.91038e-11	61159.4	61159.4
+40 	49    	61159.4	2.91038e-11	61159.4	61159.4
+41 	50    	61159.4	2.91038e-11	61159.4	61159.4
+42 	53    	61159.4	2.91038e-11	61159.4	61159.4
+43 	53    	61159.4	2.91038e-11	61159.4	61159.4
+44 	52    	61159.4	2.91038e-11	61159.4	61159.4
+45 	60    	61160.3	4.62464    	61159.4	61183  
+46 	46    	61159.6	2.34817    	61159.4	61183  
+47 	51    	61159.7	2.66657    	61159.4	61186.2
+48 	51    	61160.4	4.74269    	61159.4	61187  
+49 	53    	61160.2	3.79972    	61159.4	61182.6
+50 	50    	61159.6	2.30837    	61159.4	61182.6
+2017-11-20 20:21:11,928 root            INFO     Saving the best parameters
+2017-11-20 20:21:11,928 root            INFO     Saving the best parameters
+2017-11-20 20:21:11,928 root            INFO     Done
+2017-11-20 20:21:11,928 root            INFO     Done
+[2017-11-20 20:21:12,265] launcher  (127.0.0.1:48114) INFO    Root process is done.
+[2017-11-20 20:21:12,265] launcher  (127.0.0.1:48114) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 20:21:12,744] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 20:21:12,744] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 20:21:12,744] launcher  INFO    Worker distribution: 
+[2017-11-20 20:21:12,745] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 20:21:12,958 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,958 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,958 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:12,960 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,960 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,960 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:12,970 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,970 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,971 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:12,992 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,992 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,992 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,992 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,993 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:12,993 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:12,993 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:21:12,994 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:21:12,994 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:21:13,005 root            INFO     Initializing genetic algorithm
+2017-11-20 20:21:13,005 root            INFO     Initializing genetic algorithm
+2017-11-20 20:21:13,009 root            INFO     Running GA optimization
+2017-11-20 20:21:13,009 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min  	max  
+0  	100   	62621.2	3327.71	61183	84483
+1  	45    	61183  	0      	61183	61183
+2  	52    	61183  	0      	61183	61183
+3  	44    	61183  	0      	61183	61183
+4  	54    	61183  	0      	61183	61183
+5  	50    	61183  	0      	61183	61183
+6  	53    	61183  	0.14   	61182	61183
+7  	56    	61182.9	0.3    	61182	61183
+8  	52    	61182.7	0.662634	61179.2	61183
+9  	52    	61181.9	1.40898 	61175.8	61183
+10 	58    	61180.8	2.23752 	61174.6	61183
+11 	52    	61179.1	2.60112 	61174.6	61183
+12 	60    	61177.5	2.57485 	61170.6	61183
+13 	55    	61176  	2.41559 	61170.6	61183
+14 	50    	61174.3	2.0879  	61170.6	61183
+15 	48    	61172.8	2.11933 	61170.6	61183
+16 	59    	61171.4	1.32    	61170.6	61174.6
+17 	58    	61170.7	0.693444	61170.6	61176  
+18 	57    	61170.9	1.88415 	61170.6	61183  
+19 	46    	61170.6	2.91038e-11	61170.6	61170.6
+20 	55    	61170.6	2.91038e-11	61170.6	61170.6
+21 	51    	61170.6	2.91038e-11	61170.6	61170.6
+22 	51    	61170.7	1.23378    	61170.6	61183  
+23 	52    	61170.6	2.91038e-11	61170.6	61170.6
+24 	49    	61170.6	2.91038e-11	61170.6	61170.6
+25 	53    	61170.7	1.05469    	61170.6	61181.2
+26 	47    	61170.7	1.23378    	61170.6	61183  
+27 	47    	61170.6	2.91038e-11	61170.6	61170.6
+28 	54    	61170.6	1.36054    	61167.8	61183  
+29 	54    	61170.1	1.05177    	61167.8	61170.6
+30 	44    	61169.6	1.91875    	61167.8	61183  
+31 	61    	61168.6	1.91029    	61166.2	61183  
+32 	57    	61168.1	1.69733    	61166.2	61183  
+33 	47    	61167.6	0.571314   	61166.2	61167.8
+34 	54    	61167.1	0.792121   	61166.2	61167.8
+35 	49    	61166.8	1.32348    	61166.2	61177.8
+36 	50    	61166.3	0.434069   	61166.2	61167.8
+37 	54    	61166.2	0.285657   	61166.2	61168.6
+38 	47    	61166.2	0          	61166.2	61166.2
+39 	48    	61166.2	0          	61166.2	61166.2
+40 	47    	61166.4	1.67158    	61166.2	61183  
+41 	52    	61166.4	1.70395    	61166.2	61179.6
+42 	58    	61166.5	1.93407    	61166.2	61179.6
+43 	47    	61166.1	2.7835     	61144  	61183  
+44 	50    	61165.3	4.35029    	61144  	61166.2
+45 	53    	61164.9	5.27221    	61144  	61166.2
+46 	51    	61161.1	9.34248    	61144  	61166.2
+47 	47    	61153.8	11.0198    	61144  	61166.2
+48 	47    	61147.1	7.70311    	61144  	61166.2
+49 	58    	61144.8	4.67872    	61144  	61179.6
+50 	57    	61144.8	5.36291    	61144  	61183  
+2017-11-20 20:30:11,818 root            INFO     Saving the best parameters
+2017-11-20 20:30:11,818 root            INFO     Saving the best parameters
+2017-11-20 20:30:11,819 root            INFO     Done
+2017-11-20 20:30:11,819 root            INFO     Done
+[2017-11-20 20:30:12,158] launcher  (127.0.0.1:52514) INFO    Root process is done.
+[2017-11-20 20:30:12,159] launcher  (127.0.0.1:52514) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 20:30:12,489] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 20:30:12,489] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 20:30:12,489] launcher  INFO    Worker distribution: 
+[2017-11-20 20:30:12,489] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 20:30:12,706 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,707 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,707 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,707 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,707 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,707 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,707 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,707 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,707 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,724 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,724 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,724 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,733 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,733 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:30:12,733 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,733 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:30:12,734 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,734 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:30:12,746 root            INFO     Initializing genetic algorithm
+2017-11-20 20:30:12,746 root            INFO     Initializing genetic algorithm
+2017-11-20 20:30:12,750 root            INFO     Running GA optimization
+2017-11-20 20:30:12,750 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg  	std    	min  	max    
+0  	100   	62418	3325.27	61183	86047.4
+1  	51    	61190.8	77.9274	61183	61966.2
+2  	56    	61183  	0.308  	61180.8	61183  
+3  	56    	61182.9	0.375292	61180.8	61183  
+4  	53    	61182.9	0.522471	61180.8	61183  
+5  	55    	61182.6	0.806533	61180.8	61183  
+6  	53    	61182.2	1.42584 	61175  	61183  
+7  	54    	61181.1	2.63917 	61166.8	61183  
+8  	54    	61179.6	2.99725 	61166.8	61183  
+9  	53    	61176.6	4.13494 	61160.6	61183  
+10 	53    	61173.8	4.88826 	61160.6	61183  
+11 	52    	61170  	5.89913 	61160.6	61178.8
+12 	55    	61166.1	6.05768 	61156.4	61180.2
+13 	45    	61161.3	3.08276 	61156.4	61173.4
+14 	52    	61159.6	3.30578 	61156.4	61183  
+15 	56    	61158.5	3.85046 	61156  	61183  
+16 	50    	61157  	2.4313  	61156  	61177.6
+17 	49    	61156.6	2.0848  	61156  	61176.4
+18 	54    	61156.8	3.57125 	61156  	61183  
+19 	49    	61156  	0.186719	61154.8	61156.4
+20 	56    	61156  	0.168   	61154.8	61156  
+21 	50    	61155.9	1.90442 	61150.2	61171.8
+22 	58    	61155.2	1.47469 	61150.2	61156  
+23 	47    	61154.2	1.9117  	61150.2	61156  
+24 	57    	61154.2	5.66043 	61150.2	61186.6
+25 	46    	61151.5	3.10076 	61150.2	61175.8
+26 	50    	61150.6	2.93847 	61150.2	61178.8
+27 	57    	61150.2	0       	61150.2	61150.2
+28 	55    	61150.4	1.67158 	61150.2	61167  
+29 	52    	61150.2	0       	61150.2	61150.2
+30 	53    	61150.3	1.25368 	61150.2	61162.8
+31 	51    	61150.2	0       	61150.2	61150.2
+32 	57    	61150.5	2.90536 	61150.2	61179.4
+33 	53    	61150.2	0       	61150.2	61150.2
+34 	51    	61150.2	0       	61150.2	61150.2
+35 	54    	61150.2	0       	61150.2	61150.2
+36 	53    	61150.2	0       	61150.2	61150.2
+37 	57    	61150.2	0       	61150.2	61150.2
+38 	48    	61150.2	0       	61150.2	61150.2
+39 	57    	61150.2	0       	61150.2	61150.2
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+40 	46    	61150.5	2.33838 	61150.2	61167.2
+41 	49    	61150.2	0       	61150.2	61150.2
+42 	55    	61150.7	3.47304 	61150.2	61175.6
+43 	54    	61151.1	4.75131 	61150.2	61181.8
+44 	57    	61151  	3.95069 	61150.2	61175  
+45 	58    	61150.8	3.42792 	61150.2	61174  
+46 	51    	61150.2	0       	61150.2	61150.2
+47 	53    	61150.1	0.532   	61146.4	61150.2
+48 	46    	61150.2	2.41841 	61146.4	61172.2
+49 	46    	61149.4	3.11998 	61146.4	61175.4
+50 	55    	61148.8	4.35204 	61146.4	61172.4
+2017-11-20 20:45:42,278 root            INFO     Saving the best parameters
+2017-11-20 20:45:42,278 root            INFO     Saving the best parameters
+2017-11-20 20:45:42,278 root            INFO     Done
+2017-11-20 20:45:42,278 root            INFO     Done
+[2017-11-20 20:45:42,618] launcher  (127.0.0.1:40178) INFO    Root process is done.
+[2017-11-20 20:45:42,618] launcher  (127.0.0.1:40178) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 20:45:43,105] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 20:45:43,105] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 20:45:43,105] launcher  INFO    Worker distribution: 
+[2017-11-20 20:45:43,105] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 20:45:43,330 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,330 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,330 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,331 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,331 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,331 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,346 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,346 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,346 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,351 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,351 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,352 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,372 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,372 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 20:45:43,372 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,372 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 20:45:43,372 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,372 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 20:45:43,385 root            INFO     Initializing genetic algorithm
+2017-11-20 20:45:43,385 root            INFO     Initializing genetic algorithm
+2017-11-20 20:45:43,389 root            INFO     Running GA optimization
+2017-11-20 20:45:43,389 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg  	std    	min  	max    
+0  	100   	62974	3350.28	61183	74398.4
+1  	53    	61221.1	379.329	61183	64995.4
+2  	46    	61182.9	0.443527	61180.4	61183  
+3  	52    	61182.7	0.733678	61180.4	61183  
+4  	52    	61181  	4.79828 	61161.6	61183  
+5  	47    	61176.4	8.24461 	61161.6	61183  
+6  	50    	61170.4	8.47935 	61161.6	61183  
+7  	51    	61163.9	5.13065 	61161.6	61181.8
+8  	44    	61161.9	2.28674 	61161.6	61183  
+9  	46    	61161.6	2.91038e-11	61161.6	61161.6
+10 	54    	61161.8	2.12927    	61161.6	61183  
+11 	49    	61161.8	2.12927    	61161.6	61183  
+12 	48    	61161.7	1.25368    	61161.6	61174.2
+13 	56    	61161.8	1.98997    	61161.6	61181.6
+14 	53    	61161.6	2.91038e-11	61161.6	61161.6
+15 	49    	61161.6	2.91038e-11	61161.6	61161.6
+16 	43    	61161.6	2.91038e-11	61161.6	61161.6
+17 	52    	61161.7	0.895489   	61161.6	61170.6
+18 	50    	61161.6	2.91038e-11	61161.6	61161.6
+19 	49    	61161.6	2.91038e-11	61161.6	61161.6
+20 	57    	61161.6	2.91038e-11	61161.6	61161.6
+21 	52    	61161.8	2.12927    	61161.6	61183  
+22 	56    	61161.6	2.91038e-11	61161.6	61161.6
+23 	52    	61161.6	2.91038e-11	61161.6	61161.6
+24 	56    	61162  	2.52777    	61161.6	61181  
+25 	54    	61161.7	1.31338    	61161.6	61174.8
+26 	55    	61161.6	2.91038e-11	61161.6	61161.6
+27 	50    	61161.6	2.91038e-11	61161.6	61161.6
+28 	52    	61161.7	1.09449    	61161.6	61172.6
+29 	56    	61161.8	2.12927    	61161.6	61183  
+30 	51    	61161.7	1.43278    	61161.6	61176  
+31 	55    	61162  	2.30883    	61158  	61175  
+32 	52    	61161.8	2.61763    	61158  	61183  
+33 	57    	61161.3	2.04721    	61158  	61177.4
+34 	56    	61160.7	1.57908    	61158  	61161.6
+35 	52    	61159.9	2.17722    	61158  	61172.2
+36 	50    	61158.6	1.31978    	61158  	61161.6
+37 	48    	61158.1	0.705453   	61158  	61161.6
+38 	49    	61158.4	2.9829     	61158  	61183  
+39 	49    	61158  	0          	61158  	61158  
+40 	54    	61158  	0          	61158  	61158  
+41 	55    	61158.2	2.48747    	61158  	61183  
+42 	54    	61158.4	2.84829    	61158  	61183  
+43 	44    	61158  	0          	61158  	61158  
+44 	56    	61158.2	1.55218    	61158  	61173.6
+45 	51    	61158.2	1.77108    	61158  	61175.8
+46 	54    	61158  	0          	61158  	61158  
+47 	48    	61158.2	1.69148    	61158  	61175  
+48 	54    	61158.4	2.81602    	61158  	61180.8
+49 	49    	61158.2	1.93028    	61158  	61177.4
+50 	47    	61158.3	2.68647    	61158  	61185  
+2017-11-20 21:14:19,967 root            INFO     Saving the best parameters
+2017-11-20 21:14:19,967 root            INFO     Saving the best parameters
+2017-11-20 21:14:19,967 root            INFO     Done
+2017-11-20 21:14:19,967 root            INFO     Done
+[2017-11-20 21:14:20,308] launcher  (127.0.0.1:47081) INFO    Root process is done.
+[2017-11-20 21:14:20,308] launcher  (127.0.0.1:47081) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 21:14:20,876] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 21:14:20,876] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 21:14:20,876] launcher  INFO    Worker distribution: 
+[2017-11-20 21:14:20,876] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 21:14:21,093 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,093 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,093 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,093 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,093 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,093 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,094 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,094 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,094 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,111 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,111 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,112 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,115 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,115 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:14:21,116 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,116 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:14:21,116 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,116 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:14:21,129 root            INFO     Initializing genetic algorithm
+2017-11-20 21:14:21,129 root            INFO     Initializing genetic algorithm
+2017-11-20 21:14:21,134 root            INFO     Running GA optimization
+2017-11-20 21:14:21,134 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min  	max    
+0  	100   	63034.8	4081.08	61183	86806.8
+1  	51    	61217.2	206.284	61166.6	62938  
+2  	50    	61181.7	4.44921	61166.6	61183  
+3  	45    	61180.9	5.51338	61166.6	61183  
+4  	57    	61179.4	6.78954	61166.2	61183  
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+5  	55    	61175.3	8.12526	61166.2	61183  
+6  	49    	61168.4	5.02593	61166.2	61183  
+7  	50    	61167.1	3.29806	61161.4	61183  
+8  	49    	61166.1	1.29163	61161.4	61166.6
+9  	53    	61166  	2.60164	61161.4	61183  
+10 	53    	61164.4	2.36644	61161.4	61166.6
+11 	49    	61163  	4.68273	61161.4	61200.2
+12 	50    	61162  	3.81953	61161.4	61198.8
+13 	50    	61161.4	2.91038e-11	61161.4	61161.4
+14 	51    	61162  	3.30047    	61161.4	61185  
+15 	40    	61161.4	2.91038e-11	61161.4	61161.4
+16 	54    	61161.4	2.91038e-11	61161.4	61161.4
+17 	47    	61161.5	1.03479    	61161.4	61171.8
+18 	52    	61161.6	2.73005    	61153.6	61179.8
+19 	51    	61161.2	1.33058    	61153.6	61161.4
+20 	50    	61160.3	2.7065     	61153.6	61161.4
+21 	55    	61158.9	4.98972    	61153.6	61183  
+22 	45    	61156.5	4.52718    	61153.6	61183  
+23 	51    	61153.9	1.52848    	61153.6	61161.4
+24 	51    	61153.9	2.82576    	61153.6	61182  
+25 	55    	61155.1	7.36675    	61153.6	61198.8
+26 	47    	61154.4	6.60278    	61153.6	61217.6
+27 	56    	61153.9	3.18396    	61153.6	61185.6
+28 	60    	61154.4	4.57704    	61153.6	61187.2
+29 	56    	61153.6	2.91038e-11	61153.6	61153.6
+30 	50    	61153.6	0.198997   	61151.6	61153.6
+31 	50    	61153.5	0.391918   	61151.6	61153.6
+32 	56    	61153.7	5.44399    	61144.6	61194.8
+33 	49    	61152.2	5.42645    	61144.6	61196.4
+34 	52    	61149.8	3.80363    	61144.6	61153.6
+35 	55    	61147.4	3.68048    	61144.6	61153.6
+36 	52    	61145.9	6.32049    	61144.6	61205  
+37 	61    	61145.1	5.35303    	61144.6	61198.4
+38 	57    	61144.6	2.91038e-11	61144.6	61144.6
+39 	50    	61145.2	4.5692     	61144.6	61189.2
+40 	53    	61144.8	1.51238    	61144.6	61159.8
+41 	49    	61144.6	2.91038e-11	61144.6	61144.6
+42 	54    	61144.9	2.94516    	61144.6	61174.2
+43 	55    	61145.2	5.89033    	61144.6	61203.8
+44 	52    	61145.3	5.01874    	61144.6	61190.4
+45 	53    	61144.6	2.91038e-11	61144.6	61144.6
+46 	54    	61144.6	2.91038e-11	61144.6	61144.6
+47 	56    	61145.3	4.67121    	61144.6	61183  
+48 	59    	61145.2	4.62157    	61144.6	61184  
+49 	54    	61145  	3.92025    	61144.6	61184  
+50 	52    	61145  	4.41774    	61144.6	61189  
+2017-11-20 21:24:23,776 root            INFO     Saving the best parameters
+2017-11-20 21:24:23,776 root            INFO     Saving the best parameters
+2017-11-20 21:24:23,776 root            INFO     Done
+2017-11-20 21:24:23,776 root            INFO     Done
+[2017-11-20 21:24:24,114] launcher  (127.0.0.1:37327) INFO    Root process is done.
+[2017-11-20 21:24:24,117] launcher  (127.0.0.1:37327) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 21:24:24,448] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 21:24:24,448] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 21:24:24,449] launcher  INFO    Worker distribution: 
+[2017-11-20 21:24:24,449] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 21:24:24,663 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,663 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,664 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,664 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,664 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,664 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,664 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,665 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,665 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,689 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,689 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,689 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,689 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,689 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,689 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,703 root            INFO     Initializing genetic algorithm
+2017-11-20 21:24:24,703 root            INFO     Initializing genetic algorithm
+2017-11-20 21:24:24,706 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:24:24,707 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:24:24,707 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:24:24,707 root            INFO     Running GA optimization
+2017-11-20 21:24:24,707 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std   	min  	max    
+0  	100   	62186.9	2477.7	61183	72929.8
+1  	53    	61214  	308.904	61183	64287.6
+2  	47    	61183  	0      	61183	61183  
+3  	56    	61183  	0      	61183	61183  
+4  	56    	61183  	0      	61183	61183  
+5  	52    	61183  	0      	61183	61183  
+6  	46    	61183  	0      	61183	61183  
+7  	55    	61183  	0      	61183	61183  
+8  	40    	61183  	0      	61183	61183  
+9  	53    	61183  	0      	61183	61183  
+10 	51    	61183  	0      	61183	61183  
+11 	52    	61183  	0      	61183	61183  
+12 	50    	61183  	0      	61183	61183  
+13 	56    	61183  	0      	61183	61183  
+14 	54    	61183  	0      	61183	61183  
+15 	59    	61183  	0      	61183	61183  
+16 	52    	61183  	0      	61183	61183  
+17 	55    	61183  	0      	61183	61183  
+18 	52    	61183  	0      	61183	61183  
+19 	55    	61183  	0      	61183	61183  
+20 	49    	61183  	0      	61183	61183  
+21 	50    	61183  	0      	61183	61183  
+22 	57    	61183  	0      	61183	61183  
+23 	59    	61183  	0      	61183	61183  
+24 	52    	61183  	0      	61183	61183  
+25 	59    	61183  	0      	61183	61183  
+26 	60    	61183  	0      	61183	61183  
+27 	52    	61183  	0      	61183	61183  
+28 	58    	61183  	0      	61183	61183  
+29 	44    	61183  	0      	61183	61183  
+30 	57    	61183  	0      	61183	61183  
+31 	51    	61183  	0      	61183	61183  
+32 	52    	61183  	0      	61183	61183  
+33 	48    	61183  	0      	61183	61183  
+34 	57    	61183  	0      	61183	61183  
+35 	54    	61183  	0      	61183	61183  
+36 	43    	61183  	0      	61183	61183  
+37 	47    	61183  	0      	61183	61183  
+38 	45    	61183  	0      	61183	61183  
+39 	55    	61183  	0      	61183	61183  
+40 	56    	61183  	0      	61183	61183  
+41 	52    	61183  	0      	61183	61183  
+42 	47    	61183  	0      	61183	61183  
+43 	44    	61183  	0      	61183	61183  
+44 	56    	61183  	0      	61183	61183  
+45 	52    	61183  	0      	61183	61183  
+46 	50    	61183  	0      	61183	61183  
+47 	45    	61183  	0      	61183	61183  
+48 	60    	61183  	0      	61183	61183  
+49 	53    	61183  	0      	61183	61183  
+50 	50    	61183  	0      	61183	61183  
+2017-11-20 21:37:10,999 root            INFO     Saving the best parameters
+2017-11-20 21:37:10,999 root            INFO     Saving the best parameters
+2017-11-20 21:37:11,000 root            INFO     Done
+2017-11-20 21:37:11,000 root            INFO     Done
+[2017-11-20 21:37:11,340] launcher  (127.0.0.1:33652) INFO    Root process is done.
+[2017-11-20 21:37:11,341] launcher  (127.0.0.1:33652) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 21:37:11,699] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 21:37:11,699] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 21:37:11,699] launcher  INFO    Worker distribution: 
+[2017-11-20 21:37:11,699] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 21:37:11,914 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,914 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,915 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,916 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,917 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,917 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,917 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,917 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,917 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,938 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,938 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,938 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,939 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,939 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:37:11,939 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,939 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:37:11,940 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,940 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:37:11,952 root            INFO     Initializing genetic algorithm
+2017-11-20 21:37:11,952 root            INFO     Initializing genetic algorithm
+2017-11-20 21:37:11,957 root            INFO     Running GA optimization
+2017-11-20 21:37:11,957 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	62897.5	4096.09	61177.2	89774.4
+1  	53    	61183  	0      	61183  	61183  
+2  	45    	61183  	0      	61183  	61183  
+3  	50    	61183  	0      	61183  	61183  
+4  	48    	61183  	0      	61183  	61183  
+5  	48    	61183  	0      	61183  	61183  
+6  	56    	61183  	0      	61183  	61183  
+7  	57    	61182.4	3.27527	61163.8	61183  
+8  	49    	61181.7	4.89882	61163.8	61183  
+9  	57    	61178.2	8.31384	61163.8	61183  
+10 	53    	61175.1	9.4432 	61163.8	61183  
+11 	54    	61168.6	8.19641	61163.8	61183  
+12 	54    	61164  	1.82684	61163.8	61181  
+13 	54    	61163.7	0.557193	61158.2	61163.8
+14 	54    	61163.8	2.17777 	61158.2	61183  
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+15 	47    	61163.3	1.58433 	61158.2	61166.8
+16 	51    	61162.6	2.28859 	61157.6	61163.8
+17 	55    	61161.2	3.60798 	61157.6	61183  
+18 	51    	61158.9	1.9351  	61157.4	61163.8
+19 	57    	61158.3	2.8971  	61157.4	61186.6
+20 	53    	61157.7	0.322887	61157.4	61158.2
+21 	53    	61157.5	0.20019 	61157.2	61158.2
+22 	59    	61157.5	2.36028 	61151  	61179.2
+23 	52    	61157.1	1.39532 	61151  	61157.6
+24 	60    	61156.6	3.5292  	61151  	61179.8
+25 	43    	61154.8	3.94373 	61151  	61170  
+26 	65    	61152.7	2.80563 	61151  	61157.4
+27 	59    	61151.8	3.94477 	61151  	61182.8
+28 	50    	61151.5	4.79584 	61151  	61199.2
+29 	53    	61152.2	5.98978 	61151  	61188  
+30 	47    	61151.3	2.70637 	61151  	61178.2
+31 	59    	61151.3	2.32469 	61151  	61168  
+32 	52    	61151.2	1.61188 	61151  	61167.2
+33 	46    	61151  	0       	61151  	61151  
+34 	48    	61151.3	3.18396 	61151  	61183  
+35 	57    	61151  	0       	61151  	61151  
+36 	48    	61151.7	4.7684  	61151  	61187  
+37 	54    	61151  	0       	61151  	61151  
+38 	51    	61151  	0       	61151  	61151  
+39 	52    	61151.5	5.17393 	61151  	61203  
+40 	54    	61151.6	4.05732 	61151  	61183  
+41 	52    	61151.1	0.895489	61151  	61160  
+42 	51    	61151  	0       	61151  	61151  
+43 	48    	61151.4	2.98755 	61151  	61179.2
+44 	49    	61151.3	1.94538 	61151  	61169.4
+45 	50    	61151.1	1.17409 	61151  	61162.8
+46 	50    	61151.3	3.42276 	61151  	61185.4
+47 	57    	61151  	0       	61151  	61151  
+48 	57    	61152.5	8.17705 	61151  	61220.4
+49 	50    	61151.6	3.73746 	61151  	61177.4
+50 	46    	61151.4	4.07945 	61151  	61192  
+2017-11-20 21:54:32,763 root            INFO     Saving the best parameters
+2017-11-20 21:54:32,763 root            INFO     Saving the best parameters
+2017-11-20 21:54:32,763 root            INFO     Done
+2017-11-20 21:54:32,763 root            INFO     Done
+[2017-11-20 21:54:33,104] launcher  (127.0.0.1:38175) INFO    Root process is done.
+[2017-11-20 21:54:33,105] launcher  (127.0.0.1:38175) INFO    Finished cleaning spawned subprocesses.
+[2017-11-20 21:54:33,590] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-11-20 21:54:33,590] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-11-20 21:54:33,590] launcher  INFO    Worker distribution: 
+[2017-11-20 21:54:33,590] launcher  INFO       127.0.0.1:	3 + origin
+2017-11-20 21:54:33,810 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,810 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,810 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,812 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,812 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,813 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,817 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,818 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,818 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,835 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,836 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,836 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,839 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,839 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-11-20 21:54:33,839 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,839 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-11-20 21:54:33,840 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,840 root            INFO     Loading data (./data/kyoto_historical)
+2017-11-20 21:54:33,853 root            INFO     Initializing genetic algorithm
+2017-11-20 21:54:33,853 root            INFO     Initializing genetic algorithm
+2017-11-20 21:54:33,857 root            INFO     Running GA optimization
+2017-11-20 21:54:33,857 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min  	max    
+0  	100   	62237.2	2357.12	61183	70234.4
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+1  	55    	61185  	20.4806	61181.6	61388.8
+2  	50    	61183  	0.238822	61181.6	61183  
+3  	52    	61182.9	0.37981 	61181.6	61183  
+4  	52    	61182.7	0.579945	61181.6	61183  
+5  	50    	61182.3	0.69986 	61181.6	61183  
+6  	48    	61181.8	0.43914 	61181.6	61183  
+7  	48    	61181.5	0.588   	61177.4	61181.6
+8  	42    	61181.2	1.07676 	61177.4	61181.6
+9  	48    	61180.4	1.68126 	61177.2	61181.6
+10 	49    	61178.9	1.77192 	61173.4	61181.6
+11 	56    	61177.5	1.47065 	61173.4	61181.6
+12 	53    	61176.5	2.16409 	61167.6	61179.4
+13 	53    	61175.1	3.05317 	61167.6	61183  
+14 	54    	61172.7	3.8944  	61167.6	61183  
+15 	49    	61170.3	3.53931 	61167.6	61183  
+16 	45    	61167.9	1.80047 	61163  	61173.4
+17 	50    	61167.1	1.62221 	61163  	61173.4
+18 	56    	61166.3	2.06539 	61163  	61167.6
+19 	51    	61165  	2.27735 	61163  	61167.6
+20 	59    	61164.2	3.53396 	61163  	61183  
+21 	50    	61163.2	1.00255 	61163  	61167.6
+22 	53    	61163.2	1.98997 	61163  	61183  
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+23 	48    	61163.2	1.98997 	61163  	61183  
+24 	54    	61163.2	1.98997 	61163  	61183  
+25 	54    	61163.1	1.39298 	61163  	61177  
+26 	51    	61163.2	1.98997 	61163  	61183  
+27 	47    	61163  	0       	61163  	61163  
+28 	50    	61163  	0       	61163  	61163  
+29 	51    	61163  	0       	61163  	61163  
+30 	52    	61163  	0       	61163  	61163  
+31 	51    	61163  	0       	61163  	61163  
+32 	51    	61163.2	1.98997 	61163  	61183  
+33 	58    	61163.2	1.93028 	61163  	61182.4
+34 	46    	61163.2	1.91038 	61163  	61182.2
+35 	54    	61163  	0       	61163  	61163  
+36 	54    	61163.6	3.37798 	61163  	61183  
+37 	57    	61163.2	1.93028 	61163  	61182.4
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+38 	47    	61163  	0       	61163  	61163  
+39 	47    	61163  	0       	61163  	61163  
+40 	50    	61163  	0       	61163  	61163  
+41 	52    	61163  	0       	61163  	61163  
+42 	46    	61163.6	3.07829 	61163  	61183  
+43 	47    	61163  	0       	61163  	61163  
+44 	52    	61163.5	2.9957  	61163  	61183  
+45 	48    	61163  	0       	61163  	61163  
+46 	55    	61163.2	1.98997 	61163  	61183  
+47 	46    	61163  	0       	61163  	61163  
+48 	51    	61163.2	1.98997 	61163  	61183  
+49 	52    	61163  	0       	61163  	61163  
+50 	55    	61163.2	1.98997 	61163  	61183  
+2017-11-20 22:09:16,909 root            INFO     Saving the best parameters
+2017-11-20 22:09:16,909 root            INFO     Saving the best parameters
+2017-11-20 22:09:16,909 root            INFO     Done
+2017-11-20 22:09:16,909 root            INFO     Done
+[2017-11-20 22:09:17,249] launcher  (127.0.0.1:43976) INFO    Root process is done.
+[2017-11-20 22:09:17,249] launcher  (127.0.0.1:43976) INFO    Finished cleaning spawned subprocesses.

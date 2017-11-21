@@ -34,6 +34,22 @@ def process(dataset):
             for line in dataList:
                 writer.writerows([line])
 
+    elif (dataset=='Kyoto'):
+        preprocessedDir = '/home/minh/PycharmProjects/Ensemble/preprocessed/Kyoto'
+        processedFile = '/home/minh/PycharmProjects/Ensemble/processed/Kyoto/access.csv'
+        fileList = listdir(preprocessedDir)
+        fileList.sort()
+        dataList = []
+        for fileName in fileList:
+            with open(preprocessedDir + "/" + fileName, 'r') as f:
+                reader = csv.reader(f)
+                for line in reader:
+                    dataList.append(line)
+        with open(processedFile, 'w') as f:
+            writer = csv.writer(f)
+            for line in dataList:
+                writer.writerows([line])
+
 def graph(dataset):
     if (dataset=='EDGAR'):
         processedLocation = config['PROCESSED']['EDGAR_LOCATION'].encode('UTF-8')
@@ -219,5 +235,49 @@ def preprocess(dataset):
         curTime = startTime + timeDiff
         print('startTime:',startTime)
         print('curTime:',curTime)"""
+    elif (dataset=='Kyoto'):
+        dataFolder = '/home/minh/Desktop/kyoto2015/'
+        preprocessedFolder = '/home/minh/PycharmProjects/Ensemble/preprocessed/Kyoto/'
+        fileList = listdir(dataFolder)
+        fileList.sort()
+        print('fileList:',fileList)
 
-#process('EDGAR')
+        requestList = []
+        for i in range(86400):
+            requestList.append(0)
+
+        count=0
+        for fileName in fileList:
+            curDay = fileName[:4] + '-' + fileName[4:6] + '-' + fileName[6:8]
+            filePath = dataFolder + fileName
+            with open(filePath,'r') as f:
+                for line in f:
+                    count+=1
+                    lineParts = line.split()
+                    h,m,s = lineParts[-2].split(':')
+                    noOfSeconds = int(h) * 3600 + int(m) * 60 + int(s)
+                    requestList[noOfSeconds] += 1
+                    if count%100000==0:
+                        print('number of lines processed:',count)
+
+            hourlyRequest = []
+            for i in range(24):
+                hourlyRequest.append(0)
+
+            for i in range(len(requestList)):
+                curHour = int(i / 3600)
+                if requestList[i] > hourlyRequest[curHour]:
+                    hourlyRequest[curHour] = requestList[i]
+
+            startTime = datetime.strptime(curDay + " " + "00:00:00", "%Y-%m-%d %H:%M:%S")
+            timeDelta = timedelta(hours=1)
+            curTime = startTime
+
+            with open(preprocessedFolder + fileName[:8]+'.csv','w') as f:
+                writer = csv.writer(f)
+                for value in hourlyRequest:
+                    writer.writerows([[curTime.strftime("%Y-%m-%d %H:%M:%S"), value]])
+                    curTime += timeDelta
+            print('file processed:', fileName)
+
+process('Kyoto')
