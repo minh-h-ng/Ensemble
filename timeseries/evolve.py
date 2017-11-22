@@ -246,7 +246,7 @@ def main():
         return
 
     # initialize
-    ga = GeneticAlgorithm(args.data)
+    ga = GeneticAlgorithm(args.data, samples=100)
 
     # run for every hour
     for hr in tqdm.tqdm(range(args.hours_start, args.hours_end + 1)):
