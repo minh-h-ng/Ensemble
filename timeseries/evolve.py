@@ -9,6 +9,7 @@ from functools import partial
 
 import numpy as np
 import pandas as pd
+import tqdm
 from deap import base, creator, tools
 from scoop import futures
 
@@ -248,7 +249,7 @@ def main():
     ga = GeneticAlgorithm(args.data)
 
     # run for every hour
-    for hr in range(args.hours_start, args.hours_end + 1):
+    for hr in tqdm.tqdm(range(args.hours_start, args.hours_end + 1)):
         result = ga.run(hr)
         with open(args.result_path + '_' + args.times, 'a') as f:
             f.write(str(result) + '\n')
