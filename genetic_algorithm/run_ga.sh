@@ -17,7 +17,7 @@ HOURS_START=1
 HOURS_END=2207
 
 # Directory path (relative to top_dir) for storing GA results
-results_dir='/timeseries/'
+results_dir='/genetic_algorithm/'
 
 # File name for storing GA results
 results_file='GA_results'
