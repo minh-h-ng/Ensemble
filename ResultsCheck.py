@@ -33,8 +33,8 @@ def RMSE(y_true, y_pred):
     return total
 
 def checkResult(times):
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
-    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5/predictions_kyoto_historical_enet_identity' + '_' + str(times)
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
+    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5/predictions_edgar_historical_enet_identity' + '_' + str(times)
     #predictionPath = '/home
 
     # /minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
