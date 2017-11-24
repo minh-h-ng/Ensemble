@@ -13,7 +13,7 @@ DATAFILE=${top_dir}"/PythonESN/data_backup/edgar_10_12"
 # and signifies the number of hours elapsed.
 # Each output line of forecast.py (except header) signifies
 # 1-hr of elapsed time
-HOURS_START=1866
+HOURS_START=1
 HOURS_END=2207
 
 # Directory path (relative to top_dir) for storing GA results
@@ -35,4 +35,4 @@ mkdir -p ${dir_path}
 result_path=${dir_path}${results_file}
 
 # Execute script
-python3 -m scoop -n ${cpus} evolve.py $times ${DATAFILE} ${HOURS_START} ${HOURS_END} ${result_path}
+python3 -m scoop -n ${cpus} evolve.py ${times} ${DATAFILE} ${HOURS_START} ${HOURS_END} ${result_path}
