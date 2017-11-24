@@ -4,7 +4,6 @@ import argparse
 import json
 import logging
 import random
-import sys
 from functools import partial
 
 import numpy as np
@@ -13,28 +12,10 @@ import tqdm
 from deap import base, creator, tools
 from scoop import futures
 
-###############################################################################################
-# The next part needs to be in the global scope, since all workers
-# need access to these variables (pickling problems).
-############################################################################
-# Parse input arguments
-############################################################################
-parser = argparse.ArgumentParser()
-parser.add_argument('times', type=str)
-parser.add_argument('data', type=str)
-parser.add_argument('hours_start', type=int)
-parser.add_argument('hours_end', type=int)
-parser.add_argument('result_path', type=str)
-args = parser.parse_args()
-
-############################################################################
-# Load data
-############################################################################
-
 # Initialize logger
 logger = logging.getLogger(__name__)
-sh = logging.StreamHandler(sys.stdout)
-sh.setFormatter(logging.Formatter('%(levelname)s: %(message)s'))
+sh = logging.FileHandler('evolve.log', 'w')
+sh.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
 sh.setLevel(logging.DEBUG)
 logger.addHandler(sh)
 
@@ -144,7 +125,7 @@ class GeneticAlgorithm:
         return offspring
 
     def eaValter(self, population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
-                 stats=None, halloffame=None, verbose=__debug__):
+                 stats=None, halloffame=None):
         logbook = tools.Logbook()
         logbook.header = ['gen', 'nevals'] + (stats.fields if stats else [])
 
@@ -162,8 +143,7 @@ class GeneticAlgorithm:
 
         record = stats.compile(population) if stats is not None else {}
         logbook.record(gen=0, nevals=len(invalid_ind), **record)
-        if verbose:
-            logger.debug(logbook.stream)
+        logger.warning('\n' + logbook.stream)
 
         # Begin the generational process
         for gen in range(1, ngen + 1):
@@ -182,7 +162,10 @@ class GeneticAlgorithm:
 
             # break if best_ind is not changed
             if best_ind == halloffame[-1]:
+                logger.warning("Best Individual didn't change. Stopping evolution")
                 break
+            else:
+                best_ind = toolbox.clone(halloffame[-1])
 
             # Select the next generation population
             population[:] = toolbox.select(population + offspring)
@@ -190,8 +173,7 @@ class GeneticAlgorithm:
             # Update the statistics with the new population
             record = stats.compile(population) if stats is not None else {}
             logbook.record(gen=gen, nevals=len(invalid_ind), **record)
-            if verbose:
-                logger.debug(logbook.stream)
+            logger.warning('\n' + logbook.stream)
 
         return population, logbook
 
@@ -231,29 +213,47 @@ class GeneticAlgorithm:
                                                   hours_elapsed=hours_elapsed,
                                                   halloffame=halloffame)
 
+        logger.warning("Hall of Fame: " + str(halloffame[-1]))
+
         # read genes at hours_elapsed
         # iloc is zero-indexed
         genes = self.df.iloc[hours_elapsed - 1][['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']]
 
         # compute GA estimate
         ga_estimate = genes.dot(halloffame[-1]).round()
+
+        logger.warning("GA Estimate: " + str(ga_estimate))
         return ga_estimate
 
 
-def main():
+def main(args):
+    logger.warning("Starting GA")
+
     # sanitize (elapsed hours should at-least be 1)
     if args.hours_start <= 0:
+        logger.critical("Invalid args. Aborting!")
         return
 
     # initialize
-    ga = GeneticAlgorithm(args.data, samples=100)
+    ga = GeneticAlgorithm(args.data)
 
     # run for every hour
     for hr in tqdm.tqdm(range(args.hours_start, args.hours_end + 1)):
+        logger.warning("Processing hour: " + str(hr))
         result = ga.run(hr)
         with open(args.result_path + '_' + args.times, 'a') as f:
             f.write(str(result) + '\n')
+        logger.warning('\n')
+
+    logger.warning("Stopping GA")
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('times', type=str, help='Times being executed. It is appended to results file')
+    parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
+    parser.add_argument('hours_start', type=int, help='Hour to begin processing from (inclusive)')
+    parser.add_argument('hours_end', type=int, help='Hour to end processing at (inclusive)')
+    parser.add_argument('result_path', type=str, help='Destination to save result')
+
+    main(parser.parse_args())
