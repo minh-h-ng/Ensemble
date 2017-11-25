@@ -158,7 +158,7 @@ class GeneticAlgorithm:
 
             # Update the hall of fame with the generated individuals
             if halloffame is not None:
-                halloffame.update(offspring)
+                halloffame.update(population + offspring)
 
             # break if best_ind is not changed
             if best_ind == halloffame[-1]:
