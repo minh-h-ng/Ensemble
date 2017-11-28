@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 # Initialize logger
 logger = logging.getLogger(__name__)
-sh = logging.FileHandler(os.path.basename(args.result_path) + '.log', 'w')
+sh = logging.FileHandler(os.path.basename(args.result_path) + '.log', 'a')
 sh.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
 sh.setLevel(logging.DEBUG)
 logger.addHandler(sh)
