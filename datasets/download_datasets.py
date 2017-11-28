@@ -96,7 +96,7 @@ class DatasetDownloader(object):
             else:
                 return None
 
-    def download_r(self):
+    def download_r(self,startDate,endDate):
         self.logger.debug('Downloading R')
 
         # Download dir
@@ -107,13 +107,35 @@ class DatasetDownloader(object):
 
         dateFormat = '%Y-%m-%d'
 
-        datetime.strptime(line[1] + " " + line[2], "%Y-%m-%d %H:%M:%S")
+        startDate = datetime.strptime(startDate,dateFormat)
+        endDate = datetime.strptime(endDate,dateFormat)
 
-        startDate = datetime'2017-09-01'
-        endDate = '2017-10-01'
+        URLs = []
+        delta = endDate - startDate
+        for i in range(delta.days+1):
+            #print(datetime.strftime(startDate+timedelta(days=i),dateFormat))
+            URLs.append(base_url+datetime.strftime(startDate+timedelta(days=i),dateFormat)+'-r.csv.gz')
 
-        URLS = []
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
+        future_to_filename = {executor.submit(self._download_file, url, dir): url for url in URLs}
 
+        self._mkdir(dir)
+
+        for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_filename), total=len(future_to_filename)):
+            url = future_to_filename[future]
+            try:
+                filename = future.result()
+                if filename is None:
+                    raise ValueError
+                csv_filename = os.path.splitext(filename)[0] + '.csv'
+                zip_path = os.path.join(dir, filename)
+
+                os.rename(os.path.join(dir, filename), os.path.join(dir, filename))
+            except Exception as exc:
+                self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(url, exc))
+
+        # cleanup
+        executor.shutdown(True)
 
     def download_edgar(self):
         self.logger.debug('Downloading EDGAR')
@@ -313,7 +335,7 @@ def harvest_log(log_path):
 
 def main():
     downloader = DatasetDownloader()
-    downloader.download_r()
+    downloader.download_r('2017-08-01','2017-10-31')
 
     """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
