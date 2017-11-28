@@ -3,6 +3,11 @@
 ###
 # $1 => name of dataset (e.g. edgar_10_12).
 # $2 => results_suffix (e.g. 1).
+
+# Usage examples:
+# (venv)$ ./run_ga.sh edgar_10_12 1
+# (venv)$ ./run_ga.sh edgar_10_12 2
+# (venv)$ ./run_ga.sh edgar_10_12 3
 ###
 
 ########### Variables ###########
