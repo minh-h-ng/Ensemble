@@ -18,6 +18,7 @@ import requests
 import tqdm
 from bs4 import BeautifulSoup
 
+from datetime import datetime, timedelta
 
 class DatasetDownloader(object):
     def __init__(self, **kwargs):
@@ -94,6 +95,25 @@ class DatasetDownloader(object):
                 return filename
             else:
                 return None
+
+    def download_r(self):
+        self.logger.debug('Downloading R')
+
+        # Download dir
+        dir = '/home/minh/Desktop/R_download/'
+
+        # Base URL of actual dataset
+        base_url = 'http://cran-logs.rstudio.com/2017/'
+
+        dateFormat = '%Y-%m-%d'
+
+        datetime.strptime(line[1] + " " + line[2], "%Y-%m-%d %H:%M:%S")
+
+        startDate = datetime'2017-09-01'
+        endDate = '2017-10-01'
+
+        URLS = []
+
 
     def download_edgar(self):
         self.logger.debug('Downloading EDGAR')
@@ -293,7 +313,7 @@ def harvest_log(log_path):
 
 def main():
     downloader = DatasetDownloader()
-    downloader.download_svds()
+    downloader.download_r()
 
     """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,

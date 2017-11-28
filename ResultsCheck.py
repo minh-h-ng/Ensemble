@@ -33,9 +33,9 @@ def RMSE(y_true, y_pred):
     return total
 
 def checkResult(times):
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
-    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5/predictions_edgar_historical_enet_identity' + '_' + str(times)
-    #predictionPath = '/home
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5/predictions_edgar_historical_enet_identity_' + str(times)
+    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
 
     # /minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
 
@@ -159,6 +159,6 @@ def checkResult(times):
     print('total over-under of naive,ar,arma,arima,ets,esn:',overload_naive+underload_naive,overload_ar+underload_ar,overload_arma+underload_arma,
           overload_arima+underload_arima,overload_ets+underload_ets,overload_esn+underload_esn)"""
 
-for i in range(1,10):
+for i in range(1,2):
     checkResult(i)
     print('')

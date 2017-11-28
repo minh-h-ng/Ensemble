@@ -3,18 +3,18 @@
     "regression_method": "enet", 
     "n_internal_units": 318, 
     "n_drop": 100, 
-    "noise_level": 0.06770386026451884, 
+    "noise_level": 0.0789322641371887, 
     "teacher_shift": 0.0, 
-    "input_scaling": 0.42328273245236037, 
+    "input_scaling": 0.8941011858480304, 
     "input_shift": 0.0, 
     "embedding": "identity", 
     "connectivity": 0.25, 
     "embedding_parameters": null, 
-    "teacher_scaling": 0.3153794915109682, 
+    "teacher_scaling": 0.8432756893927679, 
     "regression_parameters": [
-        0.19954722221724014, 
-        0.3198195515625097
+        0.30943285947511523, 
+        0.5853938560925553
     ], 
-    "spectral_radius": 1.0915768344554473, 
-    "feedback_scaling": 0.12505357468253392
+    "spectral_radius": 1.268136566756679, 
+    "feedback_scaling": 0.05932668546379829
 }

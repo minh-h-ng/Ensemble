@@ -39,6 +39,7 @@ def ensemble_bagging():
     else:
         for i in range(len(naiveList)):
             results.append(np.ceil((naiveList[i]+arList[i]+armaList[i]+arimaList[i]+etsList[i])/5))
+    results = results[-342:]
     with open(baggingFile,'w') as f:
         for i in range(len(results)):
             f.writelines(str(results[i])+'\n')
