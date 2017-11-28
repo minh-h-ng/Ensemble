@@ -206,13 +206,6 @@ def preprocess(dataset):
         print('total length:',totalLength)
         print('time diff:',(lastTime-firstTime).total_seconds())
 
-        """firstTime: 2012-03-16 12:30:00
-        lastTime: 2012-03-17 20:46:54
-        count: 2048442
-        total sum: 2048443
-        total length: 116215
-        time diff: 116214.0"""
-
         """for i in range(len(requests)):
             print('length list:',len(requests[i]))"""
 
@@ -221,36 +214,12 @@ def preprocess(dataset):
             curList = requests[i]
             hourlyRequest.append(np.max(curList))
 
-        """for i in range(24):
-            hourlyRequest.append(0)
-
-        for i in range(len(requestList)):
-            curHour = int(i / 3600)
-            if requestList[i] > hourlyRequest[curHour]:
-                hourlyRequest[curHour] = requestList[i]"""
-
         curTime = firstTime
         with open(preprocessedFile,'w') as f:
             writer = csv.writer(f)
             for value in hourlyRequest:
                 writer.writerows([[curTime.strftime("%Y-%m-%d %H:%M:%S"), value]])
                 curTime += timedelta(hours=1)
-
-
-        """dataFile = '/home/minh/Desktop/maccdc2012/http.log'
-        count = 0
-        with open(dataFile,'r') as f:
-            for line in f:
-                if count<=1:
-                    print('line:',line)
-                else:
-                    break
-                count+=1
-        startTime = datetime.strptime("1970-01-01 00:00:00","%Y-%m-%d %H:%M:%S")
-        timeDiff = timedelta(seconds=1331901000)
-        curTime = startTime + timeDiff
-        print('startTime:',startTime)
-        print('curTime:',curTime)"""
     elif (dataset=='Kyoto'):
         dataFolder = '/home/minh/Desktop/kyoto2015/'
         preprocessedFolder = '/home/minh/PycharmProjects/Ensemble/preprocessed/Kyoto/'
@@ -258,12 +227,11 @@ def preprocess(dataset):
         fileList.sort()
         print('fileList:',fileList)
 
-        requestList = []
-        for i in range(86400):
-            requestList.append(0)
-
         count=0
         for fileName in fileList:
+            requestList = []
+            for i in range(86400):
+                requestList.append(0)
             curDay = fileName[:4] + '-' + fileName[4:6] + '-' + fileName[6:8]
             filePath = dataFolder + fileName
             with open(filePath,'r') as f:
@@ -340,6 +308,52 @@ def preprocess(dataset):
                     writer.writerows([[curTime.strftime("%Y-%m-%d %H:%M:%S"), value]])
                     curTime += timeDelta
             print('file processed:', fileName)
+    elif (dataset=='R'):
+        dataFolder = '/home/minh/Desktop/R_download/Extracted/'
+        preprocessedFolder = '/home/minh/PycharmProjects/Ensemble/preprocessed/R/'
+        fileList = listdir(dataFolder)
+        fileList.sort()
+        print('fileList:', fileList)
 
-#preprocess('CRAN')
-#process('CRAN')
+        requestList = []
+        for i in range(86400):
+            requestList.append(0)
+
+        for fileName in fileList:
+            count = 0
+            curDay = fileName[:10]
+            filePath = dataFolder + fileName
+            with open(filePath, 'r') as f:
+                for line in f:
+                    count += 1
+                    if count > 1:
+                        lineParts = line.split(',')
+                        h, m, s = lineParts[1][1:-1].split(':')
+                        #print('h,m,s:',h,m,s)
+                        noOfSeconds = int(h) * 3600 + int(m) * 60 + int(s)
+                        requestList[noOfSeconds] += 1
+                        if count % 100000 == 0:
+                            print('number of lines processed:', count)
+
+            hourlyRequest = []
+            for i in range(24):
+                hourlyRequest.append(0)
+
+            for i in range(len(requestList)):
+                curHour = int(i / 3600)
+                if requestList[i] > hourlyRequest[curHour]:
+                    hourlyRequest[curHour] = requestList[i]
+
+            startTime = datetime.strptime(curDay + " " + "00:00:00", "%Y-%m-%d %H:%M:%S")
+            timeDelta = timedelta(hours=1)
+            curTime = startTime
+
+            with open(preprocessedFolder + fileName[:4] + fileName[5:7] + fileName[8:10] + '.csv', 'w') as f:
+                writer = csv.writer(f)
+                for value in hourlyRequest:
+                    writer.writerows([[curTime.strftime("%Y-%m-%d %H:%M:%S"), value]])
+                    curTime += timeDelta
+            print('file processed:', fileName)
+
+
+process('Kyoto')
