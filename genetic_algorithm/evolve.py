@@ -3,6 +3,7 @@
 import argparse
 import json
 import logging
+import os
 import random
 from functools import partial
 
@@ -11,8 +12,6 @@ import pandas as pd
 import tqdm
 from deap import base, creator, tools
 from scoop import futures
-import os
-
 
 # Parse arguments
 parser = argparse.ArgumentParser()
