@@ -3,6 +3,7 @@
 import argparse
 import json
 import logging
+import os
 import random
 from functools import partial
 
@@ -12,9 +13,17 @@ import tqdm
 from deap import base, creator, tools
 from scoop import futures
 
+# Parse arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
+parser.add_argument('hours_start', type=int, help='Hour to begin processing from (inclusive)')
+parser.add_argument('hours_end', type=int, help='Hour to end processing at (inclusive)')
+parser.add_argument('result_path', type=str, help='Destination to save result')
+args = parser.parse_args()
+
 # Initialize logger
 logger = logging.getLogger(__name__)
-sh = logging.FileHandler('evolve.log', 'w')
+sh = logging.FileHandler(os.path.basename(args.result_path) + '.log', 'a')
 sh.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
 sh.setLevel(logging.DEBUG)
 logger.addHandler(sh)
@@ -226,7 +235,7 @@ class GeneticAlgorithm:
         return ga_estimate
 
 
-def main(args):
+def main():
     logger.warning("Starting GA")
 
     # sanitize (elapsed hours should at-least be 1)
@@ -241,7 +250,7 @@ def main(args):
     for hr in tqdm.tqdm(range(args.hours_start, args.hours_end + 1)):
         logger.warning("Processing hour: " + str(hr))
         result = ga.run(hr)
-        with open(args.result_path + '_' + args.times, 'a') as f:
+        with open(args.result_path, 'a') as f:
             f.write(str(result) + '\n')
         logger.warning('\n')
 
@@ -249,11 +258,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('times', type=str, help='Times being executed. It is appended to results file')
-    parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
-    parser.add_argument('hours_start', type=int, help='Hour to begin processing from (inclusive)')
-    parser.add_argument('hours_end', type=int, help='Hour to end processing at (inclusive)')
-    parser.add_argument('result_path', type=str, help='Destination to save result')
-
-    main(parser.parse_args())
+    main()
