@@ -24,7 +24,7 @@ data_set=$1
 # and signifies the number of hours elapsed.
 # Each output line of forecast.py (except header) signifies
 # 1-hr of elapsed time
-hours_start=1
+hours_start=1866
 hours_end=2207
 
 # Directory path (relative to top_dir) for storing GA results
