@@ -44,6 +44,7 @@ pyzmq==16.0.2
 qtconsole==4.3.1
 requests==2.18.4
 rpy2==2.9.0
+scikit-learn==0.19.1
 scipy==0.19.1
 scoop==0.7.1.1
 simplegeneric==0.8.1
