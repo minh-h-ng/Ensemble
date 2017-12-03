@@ -1,0 +1,4152 @@
+2017-12-03 00:57:32,611 - Starting GA
+2017-12-03 00:57:32,668 - Processing hour: 1866
+2017-12-03 00:57:33,770 - 
+gen	nevals
+0  	31    
+2017-12-03 00:57:47,761 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:57:47,762 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:57:47,763 - GA Estimate: 565.0
+2017-12-03 00:57:47,764 - 
+
+2017-12-03 00:57:47,764 - Processing hour: 1867
+2017-12-03 00:57:48,869 - 
+gen	nevals
+0  	31    
+2017-12-03 00:58:05,933 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:58:05,934 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:58:05,935 - GA Estimate: 576.0
+2017-12-03 00:58:05,935 - 
+
+2017-12-03 00:58:05,946 - Processing hour: 1868
+2017-12-03 00:58:07,360 - 
+gen	nevals
+0  	31    
+2017-12-03 00:58:25,546 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:58:25,547 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:58:25,548 - GA Estimate: 591.0
+2017-12-03 00:58:25,548 - 
+
+2017-12-03 00:58:25,549 - Processing hour: 1869
+2017-12-03 00:58:26,878 - 
+gen	nevals
+0  	31    
+2017-12-03 00:58:45,924 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:58:45,925 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:58:45,926 - GA Estimate: 482.0
+2017-12-03 00:58:45,926 - 
+
+2017-12-03 00:58:45,926 - Processing hour: 1870
+2017-12-03 00:58:47,570 - 
+gen	nevals
+0  	31    
+2017-12-03 00:59:08,769 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:59:08,770 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:59:08,771 - GA Estimate: 518.0
+2017-12-03 00:59:08,771 - 
+
+2017-12-03 00:59:08,771 - Processing hour: 1871
+2017-12-03 00:59:10,515 - 
+gen	nevals
+0  	31    
+2017-12-03 00:59:35,536 - Best Individual didn't change. Stopping evolution
+2017-12-03 00:59:35,537 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 00:59:35,538 - GA Estimate: 490.0
+2017-12-03 00:59:35,538 - 
+
+2017-12-03 00:59:35,538 - Processing hour: 1872
+2017-12-03 00:59:37,574 - 
+gen	nevals
+0  	31    
+2017-12-03 01:00:03,698 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:00:03,699 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:00:03,701 - GA Estimate: 479.0
+2017-12-03 01:00:03,701 - 
+
+2017-12-03 01:00:03,701 - Processing hour: 1873
+2017-12-03 01:00:05,769 - 
+gen	nevals
+0  	31    
+2017-12-03 01:00:33,346 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:00:33,347 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:00:33,348 - GA Estimate: 505.0
+2017-12-03 01:00:33,349 - 
+
+2017-12-03 01:00:33,349 - Processing hour: 1874
+2017-12-03 01:00:35,658 - 
+gen	nevals
+0  	31    
+2017-12-03 01:01:07,530 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:01:07,531 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:01:07,532 - GA Estimate: 492.0
+2017-12-03 01:01:07,532 - 
+
+2017-12-03 01:01:07,532 - Processing hour: 1875
+2017-12-03 01:01:10,030 - 
+gen	nevals
+0  	31    
+2017-12-03 01:01:45,675 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:01:45,676 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:01:45,677 - GA Estimate: 573.0
+2017-12-03 01:01:45,678 - 
+
+2017-12-03 01:01:45,678 - Processing hour: 1876
+2017-12-03 01:01:48,617 - 
+gen	nevals
+0  	31    
+2017-12-03 01:02:25,117 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:02:25,118 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:02:25,119 - GA Estimate: 562.0
+2017-12-03 01:02:25,120 - 
+
+2017-12-03 01:02:25,120 - Processing hour: 1877
+2017-12-03 01:02:27,937 - 
+gen	nevals
+0  	31    
+2017-12-03 01:03:04,911 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:03:04,912 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:03:04,913 - GA Estimate: 524.0
+2017-12-03 01:03:04,913 - 
+
+2017-12-03 01:03:04,914 - Processing hour: 1878
+2017-12-03 01:03:07,646 - 
+gen	nevals
+0  	31    
+2017-12-03 01:03:42,810 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:03:42,811 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:03:42,812 - GA Estimate: 536.0
+2017-12-03 01:03:42,812 - 
+
+2017-12-03 01:03:42,812 - Processing hour: 1879
+2017-12-03 01:03:45,597 - 
+gen	nevals
+0  	31    
+2017-12-03 01:04:20,697 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:04:20,698 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:04:20,731 - GA Estimate: 616.0
+2017-12-03 01:04:20,731 - 
+
+2017-12-03 01:04:20,739 - Processing hour: 1880
+2017-12-03 01:04:23,333 - 
+gen	nevals
+0  	31    
+2017-12-03 01:04:58,397 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:04:58,398 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:04:58,399 - GA Estimate: 604.0
+2017-12-03 01:04:58,400 - 
+
+2017-12-03 01:04:58,400 - Processing hour: 1881
+2017-12-03 01:05:01,013 - 
+gen	nevals
+0  	31    
+2017-12-03 01:05:36,820 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:05:36,821 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:05:36,822 - GA Estimate: 536.0
+2017-12-03 01:05:36,822 - 
+
+2017-12-03 01:05:36,823 - Processing hour: 1882
+2017-12-03 01:05:39,665 - 
+gen	nevals
+0  	31    
+2017-12-03 01:06:14,366 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:06:14,367 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:06:14,392 - GA Estimate: 485.0
+2017-12-03 01:06:14,393 - 
+
+2017-12-03 01:06:14,400 - Processing hour: 1883
+2017-12-03 01:06:16,971 - 
+gen	nevals
+0  	31    
+2017-12-03 01:06:52,251 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:06:52,251 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:06:52,253 - GA Estimate: 488.0
+2017-12-03 01:06:52,253 - 
+
+2017-12-03 01:06:52,291 - Processing hour: 1884
+2017-12-03 01:06:54,849 - 
+gen	nevals
+0  	31    
+2017-12-03 01:07:29,638 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:07:29,639 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:07:29,640 - GA Estimate: 666.0
+2017-12-03 01:07:29,641 - 
+
+2017-12-03 01:07:29,641 - Processing hour: 1885
+2017-12-03 01:07:32,306 - 
+gen	nevals
+0  	31    
+2017-12-03 01:08:07,922 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:08:07,924 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:08:07,925 - GA Estimate: 438.0
+2017-12-03 01:08:07,925 - 
+
+2017-12-03 01:08:07,941 - Processing hour: 1886
+2017-12-03 01:08:10,816 - 
+gen	nevals
+0  	31    
+2017-12-03 01:08:45,869 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:08:45,870 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:08:45,871 - GA Estimate: 505.0
+2017-12-03 01:08:45,871 - 
+
+2017-12-03 01:08:45,875 - Processing hour: 1887
+2017-12-03 01:08:48,617 - 
+gen	nevals
+0  	31    
+2017-12-03 01:09:23,308 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:09:23,309 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:09:23,310 - GA Estimate: 591.0
+2017-12-03 01:09:23,310 - 
+
+2017-12-03 01:09:23,310 - Processing hour: 1888
+2017-12-03 01:09:26,064 - 
+gen	nevals
+0  	31    
+2017-12-03 01:10:00,293 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:10:00,294 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:10:00,336 - GA Estimate: 508.0
+2017-12-03 01:10:00,336 - 
+
+2017-12-03 01:10:00,339 - Processing hour: 1889
+2017-12-03 01:10:03,079 - 
+gen	nevals
+0  	31    
+2017-12-03 01:10:38,772 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:10:38,773 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:10:38,775 - GA Estimate: 538.0
+2017-12-03 01:10:38,775 - 
+
+2017-12-03 01:10:38,775 - Processing hour: 1890
+2017-12-03 01:10:41,505 - 
+gen	nevals
+0  	31    
+2017-12-03 01:11:16,538 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:11:16,539 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:11:16,540 - GA Estimate: 529.0
+2017-12-03 01:11:16,540 - 
+
+2017-12-03 01:11:16,541 - Processing hour: 1891
+2017-12-03 01:11:19,346 - 
+gen	nevals
+0  	31    
+2017-12-03 01:11:54,199 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:11:54,200 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:11:54,201 - GA Estimate: 539.0
+2017-12-03 01:11:54,202 - 
+
+2017-12-03 01:11:54,202 - Processing hour: 1892
+2017-12-03 01:11:56,862 - 
+gen	nevals
+0  	31    
+2017-12-03 01:12:30,984 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:12:30,984 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:12:30,986 - GA Estimate: 484.0
+2017-12-03 01:12:30,986 - 
+
+2017-12-03 01:12:30,986 - Processing hour: 1893
+2017-12-03 01:12:33,655 - 
+gen	nevals
+0  	31    
+2017-12-03 01:13:07,618 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:13:07,619 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:13:07,620 - GA Estimate: 490.0
+2017-12-03 01:13:07,620 - 
+
+2017-12-03 01:13:07,621 - Processing hour: 1894
+2017-12-03 01:13:10,233 - 
+gen	nevals
+0  	31    
+2017-12-03 01:13:44,635 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:13:44,636 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:13:44,637 - GA Estimate: 452.0
+2017-12-03 01:13:44,637 - 
+
+2017-12-03 01:13:44,637 - Processing hour: 1895
+2017-12-03 01:13:47,260 - 
+gen	nevals
+0  	31    
+2017-12-03 01:14:20,979 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:14:20,980 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:14:20,981 - GA Estimate: 500.0
+2017-12-03 01:14:20,982 - 
+
+2017-12-03 01:14:20,982 - Processing hour: 1896
+2017-12-03 01:14:23,676 - 
+gen	nevals
+0  	31    
+2017-12-03 01:14:57,714 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:14:57,715 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:14:57,752 - GA Estimate: 479.0
+2017-12-03 01:14:57,753 - 
+
+2017-12-03 01:14:57,787 - Processing hour: 1897
+2017-12-03 01:15:00,540 - 
+gen	nevals
+0  	31    
+2017-12-03 01:15:35,651 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:15:35,652 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:15:35,654 - GA Estimate: 535.0
+2017-12-03 01:15:35,654 - 
+
+2017-12-03 01:15:35,654 - Processing hour: 1898
+2017-12-03 01:15:38,104 - 
+gen	nevals
+0  	31    
+2017-12-03 01:16:12,845 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:16:12,845 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:16:12,847 - GA Estimate: 513.0
+2017-12-03 01:16:12,847 - 
+
+2017-12-03 01:16:12,847 - Processing hour: 1899
+2017-12-03 01:16:15,430 - 
+gen	nevals
+0  	31    
+2017-12-03 01:16:50,633 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:16:50,634 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:16:50,635 - GA Estimate: 569.0
+2017-12-03 01:16:50,635 - 
+
+2017-12-03 01:16:50,635 - Processing hour: 1900
+2017-12-03 01:16:53,251 - 
+gen	nevals
+0  	31    
+2017-12-03 01:17:28,205 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:17:28,206 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:17:28,247 - GA Estimate: 485.0
+2017-12-03 01:17:28,248 - 
+
+2017-12-03 01:17:28,263 - Processing hour: 1901
+2017-12-03 01:17:31,089 - 
+gen	nevals
+0  	31    
+2017-12-03 01:18:05,951 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:18:05,952 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:18:05,953 - GA Estimate: 467.0
+2017-12-03 01:18:05,953 - 
+
+2017-12-03 01:18:05,953 - Processing hour: 1902
+2017-12-03 01:18:08,679 - 
+gen	nevals
+0  	31    
+2017-12-03 01:18:44,023 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:18:44,024 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:18:44,025 - GA Estimate: 570.0
+2017-12-03 01:18:44,026 - 
+
+2017-12-03 01:18:44,026 - Processing hour: 1903
+2017-12-03 01:18:46,673 - 
+gen	nevals
+0  	31    
+2017-12-03 01:19:21,440 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:19:21,441 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:19:21,443 - GA Estimate: 624.0
+2017-12-03 01:19:21,443 - 
+
+2017-12-03 01:19:21,471 - Processing hour: 1904
+2017-12-03 01:19:24,285 - 
+gen	nevals
+0  	31    
+2017-12-03 01:19:58,365 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:19:58,366 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:19:58,368 - GA Estimate: 593.0
+2017-12-03 01:19:58,368 - 
+
+2017-12-03 01:19:58,368 - Processing hour: 1905
+2017-12-03 01:20:01,113 - 
+gen	nevals
+0  	31    
+2017-12-03 01:20:35,733 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:20:35,734 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:20:35,736 - GA Estimate: 586.0
+2017-12-03 01:20:35,736 - 
+
+2017-12-03 01:20:35,736 - Processing hour: 1906
+2017-12-03 01:20:38,259 - 
+gen	nevals
+0  	31    
+2017-12-03 01:21:12,593 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:21:12,594 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:21:12,595 - GA Estimate: 497.0
+2017-12-03 01:21:12,596 - 
+
+2017-12-03 01:21:12,639 - Processing hour: 1907
+2017-12-03 01:21:15,280 - 
+gen	nevals
+0  	31    
+2017-12-03 01:21:50,661 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:21:50,662 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:21:50,663 - GA Estimate: 624.0
+2017-12-03 01:21:50,663 - 
+
+2017-12-03 01:21:50,663 - Processing hour: 1908
+2017-12-03 01:21:53,293 - 
+gen	nevals
+0  	31    
+2017-12-03 01:22:28,689 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:22:28,690 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:22:28,691 - GA Estimate: 613.0
+2017-12-03 01:22:28,691 - 
+
+2017-12-03 01:22:28,692 - Processing hour: 1909
+2017-12-03 01:22:31,513 - 
+gen	nevals
+0  	31    
+2017-12-03 01:23:06,589 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:23:06,590 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:23:06,592 - GA Estimate: 610.0
+2017-12-03 01:23:06,592 - 
+
+2017-12-03 01:23:06,592 - Processing hour: 1910
+2017-12-03 01:23:09,201 - 
+gen	nevals
+0  	31    
+2017-12-03 01:23:43,908 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:23:43,909 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:23:43,910 - GA Estimate: 653.0
+2017-12-03 01:23:43,910 - 
+
+2017-12-03 01:23:43,911 - Processing hour: 1911
+2017-12-03 01:23:46,805 - 
+gen	nevals
+0  	31    
+2017-12-03 01:24:21,979 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:24:21,979 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:24:21,981 - GA Estimate: 720.0
+2017-12-03 01:24:21,981 - 
+
+2017-12-03 01:24:22,011 - Processing hour: 1912
+2017-12-03 01:24:24,602 - 
+gen	nevals
+0  	31    
+2017-12-03 01:24:58,868 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:24:58,869 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:24:58,871 - GA Estimate: 901.0
+2017-12-03 01:24:58,871 - 
+
+2017-12-03 01:24:58,871 - Processing hour: 1913
+2017-12-03 01:25:01,738 - 
+gen	nevals
+0  	31    
+2017-12-03 01:25:36,942 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:25:36,943 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:25:36,945 - GA Estimate: 1083.0
+2017-12-03 01:25:36,945 - 
+
+2017-12-03 01:25:36,945 - Processing hour: 1914
+2017-12-03 01:25:39,486 - 
+gen	nevals
+0  	31    
+2017-12-03 01:26:15,276 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:26:15,277 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:26:15,278 - GA Estimate: 945.0
+2017-12-03 01:26:15,278 - 
+
+2017-12-03 01:26:15,279 - Processing hour: 1915
+2017-12-03 01:26:17,901 - 
+gen	nevals
+0  	31    
+2017-12-03 01:26:52,902 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:26:52,905 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:26:52,906 - GA Estimate: 1024.0
+2017-12-03 01:26:52,906 - 
+
+2017-12-03 01:26:52,907 - Processing hour: 1916
+2017-12-03 01:26:55,577 - 
+gen	nevals
+0  	31    
+2017-12-03 01:27:30,593 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:27:30,594 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:27:30,596 - GA Estimate: 1212.0
+2017-12-03 01:27:30,596 - 
+
+2017-12-03 01:27:30,597 - Processing hour: 1917
+2017-12-03 01:27:33,259 - 
+gen	nevals
+0  	31    
+2017-12-03 01:28:07,509 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:28:07,510 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:28:07,511 - GA Estimate: 1228.0
+2017-12-03 01:28:07,511 - 
+
+2017-12-03 01:28:07,512 - Processing hour: 1918
+2017-12-03 01:28:10,694 - 
+gen	nevals
+0  	31    
+2017-12-03 01:28:45,372 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:28:45,373 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:28:45,375 - GA Estimate: 1561.0
+2017-12-03 01:28:45,375 - 
+
+2017-12-03 01:28:45,375 - Processing hour: 1919
+2017-12-03 01:28:48,171 - 
+gen	nevals
+0  	31    
+2017-12-03 01:29:22,958 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:29:22,959 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:29:22,960 - GA Estimate: 1134.0
+2017-12-03 01:29:22,960 - 
+
+2017-12-03 01:29:22,961 - Processing hour: 1920
+2017-12-03 01:29:25,636 - 
+gen	nevals
+0  	31    
+2017-12-03 01:29:59,717 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:29:59,718 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:29:59,719 - GA Estimate: 1283.0
+2017-12-03 01:29:59,719 - 
+
+2017-12-03 01:29:59,720 - Processing hour: 1921
+2017-12-03 01:30:02,369 - 
+gen	nevals
+0  	31    
+2017-12-03 01:30:38,120 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:30:38,121 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:30:38,122 - GA Estimate: 971.0
+2017-12-03 01:30:38,122 - 
+
+2017-12-03 01:30:38,123 - Processing hour: 1922
+2017-12-03 01:30:40,738 - 
+gen	nevals
+0  	31    
+2017-12-03 01:31:16,666 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:31:16,666 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:31:16,668 - GA Estimate: 1139.0
+2017-12-03 01:31:16,668 - 
+
+2017-12-03 01:31:16,671 - Processing hour: 1923
+2017-12-03 01:31:19,372 - 
+gen	nevals
+0  	31    
+2017-12-03 01:31:54,684 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:31:54,685 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:31:54,687 - GA Estimate: 1236.0
+2017-12-03 01:31:54,687 - 
+
+2017-12-03 01:31:54,735 - Processing hour: 1924
+2017-12-03 01:31:57,318 - 
+gen	nevals
+0  	31    
+2017-12-03 01:32:32,825 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:32:32,826 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:32:32,827 - GA Estimate: 607.0
+2017-12-03 01:32:32,827 - 
+
+2017-12-03 01:32:32,835 - Processing hour: 1925
+2017-12-03 01:32:35,527 - 
+gen	nevals
+0  	31    
+2017-12-03 01:33:10,669 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:33:10,670 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:33:10,672 - GA Estimate: 494.0
+2017-12-03 01:33:10,672 - 
+
+2017-12-03 01:33:10,672 - Processing hour: 1926
+2017-12-03 01:33:13,327 - 
+gen	nevals
+0  	31    
+2017-12-03 01:33:48,466 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:33:48,467 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:33:48,468 - GA Estimate: 537.0
+2017-12-03 01:33:48,468 - 
+
+2017-12-03 01:33:48,468 - Processing hour: 1927
+2017-12-03 01:33:51,218 - 
+gen	nevals
+0  	31    
+2017-12-03 01:34:26,734 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:34:26,735 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:34:26,736 - GA Estimate: 580.0
+2017-12-03 01:34:26,736 - 
+
+2017-12-03 01:34:26,737 - Processing hour: 1928
+2017-12-03 01:34:29,401 - 
+gen	nevals
+0  	31    
+2017-12-03 01:35:04,068 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:35:04,069 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:35:04,070 - GA Estimate: 510.0
+2017-12-03 01:35:04,070 - 
+
+2017-12-03 01:35:04,103 - Processing hour: 1929
+2017-12-03 01:35:06,486 - 
+gen	nevals
+0  	31    
+2017-12-03 01:35:41,750 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:35:41,751 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:35:41,752 - GA Estimate: 602.0
+2017-12-03 01:35:41,752 - 
+
+2017-12-03 01:35:41,753 - Processing hour: 1930
+2017-12-03 01:35:44,345 - 
+gen	nevals
+0  	31    
+2017-12-03 01:36:19,150 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:36:19,151 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:36:19,152 - GA Estimate: 524.0
+2017-12-03 01:36:19,152 - 
+
+2017-12-03 01:36:19,153 - Processing hour: 1931
+2017-12-03 01:36:22,049 - 
+gen	nevals
+0  	31    
+2017-12-03 01:36:56,589 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:36:56,589 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:36:56,591 - GA Estimate: 477.0
+2017-12-03 01:36:56,591 - 
+
+2017-12-03 01:36:56,591 - Processing hour: 1932
+2017-12-03 01:36:59,231 - 
+gen	nevals
+0  	31    
+2017-12-03 01:37:33,044 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:37:33,045 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:37:33,046 - GA Estimate: 668.0
+2017-12-03 01:37:33,046 - 
+
+2017-12-03 01:37:33,046 - Processing hour: 1933
+2017-12-03 01:37:35,702 - 
+gen	nevals
+0  	31    
+2017-12-03 01:38:09,896 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:38:09,897 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:38:09,898 - GA Estimate: 496.0
+2017-12-03 01:38:09,898 - 
+
+2017-12-03 01:38:09,899 - Processing hour: 1934
+2017-12-03 01:38:12,587 - 
+gen	nevals
+0  	31    
+2017-12-03 01:38:46,257 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:38:46,259 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:38:46,261 - GA Estimate: 1093.0
+2017-12-03 01:38:46,261 - 
+
+2017-12-03 01:38:46,261 - Processing hour: 1935
+2017-12-03 01:38:48,985 - 
+gen	nevals
+0  	31    
+2017-12-03 01:39:23,733 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:39:23,734 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:39:23,735 - GA Estimate: 619.0
+2017-12-03 01:39:23,735 - 
+
+2017-12-03 01:39:23,775 - Processing hour: 1936
+2017-12-03 01:39:26,348 - 
+gen	nevals
+0  	31    
+2017-12-03 01:40:01,519 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:40:01,520 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:40:01,521 - GA Estimate: 1024.0
+2017-12-03 01:40:01,521 - 
+
+2017-12-03 01:40:01,522 - Processing hour: 1937
+2017-12-03 01:40:04,215 - 
+gen	nevals
+0  	31    
+2017-12-03 01:40:39,124 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:40:39,125 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:40:39,127 - GA Estimate: 953.0
+2017-12-03 01:40:39,127 - 
+
+2017-12-03 01:40:39,127 - Processing hour: 1938
+2017-12-03 01:40:41,878 - 
+gen	nevals
+0  	31    
+2017-12-03 01:41:17,638 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:41:17,639 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:41:17,640 - GA Estimate: 766.0
+2017-12-03 01:41:17,640 - 
+
+2017-12-03 01:41:17,640 - Processing hour: 1939
+2017-12-03 01:41:20,229 - 
+gen	nevals
+0  	31    
+2017-12-03 01:41:56,539 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:41:56,539 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:41:56,541 - GA Estimate: 651.0
+2017-12-03 01:41:56,541 - 
+
+2017-12-03 01:41:56,542 - Processing hour: 1940
+2017-12-03 01:41:59,317 - 
+gen	nevals
+0  	31    
+2017-12-03 01:42:34,104 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:42:34,105 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:42:34,106 - GA Estimate: 733.0
+2017-12-03 01:42:34,106 - 
+
+2017-12-03 01:42:34,139 - Processing hour: 1941
+2017-12-03 01:42:36,693 - 
+gen	nevals
+0  	31    
+2017-12-03 01:43:11,242 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:43:11,243 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:43:11,245 - GA Estimate: 975.0
+2017-12-03 01:43:11,245 - 
+
+2017-12-03 01:43:11,245 - Processing hour: 1942
+2017-12-03 01:43:13,731 - 
+gen	nevals
+0  	31    
+2017-12-03 01:43:49,121 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:43:49,122 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:43:49,124 - GA Estimate: 1081.0
+2017-12-03 01:43:49,124 - 
+
+2017-12-03 01:43:49,124 - Processing hour: 1943
+2017-12-03 01:43:52,008 - 
+gen	nevals
+0  	31    
+2017-12-03 01:44:26,547 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:44:26,548 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:44:26,549 - GA Estimate: 1043.0
+2017-12-03 01:44:26,549 - 
+
+2017-12-03 01:44:26,550 - Processing hour: 1944
+2017-12-03 01:44:29,307 - 
+gen	nevals
+0  	31    
+2017-12-03 01:45:03,735 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:45:03,736 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:45:03,737 - GA Estimate: 932.0
+2017-12-03 01:45:03,737 - 
+
+2017-12-03 01:45:03,738 - Processing hour: 1945
+2017-12-03 01:45:06,416 - 
+gen	nevals
+0  	31    
+2017-12-03 01:45:41,690 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:45:41,696 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:45:41,698 - GA Estimate: 831.0
+2017-12-03 01:45:41,698 - 
+
+2017-12-03 01:45:41,736 - Processing hour: 1946
+2017-12-03 01:45:44,298 - 
+gen	nevals
+0  	31    
+2017-12-03 01:46:19,534 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:46:19,535 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:46:19,536 - GA Estimate: 1136.0
+2017-12-03 01:46:19,537 - 
+
+2017-12-03 01:46:19,537 - Processing hour: 1947
+2017-12-03 01:46:22,312 - 
+gen	nevals
+0  	31    
+2017-12-03 01:46:57,409 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:46:57,410 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:46:57,412 - GA Estimate: 932.0
+2017-12-03 01:46:57,412 - 
+
+2017-12-03 01:46:57,412 - Processing hour: 1948
+2017-12-03 01:47:00,105 - 
+gen	nevals
+0  	31    
+2017-12-03 01:47:34,095 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:47:34,096 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:47:34,097 - GA Estimate: 647.0
+2017-12-03 01:47:34,097 - 
+
+2017-12-03 01:47:34,111 - Processing hour: 1949
+2017-12-03 01:47:36,752 - 
+gen	nevals
+0  	31    
+2017-12-03 01:48:11,017 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:48:11,018 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:48:11,019 - GA Estimate: 709.0
+2017-12-03 01:48:11,019 - 
+
+2017-12-03 01:48:11,019 - Processing hour: 1950
+2017-12-03 01:48:13,578 - 
+gen	nevals
+0  	31    
+2017-12-03 01:48:48,101 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:48:48,102 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:48:48,103 - GA Estimate: 635.0
+2017-12-03 01:48:48,103 - 
+
+2017-12-03 01:48:48,103 - Processing hour: 1951
+2017-12-03 01:48:50,606 - 
+gen	nevals
+0  	31    
+2017-12-03 01:49:25,180 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:49:25,181 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:49:25,182 - GA Estimate: 798.0
+2017-12-03 01:49:25,183 - 
+
+2017-12-03 01:49:25,183 - Processing hour: 1952
+2017-12-03 01:49:27,744 - 
+gen	nevals
+0  	31    
+2017-12-03 01:50:01,733 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:50:01,734 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:50:01,735 - GA Estimate: 682.0
+2017-12-03 01:50:01,735 - 
+
+2017-12-03 01:50:01,735 - Processing hour: 1953
+2017-12-03 01:50:04,204 - 
+gen	nevals
+0  	31    
+2017-12-03 01:50:38,837 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:50:38,839 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:50:38,840 - GA Estimate: 582.0
+2017-12-03 01:50:38,840 - 
+
+2017-12-03 01:50:38,841 - Processing hour: 1954
+2017-12-03 01:50:41,536 - 
+gen	nevals
+0  	31    
+2017-12-03 01:51:15,537 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:51:15,538 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:51:15,572 - GA Estimate: 549.0
+2017-12-03 01:51:15,572 - 
+
+2017-12-03 01:51:15,579 - Processing hour: 1955
+2017-12-03 01:51:18,105 - 
+gen	nevals
+0  	31    
+2017-12-03 01:51:52,916 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:51:52,917 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:51:52,918 - GA Estimate: 614.0
+2017-12-03 01:51:52,918 - 
+
+2017-12-03 01:51:52,955 - Processing hour: 1956
+2017-12-03 01:51:55,601 - 
+gen	nevals
+0  	31    
+2017-12-03 01:52:29,818 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:52:29,819 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:52:29,820 - GA Estimate: 797.0
+2017-12-03 01:52:29,820 - 
+
+2017-12-03 01:52:29,821 - Processing hour: 1957
+2017-12-03 01:52:32,434 - 
+gen	nevals
+0  	31    
+2017-12-03 01:53:07,521 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:53:07,522 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:53:07,523 - GA Estimate: 586.0
+2017-12-03 01:53:07,551 - 
+
+2017-12-03 01:53:07,552 - Processing hour: 1958
+2017-12-03 01:53:10,217 - 
+gen	nevals
+0  	31    
+2017-12-03 01:53:44,710 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:53:44,711 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:53:44,712 - GA Estimate: 591.0
+2017-12-03 01:53:44,712 - 
+
+2017-12-03 01:53:44,712 - Processing hour: 1959
+2017-12-03 01:53:47,275 - 
+gen	nevals
+0  	31    
+2017-12-03 01:54:21,489 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:54:21,490 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:54:21,492 - GA Estimate: 662.0
+2017-12-03 01:54:21,492 - 
+
+2017-12-03 01:54:21,492 - Processing hour: 1960
+2017-12-03 01:54:24,102 - 
+gen	nevals
+0  	31    
+2017-12-03 01:54:57,723 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:54:57,724 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:54:57,726 - GA Estimate: 850.0
+2017-12-03 01:54:57,726 - 
+
+2017-12-03 01:54:57,726 - Processing hour: 1961
+2017-12-03 01:55:00,406 - 
+gen	nevals
+0  	31    
+2017-12-03 01:55:33,174 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:55:33,175 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:55:33,176 - GA Estimate: 903.0
+2017-12-03 01:55:33,176 - 
+
+2017-12-03 01:55:33,177 - Processing hour: 1962
+2017-12-03 01:55:35,666 - 
+gen	nevals
+0  	31    
+2017-12-03 01:56:09,913 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:56:09,914 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:56:09,916 - GA Estimate: 843.0
+2017-12-03 01:56:09,916 - 
+
+2017-12-03 01:56:09,916 - Processing hour: 1963
+2017-12-03 01:56:12,633 - 
+gen	nevals
+0  	31    
+2017-12-03 01:56:46,469 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:56:46,470 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:56:46,471 - GA Estimate: 771.0
+2017-12-03 01:56:46,471 - 
+
+2017-12-03 01:56:46,471 - Processing hour: 1964
+2017-12-03 01:56:49,170 - 
+gen	nevals
+0  	31    
+2017-12-03 01:57:22,202 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:57:22,203 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:57:22,204 - GA Estimate: 994.0
+2017-12-03 01:57:22,204 - 
+
+2017-12-03 01:57:22,205 - Processing hour: 1965
+2017-12-03 01:57:24,735 - 
+gen	nevals
+0  	31    
+2017-12-03 01:57:59,055 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:57:59,057 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:57:59,058 - GA Estimate: 910.0
+2017-12-03 01:57:59,059 - 
+
+2017-12-03 01:57:59,059 - Processing hour: 1966
+2017-12-03 01:58:01,741 - 
+gen	nevals
+0  	31    
+2017-12-03 01:58:35,945 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:58:35,964 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:58:35,965 - GA Estimate: 1020.0
+2017-12-03 01:58:35,966 - 
+
+2017-12-03 01:58:35,995 - Processing hour: 1967
+2017-12-03 01:58:38,556 - 
+gen	nevals
+0  	31    
+2017-12-03 01:59:11,967 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:59:11,968 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:59:11,969 - GA Estimate: 965.0
+2017-12-03 01:59:11,970 - 
+
+2017-12-03 01:59:11,970 - Processing hour: 1968
+2017-12-03 01:59:14,489 - 
+gen	nevals
+0  	31    
+2017-12-03 01:59:48,189 - Best Individual didn't change. Stopping evolution
+2017-12-03 01:59:48,190 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 01:59:48,191 - GA Estimate: 809.0
+2017-12-03 01:59:48,192 - 
+
+2017-12-03 01:59:48,192 - Processing hour: 1969
+2017-12-03 01:59:50,850 - 
+gen	nevals
+0  	31    
+2017-12-03 02:00:24,660 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:00:24,661 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:00:24,663 - GA Estimate: 801.0
+2017-12-03 02:00:24,663 - 
+
+2017-12-03 02:00:24,663 - Processing hour: 1970
+2017-12-03 02:00:27,177 - 
+gen	nevals
+0  	31    
+2017-12-03 02:00:59,891 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:00:59,892 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:00:59,893 - GA Estimate: 690.0
+2017-12-03 02:00:59,894 - 
+
+2017-12-03 02:00:59,894 - Processing hour: 1971
+2017-12-03 02:01:02,395 - 
+gen	nevals
+0  	31    
+2017-12-03 02:01:36,123 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:01:36,152 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:01:36,154 - GA Estimate: 718.0
+2017-12-03 02:01:36,154 - 
+
+2017-12-03 02:01:36,179 - Processing hour: 1972
+2017-12-03 02:01:38,587 - 
+gen	nevals
+0  	31    
+2017-12-03 02:02:11,308 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:02:11,308 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:02:11,310 - GA Estimate: 557.0
+2017-12-03 02:02:11,310 - 
+
+2017-12-03 02:02:11,310 - Processing hour: 1973
+2017-12-03 02:02:13,890 - 
+gen	nevals
+0  	31    
+2017-12-03 02:02:47,702 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:02:47,703 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:02:47,704 - GA Estimate: 531.0
+2017-12-03 02:02:47,704 - 
+
+2017-12-03 02:02:47,705 - Processing hour: 1974
+2017-12-03 02:02:50,309 - 
+gen	nevals
+0  	31    
+2017-12-03 02:03:23,629 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:03:23,630 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:03:23,668 - GA Estimate: 559.0
+2017-12-03 02:03:23,668 - 
+
+2017-12-03 02:03:23,687 - Processing hour: 1975
+2017-12-03 02:03:26,229 - 
+gen	nevals
+0  	31    
+2017-12-03 02:03:59,617 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:03:59,618 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:03:59,619 - GA Estimate: 501.0
+2017-12-03 02:03:59,663 - 
+
+2017-12-03 02:03:59,667 - Processing hour: 1976
+2017-12-03 02:04:02,162 - 
+gen	nevals
+0  	31    
+2017-12-03 02:04:36,912 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:04:36,913 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:04:36,915 - GA Estimate: 524.0
+2017-12-03 02:04:36,915 - 
+
+2017-12-03 02:04:36,915 - Processing hour: 1977
+2017-12-03 02:04:39,594 - 
+gen	nevals
+0  	31    
+2017-12-03 02:05:14,019 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:05:14,020 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:05:14,022 - GA Estimate: 559.0
+2017-12-03 02:05:14,022 - 
+
+2017-12-03 02:05:14,022 - Processing hour: 1978
+2017-12-03 02:05:16,766 - 
+gen	nevals
+0  	31    
+2017-12-03 02:05:50,798 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:05:50,799 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:05:50,800 - GA Estimate: 582.0
+2017-12-03 02:05:50,801 - 
+
+2017-12-03 02:05:50,801 - Processing hour: 1979
+2017-12-03 02:05:53,416 - 
+gen	nevals
+0  	31    
+2017-12-03 02:06:27,366 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:06:27,366 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:06:27,376 - GA Estimate: 575.0
+2017-12-03 02:06:27,376 - 
+
+2017-12-03 02:06:27,391 - Processing hour: 1980
+2017-12-03 02:06:30,020 - 
+gen	nevals
+0  	31    
+2017-12-03 02:07:03,830 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:07:03,831 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:07:03,832 - GA Estimate: 633.0
+2017-12-03 02:07:03,832 - 
+
+2017-12-03 02:07:03,832 - Processing hour: 1981
+2017-12-03 02:07:06,433 - 
+gen	nevals
+0  	31    
+2017-12-03 02:07:40,374 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:07:40,375 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:07:40,392 - GA Estimate: 767.0
+2017-12-03 02:07:40,392 - 
+
+2017-12-03 02:07:40,415 - Processing hour: 1982
+2017-12-03 02:07:43,101 - 
+gen	nevals
+0  	31    
+2017-12-03 02:08:17,615 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:08:17,616 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:08:17,618 - GA Estimate: 679.0
+2017-12-03 02:08:17,618 - 
+
+2017-12-03 02:08:17,634 - Processing hour: 1983
+2017-12-03 02:08:20,106 - 
+gen	nevals
+0  	31    
+2017-12-03 02:08:54,005 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:08:54,006 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:08:54,008 - GA Estimate: 816.0
+2017-12-03 02:08:54,008 - 
+
+2017-12-03 02:08:54,008 - Processing hour: 1984
+2017-12-03 02:08:56,704 - 
+gen	nevals
+0  	31    
+2017-12-03 02:09:31,288 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:09:31,289 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:09:31,290 - GA Estimate: 633.0
+2017-12-03 02:09:31,290 - 
+
+2017-12-03 02:09:31,291 - Processing hour: 1985
+2017-12-03 02:09:34,103 - 
+gen	nevals
+0  	31    
+2017-12-03 02:10:08,553 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:10:08,554 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:10:08,555 - GA Estimate: 900.0
+2017-12-03 02:10:08,555 - 
+
+2017-12-03 02:10:08,556 - Processing hour: 1986
+2017-12-03 02:10:11,287 - 
+gen	nevals
+0  	31    
+2017-12-03 02:10:45,643 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:10:45,644 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:10:45,646 - GA Estimate: 812.0
+2017-12-03 02:10:45,646 - 
+
+2017-12-03 02:10:45,646 - Processing hour: 1987
+2017-12-03 02:10:48,295 - 
+gen	nevals
+0  	31    
+2017-12-03 02:11:20,897 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:11:20,897 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:11:20,899 - GA Estimate: 877.0
+2017-12-03 02:11:20,899 - 
+
+2017-12-03 02:11:20,899 - Processing hour: 1988
+2017-12-03 02:11:23,292 - 
+gen	nevals
+0  	31    
+2017-12-03 02:11:58,032 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:11:58,033 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:11:58,034 - GA Estimate: 876.0
+2017-12-03 02:11:58,034 - 
+
+2017-12-03 02:11:58,034 - Processing hour: 1989
+2017-12-03 02:12:00,521 - 
+gen	nevals
+0  	31    
+2017-12-03 02:12:34,933 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:12:34,934 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:12:34,936 - GA Estimate: 952.0
+2017-12-03 02:12:34,936 - 
+
+2017-12-03 02:12:34,936 - Processing hour: 1990
+2017-12-03 02:12:37,332 - 
+gen	nevals
+0  	31    
+2017-12-03 02:13:10,794 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:13:10,795 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:13:10,869 - GA Estimate: 1266.0
+2017-12-03 02:13:10,869 - 
+
+2017-12-03 02:13:10,875 - Processing hour: 1991
+2017-12-03 02:13:13,419 - 
+gen	nevals
+0  	31    
+2017-12-03 02:13:47,069 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:13:47,070 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:13:47,111 - GA Estimate: 1333.0
+2017-12-03 02:13:47,112 - 
+
+2017-12-03 02:13:47,122 - Processing hour: 1992
+2017-12-03 02:13:49,539 - 
+gen	nevals
+0  	31    
+2017-12-03 02:14:23,772 - 
+1  	421   
+2017-12-03 02:15:51,849 - 
+2  	1096  
+2017-12-03 02:17:20,412 - 
+3  	1106  
+2017-12-03 02:18:49,604 - 
+4  	1100  
+2017-12-03 02:20:17,791 - 
+5  	1094  
+2017-12-03 02:21:45,462 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:21:45,464 - Hall of Fame: [0.8015625, 0.0, 0.08281250000000001, 0.0, 0.115625]
+2017-12-03 02:21:45,484 - GA Estimate: 1220.0
+2017-12-03 02:21:45,484 - 
+
+2017-12-03 02:21:45,531 - Processing hour: 1993
+2017-12-03 02:21:48,015 - 
+gen	nevals
+0  	31    
+2017-12-03 02:22:22,143 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:22:22,144 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:22:22,145 - GA Estimate: 854.0
+2017-12-03 02:22:22,145 - 
+
+2017-12-03 02:22:22,146 - Processing hour: 1994
+2017-12-03 02:22:24,726 - 
+gen	nevals
+0  	31    
+2017-12-03 02:22:59,091 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:22:59,132 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:22:59,133 - GA Estimate: 1020.0
+2017-12-03 02:22:59,134 - 
+
+2017-12-03 02:22:59,167 - Processing hour: 1995
+2017-12-03 02:23:01,778 - 
+gen	nevals
+0  	31    
+2017-12-03 02:23:35,749 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:23:35,750 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:23:35,752 - GA Estimate: 676.0
+2017-12-03 02:23:35,752 - 
+
+2017-12-03 02:23:35,752 - Processing hour: 1996
+2017-12-03 02:23:38,288 - 
+gen	nevals
+0  	31    
+2017-12-03 02:24:11,402 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:24:11,402 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:24:11,404 - GA Estimate: 537.0
+2017-12-03 02:24:11,404 - 
+
+2017-12-03 02:24:11,405 - Processing hour: 1997
+2017-12-03 02:24:13,909 - 
+gen	nevals
+0  	31    
+2017-12-03 02:24:48,250 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:24:48,251 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:24:48,252 - GA Estimate: 526.0
+2017-12-03 02:24:48,252 - 
+
+2017-12-03 02:24:48,252 - Processing hour: 1998
+2017-12-03 02:24:50,753 - 
+gen	nevals
+0  	31    
+2017-12-03 02:25:24,832 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:25:24,833 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:25:24,834 - GA Estimate: 557.0
+2017-12-03 02:25:24,835 - 
+
+2017-12-03 02:25:24,835 - Processing hour: 1999
+2017-12-03 02:25:27,447 - 
+gen	nevals
+0  	31    
+2017-12-03 02:26:01,634 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:26:01,635 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:26:01,636 - GA Estimate: 600.0
+2017-12-03 02:26:01,636 - 
+
+2017-12-03 02:26:01,639 - Processing hour: 2000
+2017-12-03 02:26:04,211 - 
+gen	nevals
+0  	31    
+2017-12-03 02:26:37,223 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:26:37,224 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:26:37,226 - GA Estimate: 487.0
+2017-12-03 02:26:37,226 - 
+
+2017-12-03 02:26:37,226 - Processing hour: 2001
+2017-12-03 02:26:39,830 - 
+gen	nevals
+0  	31    
+2017-12-03 02:27:14,002 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:27:14,003 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:27:14,004 - GA Estimate: 470.0
+2017-12-03 02:27:14,004 - 
+
+2017-12-03 02:27:14,005 - Processing hour: 2002
+2017-12-03 02:27:16,621 - 
+gen	nevals
+0  	31    
+2017-12-03 02:27:51,106 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:27:51,107 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:27:51,108 - GA Estimate: 1232.0
+2017-12-03 02:27:51,108 - 
+
+2017-12-03 02:27:51,108 - Processing hour: 2003
+2017-12-03 02:27:53,533 - 
+gen	nevals
+0  	31    
+2017-12-03 02:28:27,677 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:28:27,678 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:28:27,679 - GA Estimate: 553.0
+2017-12-03 02:28:27,680 - 
+
+2017-12-03 02:28:27,680 - Processing hour: 2004
+2017-12-03 02:28:30,193 - 
+gen	nevals
+0  	31    
+2017-12-03 02:29:04,413 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:29:04,414 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:29:04,415 - GA Estimate: 677.0
+2017-12-03 02:29:04,415 - 
+
+2017-12-03 02:29:04,452 - Processing hour: 2005
+2017-12-03 02:29:07,164 - 
+gen	nevals
+0  	31    
+2017-12-03 02:29:39,746 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:29:39,747 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:29:39,748 - GA Estimate: 814.0
+2017-12-03 02:29:39,748 - 
+
+2017-12-03 02:29:39,749 - Processing hour: 2006
+2017-12-03 02:29:42,434 - 
+gen	nevals
+0  	31    
+2017-12-03 02:30:15,829 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:30:15,830 - Hall of Fame: [1.0, 0.0, 0.0, 0.0, 0.0]
+2017-12-03 02:30:15,876 - GA Estimate: 614.0
+2017-12-03 02:30:15,876 - 
+
+2017-12-03 02:30:15,883 - Processing hour: 2007
+2017-12-03 02:30:18,282 - 
+gen	nevals
+0  	31    
+2017-12-03 02:30:50,993 - 
+1  	402   
+2017-12-03 02:32:19,974 - 
+2  	1084  
+2017-12-03 02:33:50,257 - 
+3  	1116  
+2017-12-03 02:35:20,990 - 
+4  	1110  
+2017-12-03 02:36:50,531 - 
+5  	1102  
+2017-12-03 02:38:23,242 - 
+6  	1120  
+2017-12-03 02:39:53,191 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:39:53,201 - Hall of Fame: [0.8145312499999999, 0.0, 0.08890625, 0.0, 0.09656250000000001]
+2017-12-03 02:39:53,202 - GA Estimate: 1077.0
+2017-12-03 02:39:53,203 - 
+
+2017-12-03 02:39:53,243 - Processing hour: 2008
+2017-12-03 02:39:55,857 - 
+gen	nevals
+0  	31    
+2017-12-03 02:40:29,671 - 
+1  	411   
+2017-12-03 02:42:00,741 - 
+2  	1111  
+2017-12-03 02:43:30,817 - 
+3  	1094  
+2017-12-03 02:44:58,954 - 
+4  	1084  
+2017-12-03 02:46:29,876 - 
+5  	1106  
+2017-12-03 02:47:59,225 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:47:59,263 - Hall of Fame: [0.8015625, 0.0, 0.08281250000000001, 0.0, 0.115625]
+2017-12-03 02:47:59,265 - GA Estimate: 998.0
+2017-12-03 02:47:59,265 - 
+
+2017-12-03 02:47:59,287 - Processing hour: 2009
+2017-12-03 02:48:01,885 - 
+gen	nevals
+0  	31    
+2017-12-03 02:48:35,024 - 
+1  	414   
+2017-12-03 02:50:03,690 - 
+2  	1107  
+2017-12-03 02:51:33,889 - 
+3  	1115  
+2017-12-03 02:53:03,768 - 
+4  	1109  
+2017-12-03 02:54:31,481 - 
+5  	1088  
+2017-12-03 02:56:00,262 - Best Individual didn't change. Stopping evolution
+2017-12-03 02:56:00,300 - Hall of Fame: [0.799375, 0.0, 0.0703125, 0.018125000000000002, 0.1121875]
+2017-12-03 02:56:00,302 - GA Estimate: 902.0
+2017-12-03 02:56:00,302 - 
+
+2017-12-03 02:56:00,323 - Processing hour: 2010
+2017-12-03 02:56:02,907 - 
+gen	nevals
+0  	31    
+2017-12-03 02:56:35,816 - 
+1  	407   
+2017-12-03 02:58:06,891 - 
+2  	1108  
+2017-12-03 02:59:36,702 - 
+3  	1105  
+2017-12-03 03:01:05,108 - 
+4  	1105  
+2017-12-03 03:02:34,422 - 
+5  	1108  
+2017-12-03 03:04:03,487 - 
+6  	1107  
+2017-12-03 03:05:31,657 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:05:31,687 - Hall of Fame: [0.8071875, 0.0, 0.0884375, 0.0053125, 0.0990625]
+2017-12-03 03:05:31,689 - GA Estimate: 1127.0
+2017-12-03 03:05:31,689 - 
+
+2017-12-03 03:05:31,719 - Processing hour: 2011
+2017-12-03 03:05:34,367 - 
+gen	nevals
+0  	31    
+2017-12-03 03:06:07,812 - 
+1  	415   
+2017-12-03 03:07:36,496 - 
+2  	1097  
+2017-12-03 03:09:05,068 - 
+3  	1099  
+2017-12-03 03:10:34,615 - 
+4  	1108  
+2017-12-03 03:12:04,789 - 
+5  	1108  
+2017-12-03 03:13:34,238 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:13:34,240 - Hall of Fame: [0.7884375, 0.0, 0.085625, 0.0078125, 0.11812500000000001]
+2017-12-03 03:13:34,242 - GA Estimate: 891.0
+2017-12-03 03:13:34,242 - 
+
+2017-12-03 03:13:34,242 - Processing hour: 2012
+2017-12-03 03:13:36,742 - 
+gen	nevals
+0  	31    
+2017-12-03 03:14:11,378 - 
+1  	423   
+2017-12-03 03:15:40,599 - 
+2  	1107  
+2017-12-03 03:17:13,310 - 
+3  	1097  
+2017-12-03 03:18:43,207 - 
+4  	1110  
+2017-12-03 03:20:14,313 - 
+5  	1121  
+2017-12-03 03:21:43,704 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:21:43,706 - Hall of Fame: [0.7915625, 0.0, 0.0884375, 0.0, 0.12]
+2017-12-03 03:21:43,732 - GA Estimate: 1087.0
+2017-12-03 03:21:43,732 - 
+
+2017-12-03 03:21:43,739 - Processing hour: 2013
+2017-12-03 03:21:46,486 - 
+gen	nevals
+0  	31    
+2017-12-03 03:22:20,123 - 
+1  	416   
+2017-12-03 03:23:49,924 - 
+2  	1107  
+2017-12-03 03:25:17,587 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:25:17,629 - Hall of Fame: [0.8325, 0.0, 0.0825, 0.0, 0.085]
+2017-12-03 03:25:17,631 - GA Estimate: 1064.0
+2017-12-03 03:25:17,631 - 
+
+2017-12-03 03:25:17,671 - Processing hour: 2014
+2017-12-03 03:25:20,275 - 
+gen	nevals
+0  	31    
+2017-12-03 03:25:53,462 - 
+1  	417   
+2017-12-03 03:27:21,947 - 
+2  	1106  
+2017-12-03 03:28:51,113 - 
+3  	1103  
+2017-12-03 03:30:20,819 - 
+4  	1101  
+2017-12-03 03:31:49,113 - 
+5  	1095  
+2017-12-03 03:33:18,584 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:33:18,587 - Hall of Fame: [0.7987500000000001, 0.0, 0.08000000000000002, 0.0078125, 0.11343750000000002]
+2017-12-03 03:33:18,624 - GA Estimate: 906.0
+2017-12-03 03:33:18,625 - 
+
+2017-12-03 03:33:18,647 - Processing hour: 2015
+2017-12-03 03:33:21,015 - 
+gen	nevals
+0  	31    
+2017-12-03 03:33:54,726 - 
+1  	418   
+2017-12-03 03:35:24,959 - 
+2  	1098  
+2017-12-03 03:36:55,390 - 
+3  	1109  
+2017-12-03 03:38:23,542 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:38:23,588 - Hall of Fame: [0.77, 0.0, 0.0825, 0.0, 0.14750000000000002]
+2017-12-03 03:38:23,590 - GA Estimate: 1185.0
+2017-12-03 03:38:23,590 - 
+
+2017-12-03 03:38:23,635 - Processing hour: 2016
+2017-12-03 03:38:26,028 - 
+gen	nevals
+0  	31    
+2017-12-03 03:38:59,375 - 
+1  	417   
+2017-12-03 03:40:28,903 - 
+2  	1111  
+2017-12-03 03:41:56,637 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:41:56,639 - Hall of Fame: [0.7075, 0.0, 0.0825, 0.0, 0.21000000000000002]
+2017-12-03 03:41:56,640 - GA Estimate: 870.0
+2017-12-03 03:41:56,641 - 
+
+2017-12-03 03:41:56,641 - Processing hour: 2017
+2017-12-03 03:41:59,208 - 
+gen	nevals
+0  	31    
+2017-12-03 03:42:33,330 - 
+1  	423   
+2017-12-03 03:44:02,312 - 
+2  	1113  
+2017-12-03 03:45:30,142 - 
+3  	1096  
+2017-12-03 03:46:59,017 - 
+4  	1094  
+2017-12-03 03:48:29,015 - 
+5  	1113  
+2017-12-03 03:49:59,031 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:49:59,033 - Hall of Fame: [0.7284375000000001, 0.0, 0.07843750000000001, 0.07250000000000001, 0.12062500000000001]
+2017-12-03 03:49:59,035 - GA Estimate: 637.0
+2017-12-03 03:49:59,035 - 
+
+2017-12-03 03:49:59,039 - Processing hour: 2018
+2017-12-03 03:50:01,584 - 
+gen	nevals
+0  	31    
+2017-12-03 03:50:34,743 - 
+1  	413   
+2017-12-03 03:52:04,008 - 
+2  	1117  
+2017-12-03 03:53:31,366 - 
+3  	1090  
+2017-12-03 03:55:00,791 - 
+4  	1097  
+2017-12-03 03:56:29,353 - 
+5  	1092  
+2017-12-03 03:57:58,109 - 
+6  	1105  
+2017-12-03 03:59:25,709 - Best Individual didn't change. Stopping evolution
+2017-12-03 03:59:25,711 - Hall of Fame: [0.7701562500000001, 0.0, 0.0825, 0.026562500000000003, 0.12078125]
+2017-12-03 03:59:25,756 - GA Estimate: 836.0
+2017-12-03 03:59:25,757 - 
+
+2017-12-03 03:59:25,786 - Processing hour: 2019
+2017-12-03 03:59:28,068 - 
+gen	nevals
+0  	31    
+2017-12-03 04:00:01,597 - 
+1  	413   
+2017-12-03 04:01:31,062 - 
+2  	1110  
+2017-12-03 04:03:00,442 - 
+3  	1098  
+2017-12-03 04:04:30,635 - 
+4  	1104  
+2017-12-03 04:06:02,185 - 
+5  	1112  
+2017-12-03 04:07:33,557 - 
+6  	1115  
+2017-12-03 04:09:04,666 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:09:04,669 - Hall of Fame: [0.718125, 0.0, 0.062031249999999996, 0.1334375, 0.08640625]
+2017-12-03 04:09:04,671 - GA Estimate: 839.0
+2017-12-03 04:09:04,671 - 
+
+2017-12-03 04:09:04,671 - Processing hour: 2020
+2017-12-03 04:09:07,196 - 
+gen	nevals
+0  	31    
+2017-12-03 04:09:40,165 - 
+1  	411   
+2017-12-03 04:11:08,108 - 
+2  	1088  
+2017-12-03 04:12:35,145 - 
+3  	1075  
+2017-12-03 04:14:03,193 - 
+4  	1087  
+2017-12-03 04:15:33,608 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:15:33,611 - Hall of Fame: [0.718125, 0.0, 0.061875, 0.135, 0.085]
+2017-12-03 04:15:33,632 - GA Estimate: 716.0
+2017-12-03 04:15:33,633 - 
+
+2017-12-03 04:15:33,639 - Processing hour: 2021
+2017-12-03 04:15:36,368 - 
+gen	nevals
+0  	31    
+2017-12-03 04:16:11,222 - 
+1  	431   
+2017-12-03 04:17:40,908 - 
+2  	1112  
+2017-12-03 04:19:04,736 - 
+3  	1097  
+2017-12-03 04:20:26,560 - 
+4  	1110  
+2017-12-03 04:21:46,780 - 
+5  	1093  
+2017-12-03 04:23:08,172 - 
+6  	1092  
+2017-12-03 04:24:27,963 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:24:28,013 - Hall of Fame: [0.72046875, 0.0, 0.061875, 0.13609375, 0.08156250000000001]
+2017-12-03 04:24:28,015 - GA Estimate: 513.0
+2017-12-03 04:24:28,015 - 
+
+2017-12-03 04:24:28,031 - Processing hour: 2022
+2017-12-03 04:24:30,430 - 
+gen	nevals
+0  	31    
+2017-12-03 04:25:01,790 - 
+1  	421   
+2017-12-03 04:26:21,340 - 
+2  	1107  
+2017-12-03 04:27:35,596 - 
+3  	1101  
+2017-12-03 04:28:44,701 - 
+4  	1103  
+2017-12-03 04:29:52,874 - 
+5  	1108  
+2017-12-03 04:30:56,350 - 
+6  	1090  
+2017-12-03 04:31:54,619 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:31:54,634 - Hall of Fame: [0.7128125000000001, 0.0, 0.061875, 0.13125, 0.0940625]
+2017-12-03 04:31:54,635 - GA Estimate: 802.0
+2017-12-03 04:31:54,635 - 
+
+2017-12-03 04:31:54,646 - Processing hour: 2023
+2017-12-03 04:31:56,428 - 
+gen	nevals
+0  	31    
+2017-12-03 04:32:18,976 - 
+1  	418   
+2017-12-03 04:33:18,075 - 
+2  	1100  
+2017-12-03 04:34:17,020 - 
+3  	1094  
+2017-12-03 04:35:16,642 - 
+4  	1105  
+2017-12-03 04:36:16,688 - 
+5  	1101  
+2017-12-03 04:37:16,202 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:37:16,204 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.219375, 0.099375]
+2017-12-03 04:37:16,206 - GA Estimate: 649.0
+2017-12-03 04:37:16,206 - 
+
+2017-12-03 04:37:16,206 - Processing hour: 2024
+2017-12-03 04:37:17,855 - 
+gen	nevals
+0  	31    
+2017-12-03 04:37:39,910 - 
+1  	410   
+2017-12-03 04:38:39,060 - 
+2  	1109  
+2017-12-03 04:39:38,115 - 
+3  	1097  
+2017-12-03 04:40:37,111 - 
+4  	1097  
+2017-12-03 04:41:36,554 - 
+5  	1100  
+2017-12-03 04:42:35,990 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:42:35,993 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.21968750000000004, 0.0990625]
+2017-12-03 04:42:35,994 - GA Estimate: 691.0
+2017-12-03 04:42:35,994 - 
+
+2017-12-03 04:42:35,995 - Processing hour: 2025
+2017-12-03 04:42:37,636 - 
+gen	nevals
+0  	31    
+2017-12-03 04:42:59,960 - 
+1  	417   
+2017-12-03 04:43:59,788 - 
+2  	1115  
+2017-12-03 04:44:59,154 - 
+3  	1098  
+2017-12-03 04:45:59,337 - 
+4  	1112  
+2017-12-03 04:46:58,986 - 
+5  	1101  
+2017-12-03 04:47:58,946 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:47:58,949 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.219375, 0.099375]
+2017-12-03 04:47:58,950 - GA Estimate: 807.0
+2017-12-03 04:47:58,950 - 
+
+2017-12-03 04:47:58,950 - Processing hour: 2026
+2017-12-03 04:48:00,828 - 
+gen	nevals
+0  	31    
+2017-12-03 04:48:23,534 - 
+1  	421   
+2017-12-03 04:49:21,932 - 
+2  	1082  
+2017-12-03 04:50:20,917 - 
+3  	1095  
+2017-12-03 04:51:20,755 - 
+4  	1116  
+2017-12-03 04:52:19,839 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:52:19,841 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 04:52:19,843 - GA Estimate: 680.0
+2017-12-03 04:52:19,843 - 
+
+2017-12-03 04:52:19,887 - Processing hour: 2027
+2017-12-03 04:52:21,617 - 
+gen	nevals
+0  	31    
+2017-12-03 04:52:44,137 - 
+1  	419   
+2017-12-03 04:53:43,617 - 
+2  	1110  
+2017-12-03 04:54:42,271 - 
+3  	1102  
+2017-12-03 04:55:42,081 - 
+4  	1125  
+2017-12-03 04:56:41,599 - Best Individual didn't change. Stopping evolution
+2017-12-03 04:56:41,601 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 04:56:41,603 - GA Estimate: 709.0
+2017-12-03 04:56:41,603 - 
+
+2017-12-03 04:56:41,603 - Processing hour: 2028
+2017-12-03 04:56:43,200 - 
+gen	nevals
+0  	31    
+2017-12-03 04:57:05,568 - 
+1  	422   
+2017-12-03 04:58:05,068 - 
+2  	1107  
+2017-12-03 04:59:03,294 - 
+3  	1076  
+2017-12-03 05:00:04,034 - 
+4  	1113  
+2017-12-03 05:01:03,353 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:01:03,356 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.224375, 0.08875000000000001]
+2017-12-03 05:01:03,357 - GA Estimate: 755.0
+2017-12-03 05:01:03,357 - 
+
+2017-12-03 05:01:03,378 - Processing hour: 2029
+2017-12-03 05:01:04,995 - 
+gen	nevals
+0  	31    
+2017-12-03 05:01:26,769 - 
+1  	413   
+2017-12-03 05:02:26,547 - 
+2  	1103  
+2017-12-03 05:03:25,687 - 
+3  	1094  
+2017-12-03 05:04:26,156 - 
+4  	1107  
+2017-12-03 05:05:25,330 - 
+5  	1087  
+2017-12-03 05:06:23,301 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:06:23,303 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.219375, 0.099375]
+2017-12-03 05:06:23,329 - GA Estimate: 642.0
+2017-12-03 05:06:23,329 - 
+
+2017-12-03 05:06:23,335 - Processing hour: 2030
+2017-12-03 05:06:24,952 - 
+gen	nevals
+0  	31    
+2017-12-03 05:06:47,090 - 
+1  	421   
+2017-12-03 05:07:45,538 - 
+2  	1097  
+2017-12-03 05:08:45,176 - 
+3  	1110  
+2017-12-03 05:09:44,949 - 
+4  	1115  
+2017-12-03 05:10:44,754 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:10:44,756 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 05:10:44,757 - GA Estimate: 692.0
+2017-12-03 05:10:44,757 - 
+
+2017-12-03 05:10:44,758 - Processing hour: 2031
+2017-12-03 05:10:46,453 - 
+gen	nevals
+0  	31    
+2017-12-03 05:11:09,611 - 
+1  	429   
+2017-12-03 05:12:08,573 - 
+2  	1101  
+2017-12-03 05:13:07,605 - 
+3  	1096  
+2017-12-03 05:14:06,890 - 
+4  	1102  
+2017-12-03 05:15:05,922 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:15:05,926 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 05:15:05,928 - GA Estimate: 755.0
+2017-12-03 05:15:05,928 - 
+
+2017-12-03 05:15:05,928 - Processing hour: 2032
+2017-12-03 05:15:07,719 - 
+gen	nevals
+0  	31    
+2017-12-03 05:15:30,537 - 
+1  	423   
+2017-12-03 05:16:28,951 - 
+2  	1100  
+2017-12-03 05:17:28,687 - 
+3  	1114  
+2017-12-03 05:18:27,735 - 
+4  	1096  
+2017-12-03 05:19:27,638 - 
+5  	1110  
+2017-12-03 05:20:27,807 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:20:27,810 - Hall of Fame: [0.619375, 0.0, 0.05687500000000001, 0.21875, 0.10500000000000001]
+2017-12-03 05:20:27,826 - GA Estimate: 597.0
+2017-12-03 05:20:27,826 - 
+
+2017-12-03 05:20:27,826 - Processing hour: 2033
+2017-12-03 05:20:29,589 - 
+gen	nevals
+0  	31    
+2017-12-03 05:20:51,624 - 
+1  	414   
+2017-12-03 05:21:50,133 - 
+2  	1088  
+2017-12-03 05:22:49,103 - 
+3  	1100  
+2017-12-03 05:23:48,468 - 
+4  	1098  
+2017-12-03 05:24:48,699 - 
+5  	1126  
+2017-12-03 05:25:48,224 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:25:48,227 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.219375, 0.099375]
+2017-12-03 05:25:48,276 - GA Estimate: 509.0
+2017-12-03 05:25:48,277 - 
+
+2017-12-03 05:25:48,287 - Processing hour: 2034
+2017-12-03 05:25:50,011 - 
+gen	nevals
+0  	31    
+2017-12-03 05:26:12,324 - 
+1  	411   
+2017-12-03 05:27:12,290 - 
+2  	1107  
+2017-12-03 05:28:11,249 - 
+3  	1106  
+2017-12-03 05:29:10,362 - 
+4  	1110  
+2017-12-03 05:30:09,634 - 
+5  	1102  
+2017-12-03 05:31:08,186 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:31:08,188 - Hall of Fame: [0.6296875, 0.0, 0.05687500000000001, 0.2290625, 0.084375]
+2017-12-03 05:31:08,190 - GA Estimate: 747.0
+2017-12-03 05:31:08,190 - 
+
+2017-12-03 05:31:08,190 - Processing hour: 2035
+2017-12-03 05:31:09,943 - 
+gen	nevals
+0  	31    
+2017-12-03 05:31:32,369 - 
+1  	420   
+2017-12-03 05:32:31,638 - 
+2  	1101  
+2017-12-03 05:33:30,163 - 
+3  	1104  
+2017-12-03 05:34:29,141 - 
+4  	1102  
+2017-12-03 05:35:27,520 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:35:27,522 - Hall of Fame: [0.61375, 0.0, 0.04125, 0.24, 0.10500000000000001]
+2017-12-03 05:35:27,524 - GA Estimate: 599.0
+2017-12-03 05:35:27,524 - 
+
+2017-12-03 05:35:27,524 - Processing hour: 2036
+2017-12-03 05:35:29,269 - 
+gen	nevals
+0  	31    
+2017-12-03 05:35:51,531 - 
+1  	421   
+2017-12-03 05:36:51,562 - 
+2  	1110  
+2017-12-03 05:37:51,422 - 
+3  	1103  
+2017-12-03 05:38:51,807 - 
+4  	1111  
+2017-12-03 05:39:50,633 - 
+5  	1093  
+2017-12-03 05:40:50,684 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:40:50,686 - Hall of Fame: [0.6296875, 0.0, 0.05687500000000001, 0.2290625, 0.084375]
+2017-12-03 05:40:50,688 - GA Estimate: 615.0
+2017-12-03 05:40:50,688 - 
+
+2017-12-03 05:40:50,688 - Processing hour: 2037
+2017-12-03 05:40:52,373 - 
+gen	nevals
+0  	31    
+2017-12-03 05:41:14,702 - 
+1  	416   
+2017-12-03 05:42:13,654 - 
+2  	1107  
+2017-12-03 05:43:11,546 - 
+3  	1090  
+2017-12-03 05:44:10,841 - 
+4  	1102  
+2017-12-03 05:45:09,076 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:45:09,079 - Hall of Fame: [0.468125, 0.0, 0.020625, 0.4075, 0.10375000000000001]
+2017-12-03 05:45:09,092 - GA Estimate: 663.0
+2017-12-03 05:45:09,092 - 
+
+2017-12-03 05:45:09,099 - Processing hour: 2038
+2017-12-03 05:45:10,724 - 
+gen	nevals
+0  	31    
+2017-12-03 05:45:33,204 - 
+1  	420   
+2017-12-03 05:46:31,338 - 
+2  	1099  
+2017-12-03 05:47:30,655 - 
+3  	1107  
+2017-12-03 05:48:31,265 - 
+4  	1116  
+2017-12-03 05:49:31,234 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:49:31,257 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 05:49:31,258 - GA Estimate: 535.0
+2017-12-03 05:49:31,258 - 
+
+2017-12-03 05:49:31,275 - Processing hour: 2039
+2017-12-03 05:49:32,849 - 
+gen	nevals
+0  	31    
+2017-12-03 05:49:55,190 - 
+1  	421   
+2017-12-03 05:50:55,625 - 
+2  	1103  
+2017-12-03 05:51:55,202 - 
+3  	1099  
+2017-12-03 05:52:54,908 - 
+4  	1114  
+2017-12-03 05:53:54,329 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:53:54,332 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 05:53:54,333 - GA Estimate: 564.0
+2017-12-03 05:53:54,333 - 
+
+2017-12-03 05:53:54,379 - Processing hour: 2040
+2017-12-03 05:53:56,034 - 
+gen	nevals
+0  	31    
+2017-12-03 05:54:19,037 - 
+1  	424   
+2017-12-03 05:55:17,342 - 
+2  	1099  
+2017-12-03 05:56:16,567 - 
+3  	1112  
+2017-12-03 05:57:16,095 - 
+4  	1102  
+2017-12-03 05:58:15,070 - Best Individual didn't change. Stopping evolution
+2017-12-03 05:58:15,072 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 05:58:15,074 - GA Estimate: 548.0
+2017-12-03 05:58:15,074 - 
+
+2017-12-03 05:58:15,074 - Processing hour: 2041
+2017-12-03 05:58:16,611 - 
+gen	nevals
+0  	31    
+2017-12-03 05:58:39,089 - 
+1  	412   
+2017-12-03 05:59:38,870 - 
+2  	1119  
+2017-12-03 06:00:39,268 - 
+3  	1128  
+2017-12-03 06:01:37,766 - 
+4  	1099  
+2017-12-03 06:02:37,392 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:02:37,402 - Hall of Fame: [0.5925, 0.0, 0.04125, 0.28125, 0.085]
+2017-12-03 06:02:37,403 - GA Estimate: 698.0
+2017-12-03 06:02:37,423 - 
+
+2017-12-03 06:02:37,427 - Processing hour: 2042
+2017-12-03 06:02:39,202 - 
+gen	nevals
+0  	31    
+2017-12-03 06:03:01,796 - 
+1  	417   
+2017-12-03 06:04:01,989 - 
+2  	1111  
+2017-12-03 06:05:00,829 - 
+3  	1101  
+2017-12-03 06:05:59,827 - 
+4  	1102  
+2017-12-03 06:06:59,701 - 
+5  	1103  
+2017-12-03 06:07:58,753 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:07:58,756 - Hall of Fame: [0.629375, 0.0, 0.05687500000000001, 0.2246875, 0.0890625]
+2017-12-03 06:07:58,757 - GA Estimate: 526.0
+2017-12-03 06:07:58,757 - 
+
+2017-12-03 06:07:58,758 - Processing hour: 2043
+2017-12-03 06:08:00,499 - 
+gen	nevals
+0  	31    
+2017-12-03 06:08:23,072 - 
+1  	417   
+2017-12-03 06:09:21,769 - 
+2  	1111  
+2017-12-03 06:10:20,980 - 
+3  	1113  
+2017-12-03 06:11:18,933 - 
+4  	1103  
+2017-12-03 06:12:19,289 - 
+5  	1139  
+2017-12-03 06:13:18,775 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:13:18,794 - Hall of Fame: [0.6296875, 0.0, 0.05687500000000001, 0.2290625, 0.084375]
+2017-12-03 06:13:18,795 - GA Estimate: 573.0
+2017-12-03 06:13:18,810 - 
+
+2017-12-03 06:13:18,812 - Processing hour: 2044
+2017-12-03 06:13:20,501 - 
+gen	nevals
+0  	31    
+2017-12-03 06:13:43,590 - 
+1  	420   
+2017-12-03 06:14:43,470 - 
+2  	1109  
+2017-12-03 06:15:44,339 - 
+3  	1124  
+2017-12-03 06:16:43,454 - 
+4  	1099  
+2017-12-03 06:17:43,862 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:17:43,864 - Hall of Fame: [0.52, 0.0, 0.04125, 0.34375, 0.095]
+2017-12-03 06:17:43,865 - GA Estimate: 510.0
+2017-12-03 06:17:43,866 - 
+
+2017-12-03 06:17:43,892 - Processing hour: 2045
+2017-12-03 06:17:45,648 - 
+gen	nevals
+0  	31    
+2017-12-03 06:18:07,899 - 
+1  	410   
+2017-12-03 06:19:08,029 - 
+2  	1107  
+2017-12-03 06:20:07,770 - 
+3  	1105  
+2017-12-03 06:21:07,468 - 
+4  	1106  
+2017-12-03 06:22:11,903 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:22:11,933 - Hall of Fame: [0.494375, 0.0, 0.036875000000000005, 0.369375, 0.099375]
+2017-12-03 06:22:11,935 - GA Estimate: 462.0
+2017-12-03 06:22:11,935 - 
+
+2017-12-03 06:22:11,955 - Processing hour: 2046
+2017-12-03 06:22:13,467 - 
+gen	nevals
+0  	31    
+2017-12-03 06:22:36,335 - 
+1  	416   
+2017-12-03 06:23:35,198 - 
+2  	1101  
+2017-12-03 06:24:34,929 - 
+3  	1111  
+2017-12-03 06:25:33,319 - 
+4  	1099  
+2017-12-03 06:26:32,537 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:26:32,564 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 06:26:32,565 - GA Estimate: 525.0
+2017-12-03 06:26:32,566 - 
+
+2017-12-03 06:26:32,583 - Processing hour: 2047
+2017-12-03 06:26:34,351 - 
+gen	nevals
+0  	31    
+2017-12-03 06:26:57,076 - 
+1  	422   
+2017-12-03 06:27:56,006 - 
+2  	1098  
+2017-12-03 06:28:56,005 - 
+3  	1114  
+2017-12-03 06:29:55,583 - 
+4  	1099  
+2017-12-03 06:30:55,291 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:30:55,294 - Hall of Fame: [0.468125, 0.0, 0.020625, 0.40625, 0.10500000000000001]
+2017-12-03 06:30:55,295 - GA Estimate: 576.0
+2017-12-03 06:30:55,295 - 
+
+2017-12-03 06:30:55,296 - Processing hour: 2048
+2017-12-03 06:30:56,977 - 
+gen	nevals
+0  	31    
+2017-12-03 06:31:19,943 - 
+1  	421   
+2017-12-03 06:32:19,555 - 
+2  	1105  
+2017-12-03 06:33:18,951 - 
+3  	1096  
+2017-12-03 06:34:19,265 - 
+4  	1116  
+2017-12-03 06:35:17,751 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:35:17,778 - Hall of Fame: [0.63, 0.0, 0.05687500000000001, 0.22375, 0.08937500000000001]
+2017-12-03 06:35:17,779 - GA Estimate: 553.0
+2017-12-03 06:35:17,808 - 
+
+2017-12-03 06:35:17,815 - Processing hour: 2049
+2017-12-03 06:35:19,534 - 
+gen	nevals
+0  	31    
+2017-12-03 06:35:41,269 - 
+1  	406   
+2017-12-03 06:36:40,384 - 
+2  	1098  
+2017-12-03 06:37:41,036 - 
+3  	1104  
+2017-12-03 06:38:40,392 - 
+4  	1108  
+2017-12-03 06:39:40,502 - 
+5  	1095  
+2017-12-03 06:40:40,077 - 
+6  	1101  
+2017-12-03 06:41:40,977 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:41:40,980 - Hall of Fame: [0.6271875, 0.0, 0.05687500000000001, 0.2240625, 0.09187500000000001]
+2017-12-03 06:41:40,981 - GA Estimate: 568.0
+2017-12-03 06:41:40,981 - 
+
+2017-12-03 06:41:40,981 - Processing hour: 2050
+2017-12-03 06:41:42,716 - 
+gen	nevals
+0  	31    
+2017-12-03 06:42:05,198 - 
+1  	416   
+2017-12-03 06:43:04,010 - 
+2  	1090  
+2017-12-03 06:44:03,589 - 
+3  	1107  
+2017-12-03 06:45:02,638 - 
+4  	1087  
+2017-12-03 06:46:00,881 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:46:00,899 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 06:46:00,901 - GA Estimate: 513.0
+2017-12-03 06:46:00,901 - 
+
+2017-12-03 06:46:00,923 - Processing hour: 2051
+2017-12-03 06:46:02,702 - 
+gen	nevals
+0  	31    
+2017-12-03 06:46:25,133 - 
+1  	420   
+2017-12-03 06:47:24,412 - 
+2  	1091  
+2017-12-03 06:48:23,882 - 
+3  	1101  
+2017-12-03 06:49:22,785 - 
+4  	1104  
+2017-12-03 06:50:20,407 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:50:20,409 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 06:50:20,410 - GA Estimate: 445.0
+2017-12-03 06:50:20,411 - 
+
+2017-12-03 06:50:20,411 - Processing hour: 2052
+2017-12-03 06:50:22,118 - 
+gen	nevals
+0  	31    
+2017-12-03 06:50:44,705 - 
+1  	419   
+2017-12-03 06:51:45,155 - 
+2  	1117  
+2017-12-03 06:52:45,303 - 
+3  	1110  
+2017-12-03 06:53:44,599 - 
+4  	1099  
+2017-12-03 06:54:43,544 - Best Individual didn't change. Stopping evolution
+2017-12-03 06:54:43,546 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 06:54:43,548 - GA Estimate: 617.0
+2017-12-03 06:54:43,548 - 
+
+2017-12-03 06:54:43,548 - Processing hour: 2053
+2017-12-03 06:54:45,341 - 
+gen	nevals
+0  	31    
+2017-12-03 06:55:08,176 - 
+1  	429   
+2017-12-03 06:56:06,925 - 
+2  	1099  
+2017-12-03 06:57:05,774 - 
+3  	1098  
+2017-12-03 06:58:04,850 - 
+4  	1098  
+2017-12-03 06:59:03,821 - 
+5  	1100  
+2017-12-03 07:00:03,355 - 
+6  	1099  
+2017-12-03 07:01:01,895 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:01:01,898 - Hall of Fame: [0.62203125, 0.0, 0.05687500000000001, 0.21859375, 0.10250000000000001]
+2017-12-03 07:01:01,899 - GA Estimate: 577.0
+2017-12-03 07:01:01,899 - 
+
+2017-12-03 07:01:01,900 - Processing hour: 2054
+2017-12-03 07:01:03,654 - 
+gen	nevals
+0  	31    
+2017-12-03 07:01:25,593 - 
+1  	413   
+2017-12-03 07:02:24,024 - 
+2  	1090  
+2017-12-03 07:03:23,089 - 
+3  	1103  
+2017-12-03 07:04:20,949 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:04:20,952 - Hall of Fame: [0.635, 0.0, 0.07250000000000001, 0.19875, 0.09375]
+2017-12-03 07:04:20,953 - GA Estimate: 457.0
+2017-12-03 07:04:20,953 - 
+
+2017-12-03 07:04:20,953 - Processing hour: 2055
+2017-12-03 07:04:22,584 - 
+gen	nevals
+0  	31    
+2017-12-03 07:04:44,996 - 
+1  	422   
+2017-12-03 07:05:44,785 - 
+2  	1106  
+2017-12-03 07:06:43,872 - 
+3  	1093  
+2017-12-03 07:07:42,473 - 
+4  	1085  
+2017-12-03 07:08:42,053 - 
+5  	1115  
+2017-12-03 07:09:40,241 - 
+6  	1096  
+2017-12-03 07:10:38,961 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:10:38,963 - Hall of Fame: [0.6090625000000001, 0.0, 0.06234375, 0.23921875, 0.08937500000000001]
+2017-12-03 07:10:38,984 - GA Estimate: 557.0
+2017-12-03 07:10:38,985 - 
+
+2017-12-03 07:10:38,987 - Processing hour: 2056
+2017-12-03 07:10:40,694 - 
+gen	nevals
+0  	31    
+2017-12-03 07:11:03,807 - 
+1  	425   
+2017-12-03 07:12:03,096 - 
+2  	1103  
+2017-12-03 07:13:02,301 - 
+3  	1099  
+2017-12-03 07:14:01,182 - 
+4  	1098  
+2017-12-03 07:15:00,766 - 
+5  	1112  
+2017-12-03 07:15:57,858 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:15:57,882 - Hall of Fame: [0.619375, 0.0, 0.05687500000000001, 0.21875, 0.10500000000000001]
+2017-12-03 07:15:57,884 - GA Estimate: 497.0
+2017-12-03 07:15:57,884 - 
+
+2017-12-03 07:15:57,895 - Processing hour: 2057
+2017-12-03 07:15:59,583 - 
+gen	nevals
+0  	31    
+2017-12-03 07:16:21,503 - 
+1  	416   
+2017-12-03 07:17:19,375 - 
+2  	1083  
+2017-12-03 07:18:19,230 - 
+3  	1116  
+2017-12-03 07:19:19,198 - 
+4  	1121  
+2017-12-03 07:20:18,203 - 
+5  	1105  
+2017-12-03 07:21:18,141 - 
+6  	1118  
+2017-12-03 07:22:15,512 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:22:15,514 - Hall of Fame: [0.6151562500000001, 0.0, 0.06593750000000001, 0.2209375, 0.09796875]
+2017-12-03 07:22:15,559 - GA Estimate: 471.0
+2017-12-03 07:22:15,560 - 
+
+2017-12-03 07:22:15,560 - Processing hour: 2058
+2017-12-03 07:22:17,336 - 
+gen	nevals
+0  	31    
+2017-12-03 07:22:40,096 - 
+1  	415   
+2017-12-03 07:23:38,761 - 
+2  	1100  
+2017-12-03 07:24:37,569 - 
+3  	1098  
+2017-12-03 07:25:36,338 - 
+4  	1098  
+2017-12-03 07:26:34,985 - 
+5  	1107  
+2017-12-03 07:27:34,747 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:27:34,749 - Hall of Fame: [0.619375, 0.0, 0.05687500000000001, 0.21875, 0.10500000000000001]
+2017-12-03 07:27:34,751 - GA Estimate: 573.0
+2017-12-03 07:27:34,751 - 
+
+2017-12-03 07:27:34,751 - Processing hour: 2059
+2017-12-03 07:27:36,450 - 
+gen	nevals
+0  	31    
+2017-12-03 07:27:58,451 - 
+1  	408   
+2017-12-03 07:28:56,614 - 
+2  	1100  
+2017-12-03 07:29:55,117 - 
+3  	1105  
+2017-12-03 07:30:53,972 - 
+4  	1097  
+2017-12-03 07:31:53,657 - 
+5  	1112  
+2017-12-03 07:32:52,662 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:32:52,665 - Hall of Fame: [0.60875, 0.0, 0.04125, 0.2403125, 0.1096875]
+2017-12-03 07:32:52,666 - GA Estimate: 548.0
+2017-12-03 07:32:52,666 - 
+
+2017-12-03 07:32:52,667 - Processing hour: 2060
+2017-12-03 07:32:54,452 - 
+gen	nevals
+0  	31    
+2017-12-03 07:33:17,116 - 
+1  	422   
+2017-12-03 07:34:15,210 - 
+2  	1093  
+2017-12-03 07:35:14,241 - 
+3  	1104  
+2017-12-03 07:36:12,233 - 
+4  	1096  
+2017-12-03 07:37:09,802 - 
+5  	1078  
+2017-12-03 07:38:09,275 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:38:09,278 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.224375, 0.09437500000000001]
+2017-12-03 07:38:09,295 - GA Estimate: 507.0
+2017-12-03 07:38:09,304 - 
+
+2017-12-03 07:38:09,304 - Processing hour: 2061
+2017-12-03 07:38:10,966 - 
+gen	nevals
+0  	31    
+2017-12-03 07:38:33,316 - 
+1  	416   
+2017-12-03 07:39:32,640 - 
+2  	1111  
+2017-12-03 07:40:30,545 - 
+3  	1075  
+2017-12-03 07:41:30,158 - 
+4  	1114  
+2017-12-03 07:42:28,702 - 
+5  	1098  
+2017-12-03 07:43:27,059 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:43:27,061 - Hall of Fame: [0.624375, 0.0, 0.05687500000000001, 0.219375, 0.099375]
+2017-12-03 07:43:27,063 - GA Estimate: 416.0
+2017-12-03 07:43:27,063 - 
+
+2017-12-03 07:43:27,063 - Processing hour: 2062
+2017-12-03 07:43:28,826 - 
+gen	nevals
+0  	31    
+2017-12-03 07:43:50,857 - 
+1  	413   
+2017-12-03 07:44:49,497 - 
+2  	1102  
+2017-12-03 07:45:48,530 - 
+3  	1102  
+2017-12-03 07:46:48,185 - 
+4  	1102  
+2017-12-03 07:47:47,679 - 
+5  	1109  
+2017-12-03 07:48:47,790 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:48:47,792 - Hall of Fame: [0.6715625000000001, 0.0, 0.0625, 0.1715625, 0.09437500000000001]
+2017-12-03 07:48:47,793 - GA Estimate: 537.0
+2017-12-03 07:48:47,793 - 
+
+2017-12-03 07:48:47,811 - Processing hour: 2063
+2017-12-03 07:48:49,563 - 
+gen	nevals
+0  	31    
+2017-12-03 07:49:12,622 - 
+1  	420   
+2017-12-03 07:50:12,036 - 
+2  	1099  
+2017-12-03 07:51:10,601 - 
+3  	1086  
+2017-12-03 07:52:09,559 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:52:09,562 - Hall of Fame: [0.66625, 0.0, 0.0625, 0.1675, 0.10375000000000001]
+2017-12-03 07:52:09,563 - GA Estimate: 544.0
+2017-12-03 07:52:09,563 - 
+
+2017-12-03 07:52:09,563 - Processing hour: 2064
+2017-12-03 07:52:11,145 - 
+gen	nevals
+0  	31    
+2017-12-03 07:52:34,206 - 
+1  	422   
+2017-12-03 07:53:33,370 - 
+2  	1105  
+2017-12-03 07:54:32,908 - 
+3  	1107  
+2017-12-03 07:55:30,430 - 
+4  	1071  
+2017-12-03 07:56:29,681 - Best Individual didn't change. Stopping evolution
+2017-12-03 07:56:29,684 - Hall of Fame: [0.655625, 0.0, 0.07250000000000001, 0.198125, 0.07375000000000001]
+2017-12-03 07:56:29,685 - GA Estimate: 424.0
+2017-12-03 07:56:29,685 - 
+
+2017-12-03 07:56:29,686 - Processing hour: 2065
+2017-12-03 07:56:31,466 - 
+gen	nevals
+0  	31    
+2017-12-03 07:56:54,313 - 
+1  	418   
+2017-12-03 07:57:53,175 - 
+2  	1077  
+2017-12-03 07:58:53,280 - 
+3  	1113  
+2017-12-03 07:59:53,093 - 
+4  	1102  
+2017-12-03 08:00:51,497 - 
+5  	1085  
+2017-12-03 08:01:49,352 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:01:49,354 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.21875, 0.09437500000000001]
+2017-12-03 08:01:49,368 - GA Estimate: 702.0
+2017-12-03 08:01:49,369 - 
+
+2017-12-03 08:01:49,369 - Processing hour: 2066
+2017-12-03 08:01:51,097 - 
+gen	nevals
+0  	31    
+2017-12-03 08:02:13,941 - 
+1  	417   
+2017-12-03 08:03:13,709 - 
+2  	1108  
+2017-12-03 08:04:13,431 - 
+3  	1106  
+2017-12-03 08:05:12,679 - 
+4  	1104  
+2017-12-03 08:06:12,774 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:06:12,812 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 08:06:12,814 - GA Estimate: 442.0
+2017-12-03 08:06:12,814 - 
+
+2017-12-03 08:06:12,819 - Processing hour: 2067
+2017-12-03 08:06:14,447 - 
+gen	nevals
+0  	31    
+2017-12-03 08:06:36,593 - 
+1  	413   
+2017-12-03 08:07:36,882 - 
+2  	1122  
+2017-12-03 08:08:36,202 - 
+3  	1107  
+2017-12-03 08:09:36,202 - 
+4  	1108  
+2017-12-03 08:10:34,821 - 
+5  	1098  
+2017-12-03 08:11:34,301 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:11:34,304 - Hall of Fame: [0.619375, 0.0, 0.05687500000000001, 0.21875, 0.10500000000000001]
+2017-12-03 08:11:34,305 - GA Estimate: 691.0
+2017-12-03 08:11:34,305 - 
+
+2017-12-03 08:11:34,339 - Processing hour: 2068
+2017-12-03 08:11:36,088 - 
+gen	nevals
+0  	31    
+2017-12-03 08:11:58,124 - 
+1  	420   
+2017-12-03 08:12:57,284 - 
+2  	1109  
+2017-12-03 08:13:56,306 - 
+3  	1099  
+2017-12-03 08:14:54,752 - 
+4  	1102  
+2017-12-03 08:15:54,573 - 
+5  	1101  
+2017-12-03 08:16:53,822 - 
+6  	1102  
+2017-12-03 08:17:53,958 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:17:53,960 - Hall of Fame: [0.6265625, 0.0, 0.059375000000000004, 0.22140625, 0.09265625000000001]
+2017-12-03 08:17:53,962 - GA Estimate: 507.0
+2017-12-03 08:17:53,962 - 
+
+2017-12-03 08:17:53,962 - Processing hour: 2069
+2017-12-03 08:17:55,729 - 
+gen	nevals
+0  	31    
+2017-12-03 08:18:18,949 - 
+1  	420   
+2017-12-03 08:19:18,625 - 
+2  	1101  
+2017-12-03 08:20:17,856 - 
+3  	1104  
+2017-12-03 08:21:19,182 - 
+4  	1132  
+2017-12-03 08:22:20,026 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:22:20,041 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 08:22:20,042 - GA Estimate: 494.0
+2017-12-03 08:22:20,042 - 
+
+2017-12-03 08:22:20,042 - Processing hour: 2070
+2017-12-03 08:22:21,777 - 
+gen	nevals
+0  	31    
+2017-12-03 08:22:45,126 - 
+1  	435   
+2017-12-03 08:23:44,642 - 
+2  	1099  
+2017-12-03 08:24:45,206 - 
+3  	1120  
+2017-12-03 08:25:43,541 - 
+4  	1086  
+2017-12-03 08:26:42,647 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:26:42,658 - Hall of Fame: [0.62, 0.0, 0.0675, 0.22375, 0.08875000000000001]
+2017-12-03 08:26:42,659 - GA Estimate: 566.0
+2017-12-03 08:26:42,688 - 
+
+2017-12-03 08:26:42,690 - Processing hour: 2071
+2017-12-03 08:26:44,403 - 
+gen	nevals
+0  	31    
+2017-12-03 08:27:07,168 - 
+1  	421   
+2017-12-03 08:28:06,671 - 
+2  	1106  
+2017-12-03 08:29:05,439 - 
+3  	1101  
+2017-12-03 08:30:05,010 - 
+4  	1111  
+2017-12-03 08:31:05,461 - 
+5  	1106  
+2017-12-03 08:32:03,953 - 
+6  	1095  
+2017-12-03 08:33:03,552 - 
+7  	1120  
+2017-12-03 08:34:02,830 - 
+8  	1106  
+2017-12-03 08:35:02,182 - 
+9  	1105  
+2017-12-03 08:36:01,297 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:36:01,299 - Hall of Fame: [0.6237304687499999, 0.0, 0.05701171875000001, 0.21669921875, 0.10255859375000001]
+2017-12-03 08:36:01,301 - GA Estimate: 792.0
+2017-12-03 08:36:01,301 - 
+
+2017-12-03 08:36:01,301 - Processing hour: 2072
+2017-12-03 08:36:02,995 - 
+gen	nevals
+0  	31    
+2017-12-03 08:36:25,115 - 
+1  	425   
+2017-12-03 08:37:24,212 - 
+2  	1081  
+2017-12-03 08:38:22,563 - 
+3  	1094  
+2017-12-03 08:39:21,074 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:39:21,076 - Hall of Fame: [0.4475, 0.0, 0.03125, 0.385, 0.13625]
+2017-12-03 08:39:21,078 - GA Estimate: 501.0
+2017-12-03 08:39:21,078 - 
+
+2017-12-03 08:39:21,078 - Processing hour: 2073
+2017-12-03 08:39:22,777 - 
+gen	nevals
+0  	31    
+2017-12-03 08:39:44,792 - 
+1  	415   
+2017-12-03 08:40:43,539 - 
+2  	1091  
+2017-12-03 08:41:42,783 - 
+3  	1100  
+2017-12-03 08:42:42,400 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:42:42,403 - Hall of Fame: [0.51, 0.0, 0.07250000000000001, 0.30125, 0.11625000000000002]
+2017-12-03 08:42:42,404 - GA Estimate: 657.0
+2017-12-03 08:42:42,404 - 
+
+2017-12-03 08:42:42,404 - Processing hour: 2074
+2017-12-03 08:42:44,036 - 
+gen	nevals
+0  	31    
+2017-12-03 08:43:06,068 - 
+1  	408   
+2017-12-03 08:44:06,339 - 
+2  	1111  
+2017-12-03 08:45:05,616 - 
+3  	1107  
+2017-12-03 08:46:04,841 - 
+4  	1100  
+2017-12-03 08:47:05,254 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:47:05,256 - Hall of Fame: [0.27937500000000004, 0.0, 0.0, 0.529375, 0.19125000000000003]
+2017-12-03 08:47:05,258 - GA Estimate: 769.0
+2017-12-03 08:47:05,258 - 
+
+2017-12-03 08:47:05,258 - Processing hour: 2075
+2017-12-03 08:47:06,963 - 
+gen	nevals
+0  	31    
+2017-12-03 08:47:29,465 - 
+1  	421   
+2017-12-03 08:48:28,415 - 
+2  	1095  
+2017-12-03 08:49:28,264 - 
+3  	1103  
+2017-12-03 08:50:26,858 - 
+4  	1101  
+2017-12-03 08:51:25,415 - 
+5  	1096  
+2017-12-03 08:52:25,226 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:52:25,261 - Hall of Fame: [0.4603125, 0.0, 0.03875000000000001, 0.3825, 0.1184375]
+2017-12-03 08:52:25,262 - GA Estimate: 593.0
+2017-12-03 08:52:25,262 - 
+
+2017-12-03 08:52:25,263 - Processing hour: 2076
+2017-12-03 08:52:27,018 - 
+gen	nevals
+0  	31    
+2017-12-03 08:52:49,270 - 
+1  	423   
+2017-12-03 08:53:49,670 - 
+2  	1119  
+2017-12-03 08:54:48,775 - 
+3  	1110  
+2017-12-03 08:55:47,677 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:55:47,700 - Hall of Fame: [0.4475, 0.0, 0.03125, 0.385, 0.13625]
+2017-12-03 08:55:47,701 - GA Estimate: 538.0
+2017-12-03 08:55:47,702 - 
+
+2017-12-03 08:55:47,702 - Processing hour: 2077
+2017-12-03 08:55:49,402 - 
+gen	nevals
+0  	31    
+2017-12-03 08:56:11,393 - 
+1  	418   
+2017-12-03 08:57:09,949 - 
+2  	1108  
+2017-12-03 08:58:09,574 - 
+3  	1104  
+2017-12-03 08:59:09,423 - Best Individual didn't change. Stopping evolution
+2017-12-03 08:59:09,446 - Hall of Fame: [0.60375, 0.0, 0.0625, 0.22875, 0.10500000000000001]
+2017-12-03 08:59:09,447 - GA Estimate: 686.0
+2017-12-03 08:59:09,468 - 
+
+2017-12-03 08:59:09,468 - Processing hour: 2078
+2017-12-03 08:59:11,205 - 
+gen	nevals
+0  	31    
+2017-12-03 08:59:33,365 - 
+1  	413   
+2017-12-03 09:00:32,640 - 
+2  	1108  
+2017-12-03 09:01:33,657 - 
+3  	1135  
+2017-12-03 09:02:33,947 - 
+4  	1102  
+2017-12-03 09:03:32,594 - 
+5  	1100  
+2017-12-03 09:04:31,834 - 
+6  	1108  
+2017-12-03 09:05:30,848 - 
+7  	1101  
+2017-12-03 09:06:29,781 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:06:29,783 - Hall of Fame: [0.41875, 0.0, 0.03125, 0.41875, 0.13125000000000003]
+2017-12-03 09:06:29,785 - GA Estimate: 655.0
+2017-12-03 09:06:29,785 - 
+
+2017-12-03 09:06:29,831 - Processing hour: 2079
+2017-12-03 09:06:31,456 - 
+gen	nevals
+0  	31    
+2017-12-03 09:06:52,766 - 
+1  	407   
+2017-12-03 09:07:50,985 - 
+2  	1086  
+2017-12-03 09:08:50,219 - 
+3  	1112  
+2017-12-03 09:09:49,513 - 
+4  	1114  
+2017-12-03 09:10:48,548 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:10:48,550 - Hall of Fame: [0.400625, 0.0, 0.036250000000000004, 0.4325, 0.130625]
+2017-12-03 09:10:48,551 - GA Estimate: 606.0
+2017-12-03 09:10:48,552 - 
+
+2017-12-03 09:10:48,552 - Processing hour: 2080
+2017-12-03 09:10:50,260 - 
+gen	nevals
+0  	31    
+2017-12-03 09:11:12,463 - 
+1  	422   
+2017-12-03 09:12:11,996 - 
+2  	1105  
+2017-12-03 09:13:11,094 - 
+3  	1094  
+2017-12-03 09:14:10,783 - 
+4  	1103  
+2017-12-03 09:15:11,174 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:15:11,196 - Hall of Fame: [0.410625, 0.0, 0.036250000000000004, 0.43125, 0.12187500000000001]
+2017-12-03 09:15:11,198 - GA Estimate: 435.0
+2017-12-03 09:15:11,198 - 
+
+2017-12-03 09:15:11,219 - Processing hour: 2081
+2017-12-03 09:15:12,930 - 
+gen	nevals
+0  	31    
+2017-12-03 09:15:35,140 - 
+1  	419   
+2017-12-03 09:16:34,284 - 
+2  	1106  
+2017-12-03 09:17:35,098 - 
+3  	1120  
+2017-12-03 09:18:34,397 - 
+4  	1102  
+2017-12-03 09:19:32,362 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:19:32,364 - Hall of Fame: [0.410625, 0.0, 0.036250000000000004, 0.43125, 0.12187500000000001]
+2017-12-03 09:19:32,365 - GA Estimate: 429.0
+2017-12-03 09:19:32,366 - 
+
+2017-12-03 09:19:32,391 - Processing hour: 2082
+2017-12-03 09:19:34,161 - 
+gen	nevals
+0  	31    
+2017-12-03 09:19:56,615 - 
+1  	419   
+2017-12-03 09:20:56,212 - 
+2  	1104  
+2017-12-03 09:21:55,599 - 
+3  	1100  
+2017-12-03 09:22:55,151 - 
+4  	1109  
+2017-12-03 09:23:53,797 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:23:53,800 - Hall of Fame: [0.5675, 0.0, 0.0675, 0.255625, 0.109375]
+2017-12-03 09:23:53,801 - GA Estimate: 565.0
+2017-12-03 09:23:53,802 - 
+
+2017-12-03 09:23:53,802 - Processing hour: 2083
+2017-12-03 09:23:55,563 - 
+gen	nevals
+0  	31    
+2017-12-03 09:24:17,847 - 
+1  	417   
+2017-12-03 09:25:16,526 - 
+2  	1108  
+2017-12-03 09:26:15,898 - 
+3  	1120  
+2017-12-03 09:27:15,385 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:27:15,407 - Hall of Fame: [0.51, 0.0, 0.07250000000000001, 0.30125, 0.11625000000000002]
+2017-12-03 09:27:15,409 - GA Estimate: 740.0
+2017-12-03 09:27:15,409 - 
+
+2017-12-03 09:27:15,415 - Processing hour: 2084
+2017-12-03 09:27:17,104 - 
+gen	nevals
+0  	31    
+2017-12-03 09:27:39,905 - 
+1  	427   
+2017-12-03 09:28:40,332 - 
+2  	1098  
+2017-12-03 09:29:39,800 - 
+3  	1097  
+2017-12-03 09:30:39,249 - 
+4  	1109  
+2017-12-03 09:31:39,463 - 
+5  	1129  
+2017-12-03 09:32:38,690 - 
+6  	1108  
+2017-12-03 09:33:38,484 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:33:38,487 - Hall of Fame: [0.6060937500000001, 0.0, 0.0675, 0.2059375, 0.12046875000000001]
+2017-12-03 09:33:38,488 - GA Estimate: 507.0
+2017-12-03 09:33:38,488 - 
+
+2017-12-03 09:33:38,489 - Processing hour: 2085
+2017-12-03 09:33:39,984 - 
+gen	nevals
+0  	31    
+2017-12-03 09:34:02,768 - 
+1  	419   
+2017-12-03 09:35:01,749 - 
+2  	1104  
+2017-12-03 09:36:00,248 - 
+3  	1105  
+2017-12-03 09:36:59,916 - 
+4  	1109  
+2017-12-03 09:37:59,109 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:37:59,111 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.21375, 0.099375]
+2017-12-03 09:37:59,113 - GA Estimate: 442.0
+2017-12-03 09:37:59,113 - 
+
+2017-12-03 09:37:59,139 - Processing hour: 2086
+2017-12-03 09:38:00,782 - 
+gen	nevals
+0  	31    
+2017-12-03 09:38:23,199 - 
+1  	412   
+2017-12-03 09:39:22,767 - 
+2  	1119  
+2017-12-03 09:40:21,610 - 
+3  	1100  
+2017-12-03 09:41:20,997 - 
+4  	1106  
+2017-12-03 09:42:19,729 - 
+5  	1094  
+2017-12-03 09:43:19,023 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:43:19,025 - Hall of Fame: [0.645, 0.0, 0.07250000000000001, 0.1825, 0.1]
+2017-12-03 09:43:19,027 - GA Estimate: 452.0
+2017-12-03 09:43:19,027 - 
+
+2017-12-03 09:43:19,063 - Processing hour: 2087
+2017-12-03 09:43:20,886 - 
+gen	nevals
+0  	31    
+2017-12-03 09:43:43,345 - 
+1  	419   
+2017-12-03 09:44:42,567 - 
+2  	1096  
+2017-12-03 09:45:43,171 - 
+3  	1121  
+2017-12-03 09:46:42,409 - 
+4  	1112  
+2017-12-03 09:47:41,483 - 
+5  	1092  
+2017-12-03 09:48:40,195 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:48:40,198 - Hall of Fame: [0.645625, 0.0, 0.07250000000000001, 0.1925, 0.08937500000000001]
+2017-12-03 09:48:40,199 - GA Estimate: 469.0
+2017-12-03 09:48:40,231 - 
+
+2017-12-03 09:48:40,232 - Processing hour: 2088
+2017-12-03 09:48:41,935 - 
+gen	nevals
+0  	31    
+2017-12-03 09:49:03,394 - 
+1  	396   
+2017-12-03 09:50:02,289 - 
+2  	1097  
+2017-12-03 09:51:01,737 - 
+3  	1105  
+2017-12-03 09:52:01,472 - 
+4  	1103  
+2017-12-03 09:53:01,523 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:53:01,554 - Hall of Fame: [0.619375, 0.0, 0.0675, 0.22375, 0.08937500000000001]
+2017-12-03 09:53:01,555 - GA Estimate: 506.0
+2017-12-03 09:53:01,555 - 
+
+2017-12-03 09:53:01,582 - Processing hour: 2089
+2017-12-03 09:53:03,319 - 
+gen	nevals
+0  	31    
+2017-12-03 09:53:24,962 - 
+1  	406   
+2017-12-03 09:54:24,363 - 
+2  	1101  
+2017-12-03 09:55:24,093 - 
+3  	1108  
+2017-12-03 09:56:23,247 - 
+4  	1101  
+2017-12-03 09:57:22,140 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:57:22,142 - Hall of Fame: [0.60875, 0.0, 0.0675, 0.213125, 0.110625]
+2017-12-03 09:57:22,144 - GA Estimate: 558.0
+2017-12-03 09:57:22,144 - 
+
+2017-12-03 09:57:22,144 - Processing hour: 2090
+2017-12-03 09:57:23,816 - 
+gen	nevals
+0  	31    
+2017-12-03 09:57:46,417 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:57:46,418 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 09:57:46,419 - GA Estimate: 522.0
+2017-12-03 09:57:46,420 - 
+
+2017-12-03 09:57:46,420 - Processing hour: 2091
+2017-12-03 09:57:48,048 - 
+gen	nevals
+0  	31    
+2017-12-03 09:58:10,010 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:58:10,011 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 09:58:10,012 - GA Estimate: 535.0
+2017-12-03 09:58:10,012 - 
+
+2017-12-03 09:58:10,013 - Processing hour: 2092
+2017-12-03 09:58:11,731 - 
+gen	nevals
+0  	31    
+2017-12-03 09:58:33,852 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:58:33,853 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 09:58:33,855 - GA Estimate: 475.0
+2017-12-03 09:58:33,855 - 
+
+2017-12-03 09:58:33,879 - Processing hour: 2093
+2017-12-03 09:58:35,385 - 
+gen	nevals
+0  	31    
+2017-12-03 09:58:57,482 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:58:57,483 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 09:58:57,484 - GA Estimate: 494.0
+2017-12-03 09:58:57,485 - 
+
+2017-12-03 09:58:57,485 - Processing hour: 2094
+2017-12-03 09:58:59,078 - 
+gen	nevals
+0  	31    
+2017-12-03 09:59:21,058 - Best Individual didn't change. Stopping evolution
+2017-12-03 09:59:21,059 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 09:59:21,104 - GA Estimate: 627.0
+2017-12-03 09:59:21,104 - 
+
+2017-12-03 09:59:21,105 - Processing hour: 2095
+2017-12-03 09:59:22,671 - 
+gen	nevals
+0  	31    
+2017-12-03 09:59:45,320 - 
+1  	422   
+2017-12-03 10:00:43,425 - 
+2  	1085  
+2017-12-03 10:01:43,144 - 
+3  	1101  
+2017-12-03 10:02:43,038 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:02:43,040 - Hall of Fame: [0.3225, 0.0, 0.07250000000000001, 0.23875000000000002, 0.36625]
+2017-12-03 10:02:43,041 - GA Estimate: 521.0
+2017-12-03 10:02:43,042 - 
+
+2017-12-03 10:02:43,052 - Processing hour: 2096
+2017-12-03 10:02:44,761 - 
+gen	nevals
+0  	31    
+2017-12-03 10:03:07,253 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:03:07,254 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 10:03:07,256 - GA Estimate: 656.0
+2017-12-03 10:03:07,256 - 
+
+2017-12-03 10:03:07,256 - Processing hour: 2097
+2017-12-03 10:03:09,007 - 
+gen	nevals
+0  	31    
+2017-12-03 10:03:31,323 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:03:31,324 - Hall of Fame: [0.33, 0.0, 0.0, 0.33, 0.34]
+2017-12-03 10:03:31,325 - GA Estimate: 646.0
+2017-12-03 10:03:31,326 - 
+
+2017-12-03 10:03:31,326 - Processing hour: 2098
+2017-12-03 10:03:32,921 - 
+gen	nevals
+0  	31    
+2017-12-03 10:03:55,492 - 
+1  	414   
+2017-12-03 10:04:54,174 - 
+2  	1102  
+2017-12-03 10:05:53,570 - 
+3  	1113  
+2017-12-03 10:06:52,646 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:06:52,648 - Hall of Fame: [0.3225, 0.0, 0.07250000000000001, 0.23875000000000002, 0.36625]
+2017-12-03 10:06:52,650 - GA Estimate: 777.0
+2017-12-03 10:06:52,650 - 
+
+2017-12-03 10:06:52,687 - Processing hour: 2099
+2017-12-03 10:06:54,421 - 
+gen	nevals
+0  	31    
+2017-12-03 10:07:16,415 - 
+1  	417   
+2017-12-03 10:08:15,823 - 
+2  	1111  
+2017-12-03 10:09:16,050 - 
+3  	1115  
+2017-12-03 10:10:15,310 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:10:15,312 - Hall of Fame: [0.11375000000000002, 0.0, 0.07250000000000001, 0.135, 0.67875]
+2017-12-03 10:10:15,314 - GA Estimate: 585.0
+2017-12-03 10:10:15,314 - 
+
+2017-12-03 10:10:15,327 - Processing hour: 2100
+2017-12-03 10:10:17,029 - 
+gen	nevals
+0  	31    
+2017-12-03 10:10:39,769 - 
+1  	426   
+2017-12-03 10:11:38,541 - 
+2  	1103  
+2017-12-03 10:12:37,177 - 
+3  	1093  
+2017-12-03 10:13:36,623 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:13:36,656 - Hall of Fame: [0.11375000000000002, 0.0, 0.07250000000000001, 0.135, 0.67875]
+2017-12-03 10:13:36,658 - GA Estimate: 624.0
+2017-12-03 10:13:36,658 - 
+
+2017-12-03 10:13:36,663 - Processing hour: 2101
+2017-12-03 10:13:38,389 - 
+gen	nevals
+0  	31    
+2017-12-03 10:14:00,673 - 
+1  	418   
+2017-12-03 10:14:59,814 - 
+2  	1098  
+2017-12-03 10:15:59,704 - 
+3  	1109  
+2017-12-03 10:16:57,927 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:16:57,929 - Hall of Fame: [0.335, 0.0, 0.0825, 0.22875, 0.35375]
+2017-12-03 10:16:57,931 - GA Estimate: 762.0
+2017-12-03 10:16:57,931 - 
+
+2017-12-03 10:16:57,971 - Processing hour: 2102
+2017-12-03 10:16:59,667 - 
+gen	nevals
+0  	31    
+2017-12-03 10:17:21,616 - 
+1  	411   
+2017-12-03 10:18:21,391 - 
+2  	1110  
+2017-12-03 10:19:21,470 - 
+3  	1111  
+2017-12-03 10:20:21,127 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:20:21,130 - Hall of Fame: [0.335, 0.0, 0.0825, 0.22875, 0.35375]
+2017-12-03 10:20:21,131 - GA Estimate: 903.0
+2017-12-03 10:20:21,131 - 
+
+2017-12-03 10:20:21,132 - Processing hour: 2103
+2017-12-03 10:20:22,822 - 
+gen	nevals
+0  	31    
+2017-12-03 10:20:45,520 - 
+1  	419   
+2017-12-03 10:21:45,479 - 
+2  	1109  
+2017-12-03 10:22:45,604 - 
+3  	1116  
+2017-12-03 10:23:43,998 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:23:44,000 - Hall of Fame: [0.31125, 0.0, 0.0825, 0.22875, 0.37750000000000006]
+2017-12-03 10:23:44,025 - GA Estimate: 746.0
+2017-12-03 10:23:44,025 - 
+
+2017-12-03 10:23:44,025 - Processing hour: 2104
+2017-12-03 10:23:45,796 - 
+gen	nevals
+0  	31    
+2017-12-03 10:24:08,249 - 
+1  	416   
+2017-12-03 10:25:06,800 - 
+2  	1088  
+2017-12-03 10:26:05,505 - 
+3  	1094  
+2017-12-03 10:27:04,623 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:27:04,625 - Hall of Fame: [0.31125, 0.0, 0.08375, 0.2275, 0.3775]
+2017-12-03 10:27:04,627 - GA Estimate: 838.0
+2017-12-03 10:27:04,627 - 
+
+2017-12-03 10:27:04,627 - Processing hour: 2105
+2017-12-03 10:27:06,268 - 
+gen	nevals
+0  	31    
+2017-12-03 10:27:28,084 - 
+1  	411   
+2017-12-03 10:28:27,481 - 
+2  	1114  
+2017-12-03 10:29:27,606 - 
+3  	1120  
+2017-12-03 10:30:27,273 - 
+4  	1104  
+2017-12-03 10:31:26,703 - 
+5  	1100  
+2017-12-03 10:32:25,822 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:32:25,824 - Hall of Fame: [0.304375, 0.0, 0.07500000000000001, 0.27718750000000003, 0.34343750000000006]
+2017-12-03 10:32:25,826 - GA Estimate: 959.0
+2017-12-03 10:32:25,826 - 
+
+2017-12-03 10:32:25,826 - Processing hour: 2106
+2017-12-03 10:32:27,566 - 
+gen	nevals
+0  	31    
+2017-12-03 10:32:50,133 - 
+1  	416   
+2017-12-03 10:33:50,620 - 
+2  	1117  
+2017-12-03 10:34:49,551 - 
+3  	1104  
+2017-12-03 10:35:48,853 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:35:48,855 - Hall of Fame: [0.31375000000000003, 0.0, 0.0825, 0.23, 0.37375]
+2017-12-03 10:35:48,857 - GA Estimate: 762.0
+2017-12-03 10:35:48,857 - 
+
+2017-12-03 10:35:48,895 - Processing hour: 2107
+2017-12-03 10:35:50,631 - 
+gen	nevals
+0  	31    
+2017-12-03 10:36:12,716 - 
+1  	414   
+2017-12-03 10:37:11,495 - 
+2  	1093  
+2017-12-03 10:38:10,524 - 
+3  	1103  
+2017-12-03 10:39:08,985 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:39:09,008 - Hall of Fame: [0.31125, 0.0, 0.08375, 0.2275, 0.3775]
+2017-12-03 10:39:09,010 - GA Estimate: 931.0
+2017-12-03 10:39:09,010 - 
+
+2017-12-03 10:39:09,010 - Processing hour: 2108
+2017-12-03 10:39:10,806 - 
+gen	nevals
+0  	31    
+2017-12-03 10:39:33,396 - 
+1  	419   
+2017-12-03 10:40:32,844 - 
+2  	1106  
+2017-12-03 10:41:32,371 - 
+3  	1104  
+2017-12-03 10:42:30,903 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:42:30,905 - Hall of Fame: [0.3325, 0.0, 0.0825, 0.2275, 0.35750000000000004]
+2017-12-03 10:42:30,907 - GA Estimate: 815.0
+2017-12-03 10:42:30,907 - 
+
+2017-12-03 10:42:30,939 - Processing hour: 2109
+2017-12-03 10:42:32,651 - 
+gen	nevals
+0  	31    
+2017-12-03 10:42:54,197 - 
+1  	405   
+2017-12-03 10:43:52,672 - 
+2  	1091  
+2017-12-03 10:44:52,547 - 
+3  	1109  
+2017-12-03 10:45:50,918 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:45:50,920 - Hall of Fame: [0.335, 0.0, 0.0825, 0.22875, 0.35375]
+2017-12-03 10:45:50,922 - GA Estimate: 1032.0
+2017-12-03 10:45:50,922 - 
+
+2017-12-03 10:45:50,922 - Processing hour: 2110
+2017-12-03 10:45:52,632 - 
+gen	nevals
+0  	31    
+2017-12-03 10:46:14,257 - 
+1  	412   
+2017-12-03 10:47:14,062 - 
+2  	1109  
+2017-12-03 10:48:12,838 - 
+3  	1100  
+2017-12-03 10:49:13,151 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:49:13,186 - Hall of Fame: [0.47875, 0.0, 0.0825, 0.08375, 0.355]
+2017-12-03 10:49:13,187 - GA Estimate: 1083.0
+2017-12-03 10:49:13,188 - 
+
+2017-12-03 10:49:13,198 - Processing hour: 2111
+2017-12-03 10:49:14,852 - 
+gen	nevals
+0  	31    
+2017-12-03 10:49:37,225 - 
+1  	421   
+2017-12-03 10:50:36,157 - 
+2  	1102  
+2017-12-03 10:51:35,283 - 
+3  	1094  
+2017-12-03 10:52:35,090 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:52:35,093 - Hall of Fame: [0.335, 0.0, 0.0825, 0.22875, 0.35375]
+2017-12-03 10:52:35,094 - GA Estimate: 1070.0
+2017-12-03 10:52:35,095 - 
+
+2017-12-03 10:52:35,095 - Processing hour: 2112
+2017-12-03 10:52:36,919 - 
+gen	nevals
+0  	31    
+2017-12-03 10:52:59,089 - 
+1  	407   
+2017-12-03 10:53:58,161 - 
+2  	1097  
+2017-12-03 10:54:56,899 - 
+3  	1082  
+2017-12-03 10:55:56,698 - Best Individual didn't change. Stopping evolution
+2017-12-03 10:55:56,701 - Hall of Fame: [0.25875000000000004, 0.0, 0.07250000000000001, 0.3225, 0.34625000000000006]
+2017-12-03 10:55:56,702 - GA Estimate: 841.0
+2017-12-03 10:55:56,703 - 
+
+2017-12-03 10:55:56,703 - Processing hour: 2113
+2017-12-03 10:55:58,446 - 
+gen	nevals
+0  	31    
+2017-12-03 10:56:21,447 - 
+1  	424   
+2017-12-03 10:57:21,866 - 
+2  	1115  
+2017-12-03 10:58:21,501 - 
+3  	1109  
+2017-12-03 10:59:21,304 - 
+4  	1105  
+2017-12-03 11:00:20,194 - 
+5  	1098  
+2017-12-03 11:01:18,829 - 
+6  	1097  
+2017-12-03 11:02:19,525 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:02:19,527 - Hall of Fame: [0.09062500000000001, 0.0, 0.0825, 0.18375000000000002, 0.643125]
+2017-12-03 11:02:19,529 - GA Estimate: 931.0
+2017-12-03 11:02:19,529 - 
+
+2017-12-03 11:02:19,555 - Processing hour: 2114
+2017-12-03 11:02:21,233 - 
+gen	nevals
+0  	31    
+2017-12-03 11:02:44,076 - 
+1  	423   
+2017-12-03 11:03:44,531 - 
+2  	1120  
+2017-12-03 11:04:42,586 - 
+3  	1073  
+2017-12-03 11:05:42,451 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:05:42,462 - Hall of Fame: [0.25875000000000004, 0.0, 0.07250000000000001, 0.3225, 0.34625000000000006]
+2017-12-03 11:05:42,463 - GA Estimate: 969.0
+2017-12-03 11:05:42,464 - 
+
+2017-12-03 11:05:42,464 - Processing hour: 2115
+2017-12-03 11:05:44,215 - 
+gen	nevals
+0  	31    
+2017-12-03 11:06:07,712 - 
+1  	423   
+2017-12-03 11:07:06,905 - 
+2  	1092  
+2017-12-03 11:08:06,016 - 
+3  	1098  
+2017-12-03 11:09:05,915 - 
+4  	1103  
+2017-12-03 11:10:03,774 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:10:03,777 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025]
+2017-12-03 11:10:03,778 - GA Estimate: 883.0
+2017-12-03 11:10:03,778 - 
+
+2017-12-03 11:10:03,779 - Processing hour: 2116
+2017-12-03 11:10:05,442 - 
+gen	nevals
+0  	31    
+2017-12-03 11:10:28,174 - 
+1  	425   
+2017-12-03 11:11:27,755 - 
+2  	1093  
+2017-12-03 11:12:28,229 - 
+3  	1107  
+2017-12-03 11:13:27,102 - 
+4  	1090  
+2017-12-03 11:14:26,256 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:14:26,258 - Hall of Fame: [0.08812500000000001, 0.0, 0.07750000000000001, 0.11000000000000001, 0.724375]
+2017-12-03 11:14:26,288 - GA Estimate: 720.0
+2017-12-03 11:14:26,288 - 
+
+2017-12-03 11:14:26,288 - Processing hour: 2117
+2017-12-03 11:14:27,997 - 
+gen	nevals
+0  	31    
+2017-12-03 11:14:50,515 - 
+1  	423   
+2017-12-03 11:15:50,021 - 
+2  	1100  
+2017-12-03 11:16:49,505 - 
+3  	1099  
+2017-12-03 11:17:50,155 - 
+4  	1109  
+2017-12-03 11:18:49,035 - 
+5  	1084  
+2017-12-03 11:19:48,894 - 
+6  	1111  
+2017-12-03 11:20:49,083 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:20:49,086 - Hall of Fame: [0.09046875000000001, 0.0, 0.07750000000000001, 0.11046875, 0.7215625]
+2017-12-03 11:20:49,099 - GA Estimate: 602.0
+2017-12-03 11:20:49,100 - 
+
+2017-12-03 11:20:49,100 - Processing hour: 2118
+2017-12-03 11:20:50,826 - 
+gen	nevals
+0  	31    
+2017-12-03 11:21:13,596 - 
+1  	414   
+2017-12-03 11:22:14,990 - 
+2  	1121  
+2017-12-03 11:23:15,014 - 
+3  	1104  
+2017-12-03 11:24:15,469 - 
+4  	1120  
+2017-12-03 11:25:14,152 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:25:14,155 - Hall of Fame: [0.08812500000000001, 0.0, 0.07750000000000001, 0.10875000000000001, 0.725625]
+2017-12-03 11:25:14,177 - GA Estimate: 833.0
+2017-12-03 11:25:14,177 - 
+
+2017-12-03 11:25:14,177 - Processing hour: 2119
+2017-12-03 11:25:15,946 - 
+gen	nevals
+0  	31    
+2017-12-03 11:25:38,180 - 
+1  	415   
+2017-12-03 11:26:37,741 - 
+2  	1096  
+2017-12-03 11:27:36,817 - 
+3  	1102  
+2017-12-03 11:28:37,014 - 
+4  	1115  
+2017-12-03 11:29:37,696 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:29:37,698 - Hall of Fame: [0.08812500000000001, 0.0, 0.07750000000000001, 0.10875000000000001, 0.725625]
+2017-12-03 11:29:37,722 - GA Estimate: 746.0
+2017-12-03 11:29:37,722 - 
+
+2017-12-03 11:29:37,727 - Processing hour: 2120
+2017-12-03 11:29:39,320 - 
+gen	nevals
+0  	31    
+2017-12-03 11:30:01,786 - 
+1  	417   
+2017-12-03 11:31:00,741 - 
+2  	1096  
+2017-12-03 11:32:00,672 - 
+3  	1115  
+2017-12-03 11:33:00,107 - 
+4  	1108  
+2017-12-03 11:34:00,337 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:34:00,357 - Hall of Fame: [0.08812500000000001, 0.0, 0.07750000000000001, 0.10875000000000001, 0.725625]
+2017-12-03 11:34:00,358 - GA Estimate: 604.0
+2017-12-03 11:34:00,358 - 
+
+2017-12-03 11:34:00,365 - Processing hour: 2121
+2017-12-03 11:34:02,133 - 
+gen	nevals
+0  	31    
+2017-12-03 11:34:24,795 - 
+1  	416   
+2017-12-03 11:35:24,286 - 
+2  	1102  
+2017-12-03 11:36:23,997 - 
+3  	1106  
+2017-12-03 11:37:24,256 - 
+4  	1113  
+2017-12-03 11:38:23,516 - 
+5  	1103  
+2017-12-03 11:39:23,386 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:39:23,409 - Hall of Fame: [0.08781250000000002, 0.0, 0.07750000000000001, 0.1053125, 0.729375]
+2017-12-03 11:39:23,410 - GA Estimate: 587.0
+2017-12-03 11:39:23,410 - 
+
+2017-12-03 11:39:23,439 - Processing hour: 2122
+2017-12-03 11:39:25,196 - 
+gen	nevals
+0  	31    
+2017-12-03 11:39:46,691 - 
+1  	402   
+2017-12-03 11:40:45,362 - 
+2  	1101  
+2017-12-03 11:41:44,287 - 
+3  	1113  
+2017-12-03 11:42:43,058 - 
+4  	1103  
+2017-12-03 11:43:43,245 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:43:43,247 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025]
+2017-12-03 11:43:43,260 - GA Estimate: 494.0
+2017-12-03 11:43:43,261 - 
+
+2017-12-03 11:43:43,279 - Processing hour: 2123
+2017-12-03 11:43:44,935 - 
+gen	nevals
+0  	31    
+2017-12-03 11:44:06,915 - 
+1  	410   
+2017-12-03 11:45:05,464 - 
+2  	1096  
+2017-12-03 11:46:05,594 - 
+3  	1120  
+2017-12-03 11:47:04,953 - 
+4  	1103  
+2017-12-03 11:48:03,708 - 
+5  	1087  
+2017-12-03 11:49:03,926 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:49:03,953 - Hall of Fame: [0.0515625, 0.0, 0.0825, 0.1565625, 0.709375]
+2017-12-03 11:49:03,955 - GA Estimate: 481.0
+2017-12-03 11:49:03,955 - 
+
+2017-12-03 11:49:03,955 - Processing hour: 2124
+2017-12-03 11:49:05,725 - 
+gen	nevals
+0  	31    
+2017-12-03 11:49:28,493 - 
+1  	419   
+2017-12-03 11:50:26,861 - 
+2  	1092  
+2017-12-03 11:51:25,554 - 
+3  	1083  
+2017-12-03 11:52:25,684 - 
+4  	1111  
+2017-12-03 11:53:25,416 - 
+5  	1103  
+2017-12-03 11:54:25,849 - 
+6  	1121  
+2017-12-03 11:55:24,984 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:55:24,986 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.24906250000000002, 0.5028125]
+2017-12-03 11:55:24,988 - GA Estimate: 539.0
+2017-12-03 11:55:24,988 - 
+
+2017-12-03 11:55:24,992 - Processing hour: 2125
+2017-12-03 11:55:26,668 - 
+gen	nevals
+0  	31    
+2017-12-03 11:55:48,212 - 
+1  	411   
+2017-12-03 11:56:47,770 - 
+2  	1103  
+2017-12-03 11:57:46,260 - 
+3  	1086  
+2017-12-03 11:58:44,845 - 
+4  	1101  
+2017-12-03 11:59:44,722 - Best Individual didn't change. Stopping evolution
+2017-12-03 11:59:44,724 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025]
+2017-12-03 11:59:44,725 - GA Estimate: 688.0
+2017-12-03 11:59:44,726 - 
+
+2017-12-03 11:59:44,726 - Processing hour: 2126
+2017-12-03 11:59:46,395 - 
+gen	nevals
+0  	31    
+2017-12-03 12:00:09,139 - 
+1  	418   
+2017-12-03 12:01:08,746 - 
+2  	1103  
+2017-12-03 12:02:07,889 - 
+3  	1098  
+2017-12-03 12:03:06,522 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:03:06,524 - Hall of Fame: [0.03125, 0.0, 0.07250000000000001, 0.1975, 0.69875]
+2017-12-03 12:03:06,526 - GA Estimate: 575.0
+2017-12-03 12:03:06,526 - 
+
+2017-12-03 12:03:06,559 - Processing hour: 2127
+2017-12-03 12:03:08,252 - 
+gen	nevals
+0  	31    
+2017-12-03 12:03:31,423 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:03:31,424 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:03:31,425 - GA Estimate: 648.0
+2017-12-03 12:03:31,425 - 
+
+2017-12-03 12:03:31,426 - Processing hour: 2128
+2017-12-03 12:03:33,159 - 
+gen	nevals
+0  	31    
+2017-12-03 12:03:55,227 - 
+1  	412   
+2017-12-03 12:04:54,007 - 
+2  	1092  
+2017-12-03 12:05:53,277 - 
+3  	1103  
+2017-12-03 12:06:52,337 - 
+4  	1104  
+2017-12-03 12:07:51,548 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:07:51,550 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025000000000001]
+2017-12-03 12:07:51,552 - GA Estimate: 631.0
+2017-12-03 12:07:51,552 - 
+
+2017-12-03 12:07:51,552 - Processing hour: 2129
+2017-12-03 12:07:53,168 - 
+gen	nevals
+0  	31    
+2017-12-03 12:08:15,112 - 
+1  	410   
+2017-12-03 12:09:14,449 - 
+2  	1104  
+2017-12-03 12:10:12,896 - 
+3  	1096  
+2017-12-03 12:11:11,891 - 
+4  	1088  
+2017-12-03 12:12:11,611 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:12:11,613 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025000000000001]
+2017-12-03 12:12:11,614 - GA Estimate: 733.0
+2017-12-03 12:12:11,615 - 
+
+2017-12-03 12:12:11,615 - Processing hour: 2130
+2017-12-03 12:12:13,383 - 
+gen	nevals
+0  	31    
+2017-12-03 12:12:35,769 - 
+1  	415   
+2017-12-03 12:13:36,059 - 
+2  	1108  
+2017-12-03 12:14:35,810 - 
+3  	1106  
+2017-12-03 12:15:34,650 - 
+4  	1091  
+2017-12-03 12:16:34,127 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:16:34,129 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.250625, 0.50125]
+2017-12-03 12:16:34,130 - GA Estimate: 728.0
+2017-12-03 12:16:34,131 - 
+
+2017-12-03 12:16:34,131 - Processing hour: 2131
+2017-12-03 12:16:35,881 - 
+gen	nevals
+0  	31    
+2017-12-03 12:16:58,582 - 
+1  	416   
+2017-12-03 12:17:58,616 - 
+2  	1113  
+2017-12-03 12:18:58,151 - 
+3  	1105  
+2017-12-03 12:19:57,434 - 
+4  	1099  
+2017-12-03 12:20:56,567 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:20:56,570 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.25062500000000004, 0.50125]
+2017-12-03 12:20:56,599 - GA Estimate: 761.0
+2017-12-03 12:20:56,600 - 
+
+2017-12-03 12:20:56,607 - Processing hour: 2132
+2017-12-03 12:20:58,242 - 
+gen	nevals
+0  	31    
+2017-12-03 12:21:20,122 - 
+1  	409   
+2017-12-03 12:22:18,931 - 
+2  	1098  
+2017-12-03 12:23:17,697 - 
+3  	1097  
+2017-12-03 12:24:16,992 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:24:16,995 - Hall of Fame: [0.16625, 0.0, 0.0825, 0.25125000000000003, 0.5]
+2017-12-03 12:24:16,996 - GA Estimate: 793.0
+2017-12-03 12:24:16,996 - 
+
+2017-12-03 12:24:17,022 - Processing hour: 2133
+2017-12-03 12:24:18,669 - 
+gen	nevals
+0  	31    
+2017-12-03 12:24:41,157 - 
+1  	421   
+2017-12-03 12:25:41,273 - 
+2  	1119  
+2017-12-03 12:26:39,856 - 
+3  	1083  
+2017-12-03 12:27:40,098 - 
+4  	1105  
+2017-12-03 12:28:38,410 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:28:38,413 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.250625, 0.50125]
+2017-12-03 12:28:38,414 - GA Estimate: 733.0
+2017-12-03 12:28:38,414 - 
+
+2017-12-03 12:28:38,414 - Processing hour: 2134
+2017-12-03 12:28:40,209 - 
+gen	nevals
+0  	31    
+2017-12-03 12:29:03,042 - 
+1  	421   
+2017-12-03 12:30:02,204 - 
+2  	1097  
+2017-12-03 12:31:03,132 - 
+3  	1113  
+2017-12-03 12:32:01,537 - 
+4  	1089  
+2017-12-03 12:33:00,039 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:33:00,042 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025]
+2017-12-03 12:33:00,043 - GA Estimate: 813.0
+2017-12-03 12:33:00,043 - 
+
+2017-12-03 12:33:00,044 - Processing hour: 2135
+2017-12-03 12:33:01,743 - 
+gen	nevals
+0  	31    
+2017-12-03 12:33:24,400 - 
+1  	424   
+2017-12-03 12:34:24,509 - 
+2  	1116  
+2017-12-03 12:35:23,085 - 
+3  	1100  
+2017-12-03 12:36:22,609 - 
+4  	1110  
+2017-12-03 12:37:23,161 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:37:23,164 - Hall of Fame: [0.16562500000000002, 0.0, 0.0825, 0.249375, 0.5025000000000001]
+2017-12-03 12:37:23,165 - GA Estimate: 746.0
+2017-12-03 12:37:23,166 - 
+
+2017-12-03 12:37:23,166 - Processing hour: 2136
+2017-12-03 12:37:25,007 - 
+gen	nevals
+0  	31    
+2017-12-03 12:37:47,605 - 
+1  	415   
+2017-12-03 12:38:47,881 - 
+2  	1112  
+2017-12-03 12:39:47,634 - 
+3  	1104  
+2017-12-03 12:40:47,585 - 
+4  	1106  
+2017-12-03 12:41:46,035 - 
+5  	1092  
+2017-12-03 12:42:45,806 - 
+6  	1118  
+2017-12-03 12:43:45,273 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:43:45,275 - Hall of Fame: [0.20765625000000001, 0.0, 0.0825, 0.35609375, 0.35375]
+2017-12-03 12:43:45,305 - GA Estimate: 802.0
+2017-12-03 12:43:45,305 - 
+
+2017-12-03 12:43:45,311 - Processing hour: 2137
+2017-12-03 12:43:46,966 - 
+gen	nevals
+0  	31    
+2017-12-03 12:44:09,827 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:44:09,828 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:44:09,829 - GA Estimate: 690.0
+2017-12-03 12:44:09,829 - 
+
+2017-12-03 12:44:09,830 - Processing hour: 2138
+2017-12-03 12:44:11,550 - 
+gen	nevals
+0  	31    
+2017-12-03 12:44:33,925 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:44:33,926 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:44:33,927 - GA Estimate: 733.0
+2017-12-03 12:44:33,927 - 
+
+2017-12-03 12:44:33,928 - Processing hour: 2139
+2017-12-03 12:44:35,663 - 
+gen	nevals
+0  	31    
+2017-12-03 12:44:58,905 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:44:58,906 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:44:58,907 - GA Estimate: 864.0
+2017-12-03 12:44:58,907 - 
+
+2017-12-03 12:44:58,907 - Processing hour: 2140
+2017-12-03 12:45:00,650 - 
+gen	nevals
+0  	31    
+2017-12-03 12:45:23,628 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:45:23,629 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:45:23,630 - GA Estimate: 774.0
+2017-12-03 12:45:23,631 - 
+
+2017-12-03 12:45:23,631 - Processing hour: 2141
+2017-12-03 12:45:25,307 - 
+gen	nevals
+0  	31    
+2017-12-03 12:45:47,867 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:45:47,867 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:45:47,869 - GA Estimate: 532.0
+2017-12-03 12:45:47,869 - 
+
+2017-12-03 12:45:47,869 - Processing hour: 2142
+2017-12-03 12:45:49,531 - 
+gen	nevals
+0  	31    
+2017-12-03 12:46:12,348 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:46:12,349 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:46:12,350 - GA Estimate: 658.0
+2017-12-03 12:46:12,350 - 
+
+2017-12-03 12:46:12,351 - Processing hour: 2143
+2017-12-03 12:46:13,962 - 
+gen	nevals
+0  	31    
+2017-12-03 12:46:35,517 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:46:35,517 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:46:35,519 - GA Estimate: 685.0
+2017-12-03 12:46:35,519 - 
+
+2017-12-03 12:46:35,519 - Processing hour: 2144
+2017-12-03 12:46:37,280 - 
+gen	nevals
+0  	31    
+2017-12-03 12:46:59,466 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:46:59,472 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:46:59,473 - GA Estimate: 559.0
+2017-12-03 12:46:59,473 - 
+
+2017-12-03 12:46:59,484 - Processing hour: 2145
+2017-12-03 12:47:01,361 - 
+gen	nevals
+0  	31    
+2017-12-03 12:47:23,903 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:47:23,911 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:47:23,913 - GA Estimate: 605.0
+2017-12-03 12:47:23,913 - 
+
+2017-12-03 12:47:23,913 - Processing hour: 2146
+2017-12-03 12:47:25,595 - 
+gen	nevals
+0  	31    
+2017-12-03 12:47:47,737 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:47:47,738 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:47:47,739 - GA Estimate: 486.0
+2017-12-03 12:47:47,739 - 
+
+2017-12-03 12:47:47,775 - Processing hour: 2147
+2017-12-03 12:47:49,397 - 
+gen	nevals
+0  	31    
+2017-12-03 12:48:11,870 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:48:11,871 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:48:11,873 - GA Estimate: 726.0
+2017-12-03 12:48:11,873 - 
+
+2017-12-03 12:48:11,873 - Processing hour: 2148
+2017-12-03 12:48:13,575 - 
+gen	nevals
+0  	31    
+2017-12-03 12:48:37,060 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:48:37,061 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:48:37,062 - GA Estimate: 570.0
+2017-12-03 12:48:37,063 - 
+
+2017-12-03 12:48:37,073 - Processing hour: 2149
+2017-12-03 12:48:38,770 - 
+gen	nevals
+0  	31    
+2017-12-03 12:49:01,128 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:49:01,129 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:49:01,131 - GA Estimate: 538.0
+2017-12-03 12:49:01,131 - 
+
+2017-12-03 12:49:01,131 - Processing hour: 2150
+2017-12-03 12:49:02,871 - 
+gen	nevals
+0  	31    
+2017-12-03 12:49:25,646 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:49:25,647 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:49:25,648 - GA Estimate: 570.0
+2017-12-03 12:49:25,648 - 
+
+2017-12-03 12:49:25,663 - Processing hour: 2151
+2017-12-03 12:49:27,397 - 
+gen	nevals
+0  	31    
+2017-12-03 12:49:49,637 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:49:49,638 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:49:49,640 - GA Estimate: 690.0
+2017-12-03 12:49:49,640 - 
+
+2017-12-03 12:49:49,640 - Processing hour: 2152
+2017-12-03 12:49:51,299 - 
+gen	nevals
+0  	31    
+2017-12-03 12:50:14,118 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:50:14,119 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:50:14,144 - GA Estimate: 653.0
+2017-12-03 12:50:14,145 - 
+
+2017-12-03 12:50:14,167 - Processing hour: 2153
+2017-12-03 12:50:15,885 - 
+gen	nevals
+0  	31    
+2017-12-03 12:50:38,290 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:50:38,291 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:50:38,292 - GA Estimate: 639.0
+2017-12-03 12:50:38,292 - 
+
+2017-12-03 12:50:38,323 - Processing hour: 2154
+2017-12-03 12:50:40,135 - 
+gen	nevals
+0  	31    
+2017-12-03 12:51:02,518 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:51:02,519 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:51:02,520 - GA Estimate: 698.0
+2017-12-03 12:51:02,520 - 
+
+2017-12-03 12:51:02,521 - Processing hour: 2155
+2017-12-03 12:51:04,312 - 
+gen	nevals
+0  	31    
+2017-12-03 12:51:27,468 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:51:27,469 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:51:27,471 - GA Estimate: 798.0
+2017-12-03 12:51:27,471 - 
+
+2017-12-03 12:51:27,471 - Processing hour: 2156
+2017-12-03 12:51:29,141 - 
+gen	nevals
+0  	31    
+2017-12-03 12:51:51,154 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:51:51,155 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:51:51,156 - GA Estimate: 780.0
+2017-12-03 12:51:51,157 - 
+
+2017-12-03 12:51:51,157 - Processing hour: 2157
+2017-12-03 12:51:52,810 - 
+gen	nevals
+0  	31    
+2017-12-03 12:52:15,581 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:52:15,582 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:52:15,603 - GA Estimate: 833.0
+2017-12-03 12:52:15,604 - 
+
+2017-12-03 12:52:15,619 - Processing hour: 2158
+2017-12-03 12:52:17,353 - 
+gen	nevals
+0  	31    
+2017-12-03 12:52:39,698 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:52:39,699 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:52:39,716 - GA Estimate: 876.0
+2017-12-03 12:52:39,716 - 
+
+2017-12-03 12:52:39,717 - Processing hour: 2159
+2017-12-03 12:52:41,493 - 
+gen	nevals
+0  	31    
+2017-12-03 12:53:03,986 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:53:03,987 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:53:03,988 - GA Estimate: 897.0
+2017-12-03 12:53:03,989 - 
+
+2017-12-03 12:53:03,989 - Processing hour: 2160
+2017-12-03 12:53:05,728 - 
+gen	nevals
+0  	31    
+2017-12-03 12:53:28,475 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:53:28,476 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:53:28,478 - GA Estimate: 890.0
+2017-12-03 12:53:28,478 - 
+
+2017-12-03 12:53:28,478 - Processing hour: 2161
+2017-12-03 12:53:30,152 - 
+gen	nevals
+0  	31    
+2017-12-03 12:53:53,465 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:53:53,466 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:53:53,468 - GA Estimate: 882.0
+2017-12-03 12:53:53,468 - 
+
+2017-12-03 12:53:53,468 - Processing hour: 2162
+2017-12-03 12:53:55,131 - 
+gen	nevals
+0  	31    
+2017-12-03 12:54:16,887 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:54:16,888 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:54:16,889 - GA Estimate: 754.0
+2017-12-03 12:54:16,890 - 
+
+2017-12-03 12:54:16,890 - Processing hour: 2163
+2017-12-03 12:54:18,632 - 
+gen	nevals
+0  	31    
+2017-12-03 12:54:41,581 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:54:41,582 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:54:41,608 - GA Estimate: 722.0
+2017-12-03 12:54:41,608 - 
+
+2017-12-03 12:54:41,608 - Processing hour: 2164
+2017-12-03 12:54:43,258 - 
+gen	nevals
+0  	31    
+2017-12-03 12:55:05,881 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:55:05,882 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:55:05,883 - GA Estimate: 713.0
+2017-12-03 12:55:05,883 - 
+
+2017-12-03 12:55:05,883 - Processing hour: 2165
+2017-12-03 12:55:07,741 - 
+gen	nevals
+0  	31    
+2017-12-03 12:55:28,595 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:55:28,596 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:55:28,597 - GA Estimate: 563.0
+2017-12-03 12:55:28,598 - 
+
+2017-12-03 12:55:28,598 - Processing hour: 2166
+2017-12-03 12:55:30,101 - 
+gen	nevals
+0  	31    
+2017-12-03 12:55:50,055 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:55:50,056 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:55:50,057 - GA Estimate: 554.0
+2017-12-03 12:55:50,057 - 
+
+2017-12-03 12:55:50,058 - Processing hour: 2167
+2017-12-03 12:55:51,436 - 
+gen	nevals
+0  	31    
+2017-12-03 12:56:11,063 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:56:11,064 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:56:11,066 - GA Estimate: 614.0
+2017-12-03 12:56:11,066 - 
+
+2017-12-03 12:56:11,066 - Processing hour: 2168
+2017-12-03 12:56:12,547 - 
+gen	nevals
+0  	31    
+2017-12-03 12:56:32,231 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:56:32,232 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:56:32,233 - GA Estimate: 562.0
+2017-12-03 12:56:32,233 - 
+
+2017-12-03 12:56:32,244 - Processing hour: 2169
+2017-12-03 12:56:33,782 - 
+gen	nevals
+0  	31    
+2017-12-03 12:56:53,869 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:56:53,870 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:56:53,871 - GA Estimate: 615.0
+2017-12-03 12:56:53,871 - 
+
+2017-12-03 12:56:53,872 - Processing hour: 2170
+2017-12-03 12:56:55,348 - 
+gen	nevals
+0  	31    
+2017-12-03 12:57:14,794 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:57:14,795 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:57:14,796 - GA Estimate: 602.0
+2017-12-03 12:57:14,796 - 
+
+2017-12-03 12:57:14,797 - Processing hour: 2171
+2017-12-03 12:57:16,253 - 
+gen	nevals
+0  	31    
+2017-12-03 12:57:35,953 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:57:35,954 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:57:35,955 - GA Estimate: 674.0
+2017-12-03 12:57:35,955 - 
+
+2017-12-03 12:57:35,956 - Processing hour: 2172
+2017-12-03 12:57:37,540 - 
+gen	nevals
+0  	31    
+2017-12-03 12:57:56,648 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:57:56,649 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:57:56,651 - GA Estimate: 701.0
+2017-12-03 12:57:56,651 - 
+
+2017-12-03 12:57:56,675 - Processing hour: 2173
+2017-12-03 12:57:58,127 - 
+gen	nevals
+0  	31    
+2017-12-03 12:58:18,190 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:58:18,190 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:58:18,192 - GA Estimate: 761.0
+2017-12-03 12:58:18,192 - 
+
+2017-12-03 12:58:18,192 - Processing hour: 2174
+2017-12-03 12:58:19,681 - 
+gen	nevals
+0  	31    
+2017-12-03 12:58:39,476 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:58:39,477 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:58:39,478 - GA Estimate: 794.0
+2017-12-03 12:58:39,479 - 
+
+2017-12-03 12:58:39,479 - Processing hour: 2175
+2017-12-03 12:58:40,916 - 
+gen	nevals
+0  	31    
+2017-12-03 12:59:01,187 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:59:01,187 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:59:01,189 - GA Estimate: 790.0
+2017-12-03 12:59:01,189 - 
+
+2017-12-03 12:59:01,189 - Processing hour: 2176
+2017-12-03 12:59:02,732 - 
+gen	nevals
+0  	31    
+2017-12-03 12:59:22,374 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:59:22,375 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:59:22,377 - GA Estimate: 800.0
+2017-12-03 12:59:22,377 - 
+
+2017-12-03 12:59:22,377 - Processing hour: 2177
+2017-12-03 12:59:23,947 - 
+gen	nevals
+0  	31    
+2017-12-03 12:59:43,820 - Best Individual didn't change. Stopping evolution
+2017-12-03 12:59:43,821 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 12:59:43,822 - GA Estimate: 680.0
+2017-12-03 12:59:43,822 - 
+
+2017-12-03 12:59:43,823 - Processing hour: 2178
+2017-12-03 12:59:45,327 - 
+gen	nevals
+0  	31    
+2017-12-03 13:00:04,849 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:00:04,850 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:00:04,851 - GA Estimate: 750.0
+2017-12-03 13:00:04,851 - 
+
+2017-12-03 13:00:04,860 - Processing hour: 2179
+2017-12-03 13:00:06,411 - 
+gen	nevals
+0  	31    
+2017-12-03 13:00:25,922 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:00:25,922 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:00:25,924 - GA Estimate: 779.0
+2017-12-03 13:00:25,924 - 
+
+2017-12-03 13:00:25,924 - Processing hour: 2180
+2017-12-03 13:00:27,449 - 
+gen	nevals
+0  	31    
+2017-12-03 13:00:46,828 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:00:46,829 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:00:46,830 - GA Estimate: 808.0
+2017-12-03 13:00:46,830 - 
+
+2017-12-03 13:00:46,830 - Processing hour: 2181
+2017-12-03 13:00:48,259 - 
+gen	nevals
+0  	31    
+2017-12-03 13:01:07,528 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:01:07,529 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:01:07,564 - GA Estimate: 888.0
+2017-12-03 13:01:07,565 - 
+
+2017-12-03 13:01:07,571 - Processing hour: 2182
+2017-12-03 13:01:09,170 - 
+gen	nevals
+0  	31    
+2017-12-03 13:01:29,420 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:01:29,421 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:01:29,422 - GA Estimate: 988.0
+2017-12-03 13:01:29,422 - 
+
+2017-12-03 13:01:29,423 - Processing hour: 2183
+2017-12-03 13:01:30,991 - 
+gen	nevals
+0  	31    
+2017-12-03 13:01:50,569 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:01:50,570 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:01:50,571 - GA Estimate: 1025.0
+2017-12-03 13:01:50,571 - 
+
+2017-12-03 13:01:50,572 - Processing hour: 2184
+2017-12-03 13:01:52,030 - 
+gen	nevals
+0  	31    
+2017-12-03 13:02:11,471 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:02:11,472 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:02:11,473 - GA Estimate: 912.0
+2017-12-03 13:02:11,473 - 
+
+2017-12-03 13:02:11,474 - Processing hour: 2185
+2017-12-03 13:02:12,906 - 
+gen	nevals
+0  	31    
+2017-12-03 13:02:32,553 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:02:32,554 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:02:32,556 - GA Estimate: 870.0
+2017-12-03 13:02:32,556 - 
+
+2017-12-03 13:02:32,556 - Processing hour: 2186
+2017-12-03 13:02:34,047 - 
+gen	nevals
+0  	31    
+2017-12-03 13:02:53,600 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:02:53,601 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:02:53,602 - GA Estimate: 726.0
+2017-12-03 13:02:53,602 - 
+
+2017-12-03 13:02:53,603 - Processing hour: 2187
+2017-12-03 13:02:55,109 - 
+gen	nevals
+0  	31    
+2017-12-03 13:03:14,841 - 
+1  	421   
+2017-12-03 13:04:07,433 - 
+2  	1121  
+2017-12-03 13:04:58,423 - 
+3  	1090  
+2017-12-03 13:05:49,780 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:05:49,782 - Hall of Fame: [0.0, 0.0, 0.04125, 0.60375, 0.355]
+2017-12-03 13:05:49,784 - GA Estimate: 725.0
+2017-12-03 13:05:49,784 - 
+
+2017-12-03 13:05:49,784 - Processing hour: 2188
+2017-12-03 13:05:51,285 - 
+gen	nevals
+0  	31    
+2017-12-03 13:06:10,032 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:06:10,033 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:06:10,034 - GA Estimate: 616.0
+2017-12-03 13:06:10,034 - 
+
+2017-12-03 13:06:10,059 - Processing hour: 2189
+2017-12-03 13:06:11,581 - 
+gen	nevals
+0  	31    
+2017-12-03 13:06:31,667 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:06:31,668 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:06:31,670 - GA Estimate: 622.0
+2017-12-03 13:06:31,670 - 
+
+2017-12-03 13:06:31,670 - Processing hour: 2190
+2017-12-03 13:06:33,295 - 
+gen	nevals
+0  	31    
+2017-12-03 13:06:52,528 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:06:52,529 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:06:52,530 - GA Estimate: 660.0
+2017-12-03 13:06:52,530 - 
+
+2017-12-03 13:06:52,531 - Processing hour: 2191
+2017-12-03 13:06:54,036 - 
+gen	nevals
+0  	31    
+2017-12-03 13:07:13,732 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:07:13,733 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:07:13,734 - GA Estimate: 600.0
+2017-12-03 13:07:13,734 - 
+
+2017-12-03 13:07:13,734 - Processing hour: 2192
+2017-12-03 13:07:15,238 - 
+gen	nevals
+0  	31    
+2017-12-03 13:07:35,476 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:07:35,477 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:07:35,478 - GA Estimate: 634.0
+2017-12-03 13:07:35,479 - 
+
+2017-12-03 13:07:35,479 - Processing hour: 2193
+2017-12-03 13:07:37,022 - 
+gen	nevals
+0  	31    
+2017-12-03 13:07:57,143 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:07:57,144 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:07:57,145 - GA Estimate: 616.0
+2017-12-03 13:07:57,145 - 
+
+2017-12-03 13:07:57,146 - Processing hour: 2194
+2017-12-03 13:07:58,443 - 
+gen	nevals
+0  	31    
+2017-12-03 13:08:18,307 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:08:18,307 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:08:18,309 - GA Estimate: 672.0
+2017-12-03 13:08:18,309 - 
+
+2017-12-03 13:08:18,309 - Processing hour: 2195
+2017-12-03 13:08:19,873 - 
+gen	nevals
+0  	31    
+2017-12-03 13:08:39,112 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:08:39,112 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:08:39,114 - GA Estimate: 636.0
+2017-12-03 13:08:39,114 - 
+
+2017-12-03 13:08:39,114 - Processing hour: 2196
+2017-12-03 13:08:40,653 - 
+gen	nevals
+0  	31    
+2017-12-03 13:08:59,875 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:08:59,876 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:08:59,877 - GA Estimate: 702.0
+2017-12-03 13:08:59,877 - 
+
+2017-12-03 13:08:59,878 - Processing hour: 2197
+2017-12-03 13:09:01,461 - 
+gen	nevals
+0  	31    
+2017-12-03 13:09:21,604 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:09:21,605 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:09:21,607 - GA Estimate: 621.0
+2017-12-03 13:09:21,607 - 
+
+2017-12-03 13:09:21,607 - Processing hour: 2198
+2017-12-03 13:09:23,089 - 
+gen	nevals
+0  	31    
+2017-12-03 13:09:42,931 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:09:42,932 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:09:42,933 - GA Estimate: 532.0
+2017-12-03 13:09:42,934 - 
+
+2017-12-03 13:09:42,934 - Processing hour: 2199
+2017-12-03 13:09:44,418 - 
+gen	nevals
+0  	31    
+2017-12-03 13:10:04,503 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:10:04,504 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:10:04,505 - GA Estimate: 590.0
+2017-12-03 13:10:04,505 - 
+
+2017-12-03 13:10:04,543 - Processing hour: 2200
+2017-12-03 13:10:06,010 - 
+gen	nevals
+0  	31    
+2017-12-03 13:10:25,466 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:10:25,467 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:10:25,468 - GA Estimate: 676.0
+2017-12-03 13:10:25,468 - 
+
+2017-12-03 13:10:25,468 - Processing hour: 2201
+2017-12-03 13:10:26,989 - 
+gen	nevals
+0  	31    
+2017-12-03 13:10:46,326 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:10:46,327 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:10:46,328 - GA Estimate: 602.0
+2017-12-03 13:10:46,328 - 
+
+2017-12-03 13:10:46,328 - Processing hour: 2202
+2017-12-03 13:10:47,921 - 
+gen	nevals
+0  	31    
+2017-12-03 13:11:07,922 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:11:07,923 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:11:07,924 - GA Estimate: 660.0
+2017-12-03 13:11:07,924 - 
+
+2017-12-03 13:11:07,925 - Processing hour: 2203
+2017-12-03 13:11:09,395 - 
+gen	nevals
+0  	31    
+2017-12-03 13:11:28,925 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:11:28,926 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:11:28,927 - GA Estimate: 573.0
+2017-12-03 13:11:28,959 - 
+
+2017-12-03 13:11:28,960 - Processing hour: 2204
+2017-12-03 13:11:30,459 - 
+gen	nevals
+0  	31    
+2017-12-03 13:11:51,115 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:11:51,116 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:11:51,118 - GA Estimate: 602.0
+2017-12-03 13:11:51,118 - 
+
+2017-12-03 13:11:51,118 - Processing hour: 2205
+2017-12-03 13:11:52,595 - 
+gen	nevals
+0  	31    
+2017-12-03 13:12:12,608 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:12:12,609 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:12:12,610 - GA Estimate: 505.0
+2017-12-03 13:12:12,611 - 
+
+2017-12-03 13:12:12,611 - Processing hour: 2206
+2017-12-03 13:12:14,069 - 
+gen	nevals
+0  	31    
+2017-12-03 13:12:33,678 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:12:33,679 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:12:33,680 - GA Estimate: 566.0
+2017-12-03 13:12:33,681 - 
+
+2017-12-03 13:12:33,681 - Processing hour: 2207
+2017-12-03 13:12:35,170 - 
+gen	nevals
+0  	31    
+2017-12-03 13:12:54,217 - Best Individual didn't change. Stopping evolution
+2017-12-03 13:12:54,218 - Hall of Fame: [0.0, 0.0, 0.0, 0.5, 0.5]
+2017-12-03 13:12:54,219 - GA Estimate: 550.0
+2017-12-03 13:12:54,238 - 
+
+2017-12-03 13:12:54,238 - Stopping GA
