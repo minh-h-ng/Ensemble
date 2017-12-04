@@ -33,9 +33,16 @@ def RMSE(y_true, y_pred):
     return total
 
 def checkResult(times):
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
+    #dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
+    #dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_08_10_components_5/predictions_cran_historical_enet_identity_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5/predictions_edgar_historical_enet_identity_' + str(times)
-    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5/predictions_kyoto_historical_enet_identity_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/genetic_algorithm/results/cran_08_10/Ensemble_GA_cran_08_10_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/genetic_algorithm/results/edgar_10_12/Ensemble_GA_edgar_10_12_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/genetic_algorithm/results/kyoto_10_12/Ensemble_GA_kyoto_10_12_' + str(times)
 
     # /minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_edgar_historical_enet_identity'
 
@@ -111,54 +118,14 @@ def checkResult(times):
 
     print('diff:',differences)
     print('cur_sum:',cur_sum)
+    return cur_sum
     #plt.plot(x_axis,total_diff)
     #plt.show()
 
-    """overload_naive = 0
-    underload_naive = 0
-    overload_ar = 0
-    underload_ar = 0
-    overload_arma = 0
-    underload_arma = 0
-    overload_arima = 0
-    underload_arima = 0
-    overload_ets = 0
-    underload_ets = 0
-    overload_esn = 0
-    underload_esn = 0
-
-
-    for i in range(len(realResults)):
-        if (naiveResults[i]>=realResults[i]*1.1):
-            overload_naive+=1
-        elif (naiveResults[i]<=realResults[i]*0.9):
-            underload_naive+=1
-        if (arResults[i]>=realResults[i]*1.1):
-            overload_ar+=1
-        elif (arResults[i]<=realResults[i]*0.9):
-            underload_ar+=1
-        if (armaResults[i]>=realResults[i]*1.1):
-            overload_arma+=1
-        elif (armaResults[i]<=realResults[i]*0.9):
-            underload_arma+=1
-        if (arimaResults[i]>=realResults[i]*1.1):
-            overload_arima+=1
-        elif (arimaResults[i]<=realResults[i]*0.9):
-            underload_arima+=1
-        if (etsResults[i]>=realResults[i]*1.1):
-            overload_ets+=1
-        elif (etsResults[i]<=realResults[i]*0.9):
-            underload_ets+=1
-        if (esnResults_fixed[i]>=realResults[i]*1.1):
-            overload_esn+=1
-        elif (esnResults_fixed[i]<=realResults[i]*0.9):
-            underload_esn+=1
-
-    print('overload of naive,ar,arma,arima,ets,esn:',overload_naive,overload_ar,overload_arma,overload_arima,overload_ets,overload_esn)
-    print('underload of naive,ar,arma,arima,ets,esn:',underload_naive,underload_ar,underload_arma,underload_arima,underload_ets,underload_esn)
-    print('total over-under of naive,ar,arma,arima,ets,esn:',overload_naive+underload_naive,overload_ar+underload_ar,overload_arma+underload_arma,
-          overload_arima+underload_arima,overload_ets+underload_ets,overload_esn+underload_esn)"""
-
-for i in range(1,2):
-    checkResult(i)
+total = 0
+count=11
+for i in range(1,count):
+    total += checkResult(i)
     print('')
+
+print('average:',total/(count-1))
