@@ -1,55 +1,68 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import numpy as np
+import logging
+import sys
 
+import numpy as np
+import pandas as pd
+
+# Parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("datafile", type=str)
-parser.add_argument("baggingFile", type=str)
+parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
+parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 
-datafile = args.datafile
-baggingFile = args.baggingFile
+# Initialize logger
+logger = logging.getLogger(__name__)
+sh = logging.StreamHandler(sys.stdout)
+sh.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
+sh.setLevel(logging.DEBUG)
+logger.addHandler(sh)
 
-naiveList = []
-arList = []
-armaList = []
-arimaList = []
-etsList = []
-realList = []
 
-def getAlgorithms(dataFile):
-    with open(dataFile,'r') as f:
-        lineCount = 0
-        for line in f:
-            #skip first line
-            lineCount+=1
-            if lineCount>1:
-                line = line[:-1]
-                lineParts = line.split(',')
-                naiveList.append(int(float(lineParts[0])))
-                arList.append(int(float(lineParts[1])))
-                armaList.append(int(float(lineParts[2])))
-                arimaList.append(int(float(lineParts[3])))
-                etsList.append(int(float(lineParts[4])))
-                realList.append(int(float(lineParts[6])))
+class EnsembleAverage:
+    def __init__(self, file_path, test_size=342):
+        """
+        Initializes data required by averaging ensemble
+        :param file_path: path to processed dataset
+        :param test_size: last test_size hours will be treated as test set
+        """
+        # Read data frame
+        self.df = pd.read_csv(
+            file_path,
+            header=0,
+            usecols=['Naive', 'AR', 'ARMA', 'ARIMA',
+                     'ETS', 'CurrentObservation']
+        )
 
-def ensemble_bagging():
-    results = []
-    if (len(naiveList)==0 or len(arList)==0 or len(armaList)==0 or len(arimaList)==0 or len(etsList)==0 or len(realList)==0):
-        print('Component or Real Lists Uninitialized!')
-    else:
-        for i in range(len(naiveList)):
-            results.append(np.ceil((naiveList[i]+arList[i]+armaList[i]+arimaList[i]+etsList[i])/5))
-    results = results[-342:]
-    with open(baggingFile,'w') as f:
-        for i in range(len(results)):
-            f.writelines(str(results[i])+'\n')
+        # Save test_size
+        if test_size <= 0:
+            raise ValueError
+        self.test_size = test_size
+
+    def run_test(self, result_path):
+        # Copy test data
+        dfs = self.df[-self.test_size:].copy()
+
+        # Calculate average & ceil results
+        dfs['Average'] = dfs[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].mean(axis=1).apply(np.ceil)
+
+        # Save
+        dfs.to_csv(result_path, columns=['Average'], header=False, index=False)
 
 
 def main():
-    getAlgorithms(dataFile=datafile)
-    ensemble_bagging()
+    logger.warning("Starting Ensemble Average")
+
+    # Initialize algo
+    algo = EnsembleAverage(file_path=args.data, test_size=342)
+
+    # Run test
+    algo.run_test(result_path=args.result_path)
+
+    logger.warning("Stopping Ensemble Average")
+
 
 if __name__ == '__main__':
     main()
