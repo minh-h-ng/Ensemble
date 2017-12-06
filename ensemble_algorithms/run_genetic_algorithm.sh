@@ -5,30 +5,29 @@
 # $2 => results_suffix (e.g. 1).
 
 # Usage examples:
-# (venv)$ ./run_ga.sh edgar_10_12 1
-# (venv)$ ./run_ga.sh edgar_10_12 2
-# (venv)$ ./run_ga.sh edgar_10_12 3
+# (venv)$ ./run_genetic_algorithm.sh edgar_10_12 1
+# (venv)$ ./run_genetic_algorithm.sh edgar_10_12 2
+# (venv)$ ./run_genetic_algorithm.sh edgar_10_12 3
 ###
 
 ########### Variables ###########
 # Top most directory of project
 top_dir=$(git rev-parse --show-toplevel)
 
-# Data directory
+# Data directory (where output of base.py is stored)
 data_dir=${top_dir}"/PythonESN/data_backup/"
 
 # Data set
 data_set=$1
 
-# Both hours_start and hours_end are inclusive
-# and signifies the number of hours elapsed.
-# Each output line of forecast.py (except header) signifies
-# 1-hr of elapsed time
-hours_start=1866
-hours_end=2207
+# Line number (both inclusive) of base.py output
+# to process in genetic algorithm. GA will access
+# up-to past 500 (default) lines before start_line
+start_line=1868
+end_line=2209
 
 # Directory path (relative to top_dir) for storing GA results
-results_dir='/genetic_algorithm/'$1'/'
+results_dir='/ensemble_algorithms/results/'$1'/'
 
 # File name prefix for storing GA results
 results_prefix='Ensemble_GA_'
@@ -49,4 +48,4 @@ mkdir -p ${dir_path}
 result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
 # Execute script
-python3 -m scoop -n ${cpus} evolve.py ${data_dir}${data_set} ${hours_start} ${hours_end} ${result_path}
+python3 -m scoop -n ${cpus} ensemble_genetic_algorithm.py ${data_dir}${data_set} ${start_line} ${end_line} ${result_path}

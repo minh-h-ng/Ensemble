@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-
-import os
+import argparse
+import collections
 import warnings
 
 import numpy as np
@@ -16,7 +16,7 @@ class ForecastAlgorithms:
     def __init__(self, samples=500):
         """
         Initializes forecasting algorithms
-        :param samples: clip algorithms to most recent 500 samples
+        :param samples: clip algorithms to use at-most past 500 samples
         """
         # Try importing 'forecast' package
         try:
@@ -42,19 +42,26 @@ class ForecastAlgorithms:
     def naive_forecast(self, data, n=1):
         """
         Forecasts number of requests using naive algorithm
+        :param data: pandas Series object representing
+                    data for already elapsed hours
+        :param n: number of hours for which forecast is requested
         :return: forecasts for next n hours
         """
         assert isinstance(data, pd.core.series.Series)
 
-        # The last observed value will repeat as it is
+        # The last observed value will repeat as-is
         return np.repeat(data.values[-1], n)
 
     def ar_forecast(self, data, n=1):
         """
         Forecasts number of requests using AR(1) model
+        :param data: pandas Series object representing
+                    data for already elapsed hours
+        :param n: number of hours for which forecast is requested
         :return: forecasts for next n hours
         """
         assert isinstance(data, pd.core.series.Series)
+        assert n >= 1
 
         pandas2ri.activate()
         results = np.array([])
@@ -71,7 +78,14 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 2:
+            # need at-least 3 true observations for using AR model
+            # so, just calculate average if number of observations < 3
             results = np.append(results, sub_series.mean())
+
+            # in such cases, it's hard to forecast for n > 1,
+            # so sanitize!
+            if n != 1:
+                raise ValueError
         else:
             rdata = self.rts(sub_series)
             fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
@@ -83,9 +97,13 @@ class ForecastAlgorithms:
     def arma_forecast(self, data, n=1):
         """
         Forecasts number of requests using ARMA(1,1) model
+        :param data: pandas Series object representing
+                    data for already elapsed hours
+        :param n: number of hours for which forecast is requested
         :return: forecasts for next n hours
         """
         assert isinstance(data, pd.core.series.Series)
+        assert n >= 1
 
         pandas2ri.activate()
         results = np.array([])
@@ -102,7 +120,14 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 2:
+            # need at-least 3 true observations for using ARMA model
+            # so, just calculate average if number of observations < 3
             results = np.append(results, sub_series.mean())
+
+            # in such cases, it's hard to forecast for n > 1,
+            # so sanitize!
+            if n != 1:
+                raise ValueError
         else:
             rdata = self.rts(sub_series)
             fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
@@ -115,9 +140,13 @@ class ForecastAlgorithms:
         """
         Forecasts number of requests using ARIMA(p,d,q) model.
         The parameters (p,d,q) are auto-tuned.
+        :param data: pandas Series object representing
+                    data for already elapsed hours
+        :param n: number of hours for which forecast is requested
         :return: forecasts for next n hours
         """
         assert isinstance(data, pd.core.series.Series)
+        assert n >= 1
 
         pandas2ri.activate()
         results = np.array([])
@@ -134,10 +163,17 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 2:
+            # need at-least 3 true observations for using ARIMA model
+            # so, just calculate average if number of observations < 3
             results = np.append(results, sub_series.mean())
+
+            # in such cases, it's hard to forecast for n > 1,
+            # so sanitize!
+            if n != 1:
+                raise ValueError
         else:
             rdata = self.rts(sub_series)
-            fit = self.rforecast.auto_arima(rdata)
+            fit = self.rforecast.auto_arima(rdata)  # # auto fit
             forecast = self.rforecast.forecast(fit, h=n)
             results = np.append(results, np.asarray(forecast[3]))
 
@@ -146,9 +182,13 @@ class ForecastAlgorithms:
     def ets_forecast(self, data, n=1):
         """
         Forecasts number of requests using ETS model.
+        :param data: pandas Series object representing
+                    data for already elapsed hours
+        :param n: number of hours for which forecast is requested
         :return: forecasts for next n hours
         """
         assert isinstance(data, pd.core.series.Series)
+        assert n >= 1
 
         pandas2ri.activate()
         results = np.array([])
@@ -165,7 +205,14 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 2:
+            # need at-least 3 true observations for using ETS model
+            # so, just calculate average if number of observations < 3
             results = np.append(results, sub_series.mean())
+
+            # in such cases, it's hard to forecast for n > 1,
+            # so sanitize!
+            if n != 1:
+                raise ValueError
         else:
             rdata = self.rts(sub_series)
             fit = self.rforecast.ets(rdata)
@@ -175,17 +222,10 @@ class ForecastAlgorithms:
         return np.rint(results)
 
 
-if __name__ == '__main__':
-    # script's directory
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-
-    # read, write files
-    dataPath = os.path.join(dir_path, '..', 'processed', 'cran_08_10')
-    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'cran_08_10')
-
+def main(args):
     # read csv
     series = pd.read_csv(
-        dataPath,
+        args.data,  # processed dataset
         header=None,  # contains no header
         index_col=0,  # set datetime column as index
         names=['datetime', 'requests'],  # name the columns
@@ -195,22 +235,21 @@ if __name__ == '__main__':
         dtype={'requests': np.float64}  # https://git.io/vdbyk
     )
 
-    # results (prediction at time 0 is invalid)
+    # prediction at time 0 is NaN
     naive_results = np.array([np.nan])
     ar_results = np.array([np.nan])
     arma_results = np.array([np.nan])
     arima_results = np.array([np.nan])
     ets_results = np.array([np.nan])
+    prev_observations = np.array([np.nan])
+    current_observations = np.array([series[0]])
 
-    # initialize algos
-    algo = ForecastAlgorithms(samples=500)
+    # initialize forecasting algos
+    algo = ForecastAlgorithms()
 
     # simulate forecast for each elapsed hour
-    # skip running for last hour
-    # since there's no real observation to compare with
-    for hr in tqdm.tqdm(range(1, len(series))):
-        hr_data = series[:hr]
-
+    for hr in tqdm.tqdm(range(1, len(series) + 1)):
+        hr_data = series[:hr]  # # hr = 1, 2, 3 ... len(series)
         # naive
         naive_results = np.append(naive_results,
                                   algo.naive_forecast(hr_data))
@@ -226,22 +265,45 @@ if __name__ == '__main__':
         # ets
         ets_results = np.append(ets_results,
                                 algo.ets_forecast(hr_data))
+        # prev
+        prev_observations = np.append(prev_observations,
+                                      series[hr - 1])
+        # curr
+        if hr == len(series):
+            # the last forecast doesn't have a corresponding true observation
+            current_observations = np.append(current_observations,
+                                             np.nan)
+        else:
+            current_observations = np.append(current_observations,
+                                             series[hr])
 
     # replace < 0 with 0
-    naive_results[1:][naive_results[1:] < 0] = 0
-    ar_results[1:][ar_results[1:] < 0] = 0
-    arma_results[1:][arma_results[1:] < 0] = 0
-    arima_results[1:][arima_results[1:] < 0] = 0
-    ets_results[1:][ets_results[1:] < 0] = 0
+    with warnings.catch_warnings():
+        # ignore nan < 0 comparison warning
+        warnings.filterwarnings('ignore')
+        naive_results[naive_results < 0] = 0
+        ar_results[ar_results < 0] = 0
+        arma_results[arma_results < 0] = 0
+        arima_results[arima_results < 0] = 0
+        ets_results[ets_results < 0] = 0
 
-    with open(writePath, 'w') as f:
-        # Header
-        line = "Naive,AR,ARMA,ARIMA,ETS,PreviousObservation,CurrentObservation"
-        f.write(line + '\n')
+    # save
+    df_data = collections.OrderedDict()
+    df_data['Naive'] = naive_results
+    df_data['AR'] = ar_results
+    df_data['ARMA'] = arma_results
+    df_data['ARIMA'] = arima_results
+    df_data['ETS'] = ets_results
+    df_data['PreviousObservation'] = prev_observations
+    df_data['CurrentObservation'] = current_observations
+    pd.DataFrame(df_data, columns=df_data.keys()) \
+        .to_csv(args.result_path, index=False, na_rep='NaN')
 
-        # Contents
-        for i in range(1, len(series)):
-            line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
-                   + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
-                   + str(ets_results[i]) + ',' + str(series[i - 1]) + ',' + str(series[i])
-            f.write(line + '\n')
+
+if __name__ == '__main__':
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument('data', type=str, help='Path to processed dataset')
+    parser.add_argument('result_path', type=str, help='Destination to save result')
+
+    main(parser.parse_args())

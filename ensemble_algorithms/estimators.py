@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from sklearn.base import BaseEstimator
-
 from genetic_algorithm import forecast
+from sklearn.base import BaseEstimator
 
 
 class NaiveEstimator(BaseEstimator):

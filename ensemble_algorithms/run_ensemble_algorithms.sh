@@ -17,7 +17,7 @@ top_dir=$(git rev-parse --show-toplevel)
 data_dir=${top_dir}"/processed/"
 
 # Data set
-data_set=$1'.csv'
+data_set=$1
 
 # Directory path (relative to top_dir) for storing results
 results_dir='/ensemble_algorithms/results/'$1'/'

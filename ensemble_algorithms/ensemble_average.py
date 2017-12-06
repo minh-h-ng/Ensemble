@@ -9,7 +9,7 @@ import pandas as pd
 
 # Parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
+parser.add_argument('data', type=str, help='Path to dataset (output of base.py)')
 parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 

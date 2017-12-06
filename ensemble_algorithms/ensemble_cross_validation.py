@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import argparse
 import logging
 import sys
@@ -13,7 +14,7 @@ from sklearn.model_selection import cross_val_score, TimeSeriesSplit
 
 # Parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
+parser.add_argument('data', type=str, help='Path to processed dataset')
 parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 

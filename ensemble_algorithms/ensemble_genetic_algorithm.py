@@ -15,9 +15,9 @@ from scoop import futures
 
 # Parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('data', type=str, help='Path to dataset (output of forecast.py)')
-parser.add_argument('hours_start', type=int, help='Hour to begin processing from (inclusive)')
-parser.add_argument('hours_end', type=int, help='Hour to end processing at (inclusive)')
+parser.add_argument('data', type=str, help='Path to dataset (output of base.py)')
+parser.add_argument('start_line', type=int, help='Line number to begin processing from (inclusive)')
+parser.add_argument('end_line', type=int, help='Line number to end processing at (inclusive)')
 parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 
@@ -42,7 +42,7 @@ class GeneticAlgorithm:
                  selbest=50):
 
         """Initializes data required by genetic algorithm
-        :param file_path: path to output of forecast.py
+        :param file_path: path to output of base.py
         :param samples: clip algorithm to most recent 500 forecasts
         :param cxpb: probability of mating two individuals
         :param mutpb: probability of mutating an individual
@@ -77,14 +77,14 @@ class GeneticAlgorithm:
     def computeElasticityIndex(self, row):
         return min(row['GA'], row['CurrentObservation']) / max(row['GA'], row['CurrentObservation'])
 
-    def computeFitness(self, individual, hours_elapsed):
+    def computeFitness(self, individual, line_number):
         # df subset
-        if hours_elapsed > self.clip:
-            start_idx = hours_elapsed - self.clip  # # (1, 2, 3, 4 ...)
-            end_idx = hours_elapsed  # # (501, 502, 503, 504 ...)
+        if (line_number - 1) > self.clip:
+            start_idx = (line_number - 1) - self.clip  # # (1, 2, 3, 4 ...)
+            end_idx = line_number - 1  # # (501, 502, 503, 504 ...)
             dfs = self.df[start_idx:end_idx].copy()
         else:
-            end_idx = hours_elapsed  # # (0:1, 0:2, 0:3, 0:4 ... 0:500)
+            end_idx = line_number - 1  # # (0:1, 0:2, 0:3, 0:4 ... 0:500)
             dfs = self.df[:end_idx].copy()
 
         # compute predicted value in hours_elapsed
@@ -133,14 +133,14 @@ class GeneticAlgorithm:
 
         return offspring
 
-    def eaValter(self, population, toolbox, cxpb, mutpb, ngen, hours_elapsed,
+    def eaValter(self, population, toolbox, cxpb, mutpb, ngen, line_number,
                  stats=None, halloffame=None):
         logbook = tools.Logbook()
         logbook.header = ['gen', 'nevals'] + (stats.fields if stats else [])
 
         # Evaluate the individuals with an invalid fitness
         invalid_ind = [ind for ind in population if not ind.fitness.valid]
-        fitnesses = toolbox.map(partial(toolbox.evaluate, hours_elapsed=hours_elapsed), invalid_ind)
+        fitnesses = toolbox.map(partial(toolbox.evaluate, line_number=line_number), invalid_ind)
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
 
@@ -161,7 +161,7 @@ class GeneticAlgorithm:
 
             # Evaluate the individuals with an invalid fitness
             invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-            fitnesses = toolbox.map(partial(toolbox.evaluate, hours_elapsed=hours_elapsed), invalid_ind)
+            fitnesses = toolbox.map(partial(toolbox.evaluate, line_number=line_number), invalid_ind)
             for ind, fit in zip(invalid_ind, fitnesses):
                 ind.fitness.values = fit
 
@@ -191,7 +191,7 @@ class GeneticAlgorithm:
 
         # Population is a list of individuals seeded from json file
         toolbox.register("population", self.initPopulation,
-                         list, creator.Individual, "seed_population.json")
+                         list, creator.Individual, "ga_seed_population.json")
 
         # Evaluation: elasticity index
         toolbox.register("evaluate", self.computeFitness)
@@ -210,7 +210,7 @@ class GeneticAlgorithm:
 
         return toolbox
 
-    def run(self, hours_elapsed):
+    def run(self, line_number):
         toolbox = self.init_toolbox()
 
         population = toolbox.population()
@@ -219,14 +219,15 @@ class GeneticAlgorithm:
         halloffame = tools.HallOfFame(maxsize=1)
         final_population, logbook = self.eaValter(population, toolbox,
                                                   self.cxpb, self.mutpb, self.ngen,
-                                                  hours_elapsed=hours_elapsed,
+                                                  line_number=line_number,
                                                   halloffame=halloffame)
 
         logger.warning("Hall of Fame: " + str(halloffame[-1]))
 
-        # read genes at hours_elapsed
-        # iloc is zero-indexed
-        genes = self.df.iloc[hours_elapsed - 1][['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']]
+        # read genes at line_number
+        # iloc is zero-indexed (subtract 1)
+        # header is not part of df (subtract 1)
+        genes = self.df.iloc[line_number - 2][['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']]
 
         # compute GA estimate
         ga_estimate = genes.dot(halloffame[-1]).round()
@@ -238,18 +239,18 @@ class GeneticAlgorithm:
 def main():
     logger.warning("Starting GA")
 
-    # sanitize (elapsed hours should at-least be 1)
-    if args.hours_start <= 0:
+    # sanitize (line number must be at-least 2)
+    if args.start_line < 2 or args.start_line > args.end_line:
         logger.critical("Invalid args. Aborting!")
         return
 
     # initialize
     ga = GeneticAlgorithm(args.data)
 
-    # run for every hour
-    for hr in tqdm.tqdm(range(args.hours_start, args.hours_end + 1)):
-        logger.warning("Processing hour: " + str(hr))
-        result = ga.run(hr)
+    # run for every line (hour)
+    for lno in tqdm.tqdm(range(args.start_line, args.end_line + 1)):
+        logger.warning("Processing line number: " + str(lno))
+        result = ga.run(lno)
         with open(args.result_path, 'a') as f:
             f.write(str(result) + '\n')
         logger.warning('\n')
