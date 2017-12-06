@@ -14,10 +14,10 @@
 top_dir=$(git rev-parse --show-toplevel)
 
 # Data directory
-data_dir=${top_dir}"/PythonESN/data_backup/"
+data_dir=${top_dir}"/processed/"
 
 # Data set
-data_set=$1
+data_set=$1'.csv'
 
 # Directory path (relative to top_dir) for storing results
 results_dir='/ensemble_algorithms/results/'$1'/'
@@ -75,7 +75,7 @@ run_ensemble_bagging_regression() {
     python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${result_path}
 }
 
-run_ensemble_average
+#run_ensemble_average
 run_ensemble_cross_validation
-run_ensemble_logistic_regression
-run_ensemble_bagging_regression
+#run_ensemble_logistic_regression
+#run_ensemble_bagging_regression
