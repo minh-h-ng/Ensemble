@@ -180,7 +180,7 @@ if __name__ == '__main__':
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # read, write files
-    dataPath = os.path.join(dir_path, '..', 'processed', 'cran_08_10.csv')
+    dataPath = os.path.join(dir_path, '..', 'processed', 'cran_08_10')
     writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'cran_08_10')
 
     # read csv
