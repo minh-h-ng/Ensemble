@@ -13,10 +13,9 @@ from rpy2.robjects import pandas2ri
 
 
 class ForecastAlgorithms:
-    def __init__(self, file_path, samples=500):
+    def __init__(self, samples=500):
         """
-        Initializes data required by forecasting algorithms
-        :param file_path: path to processed dataset
+        Initializes forecasting algorithms
         :param samples: clip algorithms to most recent 500 samples
         """
         # Try importing 'forecast' package
@@ -32,18 +31,6 @@ class ForecastAlgorithms:
                 utils.install_packages('forecast')
             self.rforecast = rpackages.importr('forecast')
 
-        # Read csv
-        self.series = pd.read_csv(
-            file_path,
-            header=None,  # contains no header
-            index_col=0,  # set datetime column as index
-            names=['datetime', 'requests'],  # name the columns
-            converters={'datetime':  # custom datetime parser
-                            lambda x: pd.to_datetime(x, format='%Y-%m-%d %H:%M:%S')},
-            squeeze=True,  # convert to Series
-            dtype={'requests': np.float64}  # https://git.io/vdbyk
-        )
-
         # R timeseries
         self.rts = robjects.r('ts')
 
@@ -52,112 +39,139 @@ class ForecastAlgorithms:
             raise ValueError
         self.clip = samples
 
-    def naive_simulation(self):
+    def naive_forecast(self, data, n=1):
         """
         Forecasts number of requests using naive algorithm
-        :return: forecasts for all hours
+        :return: forecasts for next n hours
         """
-        return np.append(np.nan, self.series.values[:-1])
+        assert isinstance(data, pd.core.series.Series)
 
-    def ar_simulation(self):
+        # The last observed value will repeat as it is
+        return np.repeat(data.values[-1], n)
+
+    def ar_forecast(self, data, n=1):
         """
         Forecasts number of requests using AR(1) model
-        :return: forecasts for all n hours
+        :return: forecasts for next n hours
         """
-        pandas2ri.activate()
-        results = np.array([np.nan])
+        assert isinstance(data, pd.core.series.Series)
 
-        # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1), desc="AR"):
-            if i >= self.clip:
-                start_idx = i - (self.clip - 1)
-                sub_series = self.series[start_idx:(i + 1)]
-            else:
-                sub_series = self.series[:(i + 1)]
-            if i < 2:
-                results = np.append(results, sub_series.mean())
-            else:
-                rdata = self.rts(sub_series)
-                ar_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
-                ar_forecast = self.rforecast.forecast(ar_fit, h=1)
-                results = np.append(results, ar_forecast[3])
-        # return np.ceil(results)
+        pandas2ri.activate()
+        results = np.array([])
+
+        # series length
+        series_len = len(data)
+
+        # clip until 500
+        if series_len > self.clip:
+            start_idx = series_len - self.clip
+            sub_series = data[start_idx:series_len]
+        else:
+            sub_series = data[:series_len]
+
+        # forecast for next n hours
+        if series_len <= 2:
+            results = np.append(results, sub_series.mean())
+        else:
+            rdata = self.rts(sub_series)
+            fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
+            forecast = self.rforecast.forecast(fit, h=n)
+            results = np.append(results, np.asarray(forecast[3]))
+
         return np.rint(results)
 
-    def arma_simulation(self):
+    def arma_forecast(self, data, n=1):
         """
         Forecasts number of requests using ARMA(1,1) model
-        :return: forecasts for all n hours
+        :return: forecasts for next n hours
         """
-        pandas2ri.activate()
-        results = np.array([np.nan])
+        assert isinstance(data, pd.core.series.Series)
 
-        # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1), desc="ARMA"):
-            if i >= self.clip:
-                start_idx = i - (self.clip - 1)
-                sub_series = self.series[start_idx:(i + 1)]
-            else:
-                sub_series = self.series[:(i + 1)]
-            if i < 2:
-                results = np.append(results, sub_series.mean())
-            else:
-                rdata = self.rts(sub_series)
-                arma_fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
-                arma_forecast = self.rforecast.forecast(arma_fit, h=1)
-                results = np.append(results, arma_forecast[3])
-        # return np.ceil(results)
+        pandas2ri.activate()
+        results = np.array([])
+
+        # series length
+        series_len = len(data)
+
+        # clip until 500
+        if series_len > self.clip:
+            start_idx = series_len - self.clip
+            sub_series = data[start_idx:series_len]
+        else:
+            sub_series = data[:series_len]
+
+        # forecast for next n hours
+        if series_len <= 2:
+            results = np.append(results, sub_series.mean())
+        else:
+            rdata = self.rts(sub_series)
+            fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
+            forecast = self.rforecast.forecast(fit, h=n)
+            results = np.append(results, np.asarray(forecast[3]))
+
         return np.rint(results)
 
-    def arima_simulation(self):
+    def arima_forecast(self, data, n=1):
         """
         Forecasts number of requests using ARIMA(p,d,q) model.
         The parameters (p,d,q) are auto-tuned.
-        :return: forecasts for all n hours
+        :return: forecasts for next n hours
         """
-        pandas2ri.activate()
-        results = np.array([np.nan])
+        assert isinstance(data, pd.core.series.Series)
 
-        # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1), desc="ARIMA"):
-            if i >= self.clip:
-                start_idx = i - (self.clip - 1)
-                sub_series = self.series[start_idx:(i + 1)]
-            else:
-                sub_series = self.series[:(i + 1)]
-            if i < 2:
-                results = np.append(results, sub_series.mean())
-            else:
-                rdata = self.rts(sub_series)
-                arima_fit = self.rforecast.auto_arima(rdata)
-                arima_forecast = self.rforecast.forecast(arima_fit, h=1)
-                results = np.append(results, arima_forecast[3])
-        # return np.ceil(results)
+        pandas2ri.activate()
+        results = np.array([])
+
+        # series length
+        series_len = len(data)
+
+        # clip until 500
+        if series_len > self.clip:
+            start_idx = series_len - self.clip
+            sub_series = data[start_idx:series_len]
+        else:
+            sub_series = data[:series_len]
+
+        # forecast for next n hours
+        if series_len <= 2:
+            results = np.append(results, sub_series.mean())
+        else:
+            rdata = self.rts(sub_series)
+            fit = self.rforecast.auto_arima(rdata)
+            forecast = self.rforecast.forecast(fit, h=n)
+            results = np.append(results, np.asarray(forecast[3]))
+
         return np.rint(results)
 
-    def ets_simulation(self):
+    def ets_forecast(self, data, n=1):
         """
         Forecasts number of requests using ETS model.
-        :return: forecasts for all n hours
+        :return: forecasts for next n hours
         """
-        pandas2ri.activate()
-        results = np.array([np.nan])
+        assert isinstance(data, pd.core.series.Series)
 
-        # TODO: parallelize
-        for i in tqdm.tqdm(range(self.series.size - 1), desc="ETS"):
-            if i >= self.clip:
-                start_idx = i - (self.clip - 1)
-                sub_series = self.series[start_idx:(i + 1)]
-            else:
-                sub_series = self.series[:(i + 1)]
-            if i < 3:
-                results = np.append(results, sub_series.mean())
-            else:
-                rdata = self.rts(sub_series)
-                ets_fit = self.rforecast.ets(rdata)
-                ets_forecast = self.rforecast.forecast(ets_fit, h=1)
-                results = np.append(results, ets_forecast[1])
-        # return np.ceil(results)
+        pandas2ri.activate()
+        results = np.array([])
+
+        # series length
+        series_len = len(data)
+
+        # clip until 500
+        if series_len > self.clip:
+            start_idx = series_len - self.clip
+            sub_series = data[start_idx:series_len]
+        else:
+            sub_series = data[:series_len]
+
+        # forecast for next n hours
+        if series_len <= 2:
+            results = np.append(results, sub_series.mean())
+        else:
+            rdata = self.rts(sub_series)
+            fit = self.rforecast.ets(rdata)
+            forecast = self.rforecast.forecast(fit, h=n)
+            results = np.append(results, np.asarray(forecast[1]))
+
         return np.rint(results)
 
 
@@ -166,16 +180,52 @@ if __name__ == '__main__':
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # read, write files
-    dataPath = os.path.join(dir_path, '..', 'processed', 'kyoto_10_12.csv')
-    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'kyoto_10_12')
+    dataPath = os.path.join(dir_path, '..', 'processed', 'cran_08_10.csv')
+    writePath = os.path.join(dir_path, '..', 'PythonESN', 'data_backup', 'cran_08_10')
 
-    # forecast
-    forecast = ForecastAlgorithms(dataPath, samples=500)
-    naive_results = forecast.naive_simulation()
-    ar_results = forecast.ar_simulation()
-    arma_results = forecast.arma_simulation()
-    arima_results = forecast.arima_simulation()
-    ets_results = forecast.ets_simulation()
+    # read csv
+    series = pd.read_csv(
+        dataPath,
+        header=None,  # contains no header
+        index_col=0,  # set datetime column as index
+        names=['datetime', 'requests'],  # name the columns
+        converters={'datetime':  # custom datetime parser
+                        lambda x: pd.to_datetime(x, format='%Y-%m-%d %H:%M:%S')},
+        squeeze=True,  # convert to Series
+        dtype={'requests': np.float64}  # https://git.io/vdbyk
+    )
+
+    # results (prediction at time 0 is invalid)
+    naive_results = np.array([np.nan])
+    ar_results = np.array([np.nan])
+    arma_results = np.array([np.nan])
+    arima_results = np.array([np.nan])
+    ets_results = np.array([np.nan])
+
+    # initialize algos
+    algo = ForecastAlgorithms(samples=500)
+
+    # simulate forecast for each elapsed hour
+    # skip running for last hour
+    # since there's no real observation to compare with
+    for hr in tqdm.tqdm(range(1, len(series))):
+        hr_data = series[:hr]
+
+        # naive
+        naive_results = np.append(naive_results,
+                                  algo.naive_forecast(hr_data))
+        # ar
+        ar_results = np.append(ar_results,
+                               algo.ar_forecast(hr_data))
+        # arma
+        arma_results = np.append(arma_results,
+                                 algo.arma_forecast(hr_data))
+        # arima
+        arima_results = np.append(arima_results,
+                                  algo.arima_forecast(hr_data))
+        # ets
+        ets_results = np.append(ets_results,
+                                algo.ets_forecast(hr_data))
 
     # replace < 0 with 0
     naive_results[1:][naive_results[1:] < 0] = 0
@@ -190,8 +240,8 @@ if __name__ == '__main__':
         f.write(line + '\n')
 
         # Contents
-        for i in range(1, len(naive_results)):
+        for i in range(1, len(series)):
             line = str(naive_results[i]) + ',' + str(ar_results[i]) + ',' \
                    + str(arma_results[i]) + ',' + str(arima_results[i]) + ',' \
-                   + str(ets_results[i]) + ',' + str(forecast.series[i - 1]) + ',' + str(forecast.series[i])
+                   + str(ets_results[i]) + ',' + str(series[i - 1]) + ',' + str(series[i])
             f.write(line + '\n')
