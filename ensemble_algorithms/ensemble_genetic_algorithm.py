@@ -84,6 +84,9 @@ class GeneticAlgorithm:
             end_idx = line_number - 1  # # (501, 502, 503, 504 ...)
             dfs = self.df[start_idx:end_idx].copy()
         else:
+            # header is not part of df (subtract 1)
+            # df is zero-indexed (subtract 1)
+            # end_idx is not inclusive (add 1)
             end_idx = line_number - 1  # # (0:1, 0:2, 0:3, 0:4 ... 0:500)
             dfs = self.df[:end_idx].copy()
 
@@ -239,8 +242,9 @@ class GeneticAlgorithm:
 def main():
     logger.warning("Starting GA")
 
-    # sanitize (line number must be at-least 2)
-    if args.start_line < 2 or args.start_line > args.end_line:
+    # sanitize (line number must be at-least 3)
+    # line number 2 is basically useless since it doesn't contain any genes
+    if args.start_line < 3 or args.start_line > args.end_line:
         logger.critical("Invalid args. Aborting!")
         return
 
