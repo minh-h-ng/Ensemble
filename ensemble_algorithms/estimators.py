@@ -42,6 +42,14 @@ class AverageEstimator(BaseEstimator):
             predictions = np.append(predictions, avg_prediction)
         return predictions
 
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
 
 class NaiveEstimator(BaseEstimator):
     def __init__(self):
