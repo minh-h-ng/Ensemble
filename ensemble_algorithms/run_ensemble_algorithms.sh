@@ -75,7 +75,7 @@ run_ensemble_bagging_regression() {
     python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${result_path}
 }
 
-#run_ensemble_average
+run_ensemble_average
 run_ensemble_cross_validation
 #run_ensemble_logistic_regression
 #run_ensemble_bagging_regression

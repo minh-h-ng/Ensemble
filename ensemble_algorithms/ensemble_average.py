@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import collections
 import logging
 import sys
 
 import numpy as np
 import pandas as pd
+from estimators import AverageEstimator
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -29,11 +31,15 @@ class EnsembleAverage:
         :param test_size: last test_size hours will be treated as test set
         """
         # Read data frame
-        self.df = pd.read_csv(
+        self.series = pd.read_csv(
             file_path,
-            header=0,
-            usecols=['Naive', 'AR', 'ARMA', 'ARIMA',
-                     'ETS', 'CurrentObservation']
+            header=None,  # contains no header
+            index_col=0,  # set datetime column as index
+            names=['datetime', 'requests'],  # name the columns
+            converters={'datetime':  # custom datetime parser
+                            lambda x: pd.to_datetime(x, format='%Y-%m-%d %H:%M:%S')},
+            squeeze=True,  # convert to Series
+            dtype={'requests': np.float64},  # https://git.io/vdbyk
         )
 
         # Save test_size
@@ -41,22 +47,35 @@ class EnsembleAverage:
             raise ValueError
         self.test_size = test_size
 
+        # exclude test data
+        self.eval_series = self.series[:-test_size]
+        self.test_series = self.series[-test_size:].copy()
+
+        # be sure
+        assert len(self.test_series) == test_size
+        assert len(self.test_series) + len(self.eval_series) == len(self.series)
+
     def run_test(self, result_path):
-        # Copy test data
-        dfs = self.df[-self.test_size:].copy()
+        estimator = AverageEstimator()
 
-        # Calculate average & ceil results
-        dfs['Average'] = dfs[['Naive', 'AR', 'ARMA', 'ARIMA', 'ETS']].mean(axis=1).apply(np.ceil)
+        # Makes eval series available for prediction
+        estimator.fit(self.eval_series)
 
-        # Save
-        dfs.to_csv(result_path, columns=['Average'], header=False, index=False)
+        # Run step-by-step prediction
+        results = estimator.predict(self.test_series)
+
+        df_data = collections.OrderedDict()
+        df_data['Observation'] = self.test_series
+        df_data['Prediction'] = results
+        pd.DataFrame(df_data, columns=df_data.keys()) \
+            .to_csv(result_path, index=False, na_rep='NaN')
 
 
 def main():
     logger.warning("Starting Ensemble Average")
 
     # Initialize algo
-    algo = EnsembleAverage(file_path=args.data, test_size=342)
+    algo = EnsembleAverage(file_path=args.data)
 
     # Run test
     algo.run_test(result_path=args.result_path)

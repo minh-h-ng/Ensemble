@@ -5,10 +5,8 @@ import collections
 import logging
 import sys
 
-import base as forecast
 import numpy as np
 import pandas as pd
-import tqdm
 from estimators import NaiveEstimator, ArEstimator, \
     ArmaEstimator, ArimaEstimator, EtsEstimator
 from sklearn.model_selection import cross_val_score, TimeSeriesSplit
