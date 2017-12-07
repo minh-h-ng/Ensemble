@@ -63,16 +63,21 @@ class EnsembleCrossValidation:
 
         # Calculate mean score of 10-fold evaluation
         score = dict()
+        logger.warning("Scoring Naive Algorithm")
         score['naive'] = cross_val_score(NaiveEstimator(), eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series)).mean()
+                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        logger.warning("Scoring AR Algorithm")
         score['ar'] = cross_val_score(ArEstimator(), eval_series,
-                                      cv=TimeSeriesSplit(n_splits=10).split(eval_series)).mean()
+                                      cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        logger.warning("Scoring ARMA Algorithm")
         score['arma'] = cross_val_score(ArmaEstimator(), eval_series,
-                                        cv=TimeSeriesSplit(n_splits=10).split(eval_series)).mean()
+                                        cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        logger.warning("Scoring ARIMA Algorithm")
         score['arima'] = cross_val_score(ArimaEstimator(), eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series)).mean()
+                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        logger.warning("Scoring ETS Algorithm")
         score['ets'] = cross_val_score(EtsEstimator(), eval_series,
-                                       cv=TimeSeriesSplit(n_splits=10).split(eval_series)).mean()
+                                       cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
 
         # Find algo with max. score
         self.best_algo = max(score, key=score.get)

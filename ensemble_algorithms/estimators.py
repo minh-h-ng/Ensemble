@@ -2,6 +2,7 @@
 
 import base as forecast
 import numpy as np
+import pandas as pd
 from sklearn.base import BaseEstimator
 
 
@@ -14,12 +15,19 @@ class NaiveEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
-        # X here holds the true observations,
-        # do not use the values for forecasting.
-        # It should only be used to count how many forecasts
-        # are requested
-        xlen = len(X)  # # number of predictions
-        return self.algo.naive_forecast(self.fit_, n=xlen)
+        # X here holds the true observations
+
+        # first prediction is done on already memorized data
+        predictions = np.array([
+            self.algo.naive_forecast(self.fit_)
+        ])
+
+        # subsequent predictions are online
+        for i in range(1, len(X)):
+            data = pd.concat([self.fit_, X[:i]])  # # training + elapsed
+            predictions = np.append(predictions,
+                                    self.algo.naive_forecast(data))
+        return predictions
 
     def score(self, X):
         predictions = self.predict(X)
@@ -39,12 +47,19 @@ class ArEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
-        # X here holds the true observations,
-        # do not use the values for forecasting.
-        # It should only be used to count how many forecasts
-        # are requested
-        xlen = len(X)  # # number of predictions
-        return self.algo.ar_forecast(self.fit_, n=xlen)
+        # X here holds the true observations
+
+        # first prediction is done on already memorized data
+        predictions = np.array([
+            self.algo.ar_forecast(self.fit_)
+        ])
+
+        # subsequent predictions are online
+        for i in range(1, len(X)):
+            data = pd.concat([self.fit_, X[:i]])  # # training + elapsed
+            predictions = np.append(predictions,
+                                    self.algo.ar_forecast(data))
+        return predictions
 
     def score(self, X):
         predictions = self.predict(X)
@@ -64,12 +79,19 @@ class ArmaEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
-        # X here holds the true observations,
-        # do not use the values for forecasting.
-        # It should only be used to count how many forecasts
-        # are requested
-        xlen = len(X)  # # number of predictions
-        return self.algo.arma_forecast(self.fit_, n=xlen)
+        # X here holds the true observations
+
+        # first prediction is done on already memorized data
+        predictions = np.array([
+            self.algo.arma_forecast(self.fit_)
+        ])
+
+        # subsequent predictions are online
+        for i in range(1, len(X)):
+            data = pd.concat([self.fit_, X[:i]])  # # training + elapsed
+            predictions = np.append(predictions,
+                                    self.algo.arma_forecast(data))
+        return predictions
 
     def score(self, X):
         predictions = self.predict(X)
@@ -89,12 +111,19 @@ class ArimaEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
-        # X here holds the true observations,
-        # do not use the values for forecasting.
-        # It should only be used to count how many forecasts
-        # are requested
-        xlen = len(X)  # # number of predictions
-        return self.algo.arima_forecast(self.fit_, n=xlen)
+        # X here holds the true observations
+
+        # first prediction is done on already memorized data
+        predictions = np.array([
+            self.algo.arima_forecast(self.fit_)
+        ])
+
+        # subsequent predictions are online
+        for i in range(1, len(X)):
+            data = pd.concat([self.fit_, X[:i]])  # # training + elapsed
+            predictions = np.append(predictions,
+                                    self.algo.arima_forecast(data))
+        return predictions
 
     def score(self, X):
         predictions = self.predict(X)
@@ -114,12 +143,19 @@ class EtsEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
-        # X here holds the true observations,
-        # do not use the values for forecasting.
-        # It should only be used to count how many forecasts
-        # are requested
-        xlen = len(X)  # # number of predictions
-        return self.algo.ets_forecast(self.fit_, n=xlen)
+        # X here holds the true observations
+
+        # first prediction is done on already memorized data
+        predictions = np.array([
+            self.algo.ets_forecast(self.fit_)
+        ])
+
+        # subsequent predictions are online
+        for i in range(1, len(X)):
+            data = pd.concat([self.fit_, X[:i]])  # # training + elapsed
+            predictions = np.append(predictions,
+                                    self.algo.ets_forecast(data))
+        return predictions
 
     def score(self, X):
         predictions = self.predict(X)
