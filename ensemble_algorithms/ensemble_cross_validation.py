@@ -79,8 +79,8 @@ class EnsembleCrossValidation:
         score['ets'] = cross_val_score(EtsEstimator(), eval_series,
                                        cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
 
-        # Find algo with max. score
-        self.best_algo = max(score, key=score.get)
+        # Find algo with min. score
+        self.best_algo = min(score, key=score.get)
 
         logger.warning("Best Algorithm: %s" % self.best_algo)
 

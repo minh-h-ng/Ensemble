@@ -33,9 +33,9 @@ class NaiveEstimator(BaseEstimator):
         predictions = self.predict(X)
         observations = X.values
 
-        minima = np.minimum(predictions, observations)
-        maxima = np.maximum(predictions, observations)
-        return sum(minima / maxima)
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
 
 
 class ArEstimator(BaseEstimator):
@@ -65,9 +65,9 @@ class ArEstimator(BaseEstimator):
         predictions = self.predict(X)
         observations = X.values
 
-        minima = np.minimum(predictions, observations)
-        maxima = np.maximum(predictions, observations)
-        return sum(minima / maxima)
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
 
 
 class ArmaEstimator(BaseEstimator):
@@ -97,9 +97,9 @@ class ArmaEstimator(BaseEstimator):
         predictions = self.predict(X)
         observations = X.values
 
-        minima = np.minimum(predictions, observations)
-        maxima = np.maximum(predictions, observations)
-        return sum(minima / maxima)
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
 
 
 class ArimaEstimator(BaseEstimator):
@@ -129,9 +129,9 @@ class ArimaEstimator(BaseEstimator):
         predictions = self.predict(X)
         observations = X.values
 
-        minima = np.minimum(predictions, observations)
-        maxima = np.maximum(predictions, observations)
-        return sum(minima / maxima)
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
 
 
 class EtsEstimator(BaseEstimator):
@@ -161,6 +161,6 @@ class EtsEstimator(BaseEstimator):
         predictions = self.predict(X)
         observations = X.values
 
-        minima = np.minimum(predictions, observations)
-        maxima = np.maximum(predictions, observations)
-        return sum(minima / maxima)
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
