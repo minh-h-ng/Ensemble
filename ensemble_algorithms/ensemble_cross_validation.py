@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import collections
 import logging
 import sys
 
-import genetic_algorithm.forecast as forecast
+import base as forecast
 import numpy as np
 import pandas as pd
 import tqdm
@@ -54,7 +55,11 @@ class EnsembleCrossValidation:
         eval_series = self.series[:-test_size]
         self.test_series = self.series[-test_size:].copy()
 
-        logger.warning("Deciding best algorithm")
+        # be sure
+        assert len(self.test_series) == test_size
+        assert len(self.test_series) + len(eval_series) == len(self.series)
+
+        logger.warning("Deciding best algorithm...")
 
         # Calculate mean score of 10-fold evaluation
         score = dict()
@@ -77,44 +82,86 @@ class EnsembleCrossValidation:
     def run_test(self, result_path):
         algo = forecast.ForecastAlgorithms()
 
+        # forecast on first observation is not defined
+        observation = np.array([self.test_series[0]])
+        results = np.array([np.nan])
+
         # run on test data
-        results = np.array([])
         if self.best_algo == 'naive':
             logger.warning("Running Naive Algorithm on Test Data")
             for i in tqdm.tqdm(range(self.test_size)):
+                # The last forecast doesn't have any true observation
+                try:
+                    observation = np.append(observation,
+                                            self.test_series[i + 1])
+                except IndexError:
+                    observation = np.append(observation, np.nan)
+
                 results = np.append(results,
-                                    algo.naive_forecast(data=self.test_series[i:]))
+                                    algo.naive_forecast(data=self.test_series[:i + 1]))
         elif self.best_algo == 'ar':
             logger.warning("Running AR Algorithm on Test Data")
             for i in tqdm.tqdm(range(self.test_size)):
+                # The last forecast doesn't have any true observation
+                try:
+                    observation = np.append(observation,
+                                            self.test_series[i + 1])
+                except IndexError:
+                    observation = np.append(observation, np.nan)
+
                 results = np.append(results,
-                                    algo.ar_forecast(data=self.test_series[i:]))
+                                    algo.ar_forecast(data=self.test_series[:i + 1]))
         elif self.best_algo == 'arma':
             logger.warning("Running ARMA Algorithm on Test Data")
             for i in tqdm.tqdm(range(self.test_size)):
+                # The last forecast doesn't have any true observation
+                try:
+                    observation = np.append(observation,
+                                            self.test_series[i + 1])
+                except IndexError:
+                    observation = np.append(observation, np.nan)
+
                 results = np.append(results,
-                                    algo.arma_forecast(data=self.test_series[i:]))
+                                    algo.arma_forecast(data=self.test_series[:i + 1]))
         elif self.best_algo == 'arima':
             logger.warning("Running ARIMA Algorithm on Test Data")
             for i in tqdm.tqdm(range(self.test_size)):
+                # The last forecast doesn't have any true observation
+                try:
+                    observation = np.append(observation,
+                                            self.test_series[i + 1])
+                except IndexError:
+                    observation = np.append(observation, np.nan)
+
                 results = np.append(results,
-                                    algo.arima_forecast(data=self.test_series[i:]))
+                                    algo.arima_forecast(data=self.test_series[:i + 1]))
         elif self.best_algo == 'ets':
             logger.warning("Running ETS Algorithm on Test Data")
             for i in tqdm.tqdm(range(self.test_size)):
+                # The last forecast doesn't have any true observation
+                try:
+                    observation = np.append(observation,
+                                            self.test_series[i + 1])
+                except IndexError:
+                    observation = np.append(observation, np.nan)
+
                 results = np.append(results,
-                                    algo.ets_forecast(data=self.test_series[i:]))
+                                    algo.ets_forecast(data=self.test_series[:i + 1]))
         else:
             assert False
 
-        pd.Series(results).to_csv(result_path, header=False, index=False)
+        df_data = collections.OrderedDict()
+        df_data['Observation'] = observation
+        df_data['Prediction'] = results
+        pd.DataFrame(df_data, columns=df_data.keys()) \
+            .to_csv(result_path, index=False, na_rep='NaN')
 
 
 def main():
     logger.warning("Starting Ensemble Cross Validation")
 
     # Initialize algo
-    algo = EnsembleCrossValidation(file_path=args.data, test_size=342)
+    algo = EnsembleCrossValidation(file_path=args.data)
 
     # Run test
     algo.run_test(result_path=args.result_path)

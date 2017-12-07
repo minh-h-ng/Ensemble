@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import base as forecast
 import numpy as np
-from genetic_algorithm import forecast
 from sklearn.base import BaseEstimator
 
 
@@ -14,6 +14,10 @@ class NaiveEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
+        # X here holds the true observations,
+        # do not use the values for forecasting.
+        # It should only be used to count how many forecasts
+        # are requested
         xlen = len(X)  # # number of predictions
         return self.algo.naive_forecast(self.fit_, n=xlen)
 
@@ -35,6 +39,10 @@ class ArEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
+        # X here holds the true observations,
+        # do not use the values for forecasting.
+        # It should only be used to count how many forecasts
+        # are requested
         xlen = len(X)  # # number of predictions
         return self.algo.ar_forecast(self.fit_, n=xlen)
 
@@ -56,6 +64,10 @@ class ArmaEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
+        # X here holds the true observations,
+        # do not use the values for forecasting.
+        # It should only be used to count how many forecasts
+        # are requested
         xlen = len(X)  # # number of predictions
         return self.algo.arma_forecast(self.fit_, n=xlen)
 
@@ -77,6 +89,10 @@ class ArimaEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
+        # X here holds the true observations,
+        # do not use the values for forecasting.
+        # It should only be used to count how many forecasts
+        # are requested
         xlen = len(X)  # # number of predictions
         return self.algo.arima_forecast(self.fit_, n=xlen)
 
@@ -98,6 +114,10 @@ class EtsEstimator(BaseEstimator):
         return self
 
     def predict(self, X):
+        # X here holds the true observations,
+        # do not use the values for forecasting.
+        # It should only be used to count how many forecasts
+        # are requested
         xlen = len(X)  # # number of predictions
         return self.algo.ets_forecast(self.fit_, n=xlen)
 
