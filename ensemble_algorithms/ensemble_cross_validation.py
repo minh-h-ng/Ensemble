@@ -52,32 +52,32 @@ class EnsembleCrossValidation:
         self.test_size = test_size
 
         # exclude test data
-        eval_series = self.series[:-test_size]
+        self.eval_series = self.series[:-test_size]
         self.test_series = self.series[-test_size:].copy()
 
         # be sure
         assert len(self.test_series) == test_size
-        assert len(self.test_series) + len(eval_series) == len(self.series)
+        assert len(self.test_series) + len(self.eval_series) == len(self.series)
 
         logger.warning("Deciding best algorithm...")
 
         # Calculate mean score of 10-fold evaluation
         score = dict()
         logger.warning("Scoring Naive Algorithm")
-        score['naive'] = cross_val_score(NaiveEstimator(), eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        score['naive'] = cross_val_score(NaiveEstimator(), self.eval_series,
+                                         cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
         logger.warning("Scoring AR Algorithm")
-        score['ar'] = cross_val_score(ArEstimator(), eval_series,
-                                      cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        score['ar'] = cross_val_score(ArEstimator(), self.eval_series,
+                                      cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
         logger.warning("Scoring ARMA Algorithm")
-        score['arma'] = cross_val_score(ArmaEstimator(), eval_series,
-                                        cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        score['arma'] = cross_val_score(ArmaEstimator(), self.eval_series,
+                                        cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
         logger.warning("Scoring ARIMA Algorithm")
-        score['arima'] = cross_val_score(ArimaEstimator(), eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        score['arima'] = cross_val_score(ArimaEstimator(), self.eval_series,
+                                         cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
         logger.warning("Scoring ETS Algorithm")
-        score['ets'] = cross_val_score(EtsEstimator(), eval_series,
-                                       cv=TimeSeriesSplit(n_splits=10).split(eval_series), verbose=3).mean()
+        score['ets'] = cross_val_score(EtsEstimator(), self.eval_series,
+                                       cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
 
         # Find algo with min. score
         self.best_algo = min(score, key=score.get)
@@ -85,78 +85,33 @@ class EnsembleCrossValidation:
         logger.warning("Best Algorithm: %s" % self.best_algo)
 
     def run_test(self, result_path):
-        algo = forecast.ForecastAlgorithms()
-
-        # forecast on first observation is not defined
-        observation = np.array([self.test_series[0]])
-        results = np.array([np.nan])
-
-        # run on test data
+        # assign estimator
         if self.best_algo == 'naive':
             logger.warning("Running Naive Algorithm on Test Data")
-            for i in tqdm.tqdm(range(self.test_size)):
-                # The last forecast doesn't have any true observation
-                try:
-                    observation = np.append(observation,
-                                            self.test_series[i + 1])
-                except IndexError:
-                    observation = np.append(observation, np.nan)
-
-                results = np.append(results,
-                                    algo.naive_forecast(data=self.test_series[:i + 1]))
+            estimator = NaiveEstimator()
         elif self.best_algo == 'ar':
             logger.warning("Running AR Algorithm on Test Data")
-            for i in tqdm.tqdm(range(self.test_size)):
-                # The last forecast doesn't have any true observation
-                try:
-                    observation = np.append(observation,
-                                            self.test_series[i + 1])
-                except IndexError:
-                    observation = np.append(observation, np.nan)
-
-                results = np.append(results,
-                                    algo.ar_forecast(data=self.test_series[:i + 1]))
+            estimator = ArEstimator()
         elif self.best_algo == 'arma':
             logger.warning("Running ARMA Algorithm on Test Data")
-            for i in tqdm.tqdm(range(self.test_size)):
-                # The last forecast doesn't have any true observation
-                try:
-                    observation = np.append(observation,
-                                            self.test_series[i + 1])
-                except IndexError:
-                    observation = np.append(observation, np.nan)
-
-                results = np.append(results,
-                                    algo.arma_forecast(data=self.test_series[:i + 1]))
+            estimator = ArmaEstimator()
         elif self.best_algo == 'arima':
             logger.warning("Running ARIMA Algorithm on Test Data")
-            for i in tqdm.tqdm(range(self.test_size)):
-                # The last forecast doesn't have any true observation
-                try:
-                    observation = np.append(observation,
-                                            self.test_series[i + 1])
-                except IndexError:
-                    observation = np.append(observation, np.nan)
-
-                results = np.append(results,
-                                    algo.arima_forecast(data=self.test_series[:i + 1]))
+            estimator = ArimaEstimator()
         elif self.best_algo == 'ets':
             logger.warning("Running ETS Algorithm on Test Data")
-            for i in tqdm.tqdm(range(self.test_size)):
-                # The last forecast doesn't have any true observation
-                try:
-                    observation = np.append(observation,
-                                            self.test_series[i + 1])
-                except IndexError:
-                    observation = np.append(observation, np.nan)
-
-                results = np.append(results,
-                                    algo.ets_forecast(data=self.test_series[:i + 1]))
+            estimator = EtsEstimator()
         else:
             assert False
 
+        # Makes eval series available for prediction
+        estimator.fit(self.eval_series)
+
+        # Run step-by-step prediction
+        results = estimator.predict(self.test_series)
+
         df_data = collections.OrderedDict()
-        df_data['Observation'] = observation
+        df_data['Observation'] = self.test_series
         df_data['Prediction'] = results
         pd.DataFrame(df_data, columns=df_data.keys()) \
             .to_csv(result_path, index=False, na_rep='NaN')
