@@ -54,7 +54,8 @@ class GeneticAlgorithm:
             file_path,
             header=0,
             usecols=['Naive', 'AR', 'ARMA', 'ARIMA',
-                     'ETS', 'CurrentObservation']
+                     'ETS', 'CurrentObservation'],
+            nrows=args.end_line - 1  # # header is not part of df (subtract 1)
         )
 
         # Clip
@@ -222,7 +223,9 @@ class GeneticAlgorithm:
         halloffame = tools.HallOfFame(maxsize=1)
         final_population, logbook = self.eaValter(population, toolbox,
                                                   self.cxpb, self.mutpb, self.ngen,
-                                                  line_number=line_number,
+                                                  # GA should find hall-of-fame over
+                                                  # past 'CurrentObservations'
+                                                  line_number=(line_number - 1),
                                                   halloffame=halloffame)
 
         logger.warning("Hall of Fame: " + str(halloffame[-1]))
