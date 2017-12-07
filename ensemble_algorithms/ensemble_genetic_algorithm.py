@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import collections
 import json
 import logging
 import os
@@ -56,6 +57,9 @@ class GeneticAlgorithm:
             usecols=['Naive', 'AR', 'ARMA', 'ARIMA',
                      'ETS', 'CurrentObservation'],
             nrows=args.end_line - 1  # # header is not part of df (subtract 1)
+            # It's possible to further skip rows based on start(/end)_line parameters
+            # since we use only 'samples' number of past data and not the whole data-frame
+            # however, I trust pandas to be efficient enough with slicing as well
         )
 
         # Clip
@@ -254,13 +258,22 @@ def main():
     # initialize
     ga = GeneticAlgorithm(args.data)
 
+    # results cache
+    line_number = np.array([])  # # of output from base.py
+    ga_results = np.array([])
+
     # run for every line (hour)
     for lno in tqdm.tqdm(range(args.start_line, args.end_line + 1)):
         logger.warning("Processing line number: " + str(lno))
-        result = ga.run(lno)
-        with open(args.result_path, 'a') as f:
-            f.write(str(result) + '\n')
-        logger.warning('\n')
+        line_number = np.append(line_number, lno)
+        ga_results = np.append(ga_results, ga.run(lno))
+
+    # flush results
+    df_data = collections.OrderedDict()
+    df_data['LineNumber'] = line_number
+    df_data['GA'] = ga_results
+    pd.DataFrame(df_data, columns=df_data.keys()) \
+        .to_csv(args.result_path, index=False, na_rep='NaN')
 
     logger.warning("Stopping GA")
 
