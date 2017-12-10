@@ -21,13 +21,16 @@ data_set=$1
 
 # Directory path (relative to top_dir) for storing results
 results_dir='/ensemble_algorithms/results/'$1'/'
+logs_dir='/ensemble_algorithms/results/logs/'$1'/'
 
 # File name suffix for multiple runs
 results_suffix='_'$2
 
-# Make sure results_dir exists
+# Make sure results_dir and logs_dir exists
 dir_path=${top_dir}${results_dir}
+logs_path=${top_dir}${logs_dir}
 mkdir -p ${dir_path}
+mkdir -p ${logs_path}
 
 data_file=${data_dir}${data_set}
 
@@ -39,7 +42,8 @@ run_ensemble_average() {
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_average.py ${data_dir}${data_set} ${result_path}
+    python3 ensemble_average.py ${data_dir}${data_set} ${result_path} |
+        tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
 run_ensemble_cross_validation() {
@@ -50,7 +54,8 @@ run_ensemble_cross_validation() {
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_cross_validation.py ${data_dir}${data_set} ${result_path}
+    python3 ensemble_cross_validation.py ${data_dir}${data_set} ${result_path} |
+        tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
 run_ensemble_logistic_regression() {
@@ -61,7 +66,8 @@ run_ensemble_logistic_regression() {
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_logistic_regression.py ${data_dir}${data_set} ${result_path}
+    python3 ensemble_logistic_regression.py ${data_dir}${data_set} ${result_path} |
+        tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
 run_ensemble_bagging_regression() {
@@ -72,7 +78,8 @@ run_ensemble_bagging_regression() {
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${result_path}
+    python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${result_path} |
+        tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
 run_ensemble_average
