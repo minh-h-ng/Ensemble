@@ -13,27 +13,27 @@ from rpy2.robjects import pandas2ri
 
 
 class ForecastAlgorithms:
+    # Try importing 'forecast' package
+    try:
+        rforecast = rpackages.importr('forecast')
+    except RRuntimeError:
+        # Select mirror
+        utils = rpackages.importr('utils')
+        utils.chooseCRANmirror(ind=1)
+        # Install
+        with warnings.catch_warnings():
+            warnings.filterwarnings('ignore')
+            utils.install_packages('forecast')
+        rforecast = rpackages.importr('forecast')
+
+    # R timeseries
+    rts = robjects.r('ts')
+
     def __init__(self, samples=500):
         """
         Initializes forecasting algorithms
         :param samples: clip algorithms to use at-most past 500 samples
         """
-        # Try importing 'forecast' package
-        try:
-            self.rforecast = rpackages.importr('forecast')
-        except RRuntimeError:
-            # Select mirror
-            utils = rpackages.importr('utils')
-            utils.chooseCRANmirror(ind=1)
-            # Install
-            with warnings.catch_warnings():
-                warnings.filterwarnings('ignore')
-                utils.install_packages('forecast')
-            self.rforecast = rpackages.importr('forecast')
-
-        # R timeseries
-        self.rts = robjects.r('ts')
-
         # Clip
         if samples <= 0:
             raise ValueError
@@ -87,9 +87,11 @@ class ForecastAlgorithms:
             if n != 1:
                 raise ValueError
         else:
-            rdata = self.rts(sub_series)
-            fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 0)), method="ML")
-            forecast = self.rforecast.forecast(fit, h=n)
+            rdata = ForecastAlgorithms.rts(sub_series)
+            fit = ForecastAlgorithms.rforecast.Arima(rdata,
+                                                     robjects.FloatVector((1, 0, 0)),
+                                                     method="ML")
+            forecast = ForecastAlgorithms.rforecast.forecast(fit, h=n)
             results = np.append(results, np.asarray(forecast[3]))
 
         return np.rint(results)
@@ -129,9 +131,11 @@ class ForecastAlgorithms:
             if n != 1:
                 raise ValueError
         else:
-            rdata = self.rts(sub_series)
-            fit = self.rforecast.Arima(rdata, robjects.FloatVector((1, 0, 1)), method="ML")
-            forecast = self.rforecast.forecast(fit, h=n)
+            rdata = ForecastAlgorithms.rts(sub_series)
+            fit = ForecastAlgorithms.rforecast.Arima(rdata,
+                                                     robjects.FloatVector((1, 0, 1)),
+                                                     method="ML")
+            forecast = ForecastAlgorithms.rforecast.forecast(fit, h=n)
             results = np.append(results, np.asarray(forecast[3]))
 
         return np.rint(results)
@@ -172,9 +176,9 @@ class ForecastAlgorithms:
             if n != 1:
                 raise ValueError
         else:
-            rdata = self.rts(sub_series)
-            fit = self.rforecast.auto_arima(rdata)  # # auto fit
-            forecast = self.rforecast.forecast(fit, h=n)
+            rdata = ForecastAlgorithms.rts(sub_series)
+            fit = ForecastAlgorithms.rforecast.auto_arima(rdata)  # # auto fit
+            forecast = ForecastAlgorithms.rforecast.forecast(fit, h=n)
             results = np.append(results, np.asarray(forecast[3]))
 
         return np.rint(results)
@@ -214,9 +218,9 @@ class ForecastAlgorithms:
             if n != 1:
                 raise ValueError
         else:
-            rdata = self.rts(sub_series)
-            fit = self.rforecast.ets(rdata)
-            forecast = self.rforecast.forecast(fit, h=n)
+            rdata = ForecastAlgorithms.rts(sub_series)
+            fit = ForecastAlgorithms.rforecast.ets(rdata)
+            forecast = ForecastAlgorithms.rforecast.forecast(fit, h=n)
             results = np.append(results, np.asarray(forecast[1]))
 
         return np.rint(results)
