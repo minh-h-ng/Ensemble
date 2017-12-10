@@ -4,7 +4,6 @@ import argparse
 import collections
 import json
 import logging
-import os
 import random
 from functools import partial
 
@@ -20,11 +19,12 @@ parser.add_argument('data', type=str, help='Path to dataset (output of base.py)'
 parser.add_argument('start_line', type=int, help='Line number to begin processing from (inclusive)')
 parser.add_argument('end_line', type=int, help='Line number to end processing at (inclusive)')
 parser.add_argument('result_path', type=str, help='Destination to save result')
+parser.add_argument('logs_path', type=str, help='Destination to save logs')
 args = parser.parse_args()
 
 # Initialize logger
 logger = logging.getLogger(__name__)
-sh = logging.FileHandler(os.path.basename(args.result_path) + '.log', 'a')
+sh = logging.FileHandler(args.logs_path, 'a')
 sh.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
 sh.setLevel(logging.DEBUG)
 logger.addHandler(sh)

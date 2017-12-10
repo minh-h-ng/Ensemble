@@ -28,6 +28,7 @@ end_line=2208
 
 # Directory path (relative to top_dir) for storing GA results
 results_dir='/ensemble_algorithms/results/'$1'/'
+logs_dir='/ensemble_algorithms/results/logs/'$1'/'
 
 # File name prefix for storing GA results
 results_prefix='Ensemble_GA_'
@@ -42,10 +43,17 @@ cpus=$(cat /proc/cpuinfo | grep 'processor' | wc -l)
 
 # Make sure results_dir exists
 dir_path=${top_dir}${results_dir}
+logs_path=${top_dir}${logs_dir}
 mkdir -p ${dir_path}
+mkdir -p ${logs_path}
 
 # Output path
 result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
 # Execute script
-python3 -m scoop -n ${cpus} ensemble_genetic_algorithm.py ${data_dir}${data_set} ${start_line} ${end_line} ${result_path}
+python3 -m scoop -n ${cpus} ensemble_genetic_algorithm.py \
+    ${data_dir}${data_set} \
+    ${start_line} \
+    ${end_line} \
+    ${result_path} \
+    ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
