@@ -40,7 +40,7 @@ class AverageEstimator(BaseEstimator):
                 self.algo.ets_forecast(data)
             ])
             predictions = np.append(predictions, avg_prediction)
-        return predictions
+        return np.rint(predictions)
 
     def score(self, X):
         predictions = self.predict(X)
