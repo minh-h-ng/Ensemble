@@ -73,6 +73,7 @@ class ForecastAlgorithms:
         if series_len > self.clip:
             start_idx = series_len - self.clip
             sub_series = data[start_idx:series_len]
+            assert len(sub_series) == self.clip
         else:
             sub_series = data[:series_len]
 
@@ -117,6 +118,7 @@ class ForecastAlgorithms:
         if series_len > self.clip:
             start_idx = series_len - self.clip
             sub_series = data[start_idx:series_len]
+            assert len(sub_series) == self.clip
         else:
             sub_series = data[:series_len]
 
@@ -162,6 +164,7 @@ class ForecastAlgorithms:
         if series_len > self.clip:
             start_idx = series_len - self.clip
             sub_series = data[start_idx:series_len]
+            assert len(sub_series) == self.clip
         else:
             sub_series = data[:series_len]
 
@@ -204,6 +207,7 @@ class ForecastAlgorithms:
         if series_len > self.clip:
             start_idx = series_len - self.clip
             sub_series = data[start_idx:series_len]
+            assert len(sub_series) == self.clip
         else:
             sub_series = data[:series_len]
 
