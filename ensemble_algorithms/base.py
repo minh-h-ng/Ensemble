@@ -256,8 +256,10 @@ def main(args):
     algo = ForecastAlgorithms()
 
     # simulate forecast for each elapsed hour
-    for hr in tqdm.tqdm(range(1, len(series) + 1)):
-        hr_data = series[:hr]  # # hr = 1, 2, 3 ... len(series)
+    # it is okay to skip prediction for last element,
+    # since there is no true observation for last time-stamp
+    for hr in tqdm.tqdm(range(1, len(series))):
+        hr_data = series[:hr]  # # hr = 1, 2, 3 ... len(series) - 1
         # naive
         naive_results = np.append(naive_results,
                                   algo.naive_forecast(hr_data))
@@ -277,23 +279,25 @@ def main(args):
         prev_observations = np.append(prev_observations,
                                       series[hr - 1])
         # curr
-        if hr == len(series):
-            # the last forecast doesn't have a corresponding true observation
-            current_observations = np.append(current_observations,
-                                             np.nan)
-        else:
-            current_observations = np.append(current_observations,
-                                             series[hr])
+        current_observations = np.append(current_observations,
+                                         series[hr])
+
+    # get rid of index 0
+    # it's basically useless because of NaNs
+    naive_results = naive_results[1:]
+    ar_results = ar_results[1:]
+    arma_results = arma_results[1:]
+    arima_results = arima_results[1:]
+    ets_results = ets_results[1:]
+    prev_observations = prev_observations[1:]
+    current_observations = current_observations[1:]
 
     # replace < 0 with 0
-    with warnings.catch_warnings():
-        # ignore nan < 0 comparison warning
-        warnings.filterwarnings('ignore')
-        naive_results[naive_results < 0] = 0
-        ar_results[ar_results < 0] = 0
-        arma_results[arma_results < 0] = 0
-        arima_results[arima_results < 0] = 0
-        ets_results[ets_results < 0] = 0
+    naive_results[naive_results < 0] = 0
+    ar_results[ar_results < 0] = 0
+    arma_results[arma_results < 0] = 0
+    arima_results[arima_results < 0] = 0
+    ets_results[ets_results < 0] = 0
 
     # save
     df_data = collections.OrderedDict()
