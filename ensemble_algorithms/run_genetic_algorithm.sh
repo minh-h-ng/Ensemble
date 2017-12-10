@@ -23,8 +23,8 @@ data_set=$1
 # Line number (both inclusive) of base.py output
 # to process in genetic algorithm. GA will access
 # up-to past 500 (default) lines before start_line
-start_line=1868
-end_line=2209
+start_line=1867
+end_line=2208
 
 # Directory path (relative to top_dir) for storing GA results
 results_dir='/ensemble_algorithms/results/'$1'/'

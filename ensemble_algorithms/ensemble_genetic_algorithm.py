@@ -80,7 +80,9 @@ class GeneticAlgorithm:
         return pcls(ind_init(c) for c in contents)
 
     def computeElasticityIndex(self, row):
-        return min(row['GA'], row['CurrentObservation']) / max(row['GA'], row['CurrentObservation'])
+        return min(row['GA'],
+                   row['CurrentObservation']) / max(row['GA'],
+                                                    row['CurrentObservation'])
 
     def computeFitness(self, individual, line_number):
         # df subset
@@ -88,6 +90,7 @@ class GeneticAlgorithm:
             start_idx = (line_number - 1) - self.clip  # # (1, 2, 3, 4 ...)
             end_idx = line_number - 1  # # (501, 502, 503, 504 ...)
             dfs = self.df[start_idx:end_idx].copy()
+            assert len(dfs) == self.clip
         else:
             # header is not part of df (subtract 1)
             # df is zero-indexed (subtract 1)
@@ -225,12 +228,13 @@ class GeneticAlgorithm:
 
         # Best individual
         halloffame = tools.HallOfFame(maxsize=1)
-        final_population, logbook = self.eaValter(population, toolbox,
-                                                  self.cxpb, self.mutpb, self.ngen,
-                                                  # GA should find hall-of-fame over
-                                                  # past 'CurrentObservations'
-                                                  line_number=(line_number - 1),
-                                                  halloffame=halloffame)
+        _, _ = self.eaValter(population, toolbox,
+                             self.cxpb, self.mutpb, self.ngen,
+                             # GA should find hall-of-fame over
+                             # past 'CurrentObservations'. Limit
+                             # the lines eaValter has access to!
+                             line_number=(line_number - 1),
+                             halloffame=halloffame)
 
         logger.warning("Hall of Fame: " + str(halloffame[-1]))
 
@@ -242,15 +246,18 @@ class GeneticAlgorithm:
         # compute GA estimate
         ga_estimate = genes.dot(halloffame[-1]).round()
 
+        observed_value = self.df.iloc[line_number - 2][['CurrentObservation']][0]
+
         logger.warning("GA Estimate: " + str(ga_estimate))
-        return ga_estimate
+        logger.warning("Observed Value: " + str(observed_value))
+        return ga_estimate, observed_value
 
 
 def main():
     logger.warning("Starting GA")
 
     # sanitize (line number must be at-least 3)
-    # line number 2 is basically useless since it doesn't contain any genes
+    # otherwise, it's not possible to make GA evolve
     if args.start_line < 3 or args.start_line > args.end_line:
         logger.critical("Invalid args. Aborting!")
         return
@@ -259,19 +266,20 @@ def main():
     ga = GeneticAlgorithm(args.data)
 
     # results cache
-    line_number = np.array([])  # # of output from base.py
-    ga_results = np.array([])
+    observations = np.array([])
+    predictions = np.array([])
 
     # run for every line (hour)
     for lno in tqdm.tqdm(range(args.start_line, args.end_line + 1)):
         logger.warning("Processing line number: " + str(lno))
-        line_number = np.append(line_number, lno)
-        ga_results = np.append(ga_results, ga.run(lno))
+        predicted, observed = ga.run(lno)
+        predictions = np.append(predictions, predicted)
+        observations = np.append(observations, observed)
 
     # flush results
     df_data = collections.OrderedDict()
-    df_data['LineNumber'] = line_number
-    df_data['GA'] = ga_results
+    df_data['Observation'] = observations
+    df_data['Prediction'] = predictions
     pd.DataFrame(df_data, columns=df_data.keys()) \
         .to_csv(args.result_path, index=False, na_rep='NaN')
 
