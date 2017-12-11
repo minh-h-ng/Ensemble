@@ -16,8 +16,8 @@ do
     for count in {2207..2207}
     do
         # Tune parameters. Note: the config file for the best parameters are saved at the location in $ESNCONFIG
-        python -m scoop -n 4 ./genoptesn.py $count $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
-        #python ./genoptesn.py $count $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
+        #python -m scoop -n 4 ./genoptesn.py $count $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
+        python ./genoptesn.py $count $DATAFILE $OPTCONFIG $ESNCONFIG --percent_dim
 
         # Run experiments with these parameters
         #python -m scoop -n 2 ./esn_experiment.py $DATAFILE $ESNCONFIG $RUNS
