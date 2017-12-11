@@ -37,6 +37,7 @@ def NRMSE(y_true, y_pred, scaler):
     y_pred = scaler.inverse_transform(y_pred)
     for i in range(len(y_true)):
         total += abs((y_true[i]-y_pred[i])/y_true[i])
+    total /= len(y_true)
     return total
 
 class ESN(object):

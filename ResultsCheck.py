@@ -33,13 +33,13 @@ def RMSE(y_true, y_pred):
     return total
 
 def checkResult(times):
-    #dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
+    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
     #dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
-    dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
+    #dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_08_10_components_5/predictions_cran_historical_enet_identity_' + str(times)
+    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5/predictions_edgar_historical_enet_identity_' + str(times)
-    predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5/predictions_kyoto_historical_enet_identity_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5/predictions_kyoto_historical_enet_identity_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
 
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_08_10/Ensemble_GA_cran_08_10_' + str(times)
@@ -129,7 +129,7 @@ def checkResult(times):
     #plt.show()
 
 total = 0
-count=11
+count=5
 for i in range(1,count):
     total += checkResult(i)
     print('')
