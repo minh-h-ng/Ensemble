@@ -22,7 +22,7 @@ def NRMSE(y_true, y_pred, scaler):
         totalDiff += abs(y_true[i]-y_pred[i])/y_std
     return totalDiff/len(y_true)"""
 
-    y_true = scaler.inverse_transform(y_true)
+    """y_true = scaler.inverse_transform(y_true)
     y_pred = scaler.inverse_transform(y_pred)
     mu = 10
     response = 0.4
@@ -30,6 +30,13 @@ def NRMSE(y_true, y_pred, scaler):
     for i in range(len(y_true)):
         total += abs(np.ceil(response * y_true[i] / (response * mu - 1)) -
                      np.ceil(response * y_pred[i] / (response * mu - 1)))
+    return total"""
+
+    total = 0
+    y_true = scaler.inverse_transform(y_true)
+    y_pred = scaler.inverse_transform(y_pred)
+    for i in range(len(y_true)):
+        total += abs((y_true-y_pred)/y_true)
     return total
 
 class ESN(object):
