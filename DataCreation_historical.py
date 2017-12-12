@@ -6,8 +6,8 @@ arimaResults = []
 etsResults = []
 realResults = []
 
-dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
-writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_historical'
+dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12'
+writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_historical_10_12'
 
 lineCount = 0
 with open(dataPath,'r') as f:

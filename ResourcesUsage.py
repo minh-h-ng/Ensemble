@@ -102,7 +102,7 @@ def main():
         gaResources = readGA(gaDir,dataResources)
         esnResources = readESN(esnDir,dataResources)
         print('dataset:',dataList[i])
-        print('data:',dataResources)
+        #print('data:',dataResources)
         print('ga:',gaResources)
         print('esn:',esnResources)
         print()
