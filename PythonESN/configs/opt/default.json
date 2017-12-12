@@ -1,7 +1,7 @@
 {
   "optimization": {
     "population_size": 100,
-    "n_generations": 50,
+    "n_generations": 30,
     "n_offsprings": 75,
     "mutpb": 0.2,
     "cxpb": 0.5,
