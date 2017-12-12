@@ -5,9 +5,9 @@ dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10
 dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_08_10_components_5'
-esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5'
-esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5'
+esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_08_10_components_5_mae'
+esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5_mape'
+esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5_mape'
 
 gaCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_08_10'
 gaEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12'
@@ -71,26 +71,27 @@ def readData(dataFile,column,ignores):
             if count>ignores:
                 data = line.split(',')
                 datas.append(float(data[column]))
-    resources = 0
+    resources = []
     for i in range(testingSize):
-        resources += resourcesCalculation(int(datas[-(i+1)]),mu,r0)
+        #resources += resourcesCalculation(int(datas[-(i+1)]),mu,r0)
+        resources.append(resourcesCalculation(int(datas[-(i+1)]),mu,r0))
     return resources
 
-def readGA(gaDir):
-    total = 0
-    fileList = listdir(gaDir)
+def readGA(gaDir,dataResources):
     for file in listdir(gaDir):
         resources = readData(gaDir+'/'+ file,1,1)
-        total += resources
-    return total/len(fileList)
-
-def readESN(esnDir):
     total = 0
-    fileList = listdir(esnDir)
+    for i in range(len(resources)):
+        total += abs(resources[i]-dataResources[i])
+    return total
+
+def readESN(esnDir,dataResources):
+    total = 0
     for file in listdir(esnDir):
         resources = readData(esnDir+'/'+ file,0,0)
-        total += resources
-    return total/len(fileList)
+    for i in range(len(resources)):
+        total += abs(resources[i]-dataResources[i])
+    return total
 
 def main():
     for i in range(len(dataList)):
@@ -98,8 +99,8 @@ def main():
         esnDir = esnList[i]
         gaDir = gaList[i]
         dataResources = readData(dataFile,-1,1)
-        gaResources = readGA(gaDir)
-        esnResources = readESN(esnDir)
+        gaResources = readGA(gaDir,dataResources)
+        esnResources = readESN(esnDir,dataResources)
         print('dataset:',dataList[i])
         print('data:',dataResources)
         print('ga:',gaResources)

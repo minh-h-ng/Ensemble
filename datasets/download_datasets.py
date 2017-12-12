@@ -102,19 +102,64 @@ class DatasetDownloader(object):
         # Download dir
         dir = '/home/minh/Desktop/R_download/'
 
-        # Base URL of actual dataset
-        base_url = 'http://cran-logs.rstudio.com/2017/'
-
         dateFormat = '%Y-%m-%d'
 
         startDate = datetime.strptime(startDate,dateFormat)
         endDate = datetime.strptime(endDate,dateFormat)
+
+        downloadYear = startDate.year
+
+        # Base URL of actual dataset
+        base_url = 'http://cran-logs.rstudio.com/' + str(downloadYear) + '/'
 
         URLs = []
         delta = endDate - startDate
         for i in range(delta.days+1):
             #print(datetime.strftime(startDate+timedelta(days=i),dateFormat))
             URLs.append(base_url+datetime.strftime(startDate+timedelta(days=i),dateFormat)+'-r.csv.gz')
+
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
+        future_to_filename = {executor.submit(self._download_file, url, dir): url for url in URLs}
+
+        self._mkdir(dir)
+
+        for future in tqdm.tqdm(concurrent.futures.as_completed(future_to_filename), total=len(future_to_filename)):
+            url = future_to_filename[future]
+            try:
+                filename = future.result()
+                if filename is None:
+                    raise ValueError
+                csv_filename = os.path.splitext(filename)[0] + '.csv'
+                zip_path = os.path.join(dir, filename)
+
+                os.rename(os.path.join(dir, filename), os.path.join(dir, filename))
+            except Exception as exc:
+                self.logger.critical('DOWNLOAD_FAILED {0}: {1}'.format(url, exc))
+
+        # cleanup
+        executor.shutdown(True)
+
+    def download_cran(self,startDate,endDate):
+        self.logger.debug('Downloading CRAN')
+
+        # Download dir
+        dir = '/home/minh/Desktop/CRAN_download/'
+
+        dateFormat = '%Y-%m-%d'
+
+        startDate = datetime.strptime(startDate,dateFormat)
+        endDate = datetime.strptime(endDate,dateFormat)
+
+        downloadYear = startDate.year
+
+        # Base URL of actual dataset
+        base_url = 'http://cran-logs.rstudio.com/' + str(downloadYear) + '/'
+
+        URLs = []
+        delta = endDate - startDate
+        for i in range(delta.days+1):
+            #print(datetime.strftime(startDate+timedelta(days=i),dateFormat))
+            URLs.append(base_url+datetime.strftime(startDate+timedelta(days=i),dateFormat)+'.csv.gz')
 
         executor = concurrent.futures.ThreadPoolExecutor(max_workers=4)
         future_to_filename = {executor.submit(self._download_file, url, dir): url for url in URLs}
@@ -335,7 +380,8 @@ def harvest_log(log_path):
 
 def main():
     downloader = DatasetDownloader()
-    downloader.download_r('2017-08-01','2017-10-31')
+    #downloader.download_r('2017-08-01','2017-10-31')
+    downloader.download_cran('2016-10-01', '2016-12-31')
 
     """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,
