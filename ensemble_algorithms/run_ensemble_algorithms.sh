@@ -84,5 +84,5 @@ run_ensemble_bagging_regression() {
 
 run_ensemble_average
 run_ensemble_cross_validation
+run_ensemble_bagging_regression
 #run_ensemble_logistic_regression
-#run_ensemble_bagging_regression

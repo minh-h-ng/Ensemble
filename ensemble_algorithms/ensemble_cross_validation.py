@@ -77,6 +77,8 @@ class EnsembleCrossValidation:
         score['ets'] = cross_val_score(EtsEstimator(), self.eval_series,
                                        cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
 
+        logger.warning(score)
+
         # Find algo with min. score
         self.best_algo = min(score, key=score.get)
 
@@ -107,6 +109,10 @@ class EnsembleCrossValidation:
 
         # Run step-by-step prediction
         results = estimator.predict(self.test_series)
+
+        # score
+        score = estimator.score(self.test_series)
+        logger.warning("Estimator Score: %s" % score)
 
         df_data = collections.OrderedDict()
         df_data['Observation'] = self.test_series
