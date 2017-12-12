@@ -51,8 +51,8 @@ def process(dataset):
                 writer.writerows([line])
 
     elif (dataset=='CRAN'):
-        preprocessedDir = '/home/minh/PycharmProjects/Ensemble/preprocessed/CRAN_10_12'
-        processedFile = '/home/minh/PycharmProjects/Ensemble/processed/CRAN_10_12/access.csv'
+        preprocessedDir = '/home/minh/PycharmProjects/Ensemble/preprocessed/CRAN_09_11'
+        processedFile = '/home/minh/PycharmProjects/Ensemble/processed/cran_09_11'
         fileList = listdir(preprocessedDir)
         fileList.sort()
         dataList = []
@@ -264,8 +264,8 @@ def preprocess(dataset):
                     curTime += timeDelta
             print('file processed:', fileName)
     elif (dataset=='CRAN'):
-        dataFolder = '/home/minh/Desktop/CRAN_download/Extracted/'
-        preprocessedFolder = '/home/minh/PycharmProjects/Ensemble/preprocessed/CRAN_10_12/'
+        dataFolder = '/home/minh/Desktop/CRAN_download_09_11/Extracted/'
+        preprocessedFolder = '/home/minh/PycharmProjects/Ensemble/preprocessed/CRAN_09_11/'
         fileList = listdir(dataFolder)
         fileList.sort()
         print('fileList:', fileList)

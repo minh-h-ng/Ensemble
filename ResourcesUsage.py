@@ -5,11 +5,11 @@ dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10
 dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_08_10_components_5_mae'
+esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_components_5_mae'
 esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5_mape'
 esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5_mape'
 
-gaCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_08_10'
+gaCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_10_12'
 gaEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12'
 gaKyoto = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12'
 
@@ -102,7 +102,8 @@ def main():
         gaResources = readGA(gaDir,dataResources)
         esnResources = readESN(esnDir,dataResources)
         print('dataset:',dataList[i])
-        #print('data:',dataResources)
+        print('data:',dataResources)
+        print('total data:',sum(dataResources))
         print('ga:',gaResources)
         print('esn:',esnResources)
         print()
