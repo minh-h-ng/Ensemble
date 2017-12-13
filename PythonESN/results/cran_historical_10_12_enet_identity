@@ -1,29 +1,29 @@
-[2017-12-13 01:21:04,705] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 01:21:04,705] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 01:21:04,705] launcher  INFO    Worker distribution: 
-[2017-12-13 01:21:04,705] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 01:21:04,922 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,922 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,923 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,928 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,928 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,928 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,945 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,945 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,946 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,948 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,949 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,949 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,975 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,975 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:21:04,976 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,976 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:21:04,977 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,977 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:21:04,989 root            INFO     Initializing genetic algorithm
-2017-12-13 01:21:04,989 root            INFO     Initializing genetic algorithm
-2017-12-13 01:21:04,994 root            INFO     Running GA optimization
-2017-12-13 01:21:04,994 root            INFO     Running GA optimization
+[2017-12-13 16:48:12,636] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 16:48:12,636] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 16:48:12,636] launcher  INFO    Worker distribution: 
+[2017-12-13 16:48:12,636] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 16:48:12,854 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,854 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,855 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,856 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,857 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,857 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,868 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,868 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,868 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,896 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,896 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,897 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,916 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,916 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 16:48:12,916 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,916 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 16:48:12,917 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,917 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 16:48:12,930 root            INFO     Initializing genetic algorithm
+2017-12-13 16:48:12,930 root            INFO     Initializing genetic algorithm
+2017-12-13 16:48:12,934 root            INFO     Running GA optimization
+2017-12-13 16:48:12,934 root            INFO     Running GA optimization
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
@@ -32,102 +32,177 @@
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-gen	nevals	avg     	std     	min      	max     
-0  	100   	0.374426	0.130028	0.0899984	0.491889
-1  	51    	0.234934	0.0944476	0.0899984	0.452124
-2  	52    	0.141226	0.0476869	0.0899984	0.309049
-3  	59    	0.0975404	0.0136635	0.0853475	0.180348
-4  	44    	0.0900273	0.0015377	0.0853475	0.097941
-5  	49    	0.0888542	0.00108688	0.0853475	0.0912833
-6  	50    	0.0878023	0.00149241	0.0853475	0.0893721
-7  	49    	0.0864307	0.0014381 	0.0853475	0.0892252
-8  	57    	0.0855344	0.000954343	0.0819753	0.0886   
-9  	60    	0.0848779	0.00115935 	0.0819753	0.0881241
-10 	58    	0.0841093	0.0016562  	0.0819753	0.0897634
-11 	54    	0.0829949	0.00129802 	0.0819753	0.0853475
-12 	51    	0.0823294	0.00111175 	0.0819753	0.0885512
-13 	55    	0.0820557	0.000509817	0.0819753	0.0864996
-14 	54    	0.0819339	0.000290445	0.0799007	0.0819753
-15 	52    	0.0818301	0.00052933 	0.0799007	0.0819753
-16 	49    	0.0814718	0.000883435	0.0799007	0.0819753
-17 	50    	0.0808828	0.00132315 	0.0799007	0.0892785
-18 	49    	0.0800026	0.000444266	0.0799007	0.0819753
-19 	46    	0.0799722	0.000883131	0.0794812	0.0887211
-20 	57    	0.0798734	0.000471864	0.0794812	0.0842993
-21 	48    	0.079763 	0.000413336	0.0794812	0.0833306
-22 	62    	0.0797564	0.00103943 	0.0794812	0.0859802
-23 	51    	0.0794937	7.15752e-05	0.0794812	0.0799007
-24 	63    	0.0796495	0.000969914	0.0794812	0.0867244
-25 	59    	0.079655 	0.00104002 	0.0794812	0.0879047
-26 	55    	0.0796701	0.00112103 	0.0794812	0.0883607
-27 	54    	0.0795475	0.000546588	0.0794812	0.0848359
-28 	54    	0.0794812	2.77556e-17	0.0794812	0.0794812
-29 	47    	0.0794812	2.77556e-17	0.0794812	0.0794812
-30 	53    	0.0794812	2.77556e-17	0.0794812	0.0794812
-2017-12-13 01:46:45,019 root            INFO     Saving the best parameters
-2017-12-13 01:46:45,019 root            INFO     Saving the best parameters
-2017-12-13 01:46:45,019 root            INFO     Done
-2017-12-13 01:46:45,019 root            INFO     Done
-[2017-12-13 01:46:45,360] launcher  (127.0.0.1:39986) INFO    Root process is done.
-[2017-12-13 01:46:45,360] launcher  (127.0.0.1:39986) INFO    Finished cleaning spawned subprocesses.
+gen	nevals	avg    	std    	min  	max    
+0  	100   	343.836	116.407	88.55	458.047
+1  	56    	202.462	75.1332	88.55	394.248
+2  	56    	136.917	37.2915	87.209	223.49 
+3  	47    	102.661	16.6808	81.1614	174.109
+4  	58    	89.5214	5.00527	80.9739	103.776
+5  	58    	83.4819	2.74952	78.1847	88.804 
+6  	59    	80.8786	1.52304	78.1847	86.2892
+7  	57    	79.7241	1.21036	78.1847	85.3553
+8  	51    	78.7582	0.827067	77.1587	80.7211
+9  	53    	78.0436	0.605516	75.47  	80.031 
+10 	60    	77.2901	1.09443 	74.9946	78.4538
+11 	52    	76.2082	1.10636 	74.6262	78.1847
+12 	61    	75.3856	0.673391	74.2557	77.9018
+13 	57    	74.9071	0.392731	74.0651	76.3946
+14 	57    	74.6332	0.320812	74.0651	76.3946
+15 	59    	74.4186	0.212316	74.0651	74.9946
+16 	46    	74.2237	0.223316	73.4882	74.6262
+17 	51    	74.0631	0.193263	73.4882	74.4677
+18 	52    	73.9356	0.219143	73.4882	74.4635
+19 	53    	73.8357	0.390002	73.4882	76.9704
+20 	56    	73.5858	0.1874  	72.948 	74.0031
+21 	49    	73.3743	0.286299	72.396 	73.8971
+22 	56    	73.1346	0.361896	72.396 	73.4882
+23 	54    	72.8583	0.327466	72.396 	73.4882
+24 	53    	72.6254	0.265055	71.9951	73.9018
+25 	46    	72.4591	0.118013	71.9951	72.7405
+26 	47    	72.3986	0.19639 	71.9951	73.8132
+27 	53    	72.3805	0.298402	71.9951	74.3264
+28 	53    	72.2621	0.278346	71.9951	74.3205
+29 	51    	72.0837	0.169891	71.7655	72.396 
+30 	59    	72.0051	0.13088 	71.6491	72.396 
+2017-12-13 17:43:26,093 root            INFO     Saving the best parameters
+2017-12-13 17:43:26,093 root            INFO     Saving the best parameters
+2017-12-13 17:43:26,094 root            INFO     Done
+2017-12-13 17:43:26,094 root            INFO     Done
+[2017-12-13 17:43:26,430] launcher  (127.0.0.1:36816) INFO    Root process is done.
+[2017-12-13 17:43:26,430] launcher  (127.0.0.1:36816) INFO    Finished cleaning spawned subprocesses.
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-[2017-12-13 01:46:46,289] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 01:46:46,289] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 01:46:46,289] launcher  INFO    Worker distribution: 
-[2017-12-13 01:46:46,289] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 01:46:46,540 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,540 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,541 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,559 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,559 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,559 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,560 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,560 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,560 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,585 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,585 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,585 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,606 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,606 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 01:46:46,606 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,606 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 01:46:46,607 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,607 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 01:46:46,619 root            INFO     Initializing genetic algorithm
-2017-12-13 01:46:46,619 root            INFO     Initializing genetic algorithm
-2017-12-13 01:46:46,624 root            INFO     Running GA optimization
-2017-12-13 01:46:46,624 root            INFO     Running GA optimization
+[2017-12-13 17:43:28,176] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 17:43:28,176] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 17:43:28,176] launcher  INFO    Worker distribution: 
+[2017-12-13 17:43:28,177] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 17:43:28,394 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,394 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,394 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 17:43:28,395 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,395 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,396 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 17:43:28,409 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,409 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,410 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 17:43:28,416 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,416 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,417 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,417 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,417 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 17:43:28,417 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 17:43:28,430 root            INFO     Initializing genetic algorithm
+2017-12-13 17:43:28,430 root            INFO     Initializing genetic algorithm
+2017-12-13 17:43:28,434 root            INFO     Running GA optimization
+2017-12-13 17:43:28,434 root            INFO     Running GA optimization
+2017-12-13 17:43:28,446 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 17:43:28,446 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 17:43:28,446 root            INFO     Loading data (./data/cran_historical_10_12)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-gen	nevals	avg     	std     	min      	max     
-0  	100   	0.380815	0.123118	0.0959999	0.491889
+gen	nevals	avg    	std   	min    	max    
+0  	100   	358.509	115.12	84.8296	458.047
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-1  	56    	0.253943	0.104235	0.0959999	0.491889
-2  	51    	0.144939	0.0448275	0.0959999	0.324269
-3  	55    	0.105795	0.0126616	0.0915674	0.162244
-4  	46    	0.0975756	0.00374102	0.090215 	0.104288
-5  	57    	0.0941468	0.00206109	0.090215 	0.0991114
-6  	54    	0.0919778	0.00161091	0.0892527	0.0959999
-7  	56    	0.0906696	0.000800017	0.0885384	0.0931856
-8  	57    	0.0896365	0.00112749 	0.0857468	0.0909747
-9  	52    	0.0884722	0.00132044 	0.0857468	0.0907865
-10 	58    	0.0871152	0.00125514 	0.0857468	0.0897481
-11 	55    	0.0861452	0.000704474	0.0849355	0.0885384
-12 	55    	0.085753 	0.000394541	0.0844731	0.0875497
-13 	51    	0.0855586	0.000561395	0.0839331	0.0880247
-14 	47    	0.08501  	0.000784019	0.0827419	0.0857468
-15 	54    	0.0842902	0.000888219	0.0827419	0.0857468
-16 	60    	0.0836583	0.000852257	0.0827419	0.0859636
-17 	50    	0.083109 	0.00073799 	0.0817955	0.0867112
-18 	53    	0.0828044	0.000447869	0.0817955	0.085928 
-19 	53    	0.0827023	0.00026306 	0.0817955	0.0839331
-20 	51    	0.0824864	0.00042014 	0.0817955	0.0827419
-21 	56    	0.082193 	0.000467078	0.0817955	0.0827419
-22 	51    	0.0819695	0.000916319	0.0817955	0.0906799
-23 	55    	0.0818813	0.000590316	0.0817955	0.087531 
+1  	52    	211.978	99.8432	84.8296	458.047
+2  	57    	125.772	26.4588	84.8296	266.494
+3  	57    	104.17 	12.0951	81.7739	131.795
+4  	53    	90.2592	8.57739	81.7739	114.307
+5  	50    	83.5481	1.33446	81.4372	85.8296
+6  	60    	82.326 	1.10004	81.0521	84.7991
+7  	48    	81.4723	0.434423	79.7344	83.6241
+8  	55    	81.0014	0.612298	78.1869	81.7159
+9  	54    	80.3905	0.868656	78.1869	81.3695
+10 	51    	79.4956	0.965362	78.1869	81.2139
+11 	53    	78.7405	0.750857	77.9227	80.8773
+12 	49    	78.2233	0.377186	77.2693	79.8652
+13 	48    	78.0349	0.285964	77.2693	79.543 
+14 	46    	77.8332	0.325932	77.2693	78.1869
+15 	51    	77.6009	0.427297	77.2693	80.3701
+16 	55    	77.3281	0.186975	77.2693	77.9227
+17 	52    	77.2896	0.150513	77.2693	78.6403
+18 	46    	77.2593	0.0992776	76.2715	77.2693
+19 	46    	77.2194	0.21746  	76.2715	77.2693
+20 	53    	77.1196	0.356278 	76.2715	77.2693
+21 	57    	76.96  	0.461465 	76.2715	77.2693
+22 	47    	76.6407	0.481731 	76.2715	77.2693
+23 	51    	76.3813	0.312194 	76.2715	77.2693
+24 	50    	76.2715	0        	76.2715	76.2715
+25 	45    	76.2818	0.102157 	76.2715	77.2982
+26 	48    	76.3016	0.299538 	76.2715	79.282 
+27 	49    	76.2715	0        	76.2715	76.2715
+28 	51    	76.2715	0        	76.2715	76.2715
+29 	56    	76.3699	0.567364 	76.2715	80.3231
+30 	53    	76.2715	0        	76.2715	76.2715
+2017-12-13 18:01:03,234 root            INFO     Saving the best parameters
+2017-12-13 18:01:03,234 root            INFO     Saving the best parameters
+2017-12-13 18:01:03,235 root            INFO     Done
+2017-12-13 18:01:03,235 root            INFO     Done
+[2017-12-13 18:01:03,574] launcher  (127.0.0.1:36237) INFO    Root process is done.
+[2017-12-13 18:01:03,575] launcher  (127.0.0.1:36237) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-13 18:01:04,160] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 18:01:04,160] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 18:01:04,160] launcher  INFO    Worker distribution: 
+[2017-12-13 18:01:04,160] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 18:01:04,378 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,378 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,379 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,380 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,380 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,381 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,411 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,412 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,412 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,424 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,424 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,424 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,444 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,444 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 18:01:04,444 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,444 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 18:01:04,445 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,445 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 18:01:04,457 root            INFO     Initializing genetic algorithm
+2017-12-13 18:01:04,457 root            INFO     Initializing genetic algorithm
+2017-12-13 18:01:04,461 root            INFO     Running GA optimization
+2017-12-13 18:01:04,461 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min   	max    
+0  	100   	339.932	112.787	96.802	458.047
+1  	55    	212.569	64.4261	126.855	458.047
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	52    	149.239	27.9425	101.222	248.726
+3  	50    	127.065	9.91739	101.222	165.452
+4  	50    	116.903	10.0977	85.5788	131.094
+5  	54    	105.857	9.77647	83.3671	123.386
+6  	46    	96.3698	7.63915	83.121 	111.173
+7  	46    	88.9357	6.34967	83.121 	101.222
+8  	57    	83.938 	1.41256	82.7356	91.3072
+9  	51    	83.1295	0.333727	82.4913	85.5788
+10 	46    	82.7163	0.310947	81.9984	83.3546
+11 	52    	82.3209	0.285237	81.5916	82.9817
+12 	53    	81.9113	0.326986	80.9557	82.4913
+13 	49    	81.5273	0.470138	79.6758	82.1786
+14 	52    	81.0199	0.523831	79.6758	81.9875
+15 	52    	80.6081	0.452135	79.6758	81.1893
+16 	53    	80.1607	0.518375	78.9821	81.0893
+17 	54    	79.82  	0.607174	78.9821	83.6733
+18 	54    	79.5202	0.44366 	78.2398	81.4358
+19 	50    	79.1935	0.427019	78.2398	79.6758
+20 	53    	78.9545	0.481831	78.2398	81.0822
+21 	52    	78.6424	0.447027	78.2398	81.2145
+22 	56    	78.4037	0.300559	78.2398	78.9821
+23 	61    	78.3461	0.446449	78.2398	81.3811
+24 	51    	78.2403	0.00447316	78.2398	78.2848

@@ -143,7 +143,7 @@ class DatasetDownloader(object):
         self.logger.debug('Downloading CRAN')
 
         # Download dir
-        dir = '/home/minh/Desktop/CRAN_download_09_11/'
+        dir = '/home/minh/Desktop/CRAN/'
 
         dateFormat = '%Y-%m-%d'
 
@@ -381,7 +381,7 @@ def harvest_log(log_path):
 def main():
     downloader = DatasetDownloader()
     #downloader.download_r('2017-08-01','2017-10-31')
-    downloader.download_cran('2017-09-01', '2017-11-30')
+    downloader.download_cran('2017-01-01', '2017-12-30')
 
     """parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', help='Dataset(s) to download', type=str,

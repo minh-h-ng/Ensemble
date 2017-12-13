@@ -1,11 +1,12 @@
 import math
 from os import listdir
+import numpy as np
 
-dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_08_10'
+dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12'
 dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_components_5_mae'
+esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_lasso_identity'
 esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5_mape'
 esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5_mape'
 
@@ -18,7 +19,7 @@ esnList = [esnCRAN,esnEDGAR,esnKyoto]
 gaList = [gaCRAN,gaEDGAR,gaKyoto]
 
 mu = 10
-r0 = 0.4
+r0 = 0.8
 testingSize = 342
 
 """
@@ -86,12 +87,14 @@ def readGA(gaDir,dataResources):
     return total
 
 def readESN(esnDir,dataResources):
-    total = 0
+    list = []
     for file in listdir(esnDir):
+        total = 0
         resources = readData(esnDir+'/'+ file,0,0)
-    for i in range(len(resources)):
-        total += abs(resources[i]-dataResources[i])
-    return total
+        for i in range(len(resources)):
+            total += abs(resources[i]-dataResources[i])
+        list.append(total)
+    return np.mean(list)
 
 def main():
     for i in range(len(dataList)):
