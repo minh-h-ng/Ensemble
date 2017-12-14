@@ -5,7 +5,7 @@
 
 # Usage examples:
 # (venv)$ ./run_base_algorithms.sh edgar_10_12
-# (venv)$ ./run_base_algorithms.sh cran_08_10
+# (venv)$ ./run_base_algorithms.sh cran_10_12
 # (venv)$ ./run_base_algorithms.sh kyoto_10_12
 ###
 

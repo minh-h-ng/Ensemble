@@ -14,6 +14,7 @@ from sklearn.model_selection import cross_val_score, TimeSeriesSplit
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('data', type=str, help='Path to processed dataset')
+parser.add_argument('test_algo', type=str, help='Algorithm to run bagging on')
 parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 
@@ -57,48 +58,21 @@ class EnsembleBagging:
         assert len(self.test_series) == test_size
         assert len(self.test_series) + len(self.eval_series) == len(self.series)
 
-        logger.warning("Deciding best algorithm...")
-
-        # Calculate mean score of 10-fold evaluation
-        score = dict()
-        logger.warning("Scoring Naive Bagging")
-        score['naive'] = cross_val_score(NaiveBaggingEstimator(), self.eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
-        logger.warning("Scoring AR Bagging")
-        score['ar'] = cross_val_score(ArBaggingEstimator(), self.eval_series,
-                                      cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
-        logger.warning("Scoring ARMA Bagging")
-        score['arma'] = cross_val_score(ArmaBaggingEstimator(), self.eval_series,
-                                        cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
-        logger.warning("Scoring ARIMA Bagging")
-        score['arima'] = cross_val_score(ArimaBaggingEstimator(), self.eval_series,
-                                         cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
-        logger.warning("Scoring ETS Bagging")
-        score['ets'] = cross_val_score(EtsBaggingEstimator(), self.eval_series,
-                                       cv=TimeSeriesSplit(n_splits=10).split(self.eval_series), verbose=3).mean()
-
-        logger.warning(score)
-
-        # Find algo with min. score
-        self.best_algo = min(score, key=score.get)
-
-        logger.warning("Best Algorithm: %s" % self.best_algo)
-
-    def run_test(self, result_path):
+    def run_test(self, test_algo, result_path):
         # assign estimator
-        if self.best_algo == 'naive':
+        if test_algo == 'naive':
             logger.warning("Running Naive Bagging on Test Data")
             estimator = NaiveBaggingEstimator()
-        elif self.best_algo == 'ar':
+        elif test_algo == 'ar':
             logger.warning("Running AR Bagging on Test Data")
             estimator = ArBaggingEstimator()
-        elif self.best_algo == 'arma':
+        elif test_algo == 'arma':
             logger.warning("Running ARMA Bagging on Test Data")
             estimator = ArmaBaggingEstimator()
-        elif self.best_algo == 'arima':
+        elif test_algo == 'arima':
             logger.warning("Running ARIMA Bagging on Test Data")
             estimator = ArimaBaggingEstimator()
-        elif self.best_algo == 'ets':
+        elif test_algo == 'ets':
             logger.warning("Running ETS Bagging on Test Data")
             estimator = EtsBaggingEstimator()
         else:
@@ -109,10 +83,6 @@ class EnsembleBagging:
 
         # Run step-by-step prediction
         results = estimator.predict(self.test_series)
-
-        # score
-        score = estimator.score(self.test_series)
-        logger.warning("Estimator Score: %s" % score)
 
         df_data = collections.OrderedDict()
         df_data['Observation'] = self.test_series
@@ -128,7 +98,8 @@ def main():
     algo = EnsembleBagging(file_path=args.data)
 
     # Run test
-    algo.run_test(result_path=args.result_path)
+    algo.run_test(test_algo=args.test_algo,
+                  result_path=args.result_path)
 
     logger.warning("Stopping Ensemble Bagging")
 
