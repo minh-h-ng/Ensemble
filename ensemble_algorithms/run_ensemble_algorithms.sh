@@ -58,15 +58,15 @@ run_ensemble_cross_validation() {
         tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
-run_ensemble_logistic_regression() {
+run_ensemble_neural_network() {
     # File name prefix for results
-    results_prefix='Ensemble_LogisticRegression_'
+    results_prefix='Ensemble_NeuralNetwork_'
 
     # Output path
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_logistic_regression.py ${data_dir}${data_set} ${result_path} |
+    python3 ensemble_neural_network.py ${data_dir}${data_set} ${result_path} |
         tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
@@ -91,4 +91,4 @@ run_ensemble_bagging_regression 'ar' 'Ensemble_ArBaggingRegression_'
 run_ensemble_bagging_regression 'arma' 'Ensemble_ArmaBaggingRegression_'
 run_ensemble_bagging_regression 'arima' 'Ensemble_ArimaBaggingRegression_'
 run_ensemble_bagging_regression 'ets' 'Ensemble_EtsBaggingRegression_'
-#run_ensemble_logistic_regression
+#run_ensemble_neural_network
