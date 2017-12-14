@@ -1,208 +1,255 @@
-[2017-12-13 16:48:12,636] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 16:48:12,636] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 16:48:12,636] launcher  INFO    Worker distribution: 
-[2017-12-13 16:48:12,636] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 16:48:12,854 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,854 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,855 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,856 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,857 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,857 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,868 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,868 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,868 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,896 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,896 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,897 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,916 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,916 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:48:12,916 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,916 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 16:48:12,917 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,917 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:48:12,930 root            INFO     Initializing genetic algorithm
-2017-12-13 16:48:12,930 root            INFO     Initializing genetic algorithm
-2017-12-13 16:48:12,934 root            INFO     Running GA optimization
-2017-12-13 16:48:12,934 root            INFO     Running GA optimization
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-gen	nevals	avg    	std    	min  	max    
-0  	100   	343.836	116.407	88.55	458.047
-1  	56    	202.462	75.1332	88.55	394.248
-2  	56    	136.917	37.2915	87.209	223.49 
-3  	47    	102.661	16.6808	81.1614	174.109
-4  	58    	89.5214	5.00527	80.9739	103.776
-5  	58    	83.4819	2.74952	78.1847	88.804 
-6  	59    	80.8786	1.52304	78.1847	86.2892
-7  	57    	79.7241	1.21036	78.1847	85.3553
-8  	51    	78.7582	0.827067	77.1587	80.7211
-9  	53    	78.0436	0.605516	75.47  	80.031 
-10 	60    	77.2901	1.09443 	74.9946	78.4538
-11 	52    	76.2082	1.10636 	74.6262	78.1847
-12 	61    	75.3856	0.673391	74.2557	77.9018
-13 	57    	74.9071	0.392731	74.0651	76.3946
-14 	57    	74.6332	0.320812	74.0651	76.3946
-15 	59    	74.4186	0.212316	74.0651	74.9946
-16 	46    	74.2237	0.223316	73.4882	74.6262
-17 	51    	74.0631	0.193263	73.4882	74.4677
-18 	52    	73.9356	0.219143	73.4882	74.4635
-19 	53    	73.8357	0.390002	73.4882	76.9704
-20 	56    	73.5858	0.1874  	72.948 	74.0031
-21 	49    	73.3743	0.286299	72.396 	73.8971
-22 	56    	73.1346	0.361896	72.396 	73.4882
-23 	54    	72.8583	0.327466	72.396 	73.4882
-24 	53    	72.6254	0.265055	71.9951	73.9018
-25 	46    	72.4591	0.118013	71.9951	72.7405
-26 	47    	72.3986	0.19639 	71.9951	73.8132
-27 	53    	72.3805	0.298402	71.9951	74.3264
-28 	53    	72.2621	0.278346	71.9951	74.3205
-29 	51    	72.0837	0.169891	71.7655	72.396 
-30 	59    	72.0051	0.13088 	71.6491	72.396 
-2017-12-13 17:43:26,093 root            INFO     Saving the best parameters
-2017-12-13 17:43:26,093 root            INFO     Saving the best parameters
-2017-12-13 17:43:26,094 root            INFO     Done
-2017-12-13 17:43:26,094 root            INFO     Done
-[2017-12-13 17:43:26,430] launcher  (127.0.0.1:36816) INFO    Root process is done.
-[2017-12-13 17:43:26,430] launcher  (127.0.0.1:36816) INFO    Finished cleaning spawned subprocesses.
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-[2017-12-13 17:43:28,176] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 17:43:28,176] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 17:43:28,176] launcher  INFO    Worker distribution: 
-[2017-12-13 17:43:28,177] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 17:43:28,394 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,394 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,394 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 17:43:28,395 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,395 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,396 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 17:43:28,409 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,409 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,410 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 17:43:28,416 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,416 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,417 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,417 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,417 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 17:43:28,417 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 17:43:28,430 root            INFO     Initializing genetic algorithm
-2017-12-13 17:43:28,430 root            INFO     Initializing genetic algorithm
-2017-12-13 17:43:28,434 root            INFO     Running GA optimization
-2017-12-13 17:43:28,434 root            INFO     Running GA optimization
-2017-12-13 17:43:28,446 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 17:43:28,446 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 17:43:28,446 root            INFO     Loading data (./data/cran_historical_10_12)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-gen	nevals	avg    	std   	min    	max    
-0  	100   	358.509	115.12	84.8296	458.047
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-1  	52    	211.978	99.8432	84.8296	458.047
-2  	57    	125.772	26.4588	84.8296	266.494
-3  	57    	104.17 	12.0951	81.7739	131.795
-4  	53    	90.2592	8.57739	81.7739	114.307
-5  	50    	83.5481	1.33446	81.4372	85.8296
-6  	60    	82.326 	1.10004	81.0521	84.7991
-7  	48    	81.4723	0.434423	79.7344	83.6241
-8  	55    	81.0014	0.612298	78.1869	81.7159
-9  	54    	80.3905	0.868656	78.1869	81.3695
-10 	51    	79.4956	0.965362	78.1869	81.2139
-11 	53    	78.7405	0.750857	77.9227	80.8773
-12 	49    	78.2233	0.377186	77.2693	79.8652
-13 	48    	78.0349	0.285964	77.2693	79.543 
-14 	46    	77.8332	0.325932	77.2693	78.1869
-15 	51    	77.6009	0.427297	77.2693	80.3701
-16 	55    	77.3281	0.186975	77.2693	77.9227
-17 	52    	77.2896	0.150513	77.2693	78.6403
-18 	46    	77.2593	0.0992776	76.2715	77.2693
-19 	46    	77.2194	0.21746  	76.2715	77.2693
-20 	53    	77.1196	0.356278 	76.2715	77.2693
-21 	57    	76.96  	0.461465 	76.2715	77.2693
-22 	47    	76.6407	0.481731 	76.2715	77.2693
-23 	51    	76.3813	0.312194 	76.2715	77.2693
-24 	50    	76.2715	0        	76.2715	76.2715
-25 	45    	76.2818	0.102157 	76.2715	77.2982
-26 	48    	76.3016	0.299538 	76.2715	79.282 
-27 	49    	76.2715	0        	76.2715	76.2715
-28 	51    	76.2715	0        	76.2715	76.2715
-29 	56    	76.3699	0.567364 	76.2715	80.3231
-30 	53    	76.2715	0        	76.2715	76.2715
-2017-12-13 18:01:03,234 root            INFO     Saving the best parameters
-2017-12-13 18:01:03,234 root            INFO     Saving the best parameters
-2017-12-13 18:01:03,235 root            INFO     Done
-2017-12-13 18:01:03,235 root            INFO     Done
-[2017-12-13 18:01:03,574] launcher  (127.0.0.1:36237) INFO    Root process is done.
-[2017-12-13 18:01:03,575] launcher  (127.0.0.1:36237) INFO    Finished cleaning spawned subprocesses.
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-[2017-12-13 18:01:04,160] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 18:01:04,160] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 18:01:04,160] launcher  INFO    Worker distribution: 
-[2017-12-13 18:01:04,160] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 18:01:04,378 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,378 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,379 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,380 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,380 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,381 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,411 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,412 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,412 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,424 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,424 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,424 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,444 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,444 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 18:01:04,444 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,444 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
-2017-12-13 18:01:04,445 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,445 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 18:01:04,457 root            INFO     Initializing genetic algorithm
-2017-12-13 18:01:04,457 root            INFO     Initializing genetic algorithm
-2017-12-13 18:01:04,461 root            INFO     Running GA optimization
-2017-12-13 18:01:04,461 root            INFO     Running GA optimization
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-gen	nevals	avg    	std    	min   	max    
-0  	100   	339.932	112.787	96.802	458.047
-1  	55    	212.569	64.4261	126.855	458.047
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-2  	52    	149.239	27.9425	101.222	248.726
-3  	50    	127.065	9.91739	101.222	165.452
-4  	50    	116.903	10.0977	85.5788	131.094
-5  	54    	105.857	9.77647	83.3671	123.386
-6  	46    	96.3698	7.63915	83.121 	111.173
-7  	46    	88.9357	6.34967	83.121 	101.222
-8  	57    	83.938 	1.41256	82.7356	91.3072
-9  	51    	83.1295	0.333727	82.4913	85.5788
-10 	46    	82.7163	0.310947	81.9984	83.3546
-11 	52    	82.3209	0.285237	81.5916	82.9817
-12 	53    	81.9113	0.326986	80.9557	82.4913
-13 	49    	81.5273	0.470138	79.6758	82.1786
-14 	52    	81.0199	0.523831	79.6758	81.9875
-15 	52    	80.6081	0.452135	79.6758	81.1893
-16 	53    	80.1607	0.518375	78.9821	81.0893
-17 	54    	79.82  	0.607174	78.9821	83.6733
-18 	54    	79.5202	0.44366 	78.2398	81.4358
-19 	50    	79.1935	0.427019	78.2398	79.6758
-20 	53    	78.9545	0.481831	78.2398	81.0822
-21 	52    	78.6424	0.447027	78.2398	81.2145
-22 	56    	78.4037	0.300559	78.2398	78.9821
-23 	61    	78.3461	0.446449	78.2398	81.3811
-24 	51    	78.2403	0.00447316	78.2398	78.2848
+[2017-12-13 22:31:35,659] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 22:31:35,659] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 22:31:35,659] launcher  INFO    Worker distribution: 
+[2017-12-13 22:31:35,659] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 22:31:35,876 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:35,876 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:35,877 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 22:31:35,886 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:35,886 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:35,886 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+2017-12-13 22:31:35,897 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:35,897 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:35,897 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+[2017-12-13 22:31:35,934] launcher  (127.0.0.1:33373) INFO    Root process is done.
+[2017-12-13 22:31:35,934] launcher  (127.0.0.1:33373) INFO    Finished cleaning spawned subprocesses.
+Traceback (most recent call last):
+  File "./esn_run.py", line 123, in <module>
+    main()
+  File "./esn_run.py", line 88, in main
+    X, Y = esnet.load_from_text(args.data)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+[2017-12-13 22:31:36,174] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 22:31:36,174] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 22:31:36,174] launcher  INFO    Worker distribution: 
+[2017-12-13 22:31:36,174] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 22:31:36,387 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,387 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,388 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 22:31:36,393 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,394 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,394 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+2017-12-13 22:31:36,422 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,423 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,423 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+2017-12-13 22:31:36,477 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,477 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,478 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+[2017-12-13 22:31:36,514] launcher  (127.0.0.1:46575) INFO    Root process is done.
+[2017-12-13 22:31:36,514] launcher  (127.0.0.1:46575) INFO    Finished cleaning spawned subprocesses.
+Traceback (most recent call last):
+  File "./esn_run.py", line 123, in <module>
+    main()
+  File "./esn_run.py", line 88, in main
+    X, Y = esnet.load_from_text(args.data)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+[2017-12-13 22:31:36,760] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-13 22:31:36,760] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-13 22:31:36,760] launcher  INFO    Worker distribution: 
+[2017-12-13 22:31:36,760] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-13 22:31:36,977 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,977 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,978 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-13 22:31:36,986 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:36,987 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:36,987 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+2017-12-13 22:31:37,054 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:37,055 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:37,055 root            INFO     Loading data (./data/cran_historical_10_12)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 302, in <module>
+    b.main()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 92, in main
+    self.run()
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 257, in run
+    globs.update(self.setupEnvironment(self))
+  File "/usr/local/lib/python2.7/dist-packages/scoop/bootstrap/__main__.py", line 210, in setupEnvironment
+    scoop.MAIN_MODULE,
+  File "./genoptesn.py", line 62, in <module>
+    X, Y = esnet.load_from_text(args.data)
+  File "esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6
+2017-12-13 22:31:37,079 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-13 22:31:37,079 parameterhelper INFO     Config: ./configs/user/enet_identity (overload)
+2017-12-13 22:31:37,080 root            INFO     Loading data (./data/cran_historical_10_12)
+[2017-12-13 22:31:37,095] launcher  (127.0.0.1:53706) INFO    Root process is done.
+[2017-12-13 22:31:37,096] launcher  (127.0.0.1:53706) INFO    Finished cleaning spawned subprocesses.
+Traceback (most recent call last):
+  File "./esn_run.py", line 123, in <module>
+    main()
+  File "./esn_run.py", line 88, in main
+    X, Y = esnet.load_from_text(args.data)
+  File "/home/minh/PycharmProjects/Ensemble/PythonESN/esnet.py", line 427, in load_from_text
+    return np.atleast_2d(data[:, [0,1,2,3,4,5,6,7,8,9]]), np.atleast_2d(data[:, 10]).T
+IndexError: index 6 is out of bounds for axis 1 with size 6

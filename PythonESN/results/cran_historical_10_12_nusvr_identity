@@ -1,26 +1,320 @@
-[2017-12-13 16:43:17,529] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 16:43:17,529] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 16:43:17,530] launcher  INFO    Worker distribution: 
-[2017-12-13 16:43:17,530] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 16:43:17,749 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,749 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,749 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,749 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,749 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,749 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,749 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,749 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,749 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,779 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,780 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,780 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,799 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,799 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 16:43:17,799 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,799 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
-2017-12-13 16:43:17,800 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,800 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 16:43:17,811 root            INFO     Initializing genetic algorithm
-2017-12-13 16:43:17,811 root            INFO     Initializing genetic algorithm
-2017-12-13 16:43:17,816 root            INFO     Running GA optimization
-2017-12-13 16:43:17,816 root            INFO     Running GA optimization
+[2017-12-14 00:08:36,077] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-14 00:08:36,078] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-14 00:08:36,078] launcher  INFO    Worker distribution: 
+[2017-12-14 00:08:36,078] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-14 00:08:36,296 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,296 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,297 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,297 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,297 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,297 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,297 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,297 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,298 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,307 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,308 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,308 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,319 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,319 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 00:08:36,319 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,319 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 00:08:36,319 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,319 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 00:08:36,332 root            INFO     Initializing genetic algorithm
+2017-12-14 00:08:36,332 root            INFO     Initializing genetic algorithm
+2017-12-14 00:08:36,336 root            INFO     Running GA optimization
+2017-12-14 00:08:36,336 root            INFO     Running GA optimization
+gen	nevals	avg    	std   	min    	max    
+0  	100   	334.938	105.52	86.3002	461.483
+1  	49    	237.144	87.1807	104.69 	426.048
+2  	52    	143.264	32.606 	103.282	269.63 
+3  	55    	113.288	15.4601	70.2275	157.96 
+4  	51    	101.332	8.30897	70.2275	128.91 
+5  	48    	93.2087	7.35792	70.2275	104.69 
+6  	52    	86.1832	7.17944	69.2639	100.038
+7  	51    	78.9443	8.11803	64.9344	91.0085
+8  	56    	71.7674	5.06738	64.9344	87.1943
+9  	60    	69.118 	2.08997	64.9344	80.7435
+10 	46    	67.3728	1.83313	64.9344	70.2275
+11 	57    	66.1303	1.35668	64.9344	69.7006
+12 	50    	65.3153	0.757145	64.9344	68.331 
+13 	52    	64.9867	0.297621	64.9344	66.787 
+14 	58    	64.9974	0.451072	64.9344	68.7551
+15 	47    	64.9344	1.42109e-14	64.9344	64.9344
+16 	57    	64.9344	1.42109e-14	64.9344	64.9344
+17 	54    	64.8908	0.213439   	63.8452	64.9344
+18 	47    	64.7954	0.378706   	63.5685	64.9344
+19 	47    	64.5659	0.550896   	63.4482	64.9344
+20 	52    	64.1307	0.695321   	62.0827	64.9344
+21 	54    	63.5433	0.572741   	62.0827	64.9344
+22 	51    	62.9284	0.716898   	61.437 	63.8452
+23 	52    	62.0574	1.10131    	58.9165	65.7909
+24 	46    	61.4419	1.00949    	58.9165	63.316 
+25 	56    	60.5455	1.1143     	58.9165	63.6524
+26 	56    	59.7477	0.825964   	58.9165	62.0827
+27 	51    	59.2911	0.612452   	58.9165	61.4183
+28 	54    	59.0461	0.464861   	58.9165	62.3856
+29 	58    	58.9402	0.166049   	58.9165	60.1026
+30 	50    	58.977 	0.601522   	58.9165	64.962 
+2017-12-14 01:40:32,780 root            INFO     Saving the best parameters
+2017-12-14 01:40:32,780 root            INFO     Saving the best parameters
+2017-12-14 01:40:32,781 root            INFO     Done
+2017-12-14 01:40:32,781 root            INFO     Done
+[2017-12-14 01:40:33,119] launcher  (127.0.0.1:45542) INFO    Root process is done.
+[2017-12-14 01:40:33,120] launcher  (127.0.0.1:45542) INFO    Finished cleaning spawned subprocesses.
+[2017-12-14 01:40:35,979] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-14 01:40:35,979] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-14 01:40:35,980] launcher  INFO    Worker distribution: 
+[2017-12-14 01:40:35,980] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-14 01:40:36,197 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,197 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,197 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,197 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,197 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,197 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,197 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,197 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,198 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,219 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,219 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,219 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,219 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,220 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,220 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,230 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 01:40:36,230 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 01:40:36,230 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 01:40:36,232 root            INFO     Initializing genetic algorithm
+2017-12-14 01:40:36,232 root            INFO     Initializing genetic algorithm
+2017-12-14 01:40:36,237 root            INFO     Running GA optimization
+2017-12-14 01:40:36,237 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min    	max    
+0  	100   	315.221	105.969	92.1206	451.245
+1  	50    	196.689	74.921 	92.1206	433.805
+2  	56    	127.153	32.4841	92.1206	238.132
+3  	49    	103.27 	11.5775	84.8667	141.379
+4  	44    	93.042 	5.78133	83.8237	108.507
+5  	51    	87.6184	4.1672 	80.2423	97.9861
+6  	54    	83.7256	2.84953	80.1615	96.0319
+7  	54    	80.8428	1.63949	77.9697	85.2218
+8  	52    	78.8427	1.79901	73.9633	82.1481
+9  	57    	76.9922	2.08433	69.7006	80.2423
+10 	52    	74.9388	1.88639	69.7006	78.7396
+11 	51    	73.178 	1.72577	69.7006	76.3371
+12 	44    	71.9795	1.66573	69.7006	74.9362
+13 	56    	70.5395	1.14905	68.6462	73.9633
+14 	51    	69.7995	0.806094	68.0472	71.8043
+15 	54    	69.1171	0.78444 	67.4316	71.3468
+16 	46    	68.5115	0.631607	67.7383	69.7006
+17 	50    	68.228 	0.788562	67.7383	75.0417
+18 	46    	67.9916	0.118699	67.7383	68.0472
+19 	56    	67.9512	0.171902	67.7383	68.868 
+20 	51    	67.8726	0.350455	67.7383	71.0571
+21 	52    	67.7537	0.0673363	67.7383	68.0472
+22 	49    	67.7414	0.0307412	67.7383	68.0472
+23 	53    	67.7423	0.0401026	67.7383	68.1413
+24 	55    	67.7788	0.605699 	67.2528	73.6894
+25 	56    	67.7705	0.822545 	67.2528	75.5117
+26 	51    	67.5505	0.302732 	65.9371	67.7383
+27 	51    	67.377 	0.41468  	65.9371	67.7383
+28 	57    	67.0995	0.543952 	65.9371	67.7383
+29 	50    	66.7707	0.834674 	65.9371	71.8959
+30 	51    	66.3558	1.00121  	65.9371	71.7779
+2017-12-14 02:40:06,181 root            INFO     Saving the best parameters
+2017-12-14 02:40:06,181 root            INFO     Saving the best parameters
+2017-12-14 02:40:06,181 root            INFO     Done
+2017-12-14 02:40:06,181 root            INFO     Done
+[2017-12-14 02:40:06,521] launcher  (127.0.0.1:41168) INFO    Root process is done.
+[2017-12-14 02:40:06,521] launcher  (127.0.0.1:41168) INFO    Finished cleaning spawned subprocesses.
+[2017-12-14 02:40:08,021] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-14 02:40:08,021] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-14 02:40:08,021] launcher  INFO    Worker distribution: 
+[2017-12-14 02:40:08,022] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-14 02:40:08,241 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,241 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,241 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,241 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,242 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,242 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,242 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,242 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,243 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,252 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,252 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,253 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,265 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,265 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 02:40:08,265 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,265 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 02:40:08,266 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,266 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 02:40:08,278 root            INFO     Initializing genetic algorithm
+2017-12-14 02:40:08,278 root            INFO     Initializing genetic algorithm
+2017-12-14 02:40:08,282 root            INFO     Running GA optimization
+2017-12-14 02:40:08,282 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min    	max    
+0  	100   	308.177	117.952	81.9777	454.864
+1  	42    	183.435	74.9234	81.9777	409.784
+2  	56    	113.039	35.3321	81.2284	268.475
+3  	53    	87.0837	10.8586	78.7826	133.47 
+4  	49    	80.8489	1.84735	71.3805	85.5022
+5  	55    	78.9861	2.71348	70.8824	81.9777
+6  	50    	77.076 	3.25479	66.0705	81.2284
+7  	46    	74.5113	3.78696	66.0705	78.7826
+8  	44    	71.0399	3.33387	64.389 	78.7826
+9  	52    	68.7942	2.20773	64.389 	71.3946
+10 	52    	66.5308	1.7491 	63.2602	70.3568
+11 	55    	64.9401	1.26076	62.8898	69.4159
+12 	49    	63.7499	0.788237	62.5666	66.008 
+13 	48    	63.1074	0.363919	61.9041	64.389 
+14 	53    	62.9237	0.395753	61.9041	65.431 
+15 	44    	62.6985	0.357671	61.9041	64.4297
+16 	47    	62.4072	0.504944	61.3061	65.6554
+17 	54    	62.0741	0.53204 	61.1466	65.909 
+18 	49    	61.8622	0.365895	61.1466	62.9354
+19 	53    	61.5909	0.330607	61.1466	61.9041
+20 	55    	61.2519	0.635478	59.6038	66.2183
+21 	57    	61.0258	0.493823	59.6038	61.8829
+22 	46    	60.7682	0.622554	59.5798	61.2575
+23 	51    	60.3424	1.13893 	59.5798	68.9522
+24 	52    	59.8044	0.47978 	59.4502	61.1466
+25 	48    	59.5873	0.135573	59.4502	60.8516
+26 	54    	59.4831	0.721613	57.2867	62.8168
+27 	50    	59.2012	0.713096	57.2867	59.5798
+28 	45    	58.6823	0.959089	57.2867	59.5798
+29 	42    	57.8025	0.803929	57.2867	59.4502
+30 	48    	57.4078	0.427426	56.803 	59.116 
+2017-12-14 04:21:23,649 root            INFO     Saving the best parameters
+2017-12-14 04:21:23,649 root            INFO     Saving the best parameters
+2017-12-14 04:21:23,649 root            INFO     Done
+2017-12-14 04:21:23,649 root            INFO     Done
+[2017-12-14 04:21:23,989] launcher  (127.0.0.1:52613) INFO    Root process is done.
+[2017-12-14 04:21:23,989] launcher  (127.0.0.1:52613) INFO    Finished cleaning spawned subprocesses.
+[2017-12-14 04:21:26,291] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-14 04:21:26,291] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-14 04:21:26,291] launcher  INFO    Worker distribution: 
+[2017-12-14 04:21:26,291] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-14 04:21:26,506 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,506 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,506 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,506 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,506 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,506 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,507 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,507 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,507 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,510 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,510 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,511 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,528 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,528 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 04:21:26,529 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,529 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 04:21:26,529 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,529 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 04:21:26,541 root            INFO     Initializing genetic algorithm
+2017-12-14 04:21:26,541 root            INFO     Initializing genetic algorithm
+2017-12-14 04:21:26,546 root            INFO     Running GA optimization
+2017-12-14 04:21:26,546 root            INFO     Running GA optimization
+gen	nevals	avg   	std    	min   	max    
+0  	100   	307.62	117.703	99.618	452.727
+1  	59    	171.096	72.5272	85.3887	401.956
+2  	49    	112.043	19.94  	83.483 	199.393
+3  	52    	92.7383	9.05644	79.8091	124.818
+4  	53    	84.5109	6.70901	63.4308	99.618 
+5  	53    	77.777 	6.78642	62.0869	88.6499
+6  	55    	71.5854	7.4373 	62.0869	83.6743
+7  	53    	64.4486	3.93549	61.7572	78.8174
+8  	56    	62.2951	0.697828	60.1783	65.856 
+9  	55    	61.7214	0.596547	60.1783	64.1176
+10 	50    	61.1249	0.560511	59.8456	62.0869
+11 	52    	60.6652	0.546501	58.8515	62.0869
+12 	59    	60.2395	0.630447	58.2653	61.3765
+13 	51    	59.8032	0.700085	58.2653	61.0344
+14 	55    	59.3113	0.812446	58.2653	60.5541
+15 	56    	58.7406	0.654559	58.2653	60.1783
+16 	54    	58.4557	0.668611	58.2653	63.6966
+17 	54    	58.277 	0.0820759	58.2653	58.8515
+18 	52    	58.2653	7.10543e-15	58.2653	58.2653
+19 	47    	58.2653	7.10543e-15	58.2653	58.2653
+20 	51    	58.3109	0.626673   	57.7164	64.4763
+21 	59    	58.2142	0.156833   	57.7164	58.2653
+22 	54    	58.1379	0.230486   	57.7164	58.2653
+23 	47    	58.0631	0.509675   	57.7164	62.3643
+24 	49    	57.8892	0.564029   	57.7164	63.0353
+25 	59    	57.7958	0.418986   	57.7164	61.0945
+26 	57    	57.7508	0.341992   	57.7164	61.1536
+27 	49    	57.7853	0.55737    	57.7164	63.1368
+28 	50    	57.7164	7.10543e-15	57.7164	57.7164
+29 	52    	57.8263	0.772776   	57.7164	63.7296
+30 	50    	57.7164	7.10543e-15	57.7164	57.7164
+2017-12-14 05:12:49,983 root            INFO     Saving the best parameters
+2017-12-14 05:12:49,983 root            INFO     Saving the best parameters
+2017-12-14 05:12:49,984 root            INFO     Done
+2017-12-14 05:12:49,984 root            INFO     Done
+[2017-12-14 05:12:50,322] launcher  (127.0.0.1:44988) INFO    Root process is done.
+[2017-12-14 05:12:50,325] launcher  (127.0.0.1:44988) INFO    Finished cleaning spawned subprocesses.
+[2017-12-14 05:12:51,803] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-14 05:12:51,803] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-14 05:12:51,803] launcher  INFO    Worker distribution: 
+[2017-12-14 05:12:51,803] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-14 05:12:52,018 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,018 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,018 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,018 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,018 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,019 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,019 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,019 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,019 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,021 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,021 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,022 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,041 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,041 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-14 05:12:52,041 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,041 parameterhelper INFO     Config: ./configs/user/nusvr_identity (overload)
+2017-12-14 05:12:52,041 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,041 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-14 05:12:52,053 root            INFO     Initializing genetic algorithm
+2017-12-14 05:12:52,053 root            INFO     Initializing genetic algorithm
+2017-12-14 05:12:52,058 root            INFO     Running GA optimization
+2017-12-14 05:12:52,058 root            INFO     Running GA optimization
+gen	nevals	avg    	std    	min    	max    
+0  	100   	306.988	109.586	87.5287	453.693
+1  	55    	183.454	63.1292	87.5287	366.664
+2  	55    	116.038	28.1639	80.8884	197.677
+3  	48    	92.5257	10.6463	79.6915	129.174
+4  	50    	84.5386	3.83791	70.8134	93.1763
+5  	53    	79.8266	3.94183	70.8134	87.5287
+6  	51    	74.8529	3.65776	69.0379	82.2319
+7  	46    	71.7069	2.29775	66.7762	79.9221
+8  	61    	70.3125	1.05725	67.1596	74.1841
+9  	44    	69.4385	1.04987	67.1596	70.8134
+10 	52    	68.257 	1.22435	61.8479	70.8134
+11 	55    	67.0423	1.22458	61.8479	69.0379
+12 	50    	65.7158	1.38543	61.8479	68.1158
+13 	51    	64.9423	1.51127	61.8479	67.2504
+14 	50    	63.4349	1.61416	61.8479	66.0659
+15 	51    	62.4217	1.13284	61.8479	65.5214
+16 	63    	62.1226	0.904507	61.8479	66.7008
+17 	48    	61.9283	0.598827	61.3872	66.3381
+18 	54    	61.8387	0.0644984	61.3872	61.8479
+19 	50    	61.8553	0.514015 	61.3347	66.7941
+20 	55    	61.7864	0.159207 	61.3347	61.8479
+21 	59    	61.7555	0.564514 	61.3347	66.8249
+22 	49    	61.5636	0.331856 	61.3347	63.7231
+23 	54    	61.5074	0.739642 	61.3347	68.2287
+24 	51    	61.3916	0.356258 	61.3347	64.9272
+25 	56    	61.3656	0.229105 	61.3347	63.6376
+26 	54    	61.3873	0.36693  	61.3347	64.2389
+27 	51    	61.3638	0.288968 	61.3347	64.2389
+28 	52    	61.38  	0.450672 	61.3347	65.8641
+29 	51    	61.3347	0        	61.3347	61.3347
+30 	46    	61.3347	0        	61.3347	61.3347
+2017-12-14 06:21:23,873 root            INFO     Saving the best parameters
+2017-12-14 06:21:23,873 root            INFO     Saving the best parameters
+2017-12-14 06:21:23,873 root            INFO     Done
+2017-12-14 06:21:23,873 root            INFO     Done
+[2017-12-14 06:21:24,210] launcher  (127.0.0.1:44466) INFO    Root process is done.
+[2017-12-14 06:21:24,210] launcher  (127.0.0.1:44466) INFO    Finished cleaning spawned subprocesses.

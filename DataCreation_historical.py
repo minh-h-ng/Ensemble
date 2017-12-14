@@ -6,8 +6,8 @@ arimaResults = []
 etsResults = []
 realResults = []
 
-dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_09_11'
-writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_historical_09_11'
+dataPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12'
+writePath = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_historical_10_12'
 
 lineCount = 0
 with open(dataPath,'r') as f:
@@ -45,7 +45,7 @@ for i in range(len(averageResults)):
     errorResults.append(float(realResults[i])-float(averageResults[i]))
 
 with open(writePath,'w') as f:
-    for i in range(0, len(averageResults)):
+    for i in range(1, len(averageResults)):
         """line = str(naiveResults[i-4]) + ',' + str(naiveResults[i-3]) + ',' + str(naiveResults[i-2]) + ',' + str(naiveResults[i-1]) + ',' + str(naiveResults[i]) + ',' + \
                str(arResults[i-4]) + ',' + str(arResults[i-3]) + ',' + str(arResults[i-2]) + ',' + str(arResults[i-1]) + ',' + str(arResults[i]) + ',' + \
                str(armaResults[i-4]) + ',' + str(armaResults[i-3]) + ',' + str(armaResults[i-2]) + ',' + str(armaResults[i-1]) + ',' + str(armaResults[i]) + ',' + \

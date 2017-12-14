@@ -6,7 +6,7 @@ dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12
 dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_lasso_identity'
+esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_components_5_mae'
 esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_components_5_mape'
 esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5_mape'
 
@@ -19,7 +19,7 @@ esnList = [esnCRAN,esnEDGAR,esnKyoto]
 gaList = [gaCRAN,gaEDGAR,gaKyoto]
 
 mu = 10
-r0 = 0.8
+r0 = 0.4
 testingSize = 342
 
 """
@@ -94,7 +94,7 @@ def readESN(esnDir,dataResources):
         for i in range(len(resources)):
             total += abs(resources[i]-dataResources[i])
         list.append(total)
-    return np.mean(list)
+    return list
 
 def main():
     for i in range(len(dataList)):

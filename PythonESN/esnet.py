@@ -334,6 +334,7 @@ def generate_datasets(X, Y, test_percent = 0.2,val_percent = 0.2, scaler = Stand
     n_data,_ = X.shape
 
     n_te = np.ceil(test_percent*n_data).astype(int)
+    n_te = 442
     #n_te=1
     n_val = np.ceil(val_percent*n_data).astype(int)
     #n_val = 0
