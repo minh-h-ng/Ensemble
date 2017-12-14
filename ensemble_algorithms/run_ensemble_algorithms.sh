@@ -71,18 +71,24 @@ run_ensemble_logistic_regression() {
 }
 
 run_ensemble_bagging_regression() {
+    # Algorithm
+    algorithm=$1
     # File name prefix for results
-    results_prefix='Ensemble_BaggingRegression_'
+    results_prefix=$2
 
     # Output path
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${result_path} |
+    python3 ensemble_bagging_regression.py ${data_dir}${data_set} ${algorithm} ${result_path} |
         tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
 run_ensemble_average
 run_ensemble_cross_validation
-run_ensemble_bagging_regression
+run_ensemble_bagging_regression 'naive' 'Ensemble_NaiveBaggingRegression_'
+run_ensemble_bagging_regression 'ar' 'Ensemble_ArBaggingRegression_'
+run_ensemble_bagging_regression 'arma' 'Ensemble_ArmaBaggingRegression_'
+run_ensemble_bagging_regression 'arima' 'Ensemble_ArimaBaggingRegression_'
+run_ensemble_bagging_regression 'ets' 'Ensemble_EtsBaggingRegression_'
 #run_ensemble_logistic_regression
