@@ -79,8 +79,7 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 3:
-            # need at-least 3 true observations for using AR model
-            # so, just calculate average if number of observations < 3
+            # calculate average if number of observations < 4
             results = np.append(results, sub_series.mean())
 
             # in such cases, it's hard to forecast for n > 1,
@@ -124,8 +123,7 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 3:
-            # need at-least 3 true observations for using ARMA model
-            # so, just calculate average if number of observations < 3
+            # calculate average if number of observations < 4
             results = np.append(results, sub_series.mean())
 
             # in such cases, it's hard to forecast for n > 1,
@@ -170,8 +168,7 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 3:
-            # need at-least 3 true observations for using ARIMA model
-            # so, just calculate average if number of observations < 3
+            # calculate average if number of observations < 4
             results = np.append(results, sub_series.mean())
 
             # in such cases, it's hard to forecast for n > 1,
@@ -213,8 +210,7 @@ class ForecastAlgorithms:
 
         # forecast for next n hours
         if series_len <= 3:
-            # need at-least 3 true observations for using ETS model
-            # so, just calculate average if number of observations < 3
+            # calculate average if number of observations < 4
             results = np.append(results, sub_series.mean())
 
             # in such cases, it's hard to forecast for n > 1,
