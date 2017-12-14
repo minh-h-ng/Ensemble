@@ -110,10 +110,6 @@ class EnsembleCrossValidation:
         # Run step-by-step prediction
         results = estimator.predict(self.test_series)
 
-        # score
-        score = estimator.score(self.test_series)
-        logger.warning("Estimator Score: %s" % score)
-
         df_data = collections.OrderedDict()
         df_data['Observation'] = self.test_series
         df_data['Prediction'] = results
