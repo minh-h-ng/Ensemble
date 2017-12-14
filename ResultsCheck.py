@@ -42,7 +42,7 @@ def checkResult(times):
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_components_5/predictions_kyoto_historical_enet_identity_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions/predictions_cran_historical_enet_identity_' + str(times)
 
-    #predictionPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_08_10/Ensemble_GA_cran_08_10_' + str(times)
+    #predictionPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_10_12/Ensemble_GA_cran_10_12_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12/Ensemble_GA_edgar_10_12_' + str(times)
     #predictionPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12/Ensemble_GA_kyoto_10_12_' + str(times)
 
