@@ -11,7 +11,7 @@ RUNS=$4
 #OPTCONFIG=ridge_identity
 #ESNCONFIG=esnconfig
 #RUNS=30
-for times in {1..5}
+for times in {1..10}
 do
     for count in {2207..2207}
     do

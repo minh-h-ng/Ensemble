@@ -1,364 +1,740 @@
-[2017-12-13 22:32:34,146] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 22:32:34,146] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 22:32:34,146] launcher  INFO    Worker distribution: 
-[2017-12-13 22:32:34,146] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 22:32:34,365 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,365 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,365 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,375 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,375 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,375 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,409 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,409 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,409 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,423 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,423 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,424 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,430 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,430 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:32:34,430 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,430 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:32:34,430 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,430 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:32:34,443 root            INFO     Initializing genetic algorithm
-2017-12-13 22:32:34,443 root            INFO     Initializing genetic algorithm
-2017-12-13 22:32:34,446 root            INFO     Running GA optimization
-2017-12-13 22:32:34,446 root            INFO     Running GA optimization
-gen	nevals	avg    	std    	min    	max    
-0  	100   	418.862	76.0841	96.4663	457.796
-1  	53    	352.035	108.331	96.4663	457.796
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-2  	52    	211.813	102.075	93.7092	457.796
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-3  	47    	113.528	36.9754	86.6188	257.242
-4  	53    	93.4019	3.53085	82.0587	100.761
-5  	47    	88.692 	3.89419	82.0587	94.3546
-6  	50    	84.6037	2.08946	81.2366	92.911 
-7  	54    	83.0104	1.21276	81.157 	88.7497
-8  	49    	81.8919	0.63621	80.9745	84.0175
-9  	49    	81.3283	0.274639	80.8358	82.4069
-10 	50    	81.1298	0.151857	80.3137	81.3745
-11 	51    	80.9777	0.180166	80.3137	81.2366
-12 	55    	80.7856	0.22006 	80.1786	81.1571
-13 	57    	80.5891	0.234627	80.1786	80.969 
-14 	58    	80.3717	0.188074	80.0733	80.8162
-15 	58    	80.2267	0.103768	80.0733	80.5193
-16 	59    	80.1403	0.0725494	80.0342	80.3726
-17 	51    	80.0782	0.0474424	79.9721	80.1846
-18 	56    	80.0118	0.0603392	79.8024	80.0733
-19 	53    	79.9564	0.0740458	79.7784	80.1376
-20 	52    	79.87  	0.086363 	79.6721	80.0174
-21 	55    	79.782 	0.0512833	79.6721	79.9963
-22 	52    	79.7487	0.0464141	79.6721	79.9265
-23 	61    	79.7103	0.0315542	79.6721	79.8017
-24 	51    	79.6904	0.0238468	79.6721	79.8017
-25 	50    	79.6751	0.00844328	79.6721	79.7148
-26 	52    	79.6761	0.0218421 	79.6721	79.8287
-27 	48    	79.6721	1.42109e-14	79.6721	79.6721
-28 	52    	79.6718	0.00129765 	79.6661	79.6721
-29 	52    	79.6714	0.00186295 	79.6661	79.6721
-30 	53    	79.6711	0.00701882 	79.6661	79.7358
-2017-12-13 22:42:49,904 root            INFO     Saving the best parameters
-2017-12-13 22:42:49,904 root            INFO     Saving the best parameters
-2017-12-13 22:42:49,905 root            INFO     Done
-2017-12-13 22:42:49,905 root            INFO     Done
-[2017-12-13 22:42:50,245] launcher  (127.0.0.1:35622) INFO    Root process is done.
-[2017-12-13 22:42:50,245] launcher  (127.0.0.1:35622) INFO    Finished cleaning spawned subprocesses.
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-[2017-12-13 22:42:50,732] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 22:42:50,732] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 22:42:50,732] launcher  INFO    Worker distribution: 
-[2017-12-13 22:42:50,732] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 22:42:50,951 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:50,951 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:50,951 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:50,951 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:50,952 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:42:50,952 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:42:50,973 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:50,973 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:50,973 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:50,973 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:50,973 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:42:50,973 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:42:50,978 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:50,978 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:50,979 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:42:50,986 root            INFO     Initializing genetic algorithm
-2017-12-13 22:42:50,986 root            INFO     Initializing genetic algorithm
-2017-12-13 22:42:50,990 root            INFO     Running GA optimization
-2017-12-13 22:42:50,990 root            INFO     Running GA optimization
-2017-12-13 22:42:51,004 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:42:51,004 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:42:51,005 root            INFO     Loading data (./data/cran_historical_10_12)
+[2017-12-15 11:40:32,373] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 11:40:32,373] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 11:40:32,373] launcher  INFO    Worker distribution: 
+[2017-12-15 11:40:32,373] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 11:40:32,589 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,589 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,589 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,589 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,589 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 11:40:32,589 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 11:40:32,597 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,597 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,598 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 11:40:32,618 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,618 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,618 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,618 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,618 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 11:40:32,618 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 11:40:32,630 root            INFO     Initializing genetic algorithm
+2017-12-15 11:40:32,630 root            INFO     Initializing genetic algorithm
+2017-12-15 11:40:32,634 root            INFO     Running GA optimization
+2017-12-15 11:40:32,634 root            INFO     Running GA optimization
+2017-12-15 11:40:32,644 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 11:40:32,644 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 11:40:32,645 root            INFO     Loading data (./data/cran_historical_10_12)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 gen	nevals	avg    	std    	min    	max    
-0  	100   	410.714	98.2734	82.4162	457.796
-1  	44    	332.72 	135.836	82.4162	457.796
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-2  	57    	168.717	104.1  	81.9302	427.98 
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-3  	56    	84.7821	11.2816	81.2383	158.831
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-4  	51    	81.7594	0.595454	79.9771	84.929 
-5  	46    	81.2095	0.421348	79.9771	82.1711
-6  	50    	80.772 	0.322294	79.9771	81.5531
-7  	55    	80.4383	0.26572 	79.9771	81.0298
-8  	54    	80.1901	0.195392	79.925 	80.7863
-9  	54    	80.0319	0.101583	79.9506	80.2861
-10 	50    	79.9835	0.0566714	79.9038	80.2498
-11 	58    	79.9505	0.0319229	79.8683	79.9998
-12 	55    	79.9081	0.0411056	79.821 	79.9771
-13 	49    	79.8712	0.035231 	79.821 	79.9506
-14 	58    	79.8391	0.0230191	79.7998	79.9315
-15 	51    	79.8223	0.0169342	79.7706	79.8683
-16 	54    	79.8037	0.0239817	79.7377	79.8448
-17 	49    	79.7856	0.0246273	79.7377	79.8732
-18 	53    	79.7702	0.016557 	79.7377	79.8298
-19 	57    	79.7583	0.0251384	79.7377	79.9156
-20 	53    	79.7417	0.010697 	79.7377	79.7706
-21 	49    	79.7377	0        	79.7377	79.7377
-22 	47    	79.738 	0.00333532	79.7377	79.7712
-23 	59    	79.7377	0         	79.7377	79.7377
-24 	48    	79.7377	0         	79.7377	79.7377
-25 	49    	79.7377	0         	79.7377	79.7377
-26 	48    	79.7377	0         	79.7377	79.7377
-27 	59    	79.7413	0.0206781 	79.7377	79.8663
-28 	52    	79.7401	0.0139643 	79.7377	79.8306
-29 	46    	79.7406	0.0184696 	79.7377	79.8878
-30 	47    	79.7392	0.0108493 	79.7377	79.8351
-2017-12-13 22:53:33,638 root            INFO     Saving the best parameters
-2017-12-13 22:53:33,638 root            INFO     Saving the best parameters
-2017-12-13 22:53:33,639 root            INFO     Done
-2017-12-13 22:53:33,639 root            INFO     Done
-[2017-12-13 22:53:33,979] launcher  (127.0.0.1:43475) INFO    Root process is done.
-[2017-12-13 22:53:33,979] launcher  (127.0.0.1:43475) INFO    Finished cleaning spawned subprocesses.
-[2017-12-13 22:53:34,394] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 22:53:34,394] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 22:53:34,394] launcher  INFO    Worker distribution: 
-[2017-12-13 22:53:34,394] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 22:53:34,608 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,608 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,608 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,611 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,611 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,612 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,633 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,633 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,633 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,633 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,634 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,634 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,634 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,635 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,635 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,636 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 22:53:34,636 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 22:53:34,637 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 22:53:34,647 root            INFO     Initializing genetic algorithm
-2017-12-13 22:53:34,647 root            INFO     Initializing genetic algorithm
-2017-12-13 22:53:34,651 root            INFO     Running GA optimization
-2017-12-13 22:53:34,651 root            INFO     Running GA optimization
-gen	nevals	avg   	std    	min    	max    
-0  	100   	413.42	87.3209	82.1993	457.796
-1  	61    	341.156	97.9966	131.246	457.796
+0  	100   	420.595	104.002	90.0675	479.507
+1  	73    	301.66 	131.091	90.0675	479.507
+2  	65    	175.548	87.3517	81.0741	449.235
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-2  	56    	213.338	70.4401	110.273	380.594
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-3  	53    	136.135	33.7912	86.6712	256.09 
-4  	55    	103.322	13.1689	81.1468	156.065
-5  	56    	88.7287	6.91456	81.1468	110.349
+3  	66    	104.738	24.9014	81.0741	248.386
+4  	68    	88.5791	6.37305	75.7003	97.4115
+5  	70    	80.4259	3.42025	74.0154	90.0675
+6  	66    	77.3346	2.00958	73.0969	83.8337
+7  	65    	75.4673	1.3156 	73.0969	77.6952
+8  	73    	74.3655	0.92479	73.0969	76.7968
+9  	70    	73.828 	0.67304	73.0969	77.6454
+10 	74    	73.5846	0.680098	72.5498	76.639 
+11 	68    	73.2303	0.374848	72.5498	74.1555
+12 	67    	73.0746	0.386752	72.5498	75.7711
+13 	68    	72.9208	0.428414	72.5498	76.2719
+14 	73    	72.8513	0.52193 	72.5498	75.3234
+15 	71    	72.6175	0.177692	72.5498	73.0969
+16 	69    	72.5498	0.146755	72.1124	73.0969
+17 	72    	72.5052	0.260065	71.7991	74.5276
+18 	77    	72.4337	0.407909	71.7991	75.6458
+19 	72    	72.2648	0.38249 	71.7991	75.0336
+20 	72    	72.2164	0.522075	71.7991	75.0336
+21 	75    	72.0777	0.244217	71.7991	73.6017
+22 	70    	72.0382	0.485371	71.7991	75.0686
+23 	74    	71.915 	0.486751	71.7991	75.9165
+24 	72    	71.8775	0.413016	71.7991	75.0936
+25 	67    	71.8781	0.39599 	71.7991	74.3992
+26 	70    	71.8177	0.185513	71.7991	73.6636
+27 	71    	71.8472	0.341513	71.7991	74.5997
+28 	69    	71.8228	0.235861	71.7991	74.1696
+29 	70    	71.8179	0.187008	71.7991	73.6786
+30 	60    	71.7991	1.42109e-14	71.7991	71.7991
+2017-12-15 12:08:16,435 root            INFO     Saving the best parameters
+2017-12-15 12:08:16,435 root            INFO     Saving the best parameters
+2017-12-15 12:08:16,435 root            INFO     Done
+2017-12-15 12:08:16,435 root            INFO     Done
+[2017-12-15 12:08:16,775] launcher  (127.0.0.1:40240) INFO    Root process is done.
+[2017-12-15 12:08:16,776] launcher  (127.0.0.1:40240) INFO    Finished cleaning spawned subprocesses.
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-6  	55    	84.6314	2.09167	80.9314	88.7776
-7  	59    	82.7562	1.39331	80.9314	86.6712
-8  	48    	81.5463	0.587447	80.9314	82.5675
-9  	50    	81.1035	0.268508	80.6534	82.4262
-10 	53    	80.9402	0.0976261	80.6489	81.1586
-11 	57    	80.8477	0.132659 	80.2357	80.9314
-12 	57    	80.7425	0.186237 	80.2357	81.313 
-13 	43    	80.6018	0.155298 	80.2357	80.9314
-14 	57    	80.4633	0.181853 	80.2357	80.7765
-15 	51    	80.3144	0.194987 	79.9586	81.6197
-16 	56    	80.2426	0.161739 	79.9586	81.424 
-17 	50    	80.2037	0.107934 	79.9586	80.7233
-18 	61    	80.1783	0.174725 	79.9586	80.8788
-19 	51    	80.0769	0.13796  	79.9586	80.8788
-20 	61    	80.0037	0.107468 	79.9406	80.7434
-21 	49    	79.9655	0.042643 	79.9406	80.2073
-22 	52    	79.9585	0.0315702	79.9406	80.2073
-23 	40    	79.94  	0.0423377	79.6491	79.9586
-24 	49    	79.9233	0.0692855	79.6491	79.9586
-25 	60    	79.9224	0.16344  	79.6491	81.0495
-26 	61    	79.8235	0.15654  	79.6491	80.2902
-27 	47    	79.7192	0.121883 	79.6491	79.9406
-28 	53    	79.6723	0.108224 	79.6491	80.5582
-29 	55    	79.6585	0.0708301	79.643 	80.2989
-30 	52    	79.6596	0.11131  	79.6362	80.7667
-2017-12-13 23:26:08,702 root            INFO     Saving the best parameters
-2017-12-13 23:26:08,702 root            INFO     Saving the best parameters
-2017-12-13 23:26:08,702 root            INFO     Done
-2017-12-13 23:26:08,702 root            INFO     Done
-[2017-12-13 23:26:09,041] launcher  (127.0.0.1:59010) INFO    Root process is done.
-[2017-12-13 23:26:09,042] launcher  (127.0.0.1:59010) INFO    Finished cleaning spawned subprocesses.
-[2017-12-13 23:26:10,135] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 23:26:10,135] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 23:26:10,135] launcher  INFO    Worker distribution: 
-[2017-12-13 23:26:10,135] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 23:26:10,350 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,350 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,350 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,353 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,353 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,353 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,357 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,357 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,357 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,367 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,367 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,367 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,378 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,378 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:26:10,378 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,378 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:26:10,379 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,379 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:26:10,391 root            INFO     Initializing genetic algorithm
-2017-12-13 23:26:10,391 root            INFO     Initializing genetic algorithm
-2017-12-13 23:26:10,395 root            INFO     Running GA optimization
-2017-12-13 23:26:10,395 root            INFO     Running GA optimization
+[2017-12-15 12:08:17,622] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 12:08:17,622] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 12:08:17,622] launcher  INFO    Worker distribution: 
+[2017-12-15 12:08:17,622] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 12:08:17,838 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,838 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,838 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,838 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,839 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:08:17,839 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:08:17,853 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,853 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,853 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:08:17,859 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,859 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,860 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,860 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,860 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:08:17,860 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:08:17,873 root            INFO     Initializing genetic algorithm
+2017-12-15 12:08:17,873 root            INFO     Initializing genetic algorithm
+2017-12-15 12:08:17,876 root            INFO     Running GA optimization
+2017-12-15 12:08:17,876 root            INFO     Running GA optimization
+2017-12-15 12:08:17,896 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:08:17,896 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:08:17,897 root            INFO     Loading data (./data/cran_historical_10_12)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-gen	nevals	avg    	std    	min    	max    
-0  	100   	402.518	95.6645	83.8899	457.796
-1  	55    	286.74 	110.307	83.8899	457.796
+gen	nevals	avg    	std  	min    	max    
+0  	100   	414.929	109.6	81.0082	479.507
+1  	64    	302.285	136.483	81.0082	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	67    	158.878	70.2707	78.6805	379.688
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-2  	54    	151.497	74.0683	80.4145	335.911
-3  	54    	89.1288	13.1567	80.3685	163.651
+3  	72    	99.8527	22.1559	76.4734	157.116
+4  	63    	82.7778	5.22286	76.4734	108.862
+5  	69    	78.7316	1.83554	75.3819	83.8625
+6  	71    	76.9684	1.01772	75.3819	79.7906
+7  	71    	75.8783	0.63941	74.8666	78.1135
+8  	66    	75.2974	0.458607	73.3887	76.4008
+9  	72    	75.0228	0.465486	73.3887	75.8416
+10 	65    	74.6516	0.636521	73.3887	75.357 
+11 	82    	74.1149	0.675592	73.3887	75.1243
+12 	71    	73.6441	0.497711	73.3472	75.1172
+13 	68    	73.4954	0.380444	73.3472	76.0717
+14 	69    	73.4355	0.262085	73.3472	75.0185
+15 	75    	73.4206	0.354573	73.3472	76.5604
+16 	70    	73.3068	0.231294	72.0212	73.3887
+17 	74    	73.3488	0.516426	72.0212	75.8802
+18 	76    	73.068 	0.533718	72.0212	75.1875
+19 	73    	72.7602	0.653924	72.0212	75.1875
+20 	70    	72.4092	0.634543	72.0212	75.1645
+21 	71    	72.2445	0.686089	72.0212	76.4245
+22 	70    	72.1075	0.534641	72.0212	75.8152
+23 	68    	72.1028	0.579685	72.0212	76.785 
+24 	73    	72.1345	0.590855	72.0212	75.8301
+25 	67    	72.0525	0.311091	72.0212	75.1478
+26 	62    	72.0501	0.287761	72.0212	74.9133
+27 	68    	72.072 	0.505476	72.0212	77.1014
+28 	69    	72.0457	0.272096	71.7546	74.7401
+29 	81    	72.1689	0.783791	71.7546	76.7228
+30 	74    	72.0451	0.403829	71.7546	76.0135
+2017-12-15 12:35:17,318 root            INFO     Saving the best parameters
+2017-12-15 12:35:17,318 root            INFO     Saving the best parameters
+2017-12-15 12:35:17,318 root            INFO     Done
+2017-12-15 12:35:17,318 root            INFO     Done
+[2017-12-15 12:35:17,656] launcher  (127.0.0.1:53527) INFO    Root process is done.
+[2017-12-15 12:35:17,656] launcher  (127.0.0.1:53527) INFO    Finished cleaning spawned subprocesses.
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-4  	53    	83.1765	2.46865	80.3685	88.5045
-5  	51    	80.8421	1.08376	80.256 	83.8899
-6  	59    	80.3315	0.0722892	80.0736	80.5697
-7  	54    	80.2637	0.0514137	80.0736	80.3685
-8  	48    	80.2157	0.0655087	80.0282	80.2854
-9  	51    	80.1338	0.0708768	79.9707	80.2577
-10 	47    	80.0762	0.0453972	79.9707	80.2123
-11 	49    	80.0329	0.0456483	79.8774	80.1259
-12 	56    	79.9954	0.0408693	79.8774	80.093 
-13 	56    	79.9651	0.0313587	79.7918	80.0369
-14 	51    	79.9242	0.125536 	79.2385	79.9744
-15 	49    	79.8442	0.19753  	79.2385	79.9941
-16 	48    	79.7041	0.265204 	79.2385	79.9498
-17 	51    	79.5221	0.291047 	79.2385	79.9093
-18 	55    	79.3339	0.2119   	79.2385	79.9407
-19 	49    	79.2545	0.0911882	79.2385	79.773 
-20 	54    	79.2433	0.0479755	79.2385	79.7207
-21 	63    	79.221 	0.0717518	78.9092	79.2385
-22 	53    	79.1666	0.133245 	78.9092	79.2385
-23 	51    	79.0971	0.158671 	78.8731	79.2385
-24 	61    	79.0031	0.164567 	78.8731	79.8497
-25 	57    	78.9289	0.185524 	78.6079	80.5212
-26 	54    	78.8832	0.165062 	78.6079	79.9049
-27 	55    	78.8536	0.287393 	78.6079	81.15  
-28 	54    	78.7809	0.321551 	78.6079	81.5586
-29 	51    	78.6458	0.0945391	78.6079	78.9092
-30 	50    	78.6105	0.0263963	78.6079	78.8731
-2017-12-13 23:48:47,344 root            INFO     Saving the best parameters
-2017-12-13 23:48:47,344 root            INFO     Saving the best parameters
-2017-12-13 23:48:47,345 root            INFO     Done
-2017-12-13 23:48:47,345 root            INFO     Done
-[2017-12-13 23:48:47,684] launcher  (127.0.0.1:33393) INFO    Root process is done.
-[2017-12-13 23:48:47,685] launcher  (127.0.0.1:33393) INFO    Finished cleaning spawned subprocesses.
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
-[2017-12-13 23:48:48,513] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
-[2017-12-13 23:48:48,513] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
-[2017-12-13 23:48:48,513] launcher  INFO    Worker distribution: 
-[2017-12-13 23:48:48,513] launcher  INFO       127.0.0.1:	3 + origin
-2017-12-13 23:48:48,730 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,730 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,730 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,730 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,730 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:48:48,731 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:48:48,732 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,733 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,733 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:48:48,759 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,759 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,759 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,759 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,760 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:48:48,760 root            INFO     Loading data (./data/cran_historical_10_12)
-2017-12-13 23:48:48,772 root            INFO     Initializing genetic algorithm
-2017-12-13 23:48:48,772 root            INFO     Initializing genetic algorithm
-2017-12-13 23:48:48,775 root            INFO     Running GA optimization
-2017-12-13 23:48:48,775 root            INFO     Running GA optimization
-2017-12-13 23:48:48,810 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
-2017-12-13 23:48:48,810 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
-2017-12-13 23:48:48,810 root            INFO     Loading data (./data/cran_historical_10_12)
-/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
-  ConvergenceWarning)
+[2017-12-15 12:35:18,515] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 12:35:18,515] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 12:35:18,515] launcher  INFO    Worker distribution: 
+[2017-12-15 12:35:18,515] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 12:35:18,733 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,734 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,734 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,734 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,734 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:35:18,734 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,734 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,734 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:35:18,735 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:35:18,761 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,761 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,761 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,761 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,762 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:35:18,762 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 12:35:18,773 root            INFO     Initializing genetic algorithm
+2017-12-15 12:35:18,773 root            INFO     Initializing genetic algorithm
+2017-12-15 12:35:18,777 root            INFO     Running GA optimization
+2017-12-15 12:35:18,777 root            INFO     Running GA optimization
+2017-12-15 12:35:18,791 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 12:35:18,791 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 12:35:18,791 root            INFO     Loading data (./data/cran_historical_10_12)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 gen	nevals	avg    	std    	min    	max    
-0  	100   	421.687	78.1749	112.797	457.796
+0  	100   	421.542	92.7218	128.302	479.507
+1  	73    	295.331	121.949	96.4184	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	78    	177.261	61.8046	87.1851	362.06 
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	64    	122.555	27.7274	77.9869	195.084
+4  	61    	90.9726	12.8255	77.3603	128.812
+5  	67    	79.8589	3.76734	75.4015	96.4184
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+6  	72    	76.932 	0.879259	75.2267	79.0031
+7  	71    	76.0417	0.592137	75.2688	77.7787
+8  	69    	75.5242	0.224797	75.2688	76.3447
+9  	71    	75.3519	0.0795922	75.1694	75.6917
+10 	76    	75.2916	0.0622244	75.1694	75.4189
+11 	73    	75.1727	0.210536 	74.1892	75.322 
+12 	68    	75.0777	0.21859  	74.1892	75.29  
+13 	66    	74.8112	0.458681 	72.877 	75.1792
+14 	69    	74.5529	0.5626   	72.877 	75.0909
+15 	72    	74.0849	0.675711 	72.877 	75.0093
+16 	65    	73.5361	0.619552 	72.877 	74.7484
+17 	70    	73.1675	0.518068 	72.877 	75.1534
+18 	64    	72.9496	0.319077 	72.877 	75.3467
+19 	69    	72.8881	0.110024 	72.877 	73.9828
+20 	68    	72.9065	0.29283  	72.877 	75.8201
+21 	76    	72.9098	0.325862 	72.877 	76.1521
+22 	74    	72.9188	0.415955 	72.877 	77.0575
+23 	64    	72.877 	1.42109e-14	72.877 	72.877 
+24 	71    	72.877 	1.42109e-14	72.877 	72.877 
+25 	65    	72.916 	0.276384   	72.877 	75.1519
+26 	61    	72.9292	0.399991   	72.877 	76.6386
+27 	67    	72.877 	1.42109e-14	72.877 	72.877 
+28 	68    	72.915 	0.347449   	72.877 	76.3578
+29 	67    	72.9133	0.25352    	72.877 	74.6879
+30 	67    	72.8958	0.186625   	72.877 	74.7527
+2017-12-15 13:02:03,577 root            INFO     Saving the best parameters
+2017-12-15 13:02:03,577 root            INFO     Saving the best parameters
+2017-12-15 13:02:03,577 root            INFO     Done
+2017-12-15 13:02:03,577 root            INFO     Done
+[2017-12-15 13:02:03,916] launcher  (127.0.0.1:52473) INFO    Root process is done.
+[2017-12-15 13:02:03,917] launcher  (127.0.0.1:52473) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 13:02:04,756] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 13:02:04,757] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 13:02:04,757] launcher  INFO    Worker distribution: 
+[2017-12-15 13:02:04,757] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 13:02:04,972 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:04,972 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:04,973 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:04,973 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:02:04,973 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:04,973 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:02:04,977 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:04,977 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:04,978 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:02:04,998 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:04,998 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:04,999 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:04,999 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:04,999 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:02:04,999 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:02:05,011 root            INFO     Initializing genetic algorithm
+2017-12-15 13:02:05,011 root            INFO     Initializing genetic algorithm
+2017-12-15 13:02:05,015 root            INFO     Running GA optimization
+2017-12-15 13:02:05,015 root            INFO     Running GA optimization
+2017-12-15 13:02:05,033 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:02:05,033 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:02:05,033 root            INFO     Loading data (./data/cran_historical_10_12)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	421.793	94.4424	100.635	479.507
+1  	73    	316.04 	107.894	99.6885	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	63    	211.582	67.3064	99.6885	375.287
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
 /usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
   ConvergenceWarning)
-1  	51    	331.441	118.886	112.797	457.796
-2  	55    	203.8  	96.3501	112.797	441.744
-3  	54    	120.363	21.0901	98.7768	270.827
-4  	51    	109.761	7.58253	85.6495	116.418
-5  	45    	100.908	9.70268	85.3454	114.574
-6  	56    	91.7648	6.57488	81.9163	106.586
-7  	55    	86.3418	2.40304	81.9163	97.0158
-8  	43    	84.3849	1.71294	81.9163	87.2397
-9  	54    	82.8701	1.46195	81.7223	85.7125
-10 	55    	81.9016	0.178054	81.1446	82.5303
-11 	58    	81.7264	0.279653	80.8288	81.9163
-12 	50    	81.424 	0.334506	80.8288	81.9163
-13 	50    	81.0842	0.202061	80.5111	81.842 
-14 	51    	80.9102	0.116727	80.5111	81.1446
-15 	53    	80.8008	0.144034	80.4477	81.1796
-16 	49    	80.6568	0.141014	80.383 	80.9323
-17 	61    	80.5013	0.0943309	80.3357	80.685 
-18 	51    	80.4119	0.0699204	80.234 	80.5693
-19 	63    	80.3662	0.0630577	80.234 	80.5813
-20 	54    	80.3058	0.0931465	79.9226	80.4949
-21 	47    	80.1991	0.132567 	79.9226	80.3357
-22 	49    	80.0879	0.114302 	79.8954	80.3357
-23 	55    	79.9893	0.0706211	79.8954	80.1525
-24 	52    	79.9316	0.0246864	79.8954	80.0284
-25 	48    	79.9173	0.0129547	79.8627	79.9344
-26 	53    	79.9031	0.0200916	79.8597	79.9226
-27 	58    	79.8867	0.0222003	79.8398	79.9753
-28 	55    	79.8726	0.0230338	79.8027	79.9608
-29 	48    	79.8531	0.0194   	79.8027	79.8859
-30 	56    	79.842 	0.0245813	79.8027	79.9101
-2017-12-14 00:08:35,114 root            INFO     Saving the best parameters
-2017-12-14 00:08:35,114 root            INFO     Saving the best parameters
-2017-12-14 00:08:35,115 root            INFO     Done
-2017-12-14 00:08:35,115 root            INFO     Done
-[2017-12-14 00:08:35,455] launcher  (127.0.0.1:55544) INFO    Root process is done.
-[2017-12-14 00:08:35,455] launcher  (127.0.0.1:55544) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	70    	139.895	45.8113	83.4291	254.297
+4  	69    	100.585	11.2418	77.1905	154.381
+5  	68    	91.1699	6.83871	77.1905	108.631
+6  	66    	83.5411	4.83499	76.5444	94.8068
+7  	65    	79.1529	2.41867	75.8152	84.4854
+8  	72    	77.0357	0.887103	74.8965	81.8745
+9  	78    	76.2389	0.856707	74.7296	77.8953
+10 	70    	75.5338	0.734582	74.2716	76.9506
+11 	75    	74.7889	0.839499	71.7124	78.0761
+12 	71    	74.0368	0.932291	71.7124	75.3435
+13 	64    	72.9868	1.09521 	71.7124	74.8965
+14 	73    	72.3859	1.02986 	71.7124	75.7331
+15 	75    	71.9684	0.774355	71.7124	76.2338
+16 	65    	71.7694	0.420828	71.7124	75.5076
+17 	74    	71.816 	0.619106	71.7124	75.9808
+18 	65    	71.7611	0.355494	71.7124	74.8563
+19 	79    	71.7743	0.434844	71.7124	75.0415
+20 	75    	71.7124	0       	71.7124	71.7124
+21 	78    	71.8222	0.625341	71.7124	75.5944
+22 	78    	71.8462	0.656266	71.7124	75.2807
+23 	71    	71.7124	0       	71.7124	71.7124
+24 	70    	71.7702	0.404807	71.7124	74.7096
+25 	68    	71.7124	0       	71.7124	71.7124
+26 	70    	71.7888	0.53528 	71.7124	75.5542
+27 	69    	71.7211	0.0865924	71.7124	72.5827
+28 	67    	71.7464	0.338533 	71.7124	75.1148
+29 	76    	71.8173	0.599049 	71.7124	75.6111
+30 	74    	71.7669	0.381852 	71.7124	74.4399
+2017-12-15 13:24:18,668 root            INFO     Saving the best parameters
+2017-12-15 13:24:18,668 root            INFO     Saving the best parameters
+2017-12-15 13:24:18,668 root            INFO     Done
+2017-12-15 13:24:18,668 root            INFO     Done
+[2017-12-15 13:24:19,006] launcher  (127.0.0.1:36283) INFO    Root process is done.
+[2017-12-15 13:24:19,007] launcher  (127.0.0.1:36283) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 13:24:19,668] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 13:24:19,668] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 13:24:19,668] launcher  INFO    Worker distribution: 
+[2017-12-15 13:24:19,669] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 13:24:19,886 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:19,886 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:19,887 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:24:19,948 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:19,949 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:19,949 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:24:19,969 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:19,969 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:19,969 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:19,969 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:19,969 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:24:19,969 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:24:19,982 root            INFO     Initializing genetic algorithm
+2017-12-15 13:24:19,982 root            INFO     Initializing genetic algorithm
+2017-12-15 13:24:19,984 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:19,984 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:19,984 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:24:19,986 root            INFO     Running GA optimization
+2017-12-15 13:24:19,986 root            INFO     Running GA optimization
+2017-12-15 13:24:20,028 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:24:20,028 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:24:20,029 root            INFO     Loading data (./data/cran_historical_10_12)
+gen	nevals	avg   	std   	min    	max    
+0  	100   	434.31	93.963	79.6607	479.507
+1  	78    	356.746	118.803	79.6607	479.507
+2  	67    	241.146	93.5534	79.2713	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	79    	133.516	55.97  	77.9992	253.442
+4  	64    	83.2504	11.2067	75.9784	147.68 
+5  	66    	77.625 	1.13813	75.7943	80.1907
+6  	75    	76.4006	0.76159	74.8809	78.4711
+7  	70    	75.679 	0.410396	74.5622	76.4945
+8  	66    	75.1348	0.384544	73.8767	75.9684
+9  	74    	74.7982	0.274693	73.8767	75.577 
+10 	74    	74.6065	0.229532	73.8767	75.0429
+11 	68    	74.397 	0.245264	73.8767	74.8165
+12 	66    	74.2161	0.246011	73.8767	74.6713
+13 	74    	73.9738	0.33331 	72.706 	74.4678
+14 	66    	73.7249	0.415847	72.706 	74.3393
+15 	71    	73.4574	0.465492	72.706 	74.2411
+16 	73    	73.1437	0.566477	72.706 	75.0645
+17 	57    	72.7928	0.29189 	72.706 	74.5174
+18 	73    	72.7829	0.450092	72.706 	76.1365
+19 	74    	72.7717	0.412695	72.706 	75.7758
+20 	75    	72.7516	0.324109	72.706 	75.3915
+21 	81    	72.7759	0.399101	72.706 	75.2998
+22 	68    	72.706 	0       	72.706 	72.706 
+23 	77    	72.8337	0.570668	72.706 	76.1769
+24 	68    	72.7647	0.411163	72.706 	75.7065
+25 	71    	72.7191	0.129977	72.706 	74.0123
+26 	68    	72.7191	0.129977	72.706 	74.0123
+27 	67    	72.7361	0.155078	72.706 	73.6049
+28 	63    	72.7366	0.214756	72.706 	74.7337
+29 	74    	72.7685	0.470827	72.706 	77.0589
+30 	68    	72.7669	0.357194	72.706 	75.2264
+2017-12-15 13:53:29,132 root            INFO     Saving the best parameters
+2017-12-15 13:53:29,132 root            INFO     Saving the best parameters
+2017-12-15 13:53:29,133 root            INFO     Done
+2017-12-15 13:53:29,133 root            INFO     Done
+[2017-12-15 13:53:29,473] launcher  (127.0.0.1:55132) INFO    Root process is done.
+[2017-12-15 13:53:29,474] launcher  (127.0.0.1:55132) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 13:53:30,433] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 13:53:30,433] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 13:53:30,433] launcher  INFO    Worker distribution: 
+[2017-12-15 13:53:30,433] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 13:53:30,649 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,649 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,649 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,649 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,649 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,650 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,670 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,670 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,671 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,671 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,671 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,671 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,674 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,674 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,675 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,684 root            INFO     Initializing genetic algorithm
+2017-12-15 13:53:30,684 root            INFO     Initializing genetic algorithm
+2017-12-15 13:53:30,684 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 13:53:30,685 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 13:53:30,685 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 13:53:30,688 root            INFO     Running GA optimization
+2017-12-15 13:53:30,688 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	435.674	84.5818	75.5702	479.507
+1  	64    	365.423	91.9003	149.014	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	64    	247.113	70.0032	94.3904	430.767
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	71    	177.098	49.1018	91.2564	312.01 
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+4  	72    	127.707	29.6087	90.0886	210.973
+5  	74    	99.861 	15.1062	79.2257	149.195
+6  	70    	87.2314	6.3362 	79.0376	102.934
+7  	66    	80.5891	4.01058	75.0408	94.3904
+8  	69    	77.819 	1.51029	73.4605	79.8502
+9  	58    	76.6919	1.38501	73.4605	79.0177
+10 	73    	75.2475	1.367  	73.4605	77.447 
+11 	66    	74.0808	0.79446	73.3135	76.4349
+12 	75    	73.5565	0.422956	72.5755	75.2402
+13 	65    	73.3852	0.351805	72.5755	75.3133
+14 	74    	73.266 	0.29773 	72.5755	74.1138
+15 	70    	72.9478	0.341858	72.5755	73.4605
+16 	75    	72.7825	0.473787	71.8911	75.6869
+17 	62    	72.5501	0.234374	71.8911	73.3135
+18 	71    	72.4404	0.293743	71.8911	73.3135
+19 	66    	72.2595	0.340209	71.8911	72.5755
+20 	67    	72.0211	0.26849 	71.8911	72.5755
+21 	65    	72.0017	0.534361	71.8911	75.798 
+22 	64    	71.9306	0.298257	71.8911	74.6581
+23 	73    	71.9172	0.2599  	71.8911	74.5032
+24 	76    	71.9697	0.451893	71.8911	75.0397
+25 	77    	71.9507	0.36494 	71.8911	74.9403
+26 	78    	71.9571	0.396203	71.8911	74.8016
+27 	75    	71.8911	0       	71.8911	71.8911
+28 	71    	71.919 	0.277226	71.8911	74.6773
+29 	70    	71.9083	0.17083 	71.8911	73.608 
+30 	67    	71.8911	0       	71.8911	71.8911
+2017-12-15 14:10:51,959 root            INFO     Saving the best parameters
+2017-12-15 14:10:51,959 root            INFO     Saving the best parameters
+2017-12-15 14:10:51,959 root            INFO     Done
+2017-12-15 14:10:51,959 root            INFO     Done
+[2017-12-15 14:10:52,298] launcher  (127.0.0.1:34877) INFO    Root process is done.
+[2017-12-15 14:10:52,298] launcher  (127.0.0.1:34877) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 14:10:52,936] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 14:10:52,936] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 14:10:52,936] launcher  INFO    Worker distribution: 
+[2017-12-15 14:10:52,936] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 14:10:53,152 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,152 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,153 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 14:10:53,157 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,157 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,157 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 14:10:53,164 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,164 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,165 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 14:10:53,178 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,178 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,178 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,178 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,178 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 14:10:53,178 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 14:10:53,191 root            INFO     Initializing genetic algorithm
+2017-12-15 14:10:53,191 root            INFO     Initializing genetic algorithm
+2017-12-15 14:10:53,195 root            INFO     Running GA optimization
+2017-12-15 14:10:53,195 root            INFO     Running GA optimization
+2017-12-15 14:10:53,209 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 14:10:53,210 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 14:10:53,210 root            INFO     Loading data (./data/cran_historical_10_12)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	412.644	108.378	83.5934	479.507
+1  	71    	321.037	125.191	83.5934	479.507
+2  	69    	198.779	80.0498	83.5934	378.939
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	58    	117.702	43.7821	78.8287	297.243
+4  	71    	86.1715	12.2964	75.6434	185.954
+5  	73    	79.7282	3.12007	75.5317	88.4662
+6  	72    	76.9916	1.61577	74.3742	83.3535
+7  	61    	75.4857	0.567036	74.3742	77.2266
+8  	71    	74.9067	0.457369	74.348 	75.8564
+9  	67    	74.4729	0.248807	74.2876	75.3164
+10 	71    	74.3418	0.0440217	74.2667	74.5661
+11 	59    	74.3021	0.02434  	74.199 	74.3742
+12 	68    	74.2759	0.0690341	73.8249	74.3776
+13 	63    	74.2215	0.182688 	73.1907	74.3036
+14 	76    	74.1768	0.232735 	73.1907	74.358 
+15 	78    	74.0327	0.291875 	73.1907	74.2986
+16 	68    	73.6967	0.429562 	72.4846	74.4333
+17 	69    	73.3579	0.374335 	72.4846	74.1771
+18 	70    	73.1658	0.395664 	72.4846	74.3204
+19 	62    	72.8893	0.374475 	72.4132	73.7287
+20 	68    	72.6551	0.291032 	72.4132	73.2379
+21 	71    	72.5582	0.354442 	72.4132	74.8177
+22 	72    	72.4794	0.186882 	72.3268	74.2979
+23 	63    	72.4894	0.304331 	72.3268	74.9161
+24 	59    	72.4293	0.191132 	72.3268	73.9315
+25 	65    	72.3785	0.0436872	72.3268	72.4846
+26 	68    	72.3769	0.189003 	72.3268	73.8411
+27 	68    	72.3645	0.248776 	72.3268	74.3307
+28 	64    	72.361 	0.239443 	72.3268	74.0722
+29 	69    	72.3701	0.303923 	72.3268	74.6462
+30 	60    	72.3635	0.258322 	72.3268	74.3379
+2017-12-15 15:01:16,153 root            INFO     Saving the best parameters
+2017-12-15 15:01:16,153 root            INFO     Saving the best parameters
+2017-12-15 15:01:16,154 root            INFO     Done
+2017-12-15 15:01:16,154 root            INFO     Done
+[2017-12-15 15:01:16,493] launcher  (127.0.0.1:57186) INFO    Root process is done.
+[2017-12-15 15:01:16,493] launcher  (127.0.0.1:57186) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 15:01:17,859] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 15:01:17,859] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 15:01:17,859] launcher  INFO    Worker distribution: 
+[2017-12-15 15:01:17,859] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 15:01:18,075 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,075 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,075 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,080 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,080 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,080 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,100 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,100 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,101 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,101 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,101 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,101 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,103 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,103 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,103 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,114 root            INFO     Initializing genetic algorithm
+2017-12-15 15:01:18,114 root            INFO     Initializing genetic algorithm
+2017-12-15 15:01:18,117 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:01:18,117 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:01:18,118 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:01:18,118 root            INFO     Running GA optimization
+2017-12-15 15:01:18,118 root            INFO     Running GA optimization
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std   	min    	max    
+0  	100   	435.461	97.682	86.8707	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+1  	71    	325.064	142.554	104.743	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+2  	69    	162.672	73.1876	77.7827	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	66    	104.806	27.8756	76.0874	215.947
+4  	71    	83.624 	8.59246	74.7621	113.513
+5  	74    	77.0587	1.35749	74.7621	80.6063
+6  	67    	75.7933	0.737697	74.7322	77.7827
+7  	73    	75.0999	0.508173	74.495 	76.4936
+8  	85    	74.7413	0.258568	74.0991	75.8195
+9  	76    	74.5893	0.251702	73.6576	74.7621
+10 	69    	74.2716	0.403506	73.5049	76.3061
+11 	77    	73.9314	0.319816	73.5049	74.7621
+12 	64    	73.6878	0.275009	73.5049	76.103 
+13 	68    	73.6009	0.193371	73.1711	74.9655
+14 	66    	73.5402	0.222446	73.1711	75.1814
+15 	73    	73.454 	0.123605	73.1711	73.6576
+16 	75    	73.3841	0.138724	73.1711	73.672 
+17 	78    	73.3056	0.154722	73.1711	73.9836
+18 	75    	73.2104	0.141026	72.9945	74.1965
+19 	71    	73.1826	0.102754	72.9945	73.9797
+20 	70    	73.1448	0.165054	72.1012	74.1902
+21 	71    	73.0949	0.167337	72.1012	73.1711
+22 	77    	73.0431	0.23188 	72.1012	74.1372
+23 	71    	72.919 	0.271945	72.1012	73.8557
+24 	71    	72.7296	0.264196	72.1012	73.1425
+25 	74    	72.5515	0.220022	72.1012	73.0321
+26 	79    	72.4963	0.404216	72.1012	74.4237
+27 	81    	72.3874	0.396494	72.1012	74.1948
+28 	63    	72.21  	0.302823	72.1012	74.6508
+29 	68    	72.129 	0.109874	72.1012	72.5639
+30 	70    	72.1254	0.240466	72.1012	74.518 
+2017-12-15 15:23:42,657 root            INFO     Saving the best parameters
+2017-12-15 15:23:42,657 root            INFO     Saving the best parameters
+2017-12-15 15:23:42,657 root            INFO     Done
+2017-12-15 15:23:42,657 root            INFO     Done
+[2017-12-15 15:23:42,996] launcher  (127.0.0.1:35167) INFO    Root process is done.
+[2017-12-15 15:23:42,997] launcher  (127.0.0.1:35167) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 15:23:43,706] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 15:23:43,706] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 15:23:43,706] launcher  INFO    Worker distribution: 
+[2017-12-15 15:23:43,706] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 15:23:43,923 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,923 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,924 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,924 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:23:43,924 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,924 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:23:43,924 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,925 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,925 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:23:43,946 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,946 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,946 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,946 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,947 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:23:43,947 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:23:43,959 root            INFO     Initializing genetic algorithm
+2017-12-15 15:23:43,959 root            INFO     Initializing genetic algorithm
+2017-12-15 15:23:43,963 root            INFO     Running GA optimization
+2017-12-15 15:23:43,963 root            INFO     Running GA optimization
+2017-12-15 15:23:43,991 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:23:43,992 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:23:43,992 root            INFO     Loading data (./data/cran_historical_10_12)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	428.369	88.7101	85.2127	479.507
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+1  	72    	315.419	125.364	83.0663	479.507
+2  	68    	181.206	89.3534	81.9658	409.876
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	74    	99.2701	36.203 	74.6091	250.974
+4  	76    	82.6969	4.07546	74.6091	94.1292
+5  	71    	78.756 	2.7282 	74.6091	83.4041
+6  	71    	76.0615	1.46867	73.821 	83.0663
+7  	72    	74.9295	0.759045	73.6165	76.7341
+8  	79    	74.4076	0.39712 	73.6165	75.2455
+9  	71    	74.0894	0.395278	73.0965	75.0533
+10 	70    	73.7513	0.445251	72.7695	76.1179
+11 	73    	73.4977	0.402869	72.7695	75.0307
+12 	65    	73.2176	0.392389	72.5234	74.7129
+13 	68    	72.9739	0.288644	72.5234	73.6165
+14 	67    	72.7782	0.271925	72.5234	74.5611
+15 	71    	72.6915	0.299835	72.5234	74.6752
+16 	76    	72.6347	0.326343	72.5234	74.499 
+17 	73    	72.5904	0.306574	72.5234	74.8966
+18 	64    	72.5661	0.238541	72.5234	74.2234
+19 	71    	72.5615	0.268608	72.5234	74.6297
+20 	67    	72.5234	1.42109e-14	72.5234	72.5234
+21 	69    	72.5418	0.183246   	72.5234	74.3651
+22 	60    	72.5621	0.271123   	72.5234	74.5503
+23 	69    	72.5473	0.238282   	72.5234	74.9182
+24 	64    	72.5234	1.42109e-14	72.5234	72.5234
+25 	72    	72.5321	0.0863834  	72.5234	73.3916
+26 	71    	72.5562	0.231143   	72.5234	74.3461
+27 	73    	72.5886	0.374445   	72.5234	74.9516
+28 	64    	72.5414	0.179575   	72.5234	74.3282
+29 	67    	72.5424	0.189555   	72.5234	74.4285
+30 	73    	72.5802	0.398228   	72.5234	75.4326
+2017-12-15 15:44:48,545 root            INFO     Saving the best parameters
+2017-12-15 15:44:48,545 root            INFO     Saving the best parameters
+2017-12-15 15:44:48,545 root            INFO     Done
+2017-12-15 15:44:48,545 root            INFO     Done
+[2017-12-15 15:44:48,885] launcher  (127.0.0.1:52887) INFO    Root process is done.
+[2017-12-15 15:44:48,886] launcher  (127.0.0.1:52887) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+[2017-12-15 15:44:49,484] launcher  INFO    SCOOP 0.7 1.1 on linux2 using Python 2.7.6 (default, Oct 26 2016, 20:30:19) [GCC 4.8.4], API: 1013
+[2017-12-15 15:44:49,484] launcher  INFO    Deploying 4 worker(s) over 1 host(s).
+[2017-12-15 15:44:49,484] launcher  INFO    Worker distribution: 
+[2017-12-15 15:44:49,484] launcher  INFO       127.0.0.1:	3 + origin
+2017-12-15 15:44:49,698 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,698 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,699 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:44:49,700 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,700 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,701 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:44:49,702 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,702 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,703 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:44:49,723 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,723 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,724 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,724 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,724 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:44:49,724 root            INFO     Loading data (./data/cran_historical_10_12)
+2017-12-15 15:44:49,736 root            INFO     Initializing genetic algorithm
+2017-12-15 15:44:49,736 root            INFO     Initializing genetic algorithm
+2017-12-15 15:44:49,740 root            INFO     Running GA optimization
+2017-12-15 15:44:49,740 root            INFO     Running GA optimization
+2017-12-15 15:44:49,766 parameterhelper INFO     Loading config for dimensionality as a percentage of the reservoir size.
+2017-12-15 15:44:49,766 parameterhelper INFO     Config: ./configs/user/lasso_identity (overload)
+2017-12-15 15:44:49,766 root            INFO     Loading data (./data/cran_historical_10_12)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+gen	nevals	avg    	std    	min    	max    
+0  	100   	432.248	94.8525	79.6839	479.507
+1  	63    	347.94 	118.986	98.913 	479.507
+2  	66    	213.941	66.7817	84.4262	395.77 
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+3  	69    	140.924	47.917 	76.4493	269.505
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
+4  	73    	91.5963	21.7142	75.0928	166.686
+5  	72    	77.6487	2.43418	74.8208	89.6547
+6  	76    	75.8724	0.768216	74.8208	78.4038
+7  	78    	75.0959	0.439374	74.0097	76.3244
+8  	68    	74.7782	0.346416	74.0097	76.1189
+9  	73    	74.5725	0.324314	74.0097	74.9511
+10 	73    	74.2679	0.296692	74.0097	74.8208
+11 	70    	74.1055	0.196337	73.7999	75.1687
+12 	71    	73.9226	0.351606	72.2231	74.4209
+13 	74    	73.7671	0.519169	72.2231	74.5204
+14 	66    	73.5372	0.594004	72.2231	74.5729
+15 	60    	73.0369	0.609657	72.2231	74.3877
+16 	78    	72.7694	0.526911	72.2231	74.5318
+17 	72    	72.4814	0.392788	72.2231	74.5318
+18 	71    	72.3165	0.261181	72.2231	73.5662
+19 	59    	72.281 	0.329151	72.2231	74.726 
+20 	67    	72.2687	0.31996 	72.2231	74.6966
+21 	76    	72.2587	0.249982	72.2231	74.1455
+22 	77    	72.3092	0.381765	72.2231	74.4602
+23 	67    	72.2816	0.333583	72.2231	74.3812
+24 	73    	72.2388	0.155793	72.2231	73.7889
+25 	60    	72.2231	1.42109e-14	72.2231	72.2231
+26 	75    	72.2678	0.347894   	72.2231	75.5363
+27 	72    	72.2918	0.342602   	72.2231	74.3346
+28 	71    	72.2605	0.278333   	72.2231	74.7663
+29 	68    	72.24  	0.167884   	72.2231	73.9104
+30 	73    	72.2508	0.196788   	72.2231	73.8477
+2017-12-15 16:05:08,348 root            INFO     Saving the best parameters
+2017-12-15 16:05:08,348 root            INFO     Saving the best parameters
+2017-12-15 16:05:08,349 root            INFO     Done
+2017-12-15 16:05:08,349 root            INFO     Done
+[2017-12-15 16:05:08,689] launcher  (127.0.0.1:55126) INFO    Root process is done.
+[2017-12-15 16:05:08,690] launcher  (127.0.0.1:55126) INFO    Finished cleaning spawned subprocesses.
+/usr/local/lib/python2.7/dist-packages/sklearn/linear_model/coordinate_descent.py:466: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations
+  ConvergenceWarning)
