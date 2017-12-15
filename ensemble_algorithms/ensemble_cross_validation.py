@@ -121,7 +121,7 @@ def main():
     logger.warning("Starting Ensemble Cross Validation")
 
     # Initialize algo
-    algo = EnsembleCrossValidation(file_path=args.data)
+    algo = EnsembleCrossValidation(file_path=args.data, test_size=240)
 
     # Run test
     algo.run_test(result_path=args.result_path)

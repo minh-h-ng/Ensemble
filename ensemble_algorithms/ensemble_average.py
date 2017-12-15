@@ -75,7 +75,7 @@ def main():
     logger.warning("Starting Ensemble Average")
 
     # Initialize algo
-    algo = EnsembleAverage(file_path=args.data)
+    algo = EnsembleAverage(file_path=args.data, test_size=240)
 
     # Run test
     algo.run_test(result_path=args.result_path)
