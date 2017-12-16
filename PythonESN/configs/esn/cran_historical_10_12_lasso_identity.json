@@ -1,17 +1,17 @@
 {
     "n_dim": null, 
     "regression_method": "lasso", 
-    "n_internal_units": 281, 
+    "n_internal_units": 151, 
     "n_drop": 100, 
-    "noise_level": 0.06321923970031787, 
+    "noise_level": 0.07363176083013713, 
     "teacher_shift": 0.0, 
-    "input_scaling": 0.9, 
+    "input_scaling": 0.882275768508686, 
     "input_shift": 0.0, 
     "embedding": "identity", 
     "connectivity": 0.25, 
     "embedding_parameters": null, 
-    "teacher_scaling": 0.7654570445838441, 
-    "regression_parameters": 0.005787055100776663, 
-    "spectral_radius": 0.5431445033938235, 
-    "feedback_scaling": 0.11620880011224849
+    "teacher_scaling": 0.8967211471533368, 
+    "regression_parameters": 0.001, 
+    "spectral_radius": 0.5523568171788257, 
+    "feedback_scaling": 0.278969936895176
 }
