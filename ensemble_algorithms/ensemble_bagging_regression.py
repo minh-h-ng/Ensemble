@@ -95,7 +95,7 @@ def main():
     logger.warning("Starting Ensemble Bagging")
 
     # Initialize algo
-    algo = EnsembleBagging(file_path=args.data)
+    algo = EnsembleBagging(file_path=args.data, test_size=240)
 
     # Run test
     algo.run_test(test_algo=args.test_algo,

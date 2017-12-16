@@ -20,11 +20,17 @@ data_dir=${top_dir}"/PythonESN/data_backup/"
 # Data set
 data_set=$1
 
+# Test Size
+test_size=240
+
 # Line number (both inclusive) of base.py output
 # to process in genetic algorithm. GA will access
 # up-to past 500 (default) lines before start_line
-start_line=1867
-end_line=2208
+start_line=$(expr `cat ${data_dir}${data_set} | wc -l` - ${test_size} + 1) # +1 to include self
+end_line=`cat ${data_dir}${data_set} | wc -l`
+
+echo "Start Line: "${start_line}
+echo "End Line: "${end_line}
 
 # Directory path (relative to top_dir) for storing GA results
 results_dir='/ensemble_algorithms/results/'$1'/'
