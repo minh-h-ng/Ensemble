@@ -6,9 +6,11 @@ dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12
 dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_lasso_identity_mae'
-esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_enet_identity'
-esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_enet_identity'
+esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_enet_identity_mae'
+esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_enet_identity_mae'
+esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_enet_identity_mae'
+
+averageEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12/Ensemble_Average_edgar_10_12_1'
 
 gaCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_10_12'
 gaEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12'
@@ -75,22 +77,21 @@ def readData(dataFile,column,ignores):
     resources = []
     for i in range(testingSize):
         #resources += resourcesCalculation(int(datas[-(i+1)]),mu,r0)
-        resources.append(resourcesCalculation(int(datas[-(i+1)]),mu,r0))
+        resources.append(resourcesCalculation(int(datas[-testingSize+i]),mu,r0))
     return resources
 
 def readComponents(componentFile,dataResources):
-    with open(componentFile,'r') as f:
-        naiveResources = readData(componentFile,0,1)
-        arResources = readData(componentFile, 1, 1)
-        armaResources = readData(componentFile, 2, 1)
-        arimaResources = readData(componentFile,3,1)
-        etsResources = readData(componentFile, 4, 1)
+    naiveResources = readData(componentFile,0,1)
+    arResources = readData(componentFile, 1, 1)
+    armaResources = readData(componentFile, 2, 1)
+    arimaResources = readData(componentFile,3,1)
+    etsResources = readData(componentFile, 4, 1)
     totalNaive = 0
     totalAR = 0
     totalARMA = 0
     totalARIMA = 0
     totalETS = 0
-    for i in range(len(arimaResources)):
+    for i in range(len(naiveResources)):
         totalNaive += abs(naiveResources[i] - dataResources[i])
         totalAR+= abs(arResources[i] - dataResources[i])
         totalARMA += abs(armaResources[i] - dataResources[i])
@@ -128,7 +129,7 @@ def main():
         dataResources = readData(dataFile,-1,1)
         gaResources = readGA(gaDir,dataResources)
         esnResources = readESN(esnDir,dataResources)
-        naiveResources,arResources,armaResources,arimaResources,etsResources = readComponents(dataCRAN,dataResources)
+        naiveResources,arResources,armaResources,arimaResources,etsResources = readComponents(dataFile,dataResources)
         print('dataset:',dataList[i])
         print('data:',dataResources)
         print('total data:',sum(dataResources))
