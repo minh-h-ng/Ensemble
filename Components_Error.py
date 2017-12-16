@@ -7,9 +7,9 @@ kyotoFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_
 
 def doCalculate(componentList,realList,type):
     print(type)
-    print('mae:',mae(componentList,realList))
-    print('mape:',mape(componentList,realList))
-    print('rmse:',rmse(componentList,realList))
+    print(mae(componentList,realList))
+    print(mape(componentList,realList))
+    print(rmse(componentList,realList))
 
 def mae(predictList,realList):
     total = 0
@@ -48,12 +48,12 @@ def doDataset(dataFile):
                 arimaList.append(float(linePart[3]))
                 etsList.append(float(linePart[4]))
                 realList.append(float(linePart[6]))
-    naiveList = naiveList[-342:]
-    arList = arList[-342:]
-    armaList = armaList[-342:]
-    arimaList = arimaList[-342:]
-    etsList = etsList[-342:]
-    realList = realList[-342:]
+    naiveList = naiveList[-240:]
+    arList = arList[-240:]
+    armaList = armaList[-240:]
+    arimaList = arimaList[-240:]
+    etsList = etsList[-240:]
+    realList = realList[-240:]
     doCalculate(naiveList,realList,'naive')
     doCalculate(arList,realList,'ar')
     doCalculate(armaList, realList, 'arma')
