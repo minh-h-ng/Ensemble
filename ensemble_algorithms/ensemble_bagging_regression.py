@@ -9,7 +9,6 @@ import numpy as np
 import pandas as pd
 from estimators import NaiveBaggingEstimator, ArBaggingEstimator, \
     ArmaBaggingEstimator, ArimaBaggingEstimator, EtsBaggingEstimator
-from sklearn.model_selection import cross_val_score, TimeSeriesSplit
 
 # Parse arguments
 parser = argparse.ArgumentParser()

@@ -3,8 +3,11 @@
 import base as forecast
 import numpy as np
 import pandas as pd
+import torch
+import torch.nn as nn
 import tqdm
 from sklearn.base import BaseEstimator
+from torch.autograd import Variable
 
 
 class AverageEstimator(BaseEstimator):
@@ -576,6 +579,65 @@ class EtsBaggingEstimator(BaseEstimator):
             predictions = np.append(predictions, avg)
 
         return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
+
+# Network for NeuralNetworkEstimator
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.linear = nn.Linear(5, 1)
+
+    def forward(self, x):
+        y = self.linear(x)
+        return y
+
+
+class NeuralNetworkEstimator(BaseEstimator):
+    def __init__(self, iterations=1000):
+        self.iterations = iterations
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+
+    def fit(self, X):
+        self.model = Net()
+        criterion = torch.nn.MSELoss(size_average=False)
+        optimizer = torch.optim.SGD(self.model.parameters(), lr=1e-4)
+
+        # X here is the whole training set
+        # we have to train the network with each sample
+        for t in range(self.iterations):
+            for i in tqdm.tqdm(range(1, len(X))):
+                naive = self.algo.naive_forecast(X[:i])[-1]
+                ar = self.algo.ar_forecast(X[:i])[-1]
+                arma = self.algo.arma_forecast(X[:i])[-1]
+                arima = self.algo.arima_forecast(X[:i])[-1]
+                ets = self.algo.ets_forecast(X[:i])[-1]
+                observation = X[i]
+
+                x = Variable(torch.FloatTensor([naive, ar, arma, arima, ets]))
+                y = Variable(torch.FloatTensor([observation]), requires_grad=False)
+
+                # forward pass
+                y_pred = self.model(x)
+
+                # backward pass
+                loss = criterion(y_pred, y)
+                print(t, loss.data[0])
+
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+    def predict(self, X):
+        # X here holds the true observations
+        pass
 
     def score(self, X):
         predictions = self.predict(X)
