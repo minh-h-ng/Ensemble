@@ -65,6 +65,26 @@ def resourcesCalculation(lamda,mu,r0):
         c+=1
     return None
 
+def readDatas(dataFiles,column,ignores):
+    datas = []
+    for i in range(testingSize):
+        datas.append(0)
+    for dataFile in dataFiles:
+        count = 0
+        with open(dataFile, 'r') as f:
+            for line in f:
+                count += 1
+                if count > ignores:
+                    data = line.split(',')
+                    datas[count-ignores-1]+=float(data[column])
+    for i in range(len(datas)):
+        datas[i] /= len(dataFiles)
+    resources = []
+    for i in range(testingSize):
+        # resources += resourcesCalculation(int(datas[-(i+1)]),mu,r0)
+        resources.append(resourcesCalculation(int(datas[-testingSize + i]), mu, r0))
+    return resources
+
 def readData(dataFile,column,ignores):
     datas = []
     count = 0
@@ -112,13 +132,20 @@ def readGA(gaDir,dataResources):
 def readESN(esnDir,dataResources):
     listResources = []
     list = []
-    for file in sorted(listdir(esnDir)):
-        total = 0
-        resources = readData(esnDir+'/'+ file,0,0)
-        for i in range(len(resources)):
-            listResources.append(abs(resources[i]-dataResources[i]))
-            total += abs(resources[i]-dataResources[i])
-        list.append(total)
+    sortedList = sorted(listdir(esnDir))
+    ele10 = sortedList[1]
+    sortedList.pop(1)
+    sortedList.append(ele10)
+    for i in range(len(sortedList)):
+        sortedList[i]=esnDir+'/'+sortedList[i]
+    #print('sortedList:',sortedList)
+    total = 0
+    #resources = readData(esnDir+'/'+ file,0,0)
+    resources = readDatas(sortedList[:5],0,0)
+    for i in range(len(resources)):
+        listResources.append(abs(resources[i]-dataResources[i]))
+        total += abs(resources[i]-dataResources[i])
+    list.append(total)
     return list
 
 def main():
@@ -131,7 +158,7 @@ def main():
         esnResources = readESN(esnDir,dataResources)
         naiveResources,arResources,armaResources,arimaResources,etsResources = readComponents(dataFile,dataResources)
         print('dataset:',dataList[i])
-        print('data:',dataResources)
+        #print('data:',dataResources)
         print('total data:',sum(dataResources))
         print('ga:',gaResources)
         print('esn:',esnResources)
