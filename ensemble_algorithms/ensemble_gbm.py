@@ -7,7 +7,7 @@ import sys
 
 import numpy as np
 import pandas as pd
-from estimators import NeuralNetworkEstimator
+from estimators import GBMEstimator
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -23,10 +23,10 @@ sh.setLevel(logging.DEBUG)
 logger.addHandler(sh)
 
 
-class EnsembleNeuralNetwork:
+class EnsembleGBM:
     def __init__(self, file_path, test_size=342):
         """
-        Initializes data required by neural network ensemble
+        Initializes data required by GBM ensemble
         :param file_path: path to processed dataset
         :param test_size: last test_size hours will be treated as test set
         """
@@ -56,7 +56,7 @@ class EnsembleNeuralNetwork:
         assert len(self.test_series) + len(self.eval_series) == len(self.series)
 
     def run_test(self, result_path):
-        estimator = NeuralNetworkEstimator()
+        estimator = GBMEstimator()
 
         # Makes eval series available for prediction
         estimator.fit(self.eval_series)
@@ -72,15 +72,15 @@ class EnsembleNeuralNetwork:
 
 
 def main():
-    logger.warning("Starting Ensemble Neural Network")
+    logger.warning("Starting Ensemble GBM")
 
     # Initialize algo
-    algo = EnsembleNeuralNetwork(file_path=args.data, test_size=240)
+    algo = EnsembleGBM(file_path=args.data, test_size=240)
 
     # Run test
     algo.run_test(result_path=args.result_path)
 
-    logger.warning("Stopping Ensemble Neural Network")
+    logger.warning("Stopping Ensemble GBM")
 
 
 if __name__ == '__main__':

@@ -3,11 +3,8 @@
 import base as forecast
 import numpy as np
 import pandas as pd
-import torch
-import torch.nn as nn
 import tqdm
 from sklearn.base import BaseEstimator
-from torch.autograd import Variable
 
 
 class AverageEstimator(BaseEstimator):
@@ -589,22 +586,8 @@ class EtsBaggingEstimator(BaseEstimator):
         return sum(numerator / denominator)
 
 
-# Network for NeuralNetworkEstimator
-class Net(nn.Module):
+class GBMEstimator(BaseEstimator):
     def __init__(self):
-        super(Net, self).__init__()
-        self.linear1 = torch.nn.Linear(5, 100)
-        self.linear2 = torch.nn.Linear(100, 1)
-
-    def forward(self, x):
-        h_relu = self.linear1(x).clamp(min=0)
-        y_pred = self.linear2(h_relu)
-        return y_pred
-
-
-class NeuralNetworkEstimator(BaseEstimator):
-    def __init__(self, iterations=1000):
-        self.iterations = iterations
         self.algo = forecast.ForecastAlgorithms(samples=500)
 
     def fit(self, X):
@@ -624,26 +607,6 @@ class NeuralNetworkEstimator(BaseEstimator):
                                    np.array([[naive, ar, arma, arima, ets]]), axis=0)
             observations = np.append(observations,
                                      np.array([[X[i]]]), axis=0)
-
-        self.model = Net()  # # network
-        criterion = torch.nn.MSELoss(size_average=False)
-        optimizer = torch.optim.SGD(self.model.parameters(), lr=1e-4)
-
-        # train the network for 1000 iterations
-        for t in range(self.iterations):
-            x = Variable(torch.from_numpy(components)).float()
-            y = Variable(torch.from_numpy(observations), requires_grad=False).float()
-
-            # forward pass
-            y_pred = self.model(x)
-
-            # backward pass
-            loss = criterion(y_pred, y)
-            print(t, loss.data[0])
-
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
 
     def predict(self, X):
         # X here holds the true observations
