@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import base as forecast
+import lightgbm as lgb
 import numpy as np
 import pandas as pd
 import tqdm
@@ -589,6 +590,8 @@ class EtsBaggingEstimator(BaseEstimator):
 class GBMEstimator(BaseEstimator):
     def __init__(self):
         self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.gbm = lgb.LGBMRegressor(objective='regression',
+                                     learning_rate=0.05)
 
     def fit(self, X):
         # X here is the whole training set
@@ -607,10 +610,41 @@ class GBMEstimator(BaseEstimator):
                                    np.array([[naive, ar, arma, arima, ets]]), axis=0)
             observations = np.append(observations,
                                      np.array([[X[i]]]), axis=0)
+        self.fit_ = self.gbm.fit(components, np.ravel(observations))
+
+        # memorize
+        self.samples = X
+        return self
 
     def predict(self, X):
         # X here holds the true observations
-        pass
+        components = np.empty((0, 5), np.float64)
+
+        # first prediction is done on already memorized data
+        naive = self.algo.naive_forecast(self.samples)[-1]
+        ar = self.algo.ar_forecast(self.samples)[-1]
+        arma = self.algo.arma_forecast(self.samples)[-1]
+        arima = self.algo.arima_forecast(self.samples)[-1]
+        ets = self.algo.ets_forecast(self.samples)[-1]
+
+        components = np.append(components,
+                               np.array([[naive, ar, arma, arima, ets]]), axis=0)
+
+        # subsequent predictions are online
+        for i in tqdm.tqdm(range(1, len(X))):
+            data = pd.concat([self.samples, X[:i]])  # # training + elapsed
+
+            naive = self.algo.naive_forecast(data)[-1]
+            ar = self.algo.ar_forecast(data)[-1]
+            arma = self.algo.arma_forecast(data)[-1]
+            arima = self.algo.arima_forecast(data)[-1]
+            ets = self.algo.ets_forecast(data)[-1]
+
+            components = np.append(components,
+                                   np.array([[naive, ar, arma, arima, ets]]), axis=0)
+
+        predictions = self.fit_.predict(components)
+        return np.rint(predictions)
 
     def score(self, X):
         predictions = self.predict(X)
