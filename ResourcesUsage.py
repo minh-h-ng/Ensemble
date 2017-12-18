@@ -112,7 +112,7 @@ def readGA(gaDir,dataResources):
 def readESN(esnDir,dataResources):
     listResources = []
     list = []
-    for file in listdir(esnDir):
+    for file in sorted(listdir(esnDir)):
         total = 0
         resources = readData(esnDir+'/'+ file,0,0)
         for i in range(len(resources)):
