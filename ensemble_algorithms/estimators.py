@@ -593,11 +593,13 @@ class EtsBaggingEstimator(BaseEstimator):
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.linear = nn.Linear(5, 1)
+        self.linear1 = torch.nn.Linear(5, 100)
+        self.linear2 = torch.nn.Linear(100, 1)
 
     def forward(self, x):
-        y = self.linear(x)
-        return y
+        h_relu = self.linear1(x).clamp(min=0)
+        y_pred = self.linear2(h_relu)
+        return y_pred
 
 
 class NeuralNetworkEstimator(BaseEstimator):
@@ -606,34 +608,42 @@ class NeuralNetworkEstimator(BaseEstimator):
         self.algo = forecast.ForecastAlgorithms(samples=500)
 
     def fit(self, X):
-        self.model = Net()
+        # X here is the whole training set
+        # run component algorithms
+        components = np.empty((0, 5), np.float64)
+        observations = np.empty((0, 1), np.float64)
+
+        for i in tqdm.tqdm(range(1, len(X)), desc="Computing components"):
+            naive = self.algo.naive_forecast(X[:i])[-1]
+            ar = self.algo.ar_forecast(X[:i])[-1]
+            arma = self.algo.arma_forecast(X[:i])[-1]
+            arima = self.algo.arima_forecast(X[:i])[-1]
+            ets = self.algo.ets_forecast(X[:i])[-1]
+
+            components = np.append(components,
+                                   np.array([[naive, ar, arma, arima, ets]]), axis=0)
+            observations = np.append(observations,
+                                     np.array([[X[i]]]), axis=0)
+
+        self.model = Net()  # # network
         criterion = torch.nn.MSELoss(size_average=False)
         optimizer = torch.optim.SGD(self.model.parameters(), lr=1e-4)
 
-        # X here is the whole training set
-        # we have to train the network with each sample
+        # train the network for 1000 iterations
         for t in range(self.iterations):
-            for i in tqdm.tqdm(range(1, len(X))):
-                naive = self.algo.naive_forecast(X[:i])[-1]
-                ar = self.algo.ar_forecast(X[:i])[-1]
-                arma = self.algo.arma_forecast(X[:i])[-1]
-                arima = self.algo.arima_forecast(X[:i])[-1]
-                ets = self.algo.ets_forecast(X[:i])[-1]
-                observation = X[i]
+            x = Variable(torch.from_numpy(components)).float()
+            y = Variable(torch.from_numpy(observations), requires_grad=False).float()
 
-                x = Variable(torch.FloatTensor([naive, ar, arma, arima, ets]))
-                y = Variable(torch.FloatTensor([observation]), requires_grad=False)
+            # forward pass
+            y_pred = self.model(x)
 
-                # forward pass
-                y_pred = self.model(x)
+            # backward pass
+            loss = criterion(y_pred, y)
+            print(t, loss.data[0])
 
-                # backward pass
-                loss = criterion(y_pred, y)
-                print(t, loss.data[0])
-
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
 
     def predict(self, X):
         # X here holds the true observations
