@@ -4,6 +4,14 @@ from sklearn.metrics import mean_squared_error
 cranFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12'
 edgarFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
 kyotoFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
+esnCRANFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/' \
+              'cran_10_12_enet_identity_mae/predictions_cran_historical_10_12_enet_identity_1'
+esnEDGARFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/' \
+               'edgar_10_12_enet_identity_mae/predictions_edgar_historical_10_12_enet_identity_1'
+esnKyotoFile = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/' \
+               'kyoto_10_12_enet_identity_mae/predictions_kyoto_historical_10_12_enet_identity_1'
+
+testingSize = 240
 
 def doCalculate(componentList,realList,type):
     print(type)
@@ -28,7 +36,6 @@ def mape(predictList,realList):
 def rmse(predictList,realList):
     return np.sqrt(mean_squared_error(predictList,realList))
 
-
 def doDataset(dataFile):
     realList = []
     naiveList = []
@@ -48,17 +55,37 @@ def doDataset(dataFile):
                 arimaList.append(float(linePart[3]))
                 etsList.append(float(linePart[4]))
                 realList.append(float(linePart[6]))
-    naiveList = naiveList[-240:]
-    arList = arList[-240:]
-    armaList = armaList[-240:]
-    arimaList = arimaList[-240:]
-    etsList = etsList[-240:]
-    realList = realList[-240:]
+    naiveList = naiveList[-testingSize:]
+    arList = arList[-testingSize:]
+    armaList = armaList[-testingSize:]
+    arimaList = arimaList[-testingSize:]
+    etsList = etsList[-testingSize:]
+    realList = realList[-testingSize:]
     doCalculate(naiveList,realList,'naive')
     doCalculate(arList,realList,'ar')
     doCalculate(armaList, realList, 'arma')
     doCalculate(arimaList, realList, 'arima')
     doCalculate(etsList, realList, 'ets')
+
+def doESN(esnFile,realFile):
+    realList = []
+    count = 0
+    with open(realFile,'r') as f:
+        for line in f:
+            count += 1
+            if count>1:
+                linePart = line.split(',')
+                realList.append(float(linePart[6]))
+    realList = realList[-testingSize:]
+
+    esnList = []
+    with open(esnFile,'r') as f:
+        for line in f:
+            esnList.append(float(line))
+    esnList = esnList[-testingSize:]
+    print('mae:',mae(esnList,realList))
+    print('mape:', mape(esnList, realList))
+    print('rmse:', rmse(esnList, realList))
 
 def main():
     print('CRAN dataset:')
@@ -69,6 +96,12 @@ def main():
     print()
     print('Kyoto dataset:')
     doDataset(kyotoFile)
+    print('ESN CRAN:')
+    doESN(esnCRANFile,cranFile)
+    print('ESN EDGAR:')
+    doESN(esnEDGARFile,edgarFile)
+    print('ESN Kyoto:')
+    doESN(esnKyotoFile,kyotoFile)
 
 if __name__ == "__main__":
     main()
