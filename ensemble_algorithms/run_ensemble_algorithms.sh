@@ -84,11 +84,11 @@ run_ensemble_bagging_regression() {
         tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
-run_ensemble_average
-run_ensemble_cross_validation
-run_ensemble_bagging_regression 'naive' 'Ensemble_NaiveBaggingRegression_'
-run_ensemble_bagging_regression 'ar' 'Ensemble_ArBaggingRegression_'
-run_ensemble_bagging_regression 'arma' 'Ensemble_ArmaBaggingRegression_'
-run_ensemble_bagging_regression 'arima' 'Ensemble_ArimaBaggingRegression_'
-run_ensemble_bagging_regression 'ets' 'Ensemble_EtsBaggingRegression_'
-#run_ensemble_gbm
+#run_ensemble_average
+#run_ensemble_cross_validation
+#run_ensemble_bagging_regression 'naive' 'Ensemble_NaiveBaggingRegression_'
+#run_ensemble_bagging_regression 'ar' 'Ensemble_ArBaggingRegression_'
+#run_ensemble_bagging_regression 'arma' 'Ensemble_ArmaBaggingRegression_'
+#run_ensemble_bagging_regression 'arima' 'Ensemble_ArimaBaggingRegression_'
+#run_ensemble_bagging_regression 'ets' 'Ensemble_EtsBaggingRegression_'
+run_ensemble_gbm
