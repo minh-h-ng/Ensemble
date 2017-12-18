@@ -55,7 +55,6 @@ six==1.11.0
 statsmodels==0.8.0
 terminado==0.6
 testpath==0.3.1
-http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl ; sys_platform == "linux"
 torch==0.3.0.post4
 torchvision==0.2.0
 tornado==4.5.2
