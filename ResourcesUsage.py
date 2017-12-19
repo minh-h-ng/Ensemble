@@ -16,6 +16,11 @@ gaCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_1
 gaEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12'
 gaKyoto = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12'
 
+gaCRANPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_10_12/Ensemble_GA_cran_10_12_'
+gaEDGARPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12/Ensemble_GA_edgar_10_12_'
+gaKyotoPath = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12/Ensemble_GA_kyoto_10_12_'
+
+pathList = [gaCRANPath,gaEDGARPath,gaKyotoPath]
 dataList = [dataCRAN,dataEDGAR,dataKyoto]
 esnList = [esnCRAN,esnEDGAR,esnKyoto]
 gaList = [gaCRAN,gaEDGAR,gaKyoto]
@@ -23,6 +28,7 @@ gaList = [gaCRAN,gaEDGAR,gaKyoto]
 mu = 10
 r0 = 0.4
 testingSize = 240
+repeatSize = 5
 
 """
 c: number of servers
@@ -129,6 +135,18 @@ def readGA(gaDir,dataResources):
         list.append(abs(resources[i]-dataResources[i]))
     return sum(list)
 
+def readGAs(gaPath, dataResources):
+    finalList = []
+    for i in range(1,repeatSize+1):
+        resources = readData(gaPath + str(i),1,1)
+        list = []
+        total = 0
+        for j in range(len(resources)):
+            total += abs(resources[j]-dataResources[j])
+            #list.append(total)
+        finalList.append(total)
+    return np.mean(finalList)
+
 def readESN(esnDir,dataResources):
     listResources = []
     list = []
@@ -141,7 +159,7 @@ def readESN(esnDir,dataResources):
     #print('sortedList:',sortedList)
     total = 0
     #resources = readData(esnDir+'/'+ file,0,0)
-    resources = readDatas(sortedList[:5],0,0)
+    resources = readDatas(sortedList[:repeatSize],0,0)
     for i in range(len(resources)):
         listResources.append(abs(resources[i]-dataResources[i]))
         total += abs(resources[i]-dataResources[i])
@@ -154,11 +172,12 @@ def main():
         esnDir = esnList[i]
         gaDir = gaList[i]
         dataResources = readData(dataFile,-1,1)
-        gaResources = readGA(gaDir,dataResources)
+        #gaResources = readGA(gaDir,dataResources)
+        gaResources = readGAs(pathList[i],dataResources)
         esnResources = readESN(esnDir,dataResources)
         naiveResources,arResources,armaResources,arimaResources,etsResources = readComponents(dataFile,dataResources)
         print('dataset:',dataList[i])
-        #print('data:',dataResources)
+        #11111print('data:',dataResources)
         print('total data:',sum(dataResources))
         print('ga:',gaResources)
         print('esn:',esnResources)
