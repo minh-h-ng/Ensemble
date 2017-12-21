@@ -1,6 +1,7 @@
 import csv
 import numpy as np
 from sklearn.metrics import mean_squared_error
+import math
 
 finalCRAN = '/home/minh/PycharmProjects/Ensemble/final_results/cran_10_12.csv'
 finalEDGAR = '/home/minh/PycharmProjects/Ensemble/final_results/edgar_10_12.csv'
@@ -12,6 +13,28 @@ outKyoto = '/home/minh/PycharmProjects/Ensemble/final_results/kyoto_accuracy_10_
 
 outList = [outCRAN,outEDGAR,outKyoto]
 finalList = [finalCRAN,finalEDGAR,finalKyoto]
+
+def responseTime(c,lamda,mu):
+    p = lamda / (c * mu)
+    if p>=1:
+        return -1
+    r = 1/mu + (p**(math.sqrt(2*c+2)))/(p*c*(1-p)*mu)
+    return r
+
+def resourcesCalculation(lamda,mu,r0):
+    c = math.ceil(lamda/mu)
+    while True:
+        r = responseTime(c,lamda,mu)
+        if r<0:
+            c+=1
+            continue
+        if (r<=r0):
+            return c
+        if (c>=1000):
+            print('no. of servers reached 1000')
+            break
+        c+=1
+    return None
 
 def mae(predictList,realList):
     results = 0
@@ -61,6 +84,24 @@ def doNRMSE(components,reals):
         compNRMSE.append(nrmse(components[i],reals))
     return compNRMSE
 
+#result: under-provision, over-provision, total wasted, yearly cost projection
+def doResources(components,reals,mu,r0):
+    resources = []
+    for i in range(len(components)):
+        underRes = 0
+        overRes = 0
+        total = 0
+        for j in range(len(components[i])):
+            if resourcesCalculation(components[i][j], mu, r0)<resourcesCalculation(reals[j],mu,r0):
+                underRes += resourcesCalculation(reals[j],mu,r0) - resourcesCalculation(components[i][j], mu, r0)
+                total += resourcesCalculation(reals[j],mu,r0) - resourcesCalculation(components[i][j], mu, r0)
+            else:
+                overRes += resourcesCalculation(components[i][j], mu, r0) - resourcesCalculation(reals[j],mu,r0)
+                total += resourcesCalculation(components[i][j], mu, r0) - resourcesCalculation(reals[j],mu,r0)
+        yearlyCost = total/len(reals)*365
+        resources.append([underRes,overRes,total,yearlyCost])
+    return resources
+
 def doReals(dataFile):
     reals = []
     with open(dataFile, 'r') as f:
@@ -100,6 +141,8 @@ def main():
         compMAPE = doMAPE(components,reals)
         compRMSE = doRMSE(components,reals)
         compNRMSE = doNRMSE(components,reals)
+        compRes1 = doResources(components,reals,10,0.4)
+        compRes2 = doResources(components, reals, 20, 0.8)
         with open(outList[i],'w') as f:
             writer = csv.writer(f)
             writer.writerows([names])
@@ -107,6 +150,8 @@ def main():
             writer.writerows([compMAPE])
             writer.writerows([compRMSE])
             writer.writerows([compNRMSE])
+            writer.writerows([compRes1])
+            writer.writerows([compRes2])
         print('names:',names)
 
 if __name__ == "__main__":
