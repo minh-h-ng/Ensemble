@@ -1,2 +1,12 @@
-2017-12-19 01:41:03,335 - Starting Ensemble GBM
-2017-12-19 02:57:02,839 - Stopping Ensemble GBM
+2017-12-21 19:30:55,727 - Starting Ensemble GBM
+[1]	valid_0's l1: 474.978
+[2]	valid_0's l1: 453.782
+[3]	valid_0's l1: 433.174
+[4]	valid_0's l1: 413.699
+[5]	valid_0's l1: 394.957
+[6]	valid_0's l1: 377.433
+[7]	valid_0's l1: 360.858
+[8]	valid_0's l1: 344.796
+[9]	valid_0's l1: 329.277
+[10]	valid_0's l1: 315.003
+2017-12-21 19:59:03,346 - Stopping Ensemble GBM

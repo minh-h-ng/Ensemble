@@ -588,7 +588,8 @@ class EtsBaggingEstimator(BaseEstimator):
 
 
 class GBMEstimator(BaseEstimator):
-    def __init__(self):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
         self.gbm = lgb.LGBMRegressor(objective='regression',
                                      learning_rate=0.05)
@@ -610,7 +611,15 @@ class GBMEstimator(BaseEstimator):
                                    np.array([[naive, ar, arma, arima, ets]]), axis=0)
             observations = np.append(observations,
                                      np.array([[X[i]]]), axis=0)
-        self.fit_ = self.gbm.fit(components, np.ravel(observations))
+        # ravel
+        observations = np.ravel(observations)
+
+        # split validation (last 240), train (remaining)
+        X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
+        X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
+        self.fit_ = self.gbm.fit(X_train, y_train,
+                                 eval_metric='l1',
+                                 eval_set=(X_test, y_test))
 
         # memorize
         self.samples = X
