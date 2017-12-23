@@ -84,23 +84,27 @@ def doNRMSE(components,reals):
         compNRMSE.append(nrmse(components[i],reals))
     return compNRMSE
 
-#result: under-provision, over-provision, total wasted, yearly cost projection
+#result: under-provision, over-provision, total wasted
 def doResources(components,reals,mu,r0):
-    resources = []
+    under = []
+    over = []
+    total = []
     for i in range(len(components)):
         underRes = 0
         overRes = 0
-        total = 0
+        totalRes = 0
         for j in range(len(components[i])):
             if resourcesCalculation(components[i][j], mu, r0)<resourcesCalculation(reals[j],mu,r0):
                 underRes += resourcesCalculation(reals[j],mu,r0) - resourcesCalculation(components[i][j], mu, r0)
-                total += resourcesCalculation(reals[j],mu,r0) - resourcesCalculation(components[i][j], mu, r0)
+                totalRes += resourcesCalculation(reals[j],mu,r0) - resourcesCalculation(components[i][j], mu, r0)
             else:
                 overRes += resourcesCalculation(components[i][j], mu, r0) - resourcesCalculation(reals[j],mu,r0)
-                total += resourcesCalculation(components[i][j], mu, r0) - resourcesCalculation(reals[j],mu,r0)
-        yearlyCost = total/len(reals)*365
-        resources.append([underRes,overRes,total,yearlyCost])
-    return resources
+                totalRes += resourcesCalculation(components[i][j], mu, r0) - resourcesCalculation(reals[j],mu,r0)
+        #yearlyCost = total/len(reals)*365
+        under.append(underRes)
+        over.append(overRes)
+        total.append(totalRes)
+    return under,over,total
 
 def doReals(dataFile):
     reals = []
@@ -136,13 +140,24 @@ def doComponents(dataFile):
 def main():
     for i in range(len(finalList)):
         names, reals = doReals(finalList[i])
+        names.insert(0,'')
         components = doComponents(finalList[i])
         compMAE = doMAE(components,reals)
+        compMAE.insert(0,'MAE')
         compMAPE = doMAPE(components,reals)
+        compMAPE.insert(0,'MAPE')
         compRMSE = doRMSE(components,reals)
+        compRMSE.insert(0,'RMSE')
         compNRMSE = doNRMSE(components,reals)
-        compRes1 = doResources(components,reals,10,0.4)
-        compRes2 = doResources(components, reals, 20, 0.8)
+        compNRMSE.insert(0,'NRMSE')
+        under1, over1, total1 = doResources(components,reals,10,0.4)
+        under1.insert(0,'under - 1st scenario')
+        over1.insert(0, 'over - 1st scenario')
+        total1.insert(0, 'total - 1st scenario')
+        under2, over2, total2 = doResources(components, reals, 10, 0.4)
+        under2.insert(0, 'under - 2nd scenario')
+        over2.insert(0, 'over - 2nd scenario')
+        total2.insert(0, 'total - 2nd scenario')
         with open(outList[i],'w') as f:
             writer = csv.writer(f)
             writer.writerows([names])
@@ -150,8 +165,12 @@ def main():
             writer.writerows([compMAPE])
             writer.writerows([compRMSE])
             writer.writerows([compNRMSE])
-            writer.writerows([compRes1])
-            writer.writerows([compRes2])
+            writer.writerows([under1])
+            writer.writerows([over1])
+            writer.writerows([total1])
+            writer.writerows([under2])
+            writer.writerows([over2])
+            writer.writerows([total2])
         print('names:',names)
 
 if __name__ == "__main__":

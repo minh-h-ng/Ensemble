@@ -112,7 +112,7 @@ def doEnsemble(fileList):
                 if count>1:
                     resultList[count-2]+=float(line[1])
     for i in range(len(resultList)):
-        resultList[i]/=repeatSize
+        resultList[i]/=len(fileList)
     for i in range(len(resultList)):
         resultList[i] = int(round(resultList[i]))
         resultList[i]=str(resultList[i])
