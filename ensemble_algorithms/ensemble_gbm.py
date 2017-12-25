@@ -7,11 +7,13 @@ import sys
 
 import numpy as np
 import pandas as pd
-from estimators import GBMEstimator
+from estimators import NaiveGBMEstimator, ArGBMEstimator, \
+    ArmaGBMEstimator, ArimaGBMEstimator, EtsGBMEstimator
 
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('data', type=str, help='Path to processed dataset')
+parser.add_argument('test_algo', type=str, help='Algorithm to run bagging on')
 parser.add_argument('result_path', type=str, help='Destination to save result')
 args = parser.parse_args()
 
@@ -55,8 +57,25 @@ class EnsembleGBM:
         assert len(self.test_series) == test_size
         assert len(self.test_series) + len(self.eval_series) == len(self.series)
 
-    def run_test(self, result_path):
-        estimator = GBMEstimator()
+    def run_test(self, test_algo, result_path):
+        # assign estimator
+        if test_algo == 'naive':
+            logger.warning("Running Naive GBM on Test Data")
+            estimator = NaiveGBMEstimator()
+        elif test_algo == 'ar':
+            logger.warning("Running AR GBM on Test Data")
+            estimator = ArGBMEstimator()
+        elif test_algo == 'arma':
+            logger.warning("Running ARMA GBM on Test Data")
+            estimator = ArmaGBMEstimator()
+        elif test_algo == 'arima':
+            logger.warning("Running ARIMA GBM on Test Data")
+            estimator = ArimaGBMEstimator()
+        elif test_algo == 'ets':
+            logger.warning("Running ETS GBM on Test Data")
+            estimator = EtsGBMEstimator()
+        else:
+            assert False
 
         # Makes eval series available for prediction
         estimator.fit(self.eval_series)
@@ -78,7 +97,8 @@ def main():
     algo = EnsembleGBM(file_path=args.data, test_size=240)
 
     # Run test
-    algo.run_test(result_path=args.result_path)
+    algo.run_test(test_algo=args.test_algo,
+                  result_path=args.result_path)
 
     logger.warning("Stopping Ensemble GBM")
 

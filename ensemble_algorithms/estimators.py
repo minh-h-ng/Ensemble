@@ -587,7 +587,7 @@ class EtsBaggingEstimator(BaseEstimator):
         return sum(numerator / denominator)
 
 
-class GBMEstimator(BaseEstimator):
+class NaiveGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
@@ -596,19 +596,16 @@ class GBMEstimator(BaseEstimator):
 
     def fit(self, X):
         # X here is the whole training set
-        # run component algorithms
-        components = np.empty((0, 5), np.float64)
+        components = np.empty((0, 1), np.float64)
         observations = np.empty((0, 1), np.float64)
 
-        for i in tqdm.tqdm(range(1, len(X)), desc="Computing components"):
+        for i in tqdm.tqdm(range(1, len(X)), desc="Naive forecasting"):
+            # forecast
             naive = self.algo.naive_forecast(X[:i])[-1]
-            ar = self.algo.ar_forecast(X[:i])[-1]
-            arma = self.algo.arma_forecast(X[:i])[-1]
-            arima = self.algo.arima_forecast(X[:i])[-1]
-            ets = self.algo.ets_forecast(X[:i])[-1]
 
+            # save
             components = np.append(components,
-                                   np.array([[naive, ar, arma, arima, ets]]), axis=0)
+                                   np.array([[naive]]), axis=0)
             observations = np.append(observations,
                                      np.array([[X[i]]]), axis=0)
         # ravel
@@ -617,9 +614,11 @@ class GBMEstimator(BaseEstimator):
         # split validation (last 240), train (remaining)
         X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
         X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
-        self.fit_ = self.gbm.fit(X_train, y_train,
+        self.fit_ = self.gbm.fit(np.reshape(X_train[:, 0], (-1, 1)),
+                                 y_train,
                                  eval_metric='l1',
-                                 eval_set=(X_test, y_test))
+                                 eval_set=(np.reshape(X_test[:, 0], (-1, 1)),
+                                           y_test))
 
         # memorize
         self.samples = X
@@ -627,30 +626,294 @@ class GBMEstimator(BaseEstimator):
 
     def predict(self, X):
         # X here holds the true observations
-        components = np.empty((0, 5), np.float64)
+        components = np.empty((0, 1), np.float64)
 
         # first prediction is done on already memorized data
         naive = self.algo.naive_forecast(self.samples)[-1]
-        ar = self.algo.ar_forecast(self.samples)[-1]
-        arma = self.algo.arma_forecast(self.samples)[-1]
-        arima = self.algo.arima_forecast(self.samples)[-1]
-        ets = self.algo.ets_forecast(self.samples)[-1]
 
         components = np.append(components,
-                               np.array([[naive, ar, arma, arima, ets]]), axis=0)
+                               np.array([[naive]]), axis=0)
 
         # subsequent predictions are online
         for i in tqdm.tqdm(range(1, len(X))):
             data = pd.concat([self.samples, X[:i]])  # # training + elapsed
 
             naive = self.algo.naive_forecast(data)[-1]
+
+            components = np.append(components,
+                                   np.array([[naive]]), axis=0)
+
+        predictions = self.fit_.predict(components)
+        return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
+
+class ArGBMEstimator(BaseEstimator):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.gbm = lgb.LGBMRegressor(objective='regression',
+                                     learning_rate=0.05)
+
+    def fit(self, X):
+        # X here is the whole training set
+        components = np.empty((0, 1), np.float64)
+        observations = np.empty((0, 1), np.float64)
+
+        for i in tqdm.tqdm(range(1, len(X)), desc="AR forecasting"):
+            # forecast
+            ar = self.algo.ar_forecast(X[:i])[-1]
+
+            # save
+            components = np.append(components,
+                                   np.array([[ar]]), axis=0)
+            observations = np.append(observations,
+                                     np.array([[X[i]]]), axis=0)
+        # ravel
+        observations = np.ravel(observations)
+
+        # split validation (last 240), train (remaining)
+        X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
+        X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
+        self.fit_ = self.gbm.fit(np.reshape(X_train[:, 0], (-1, 1)),
+                                 y_train,
+                                 eval_metric='l1',
+                                 eval_set=(np.reshape(X_test[:, 0], (-1, 1)),
+                                           y_test))
+
+        # memorize
+        self.samples = X
+        return self
+
+    def predict(self, X):
+        # X here holds the true observations
+        components = np.empty((0, 1), np.float64)
+
+        # first prediction is done on already memorized data
+        ar = self.algo.ar_forecast(self.samples)[-1]
+
+        components = np.append(components,
+                               np.array([[ar]]), axis=0)
+
+        # subsequent predictions are online
+        for i in tqdm.tqdm(range(1, len(X))):
+            data = pd.concat([self.samples, X[:i]])  # # training + elapsed
+
             ar = self.algo.ar_forecast(data)[-1]
+
+            components = np.append(components,
+                                   np.array([[ar]]), axis=0)
+
+        predictions = self.fit_.predict(components)
+        return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
+
+class ArmaGBMEstimator(BaseEstimator):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.gbm = lgb.LGBMRegressor(objective='regression',
+                                     learning_rate=0.05)
+
+    def fit(self, X):
+        # X here is the whole training set
+        components = np.empty((0, 1), np.float64)
+        observations = np.empty((0, 1), np.float64)
+
+        for i in tqdm.tqdm(range(1, len(X)), desc="ARMA forecasting"):
+            # forecast
+            arma = self.algo.arma_forecast(X[:i])[-1]
+
+            # save
+            components = np.append(components,
+                                   np.array([[arma]]), axis=0)
+            observations = np.append(observations,
+                                     np.array([[X[i]]]), axis=0)
+        # ravel
+        observations = np.ravel(observations)
+
+        # split validation (last 240), train (remaining)
+        X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
+        X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
+        self.fit_ = self.gbm.fit(np.reshape(X_train[:, 0], (-1, 1)),
+                                 y_train,
+                                 eval_metric='l1',
+                                 eval_set=(np.reshape(X_test[:, 0], (-1, 1)),
+                                           y_test))
+
+        # memorize
+        self.samples = X
+        return self
+
+    def predict(self, X):
+        # X here holds the true observations
+        components = np.empty((0, 1), np.float64)
+
+        # first prediction is done on already memorized data
+        arma = self.algo.arma_forecast(self.samples)[-1]
+
+        components = np.append(components,
+                               np.array([[arma]]), axis=0)
+
+        # subsequent predictions are online
+        for i in tqdm.tqdm(range(1, len(X))):
+            data = pd.concat([self.samples, X[:i]])  # # training + elapsed
+
             arma = self.algo.arma_forecast(data)[-1]
+
+            components = np.append(components,
+                                   np.array([[arma]]), axis=0)
+
+        predictions = self.fit_.predict(components)
+        return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
+
+class ArimaGBMEstimator(BaseEstimator):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.gbm = lgb.LGBMRegressor(objective='regression',
+                                     learning_rate=0.05)
+
+    def fit(self, X):
+        # X here is the whole training set
+        components = np.empty((0, 1), np.float64)
+        observations = np.empty((0, 1), np.float64)
+
+        for i in tqdm.tqdm(range(1, len(X)), desc="ARIMA forecasting"):
+            # forecast
+            arima = self.algo.arima_forecast(X[:i])[-1]
+
+            # save
+            components = np.append(components,
+                                   np.array([[arima]]), axis=0)
+            observations = np.append(observations,
+                                     np.array([[X[i]]]), axis=0)
+        # ravel
+        observations = np.ravel(observations)
+
+        # split validation (last 240), train (remaining)
+        X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
+        X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
+        self.fit_ = self.gbm.fit(np.reshape(X_train[:, 0], (-1, 1)),
+                                 y_train,
+                                 eval_metric='l1',
+                                 eval_set=(np.reshape(X_test[:, 0], (-1, 1)),
+                                           y_test))
+
+        # memorize
+        self.samples = X
+        return self
+
+    def predict(self, X):
+        # X here holds the true observations
+        components = np.empty((0, 1), np.float64)
+
+        # first prediction is done on already memorized data
+        arima = self.algo.arima_forecast(self.samples)[-1]
+
+        components = np.append(components,
+                               np.array([[arima]]), axis=0)
+
+        # subsequent predictions are online
+        for i in tqdm.tqdm(range(1, len(X))):
+            data = pd.concat([self.samples, X[:i]])  # # training + elapsed
+
             arima = self.algo.arima_forecast(data)[-1]
+
+            components = np.append(components,
+                                   np.array([[arima]]), axis=0)
+
+        predictions = self.fit_.predict(components)
+        return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
+
+
+class EtsGBMEstimator(BaseEstimator):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.gbm = lgb.LGBMRegressor(objective='regression',
+                                     learning_rate=0.05)
+
+    def fit(self, X):
+        # X here is the whole training set
+        components = np.empty((0, 1), np.float64)
+        observations = np.empty((0, 1), np.float64)
+
+        for i in tqdm.tqdm(range(1, len(X)), desc="ETS forecasting"):
+            # forecast
+            ets = self.algo.ets_forecast(X[:i])[-1]
+
+            # save
+            components = np.append(components,
+                                   np.array([[ets]]), axis=0)
+            observations = np.append(observations,
+                                     np.array([[X[i]]]), axis=0)
+        # ravel
+        observations = np.ravel(observations)
+
+        # split validation (last 240), train (remaining)
+        X_train, y_train = components[:-self.validation_size], observations[:-self.validation_size]
+        X_test, y_test = components[-self.validation_size:], observations[-self.validation_size:]
+        self.fit_ = self.gbm.fit(np.reshape(X_train[:, 0], (-1, 1)),
+                                 y_train,
+                                 eval_metric='l1',
+                                 eval_set=(np.reshape(X_test[:, 0], (-1, 1)),
+                                           y_test))
+
+        # memorize
+        self.samples = X
+        return self
+
+    def predict(self, X):
+        # X here holds the true observations
+        components = np.empty((0, 1), np.float64)
+
+        # first prediction is done on already memorized data
+        ets = self.algo.ets_forecast(self.samples)[-1]
+
+        components = np.append(components,
+                               np.array([[ets]]), axis=0)
+
+        # subsequent predictions are online
+        for i in tqdm.tqdm(range(1, len(X))):
+            data = pd.concat([self.samples, X[:i]])  # # training + elapsed
+
             ets = self.algo.ets_forecast(data)[-1]
 
             components = np.append(components,
-                                   np.array([[naive, ar, arma, arima, ets]]), axis=0)
+                                   np.array([[ets]]), axis=0)
 
         predictions = self.fit_.predict(components)
         return np.rint(predictions)

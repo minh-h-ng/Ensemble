@@ -59,14 +59,16 @@ run_ensemble_cross_validation() {
 }
 
 run_ensemble_gbm() {
+    # Algorithm
+    algorithm=$1
     # File name prefix for results
-    results_prefix='Ensemble_GBM_'
+    results_prefix=$2
 
     # Output path
     result_path=${dir_path}${results_prefix}${data_set}${results_suffix}
 
     # Execute script
-    python3 ensemble_gbm.py ${data_dir}${data_set} ${result_path} |
+    python3 ensemble_gbm.py ${data_dir}${data_set} ${algorithm} ${result_path} |
         tee ${logs_path}${results_prefix}${data_set}${results_suffix}'.log'
 }
 
@@ -91,4 +93,8 @@ run_ensemble_bagging_regression() {
 #run_ensemble_bagging_regression 'arma' 'Ensemble_ArmaBaggingRegression_'
 #run_ensemble_bagging_regression 'arima' 'Ensemble_ArimaBaggingRegression_'
 #run_ensemble_bagging_regression 'ets' 'Ensemble_EtsBaggingRegression_'
-run_ensemble_gbm
+run_ensemble_gbm 'naive' 'Ensemble_NaiveGBM_'
+run_ensemble_gbm 'ar' 'Ensemble_ArGBM_'
+run_ensemble_gbm 'arma' 'Ensemble_ArmaGBM_'
+run_ensemble_gbm 'arima' 'Ensemble_ArimaGBM_'
+run_ensemble_gbm 'ets' 'Ensemble_EtsGBM_'
