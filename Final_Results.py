@@ -1,25 +1,31 @@
 import csv
 from os import listdir
+import argparse
 
-dataCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/cran_10_12'
-dataEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/edgar_10_12'
-dataKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/data_backup/kyoto_10_12'
+# Parse arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('top_dir', type=str, help='Path to project directory')
+args = parser.parse_args()
 
-realCRAN = '/home/minh/PycharmProjects/Ensemble/processed/cran_10_12'
-realEDGAR = '/home/minh/PycharmProjects/Ensemble/processed/edgar_10_12'
-realKyoto = '/home/minh/PycharmProjects/Ensemble/processed/kyoto_10_12'
+dataCRAN = args.top_dir + '/PythonESN/data_backup/cran_10_12'
+dataEDGAR = args.top_dir + '/PythonESN/data_backup/edgar_10_12'
+dataKyoto = args.top_dir + '/PythonESN/data_backup/kyoto_10_12'
 
-outCRAN = '/home/minh/PycharmProjects/Ensemble/final_results/cran_10_12.csv'
-outEDGAR = '/home/minh/PycharmProjects/Ensemble/final_results/edgar_10_12.csv'
-outKyoto = '/home/minh/PycharmProjects/Ensemble/final_results/kyoto_10_12.csv'
+realCRAN = args.top_dir + '/processed/cran_10_12'
+realEDGAR = args.top_dir + '/processed/edgar_10_12'
+realKyoto = args.top_dir + '/processed/kyoto_10_12'
 
-esnCRAN = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/cran_10_12_enet_identity_mae/predictions_cran_historical_10_12_enet_identity_'
-esnEDGAR = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/edgar_10_12_enet_identity_mae/predictions_edgar_historical_10_12_enet_identity_'
-esnKyoto = '/home/minh/PycharmProjects/Ensemble/PythonESN/predictions_backup/kyoto_10_12_enet_identity_mae/predictions_kyoto_historical_10_12_enet_identity_'
+outCRAN = args.top_dir + '/final_results/cran_10_12.csv'
+outEDGAR = args.top_dir + '/final_results/edgar_10_12.csv'
+outKyoto = args.top_dir + '/final_results/kyoto_10_12.csv'
 
-ensembleCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/cran_10_12/'
-ensembleEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12/'
-ensembleKyoto = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12/'
+esnCRAN = args.top_dir + '/PythonESN/predictions_backup/cran_10_12_enet_identity_mae/predictions_cran_historical_10_12_enet_identity_'
+esnEDGAR = args.top_dir + '/PythonESN/predictions_backup/edgar_10_12_enet_identity_mae/predictions_edgar_historical_10_12_enet_identity_'
+esnKyoto = args.top_dir + '/PythonESN/predictions_backup/kyoto_10_12_enet_identity_mae/predictions_kyoto_historical_10_12_enet_identity_'
+
+ensembleCRAN = args.top_dir + '/ensemble_algorithms/results/cran_10_12/'
+ensembleEDGAR = args.top_dir + '/ensemble_algorithms/results/edgar_10_12/'
+ensembleKyoto = args.top_dir + '/ensemble_algorithms/results/kyoto_10_12/'
 
 ensembleNames = ['Average','CrossValidation','GA',
                  'NaiveBaggingRegression','ArBaggingRegression','ArmaBaggingRegression','ArimaBaggingRegression','EtsBaggingRegression',

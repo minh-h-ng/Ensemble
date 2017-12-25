@@ -1,12 +1,18 @@
 import csv
+import argparse
 
-finalCRAN = '/home/minh/PycharmProjects/Ensemble/final_results/cran_10_12.csv'
-finalEDGAR = '/home/minh/PycharmProjects/Ensemble/final_results/edgar_10_12.csv'
-finalKyoto = '/home/minh/PycharmProjects/Ensemble/final_results/kyoto_10_12.csv'
+# Parse arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('top_dir', type=str, help='Path to project directory')
+args = parser.parse_args()
 
-outCRAN = '/home/minh/PycharmProjects/Ensemble/final_results/cran_percent_10_12.csv'
-outEDGAR = '/home/minh/PycharmProjects/Ensemble/final_results/edgar_percent_10_12.csv'
-outKyoto = '/home/minh/PycharmProjects/Ensemble/final_results/kyoto_percent_10_12.csv'
+finalCRAN = args.top_dir + '/final_results/cran_10_12.csv'
+finalEDGAR = args.top_dir + '/final_results/edgar_10_12.csv'
+finalKyoto = args.top_dir + '/final_results/kyoto_10_12.csv'
+
+outCRAN = args.top_dir + '/final_results/cran_percent_10_12.csv'
+outEDGAR = args.top_dir + '/final_results/edgar_percent_10_12.csv'
+outKyoto = args.top_dir + '/final_results/kyoto_percent_10_12.csv'
 
 outList = [outCRAN,outEDGAR,outKyoto]
 finalList = [finalCRAN,finalEDGAR,finalKyoto]

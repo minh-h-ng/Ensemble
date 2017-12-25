@@ -1,10 +1,16 @@
 import csv
+import argparse
 
-accuracyCRAN = '/home/minh/PycharmProjects/Ensemble/final_results/cran_accuracy_10_12.csv'
-accurayEDGAR = '/home/minh/PycharmProjects/Ensemble/final_results/edgar_accuracy_10_12.csv'
-accuracyKyoto = '/home/minh/PycharmProjects/Ensemble/final_results/kyoto_accuracy_10_12.csv'
+# Parse arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('top_dir', type=str, help='Path to project directory')
+args = parser.parse_args()
 
-outFile = '/home/minh/PycharmProjects/Ensemble/final_results/cost_projection.csv'
+accuracyCRAN = args.top_dir + '/final_results/cran_accuracy_10_12.csv'
+accurayEDGAR = args.top_dir + '/final_results/edgar_accuracy_10_12.csv'
+accuracyKyoto = args.top_dir + '/final_results/kyoto_accuracy_10_12.csv'
+
+outFile = args.top_dir + '/final_results/cost_projection.csv'
 
 accuracyList = [accuracyCRAN,accurayEDGAR,accuracyKyoto]
 
