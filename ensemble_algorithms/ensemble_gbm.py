@@ -8,7 +8,8 @@ import sys
 import numpy as np
 import pandas as pd
 from estimators import NaiveGBMEstimator, ArGBMEstimator, \
-    ArmaGBMEstimator, ArimaGBMEstimator, EtsGBMEstimator
+    ArmaGBMEstimator, ArimaGBMEstimator, EtsGBMEstimator, \
+    GBMAverageEstimator
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -74,6 +75,9 @@ class EnsembleGBM:
         elif test_algo == 'ets':
             logger.warning("Running ETS GBM on Test Data")
             estimator = EtsGBMEstimator()
+        elif test_algo == 'average':
+            logger.warning("Running Average GBM on Test Data")
+            estimator = GBMAverageEstimator()
         else:
             assert False
 

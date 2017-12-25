@@ -925,3 +925,39 @@ class EtsGBMEstimator(BaseEstimator):
         numerator = np.absolute(predictions - observations)
         denominator = observations
         return sum(numerator / denominator)
+
+
+class GBMAverageEstimator(BaseEstimator):
+    def __init__(self, validation_size=240):
+        self.validation_size = validation_size
+        self.algo = forecast.ForecastAlgorithms(samples=500)
+        self.naivegbm = NaiveGBMEstimator(validation_size=validation_size)
+        self.argbm = ArGBMEstimator(validation_size=validation_size)
+        self.armagbm = ArmaGBMEstimator(validation_size=validation_size)
+        self.arimagbm = ArimaGBMEstimator(validation_size=validation_size)
+        self.etsgbm = EtsGBMEstimator(validation_size=validation_size)
+
+    def fit(self, X):
+        self.naive_fit = self.naivegbm.fit(X)
+        self.ar_fit = self.argbm.fit(X)
+        self.arma_fit = self.armagbm.fit(X)
+        self.arima_fit = self.arimagbm.fit(X)
+        self.ets_fit = self.etsgbm.fit(X)
+        return self
+
+    def predict(self, X):
+        naive = self.naive_fit.predict(X)
+        ar = self.ar_fit.predict(X)
+        arma = self.arma_fit.predict(X)
+        arima = self.arima_fit.predict(X)
+        ets = self.ets_fit.predict(X)
+        predictions = np.mean([naive, ar, arma, arima, ets], axis=0)
+        return np.rint(predictions)
+
+    def score(self, X):
+        predictions = self.predict(X)
+        observations = X.values
+
+        numerator = np.absolute(predictions - observations)
+        denominator = observations
+        return sum(numerator / denominator)
