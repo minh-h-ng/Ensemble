@@ -1,0 +1,13 @@
+2017-12-25 20:47:25,127 - Starting Ensemble GBM
+2017-12-25 20:47:25,299 - Running ETS GBM on Test Data
+[1]	valid_0's l1: 725.834
+[2]	valid_0's l1: 696.971
+[3]	valid_0's l1: 669.611
+[4]	valid_0's l1: 643.559
+[5]	valid_0's l1: 618.809
+[6]	valid_0's l1: 595.296
+[7]	valid_0's l1: 572.687
+[8]	valid_0's l1: 551.357
+[9]	valid_0's l1: 531.12
+[10]	valid_0's l1: 511.712
+2017-12-25 20:50:36,104 - Stopping Ensemble GBM

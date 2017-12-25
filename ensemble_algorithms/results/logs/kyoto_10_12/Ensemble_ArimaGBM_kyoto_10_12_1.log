@@ -1,0 +1,13 @@
+2017-12-25 20:35:00,996 - Starting Ensemble GBM
+2017-12-25 20:35:01,169 - Running ARIMA GBM on Test Data
+[1]	valid_0's l1: 131.413
+[2]	valid_0's l1: 129.82
+[3]	valid_0's l1: 128.308
+[4]	valid_0's l1: 126.871
+[5]	valid_0's l1: 125.506
+[6]	valid_0's l1: 124.216
+[7]	valid_0's l1: 122.998
+[8]	valid_0's l1: 121.84
+[9]	valid_0's l1: 120.744
+[10]	valid_0's l1: 119.725
+2017-12-25 20:36:48,917 - Stopping Ensemble GBM
