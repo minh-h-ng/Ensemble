@@ -21,8 +21,9 @@ ensembleCRAN = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/
 ensembleEDGAR = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/edgar_10_12/'
 ensembleKyoto = '/home/minh/PycharmProjects/Ensemble/ensemble_algorithms/results/kyoto_10_12/'
 
-ensembleNames = ['Average','CrossValidation','GBM','GA',
-                 'NaiveBaggingRegression','ArBaggingRegression','ArmaBaggingRegression','ArimaBaggingRegression','EtsBaggingRegression']
+ensembleNames = ['Average','CrossValidation','GA',
+                 'NaiveBaggingRegression','ArBaggingRegression','ArmaBaggingRegression','ArimaBaggingRegression','EtsBaggingRegression',
+                 'NaiveGBM','ArGBM','ArmaGBM','ArimaGBM','EtsGBM']
 dataList = [dataCRAN,dataEDGAR,dataKyoto]
 realList = [realCRAN,realEDGAR,realKyoto]
 esnList = [esnCRAN,esnEDGAR,esnKyoto]
@@ -127,19 +128,24 @@ def main():
 
         average = results[0]
         crossval = results[1]
-        gbm = results[2]
-        ga = results[3]
-        naivebag = results[4]
-        arbag = results[5]
-        armabag = results[6]
-        arimabag = results[7]
-        etsbag = results[8]
+        ga = results[2]
+        naivebag = results[3]
+        arbag = results[4]
+        armabag = results[5]
+        arimabag = results[6]
+        etsbag = results[7]
+        naiveboost = results[8]
+        arboost = results[9]
+        armaboost = results[10]
+        arimaboost = results[11]
+        etsboost = results[12]
 
         with open(outList[i],'w') as f:
             for j in range(len(real)):
                 #f.write(real[j] + ',' + naive[j] + ',' + ar[j] + ',' + arma[j] + ',' + arima[j] + ',' + ets[j] + ',' + esn[j])
-                f.write(real[j] + ',' + average[j] + ',' + crossval[j] + ',' + gbm[j] + ',' + ga[j] + ',' +
-                        naivebag[j] + ',' + arbag[j] + ',' + armabag[j] + ',' + arimabag[j] + ',' + etsbag[j] + ',' + esn[j])
+                f.write(real[j] + ',' + average[j] + ',' + crossval[j] + ',' + ga[j] + ',' +
+                        naivebag[j] + ',' + arbag[j] + ',' + armabag[j] + ',' + arimabag[j] + ',' + etsbag[j] + ',' + esn[j] + ',' +
+                        naiveboost[j] + ',' + arboost[j] + ',' + armaboost[j] + ',' + arimaboost[j] + ',' + etsboost[j])
                 f.write('\n')
 
 if __name__ == "__main__":
