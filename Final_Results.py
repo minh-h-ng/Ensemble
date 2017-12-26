@@ -30,7 +30,7 @@ ensembleKyoto = args.top_dir + '/ensemble_algorithms/results/kyoto_10_12/'
 ensembleNames = ['Average', 'CrossValidation', 'GA',
                  'NaiveBaggingRegression', 'ArBaggingRegression', 'ArmaBaggingRegression', 'ArimaBaggingRegression',
                  'EtsBaggingRegression',
-                 'NaiveGBM', 'ArGBM', 'ArmaGBM', 'ArimaGBM', 'EtsGBM']
+                 'NaiveGBM', 'ArGBM', 'ArmaGBM', 'ArimaGBM', 'EtsGBM', 'AverageGBM']
 dataList = [dataCRAN, dataEDGAR, dataKyoto]
 realList = [realCRAN, realEDGAR, realKyoto]
 esnList = [esnCRAN, esnEDGAR, esnKyoto]
@@ -153,6 +153,7 @@ def main():
         armaboost = results[10]
         arimaboost = results[11]
         etsboost = results[12]
+        averageboost = results[13]
 
         with open(outList[i], 'w') as f:
             for j in range(len(real)):
@@ -160,7 +161,8 @@ def main():
                 f.write(real[j] + ',' + average[j] + ',' + crossval[j] + ',' + ga[j] + ',' +
                         naivebag[j] + ',' + arbag[j] + ',' + armabag[j] + ',' + arimabag[j] + ',' + etsbag[j] + ',' +
                         esn[j] + ',' +
-                        naiveboost[j] + ',' + arboost[j] + ',' + armaboost[j] + ',' + arimaboost[j] + ',' + etsboost[j])
+                        naiveboost[j] + ',' + arboost[j] + ',' + armaboost[j] + ',' + arimaboost[j] + ',' + etsboost[j] + ',' +
+                        averageboost[j])
                 f.write('\n')
 
 

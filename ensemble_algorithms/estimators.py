@@ -591,8 +591,7 @@ class NaiveGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
-        self.gbm = lgb.LGBMRegressor(objective='regression',
-                                     learning_rate=0.05)
+        self.gbm = lgb.LGBMRegressor(objective='regression_l1')
 
     def fit(self, X):
         # X here is the whole training set
@@ -659,8 +658,7 @@ class ArGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
-        self.gbm = lgb.LGBMRegressor(objective='regression',
-                                     learning_rate=0.05)
+        self.gbm = lgb.LGBMRegressor(objective='regression_l1')
 
     def fit(self, X):
         # X here is the whole training set
@@ -727,8 +725,7 @@ class ArmaGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
-        self.gbm = lgb.LGBMRegressor(objective='regression',
-                                     learning_rate=0.05)
+        self.gbm = lgb.LGBMRegressor(objective='regression_l1')
 
     def fit(self, X):
         # X here is the whole training set
@@ -795,8 +792,7 @@ class ArimaGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
-        self.gbm = lgb.LGBMRegressor(objective='regression',
-                                     learning_rate=0.05)
+        self.gbm = lgb.LGBMRegressor(objective='regression_l1')
 
     def fit(self, X):
         # X here is the whole training set
@@ -863,8 +859,7 @@ class EtsGBMEstimator(BaseEstimator):
     def __init__(self, validation_size=240):
         self.validation_size = validation_size
         self.algo = forecast.ForecastAlgorithms(samples=500)
-        self.gbm = lgb.LGBMRegressor(objective='regression',
-                                     learning_rate=0.05)
+        self.gbm = lgb.LGBMRegressor(objective='regression_l1')
 
     def fit(self, X):
         # X here is the whole training set
