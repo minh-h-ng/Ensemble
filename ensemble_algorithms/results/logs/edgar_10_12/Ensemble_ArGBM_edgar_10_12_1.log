@@ -1,13 +1,13 @@
-2017-12-25 20:32:43,673 - Starting Ensemble GBM
-2017-12-25 20:32:43,834 - Running AR GBM on Test Data
-[1]	valid_0's l1: 280.088
-[2]	valid_0's l1: 272.461
-[3]	valid_0's l1: 265.35
-[4]	valid_0's l1: 259.703
-[5]	valid_0's l1: 255.198
-[6]	valid_0's l1: 250.959
-[7]	valid_0's l1: 247.568
-[8]	valid_0's l1: 244.749
-[9]	valid_0's l1: 242.138
-[10]	valid_0's l1: 240.275
-2017-12-25 20:33:27,424 - Stopping Ensemble GBM
+2017-12-26 18:18:36,902 - Starting Ensemble GBM
+2017-12-26 18:18:37,018 - Running AR GBM on Test Data
+[1]	valid_0's l1: 224.141
+[2]	valid_0's l1: 183.249
+[3]	valid_0's l1: 160.993
+[4]	valid_0's l1: 167.3
+[5]	valid_0's l1: 161.049
+[6]	valid_0's l1: 162.595
+[7]	valid_0's l1: 161.525
+[8]	valid_0's l1: 163.214
+[9]	valid_0's l1: 166.063
+[10]	valid_0's l1: 163.016
+2017-12-26 18:20:41,250 - Stopping Ensemble GBM

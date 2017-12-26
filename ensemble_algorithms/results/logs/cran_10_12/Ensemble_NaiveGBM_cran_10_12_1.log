@@ -1,5 +1,5 @@
-2017-12-26 18:14:02,473 - Starting Ensemble GBM
-2017-12-26 18:14:02,581 - Running Naive GBM on Test Data
+2017-12-26 18:18:17,297 - Starting Ensemble GBM
+2017-12-26 18:18:17,407 - Running Naive GBM on Test Data
 [1]	valid_0's l1: 397.374
 [2]	valid_0's l1: 300.55
 [3]	valid_0's l1: 235.768
@@ -10,4 +10,4 @@
 [8]	valid_0's l1: 110.384
 [9]	valid_0's l1: 93.5967
 [10]	valid_0's l1: 108.891
-2017-12-26 18:14:02,896 - Stopping Ensemble GBM
+2017-12-26 18:18:17,779 - Stopping Ensemble GBM
