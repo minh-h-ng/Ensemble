@@ -158,11 +158,11 @@ def main():
         with open(outList[i], 'w') as f:
             for j in range(len(real)):
                 # f.write(real[j] + ',' + naive[j] + ',' + ar[j] + ',' + arma[j] + ',' + arima[j] + ',' + ets[j] + ',' + esn[j])
-                f.write(real[j] + ',' + average[j] + ',' + crossval[j] + ',' + ga[j] + ',' +
+                f.write(real[j] + ',' + naive[j] + ',' + ar[j] + ',' + arma[j] + ',' + arima[j] + ',' + ets[j] + ',' +
+                        average[j] + ',' + crossval[j] + ',' + ga[j] + ',' +
                         naivebag[j] + ',' + arbag[j] + ',' + armabag[j] + ',' + arimabag[j] + ',' + etsbag[j] + ',' +
-                        esn[j] + ',' +
                         naiveboost[j] + ',' + arboost[j] + ',' + armaboost[j] + ',' + arimaboost[j] + ',' + etsboost[j] + ',' +
-                        averageboost[j])
+                        esn[j])
                 f.write('\n')
 
 

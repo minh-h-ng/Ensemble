@@ -175,7 +175,7 @@ def main():
         under1.insert(0, 'under - 1st scenario')
         over1.insert(0, 'over - 1st scenario')
         total1.insert(0, 'total - 1st scenario')
-        under2, over2, total2 = doResources(components, reals, 10, 0.4)
+        under2, over2, total2 = doResources(components, reals, 20, 0.8)
         under2.insert(0, 'under - 2nd scenario')
         over2.insert(0, 'over - 2nd scenario')
         total2.insert(0, 'total - 2nd scenario')
