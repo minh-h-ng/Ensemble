@@ -43,23 +43,22 @@ def main():
                     names = line
                 elif line[0] == 'total - 1st scenario':
                     scenario1 = line
-                    print('scenario1:',scenario1)
                 elif line[0] == 'total - 2nd scenario':
                     scenario2 = line
-                    print('scenario2:', scenario2)
             if i == 0:
                 for j in range(1, len(scenario1)):
-                    cranList[j] = (float(scenario1[j]) + float(scenario2[j])) / testingSize * 365
+                    print('float:',float(scenario1[j]),float(scenario2[j]))
+                    cranList[j] = (float(scenario1[j]) + float(scenario2[j])) / (2*testingSize) * 365
             elif i == 1:
                 for j in range(1, len(scenario1)):
-                    edgarList[j] = (float(scenario1[j]) + float(scenario2[j])) / testingSize * 365
+                    edgarList[j] = (float(scenario1[j]) + float(scenario2[j])) / (2*testingSize) * 365
             elif i == 2:
                 for j in range(1, len(scenario1)):
-                    kyotoList[j] = (float(scenario1[j]) + float(scenario2[j])) / testingSize * 365
+                    kyotoList[j] = (float(scenario1[j]) + float(scenario2[j])) / (2*testingSize) * 365
     totalList = []
     totalList.append('total')
     for i in range(1, len(cranList)):
-        totalList.append(((cranList[i] + edgarList[i] + kyotoList[i]) / 2)/ 3)
+        totalList.append(((cranList[i] + edgarList[i] + kyotoList[i]))/ 3)
     with open(outFile, 'w') as f:
         writer = csv.writer(f)
         writer.writerows([names])

@@ -6,6 +6,7 @@ import json
 import logging
 import random
 from functools import partial
+import sys
 
 import numpy as np
 import pandas as pd
@@ -181,7 +182,7 @@ class GeneticAlgorithm:
                 halloffame.update(population + offspring)
 
             # break if best_ind is not changed
-            if best_ind == halloffame[-1]:
+            if best_ind == halloffame[-1] and gen>5:
                 logger.warning("Best Individual didn't change. Stopping evolution")
                 break
             else:
@@ -284,7 +285,6 @@ def main():
         .to_csv(args.result_path, index=False, na_rep='NaN')
 
     logger.warning("Stopping GA")
-
 
 if __name__ == '__main__':
     main()
