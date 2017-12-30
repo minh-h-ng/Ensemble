@@ -43,11 +43,11 @@ def main():
                     names = line
                 elif line[0] == 'total - 1st scenario':
                     scenario1 = line
+                    scenario1 = line
                 elif line[0] == 'total - 2nd scenario':
                     scenario2 = line
             if i == 0:
                 for j in range(1, len(scenario1)):
-                    print('float:',float(scenario1[j]),float(scenario2[j]))
                     cranList[j] = (float(scenario1[j]) + float(scenario2[j])) / (2*testingSize) * 365
             elif i == 1:
                 for j in range(1, len(scenario1)):
