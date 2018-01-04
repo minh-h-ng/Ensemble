@@ -185,7 +185,7 @@ def main():
             writer.writerows([compMAE])
             writer.writerows([compMAPE])
             writer.writerows([compRMSE])
-            writer.writerows([compNRMSE])
+            #writer.writerows([compNRMSE])
             writer.writerows([under1])
             writer.writerows([over1])
             writer.writerows([total1])
